@@ -1,0 +1,48 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "Root"
+    },
+    {
+      "path": "apps/backend"
+    },
+    {
+      "path": "apps/frontend"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "streetsidesoftware.code-spell-checker",
+      "pkief.material-icon-theme",
+      "ms-vscode.vscode-typescript-next",
+      "meganrogge.template-string-converter",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss"
+    ]
+  },
+  "settings": {
+    "cSpell.enabled": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll.eslint": "always"
+    },
+    "eslint.validate": ["typescript"],
+    "eslint.options": {
+      "extensions": [".ts", ".tsx"]
+    },
+    "[typescript]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "editor.formatOnSave": "explicit",
+        "source.organizeImports": "always"
+      },
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.words": ["tailwindcss"],
+    "editor.tabSize": 2
+  }
+}
