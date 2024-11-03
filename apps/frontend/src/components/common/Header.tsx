@@ -1,5 +1,5 @@
-import CloseIcon from "@mui/icons-material/Close"; // Import the close icon
-import MenuIcon from "@mui/icons-material/Menu"; // Import the menu icon
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 import { SIDEBAR_WIDTH } from "../../utils/conts";
 
