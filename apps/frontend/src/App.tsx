@@ -1,7 +1,9 @@
+import ClientTable from "./components/clients/ClientTable/ClientTable";
+
 const App = () => {
   return (
     <>
-      <h1>Hello Word</h1>
+      <ClientTable></ClientTable>
     </>
   );
 };

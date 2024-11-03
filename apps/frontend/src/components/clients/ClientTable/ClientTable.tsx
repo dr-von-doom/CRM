@@ -9,6 +9,7 @@ import { useState } from "react";
 import useGetClients from "../../../hooks/useGetClients";
 import { ClientType } from "../../../types/client.types";
 import { CLIENTS_PAGE_SIZE } from "../../../utils/conts";
+import EditClientModal from './EditClientModal'; // Asegúrate de que la ruta sea correcta
 
 /** Client data grid columns definition */
 const ClientDataGridColumns: GridColDef<ClientType>[] = [
@@ -54,7 +55,7 @@ const ClientDataGridColumns: GridColDef<ClientType>[] = [
     headerName: "Edit",
     sortable: false,
     renderCell: ({ row }: Partial<GridRowParams>) => {
-      return <EditButton clientId={row.id} />;
+      return <EditButton client={row} />;
     },
   },
   {
@@ -77,15 +78,32 @@ const ClientDataGridColumnVisibility: GridColumnVisibilityModel = {
 /**
  * Client edit button component
  */
-const EditButton = ({ clientId }: { clientId: string }) => {
+const EditButton = ({ client }: { client: ClientType }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleUpdate = (updatedClient: ClientType) => {
+    // Aquí debes implementar la lógica para actualizar el cliente en la API
+    console.log("[EditButton] Updating client:", updatedClient);
+    // Puedes hacer la llamada a la API aquí
+    setOpen(false);
+  };
+
   return (
-    <Button
-      variant="outlined"
-      className="w-full"
-      onClick={() => console.log("[ClientTable] EditButton", clientId)}
-    >
-      Edit
-    </Button>
+    <>
+      <Button
+        variant="outlined"
+        className="w-full"
+        onClick={() => setOpen(true)}
+      >
+        Edit
+      </Button>
+      <EditClientModal
+        open={open}
+        onClose={() => setOpen(false)}
+        clientData={client}
+        onUpdate={handleUpdate}
+      />
+    </>
   );
 };
 

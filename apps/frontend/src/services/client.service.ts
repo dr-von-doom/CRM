@@ -33,3 +33,19 @@ export const getClients = async (
       : null,
   };
 };
+
+/**
+ * It updates a client in the API.
+ *
+ * @param {string} id - The ID of the client to update
+ * @param {ClientType} data - The new data for the client
+ * @returns {Promise<ClientType>} - The updated client data
+ */
+export const updateClient = async (id: string, data: ClientType): Promise<ClientType> => {
+  const { body } = await requestApi(ApiRequests.UPDATE_CLIENT, {
+    body: data,
+    pathParams: { id },
+  });
+
+  return body;
+};

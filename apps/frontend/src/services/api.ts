@@ -18,6 +18,7 @@ const BASE_URL =
     : "https://crm-backend-8k3c.onrender.com";
 
 console.log("[api] BASE_URL", env);
+
 /**
  * It replaces the path params in the path
  *
@@ -61,9 +62,9 @@ export const replaceParams = (
 export const requestApi = async <T extends ApiRequests>(
   request: T,
   options?: {
-    body?: ApiRequestBodyType[T];
-    queryParams?: ApiRequestQueryType[T];
-    pathParams?: ApiPathParamsType[T];
+    body?: T extends keyof ApiRequestBodyType ? ApiRequestBodyType[T] : never;
+    queryParams?: T extends keyof ApiRequestQueryType ? ApiRequestQueryType[T] : never;
+    pathParams?: T extends keyof ApiPathParamsType ? ApiPathParamsType[T] : never;
   }
 ): Promise<{
   body: ApiResponseType[T];
@@ -73,8 +74,8 @@ export const requestApi = async <T extends ApiRequests>(
 
   const route = `${BASE_URL}${replaceParams(
     ApiRequestPaths[request],
-    options?.pathParams as unknown as Record<string, string>,
-    options?.queryParams as unknown as Record<string, string>
+    options?.pathParams as Record<string, string>,
+    options?.queryParams as Record<string, string>
   )}`;
 
   console.log(
