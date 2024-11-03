@@ -14,7 +14,6 @@ const NewClientPage = () => {
     city: "",
     email: "",
     phone: "",
-    contacts: [],
     isActive: true,
   });
 

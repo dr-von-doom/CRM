@@ -48,7 +48,6 @@ export type Client = {
   city: string;
   email: string;
   phone: string;
-  contacts: Contact[];
   isActive: boolean;
 };
 
