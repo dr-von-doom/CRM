@@ -1,9 +1,10 @@
+import BaseLayout from "../layout/BaseLayout";
+
 export const HomePage = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <BaseLayout title="Home">
       <p>Welcome to the home page!</p>
-    </div>
+    </BaseLayout>
   );
 };
 

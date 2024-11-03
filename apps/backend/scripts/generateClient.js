@@ -1,5 +1,5 @@
-import { faker } from "@faker-js/faker";
-import { writeFileSync } from "fs";
+const { faker } = require("@faker-js/faker");
+const { writeFileSync } = require("fs");
 
 const clients = [];
 
