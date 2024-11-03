@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ClientForm from "../../components/ClientForm/ClientForm";
-import ContactForm from "../../components/ContactForm/ContactForm";
-import { Client, Contact } from "../../types/api.types";
+import ClientForm from "../components/ClientForm/ClientForm";
+import ContactForm from "../components/ContactForm/ContactForm";
+import { Client, Contact } from "../types/api.types";
 
 
 const NewClientPage = () => {

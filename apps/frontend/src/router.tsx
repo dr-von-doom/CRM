@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import NewClientPage from "./pages/NewClientPage/NewClientPage";
+import NewClientPage from "./pages/NewClientPage";
 
 const router = createBrowserRouter([
   {
