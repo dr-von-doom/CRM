@@ -13,8 +13,11 @@ const env = process.env.NODE_ENV;
 const BASE_URL =
   env === "development"
     ? "http://localhost:3000"
-    : "https://exclusive-be.onrender.com";
+    : env === "storybook"
+    ? ""
+    : "https://crm-backend-8k3c.onrender.com";
 
+console.log("[api] BASE_URL", env);
 /**
  * It replaces the path params in the path
  *
@@ -22,16 +25,27 @@ const BASE_URL =
  * @param {object} pathParams - path params to be replaced
  * @returns it replaces the path params in the path
  */
-export const replacePathParams = (
+export const replaceParams = (
   path: string,
-  pathParams?: Record<string, string>
+  pathParams?: Record<string, string>,
+  queryParams?: Record<string, string>
 ) => {
-  if (!pathParams) return path;
+  // Replace path params
+  const route = pathParams
+    ? Object.entries(pathParams).reduce(
+        (acc, [key, value]) => acc.replace(`:${key}`, value),
+        path
+      )
+    : path;
 
-  return Object.entries(pathParams).reduce(
-    (acc, [key, value]) => acc.replace(`:${key}`, value),
-    path
-  );
+  if (!queryParams) return route;
+
+  // Replace query params
+  const _queryParams: string = queryParams
+    ? new URLSearchParams(queryParams as Record<string, string>).toString()
+    : "";
+
+  return `${route}?${_queryParams}`;
 };
 
 /**
@@ -51,22 +65,23 @@ export const requestApi = async <T extends ApiRequests>(
     queryParams?: ApiRequestQueryType[T];
     pathParams?: ApiPathParamsType[T];
   }
-): Promise<ApiResponseType[T]> => {
+): Promise<{
+  body: ApiResponseType[T];
+  headers: Headers;
+}> => {
   const isFormData = (options?.body ?? {}) instanceof FormData;
 
-  const queryParams: string = options?.queryParams
-    ? new URLSearchParams(options?.queryParams).toString()
-    : "";
-
-  const route = replacePathParams(
+  const route = `${BASE_URL}${replaceParams(
     ApiRequestPaths[request],
-    options?.pathParams ?? {}
+    options?.pathParams as unknown as Record<string, string>,
+    options?.queryParams as unknown as Record<string, string>
+  )}`;
+
+  console.log(
+    `[requestApi] fetching: {${ApiRequestMethods[request]}} ${route}`
   );
 
-  const ep = `${BASE_URL}${route}?${queryParams}`;
-  console.log(`fetching: {${ApiRequestMethods[request]}} ${ep}`);
-
-  const response = await fetch(ep, {
+  const response = await fetch(route, {
     method: ApiRequestMethods[request],
     headers: {
       ...(isFormData ? {} : { "Content-Type": "application/json" }),
@@ -74,5 +89,16 @@ export const requestApi = async <T extends ApiRequests>(
     body: options?.body ? JSON.stringify(options?.body) : null,
   });
 
-  return response.json() ?? ({} as ApiResponseType[T]);
+  if (!response.ok) {
+    throw new Error(`[requestApi] HTTP error! status: ${response.status}`);
+  }
+
+  const responseBody = (await response.json()) as ApiResponseType[T];
+
+  console.log("[requestApi] response", response);
+
+  return {
+    body: responseBody,
+    headers: response.headers,
+  };
 };
