@@ -32,3 +32,23 @@ export type ApiPathParamsType = {
 export type ApiResponseType = {
   [ApiRequests.CHECK_HEALTH]: { message: string };
 };
+
+export type Contact = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+};
+
+export type Client = {
+  nit: string;
+  fullName: string;
+  address: string;
+  country: string;
+  city: string;
+  email: string;
+  phone: string;
+  contacts: Contact[];
+  isActive: boolean;
+};
+
