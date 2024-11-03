@@ -24,7 +24,8 @@ export const Header = ({
       sx={{
         width: { sm: `calc(100% - ${SIDEBAR_WIDTH}px)` },
         ml: { sm: `${SIDEBAR_WIDTH}px` }, // offset for drawer width on larger screens
-        zIndex: (theme) => theme.zIndex.drawer + 1,
+        zIndex: (theme: { zIndex: { drawer: number } }) =>
+          theme.zIndex.drawer + 1,
         backgroundColor: isMobile ? "#283444" : "white",
         color: isMobile ? "#eeeeee" : "black",
         boxShadow: "none",

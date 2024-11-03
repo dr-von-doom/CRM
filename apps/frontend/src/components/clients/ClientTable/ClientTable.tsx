@@ -1,28 +1,29 @@
 import EditIcon from "@mui/icons-material/Edit";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"; // Icon for "Open"
-import { Box, IconButton, Switch } from "@mui/material";
+import { Box, CircularProgress, IconButton, Switch } from "@mui/material";
 import { DataGrid, GridRowParams } from "@mui/x-data-grid";
-import { useState } from "react";
+import { FC, useState } from "react";
 import useGetClients from "../../../hooks/useGetClients";
 import { CLIENTS_PAGE_SIZE } from "../../../utils/const";
+import { ErrorAlert } from "../../common/alerts";
 import {
   ClientDataGridColumns,
   ClientDataGridColumnVisibility,
 } from "./ClientTable.types";
 
-export interface ClientTableProps {
-  onSelect?: (clientId: string) => void;
-  onEdit?: (clientId: string) => void;
-  onDelete?: (clientId: string) => void;
-}
+export type ClientTableProps = {
+  onSelect: (clientId: string) => void;
+  onEdit: (clientId: string) => void;
+  onDelete: (clientId: string) => void;
+};
 
 /**
  * Client table component
  */
-export const ClientTable = ({
-  onSelect = () => {},
-  onEdit = () => {},
-  onDelete = () => {},
+export const ClientTable: FC<ClientTableProps> = ({
+  onSelect,
+  onEdit,
+  onDelete,
 }: ClientTableProps) => {
   const [page, setPage] = useState(1);
   const { data, isLoading, isError } = useGetClients(page);
@@ -91,8 +92,23 @@ export const ClientTable = ({
     },
   ];
 
+  if (isLoading) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+        }}
+      >
+        <CircularProgress />;
+      </Box>
+    );
+  }
+
   if (isError) {
-    return <>Error...</>;
+    return <ErrorAlert />;
   }
 
   return (
@@ -111,7 +127,7 @@ export const ClientTable = ({
           (totalPage ? totalPage * CLIENTS_PAGE_SIZE : clients?.length) ?? 0
         }
         paginationMode="server"
-        onPaginationModelChange={(newPaginationModel) => {
+        onPaginationModelChange={(newPaginationModel: { page: number }) => {
           setPage(newPaginationModel.page + 1);
         }}
         disableColumnMenu

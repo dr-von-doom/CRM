@@ -31,9 +31,9 @@ const ClientPage = () => {
 
   const panels = {
     [ClientSidePanelType.CLIENT_DETAILS]: (
-      <p>Client details {selectedClientId}</p>
+      <Typography>Client details {selectedClientId}</Typography>
     ),
-    [ClientSidePanelType.CREATE_CLIENT]: <p>Create client</p>,
+    [ClientSidePanelType.CREATE_CLIENT]: <Typography>Create client</Typography>,
   };
 
   return (
@@ -59,7 +59,6 @@ const ClientPage = () => {
         <Box
           sx={{
             flex: 1,
-            overflow: "auto",
             [theme.breakpoints.up("sm")]: {
               paddingLeft: theme.spacing(3),
               paddingRight: theme.spacing(3),
@@ -67,9 +66,15 @@ const ClientPage = () => {
           }}
         >
           <ClientTable
-            onSelect={(clientId) => {
+            onSelect={(clientId: string) => {
               setSelectedClientId(clientId);
               openPanel(ClientSidePanelType.CLIENT_DETAILS);
+            }}
+            onDelete={(clientId: string) => {
+              console.log("Delete client", clientId);
+            }}
+            onEdit={(clientId: string) => {
+              console.log("Edit client", clientId);
             }}
           />
         </Box>

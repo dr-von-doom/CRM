@@ -65,11 +65,15 @@ export const SideBar = ({
               component={Link}
               to={path!}
               onClick={() => setIsSideBarOpen(false)}
-              onMouseEnter={(e) =>
+              onMouseEnter={(e: {
+                currentTarget: { style: { backgroundColor: string } };
+              }) =>
                 (e.currentTarget.style.backgroundColor =
                   location.pathname === path ? "#1e293a" : "#202c3f")
               }
-              onMouseLeave={(e) =>
+              onMouseLeave={(e: {
+                currentTarget: { style: { backgroundColor: string } };
+              }) =>
                 (e.currentTarget.style.backgroundColor =
                   location.pathname === path ? "#1e293a" : "transparent")
               }
