@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import { routes } from "../../router";
-import { SIDEBAR_WIDTH } from "../../utils/conts";
+import { SIDEBAR_WIDTH } from "../../utils/const";
 
 export interface SideBarProps {
   isMobile: boolean;

@@ -1,6 +1,6 @@
 import { ApiRequests } from "../types/api.types";
 import { ClientType } from "../types/client.types";
-import { CLIENTS_PAGE_SIZE } from "../utils/conts";
+import { CLIENTS_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
 /**

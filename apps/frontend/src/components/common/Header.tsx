@@ -1,7 +1,7 @@
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
-import { SIDEBAR_WIDTH } from "../../utils/conts";
+import { SIDEBAR_WIDTH } from "../../utils/const";
 
 export interface HeaderProps {
   title: string;
@@ -16,6 +16,8 @@ export const Header = ({
   isSideBarOpen,
   toggleSideBar,
 }: HeaderProps) => {
+  if (!isMobile) return null;
+
   return (
     <AppBar
       position="fixed"

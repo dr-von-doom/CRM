@@ -15,10 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "@crm/backend": "^0.0.0",
-    "@crm/frontend": "^0.0.0",
-    "faker": "^6.6.6"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^9.1.0"
+    "@crm/frontend": "^0.0.0"
   }
 }

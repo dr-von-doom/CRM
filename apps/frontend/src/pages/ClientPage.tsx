@@ -1,5 +1,6 @@
 import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
+import ClientTable from "../components/clients/ClientTable/ClientTable";
 import SidePanel from "../components/common/SidePanel";
 import BaseLayout from "../layout/BaseLayout";
 
@@ -65,15 +66,12 @@ const ClientPage = () => {
             },
           }}
         >
-          <Button
-            onClick={() => {
-              setSelectedClientId("1");
+          <ClientTable
+            onSelect={(clientId) => {
+              setSelectedClientId(clientId);
               openPanel(ClientSidePanelType.CLIENT_DETAILS);
             }}
-            variant="outlined"
-          >
-            open client details
-          </Button>
+          />
         </Box>
 
         <SidePanel
