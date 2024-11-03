@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import { routes } from "../../router";
-import { SIDEBAR_WIDTH } from "../../utils/conts";
+import { SIDEBAR_WIDTH } from "../../utils/const";
 
 export interface SideBarProps {
   isMobile: boolean;
@@ -65,11 +65,15 @@ export const SideBar = ({
               component={Link}
               to={path!}
               onClick={() => setIsSideBarOpen(false)}
-              onMouseEnter={(e) =>
+              onMouseEnter={(e: {
+                currentTarget: { style: { backgroundColor: string } };
+              }) =>
                 (e.currentTarget.style.backgroundColor =
                   location.pathname === path ? "#1e293a" : "#202c3f")
               }
-              onMouseLeave={(e) =>
+              onMouseLeave={(e: {
+                currentTarget: { style: { backgroundColor: string } };
+              }) =>
                 (e.currentTarget.style.backgroundColor =
                   location.pathname === path ? "#1e293a" : "transparent")
               }

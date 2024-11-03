@@ -1,7 +1,7 @@
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
-import { SIDEBAR_WIDTH } from "../../utils/conts";
+import { SIDEBAR_WIDTH } from "../../utils/const";
 
 export interface HeaderProps {
   title: string;
@@ -16,13 +16,16 @@ export const Header = ({
   isSideBarOpen,
   toggleSideBar,
 }: HeaderProps) => {
+  if (!isMobile) return null;
+
   return (
     <AppBar
       position="fixed"
       sx={{
         width: { sm: `calc(100% - ${SIDEBAR_WIDTH}px)` },
         ml: { sm: `${SIDEBAR_WIDTH}px` }, // offset for drawer width on larger screens
-        zIndex: (theme) => theme.zIndex.drawer + 1,
+        zIndex: (theme: { zIndex: { drawer: number } }) =>
+          theme.zIndex.drawer + 1,
         backgroundColor: isMobile ? "#283444" : "white",
         color: isMobile ? "#eeeeee" : "black",
         boxShadow: "none",

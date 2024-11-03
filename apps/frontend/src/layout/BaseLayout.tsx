@@ -2,7 +2,7 @@ import { Box, CssBaseline, useMediaQuery, useTheme } from "@mui/material";
 import { useState } from "react";
 import Header from "../components/common/Header";
 import SideBar from "../components/common/SideBar";
-import { SIDEBAR_WIDTH } from "../utils/conts";
+import { SIDEBAR_WIDTH } from "../utils/const";
 
 export interface BaseLayoutProps {
   title?: string;
@@ -19,7 +19,13 @@ const BaseLayout = ({ title = "CRM", children }: BaseLayoutProps) => {
   };
 
   return (
-    <Box sx={{ display: "flex", height: "100vh" }}>
+    <Box
+      sx={{
+        display: "flex",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
+    >
       <CssBaseline />
 
       <Header
@@ -41,8 +47,8 @@ const BaseLayout = ({ title = "CRM", children }: BaseLayoutProps) => {
         sx={{
           flexGrow: 1,
           p: 3,
-          mt: 7, // offset for AppBar height
-          width: { sm: `calc(100% - ${SIDEBAR_WIDTH}px)` },
+          mt: isMobile ? 7 : 0,
+          width: { sm: `calc(100% - ${SIDEBAR_WIDTH}px)`, maxWidth: "100%" },
           backgroundColor: "#f7f9fc",
         }}
       >

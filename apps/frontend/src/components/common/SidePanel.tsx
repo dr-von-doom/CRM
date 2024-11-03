@@ -21,13 +21,13 @@ interface SidePanelProps {
   width?: number; // optional width for desktop drawer
 }
 
-const SidePanel: React.FC<SidePanelProps> = ({
+export const SidePanel = ({
   isOpen,
   onClose,
   title,
   children,
   width = 400,
-}) => {
+}: SidePanelProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
