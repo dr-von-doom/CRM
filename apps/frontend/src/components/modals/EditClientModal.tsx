@@ -24,7 +24,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
   clientData,
   onUpdate,
 }) => {
-  const { mutate: updateClientHandler, isLoading, isError } = useUpdateClient();
+  const { mutate: updateClientHandler, isError } = useUpdateClient(); 
 
   const { control, handleSubmit, reset } = useForm<ClientType>({
     defaultValues: clientData,
@@ -79,7 +79,6 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
                       {...field}
                       fullWidth
                       label={field.name}
-                      disabled={isLoading}
                     />
                   )}
                 />
@@ -87,16 +86,15 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
             ))}
           </Grid>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 3 }}>
-            <Button variant="outlined" onClick={onClose} color='error' sx={{ mr: 2 }} disabled={isLoading}>
+            <Button variant="outlined" onClick={onClose} color='error' sx={{ mr: 2 }}>
               Cancel
             </Button>
             <Button
               variant="outlined"
               type="submit"
               color="primary"
-              disabled={isLoading}
             >
-              {isLoading ? 'Updating...' : 'Update'}
+              Update
             </Button>
           </Box>
           {isError && (
