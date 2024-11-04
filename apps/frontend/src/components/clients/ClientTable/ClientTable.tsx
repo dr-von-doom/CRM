@@ -9,7 +9,7 @@ import { useState } from "react";
 import useGetClients from "../../../hooks/useGetClients";
 import { ClientType } from "../../../types/client.types";
 import { CLIENTS_PAGE_SIZE } from "../../../utils/conts";
-import EditClientModal from './EditClientModal'; // Asegúrate de que la ruta sea correcta
+import EditClientModal from '../../modals/EditClientModal'; // Asegúrate de que la ruta sea correcta
 
 /** Client data grid columns definition */
 const ClientDataGridColumns: GridColDef<ClientType>[] = [

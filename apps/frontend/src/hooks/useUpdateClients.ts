@@ -1,27 +1,29 @@
-import { useCallback } from 'react';
+import { useMutation } from 'react-query';
 import { ClientType } from '../types/client.types';
 import { updateClient } from '../services/client.service';
 
 /**
- * Custom hook for updating a client.
+ * Custom hook for updating a client using React Query's useMutation.
  * 
- * @returns {function} updateClientHandler - A function to call to update a client
+ * @returns {object}
  */
 const useUpdateClient = () => {
-  const updateClientHandler = useCallback(
-    async (id: string, clientData: ClientType) => {
-      try {
-        const updatedClient = await updateClient(id, clientData);
-        return updatedClient;
-      } catch (error) {
-        console.error("Error updating client:", error);
-        throw error; // Rethrow the error to be handled by the caller
-      }
+  const mutation = useMutation(
+    async ({ id, clientData }: { id: string; clientData: ClientType }) => {
+      const updatedClient = await updateClient(id, clientData);
+      return updatedClient;
     },
-    []
+    {
+      onError: (error) => {
+        console.error("Error updating client:", error);
+      },
+      onSuccess: (data) => {
+        console.log("Client updated successfully:", data);
+      },
+    }
   );
 
-  return { updateClientHandler };
+  return mutation;
 };
 
 export default useUpdateClient;
