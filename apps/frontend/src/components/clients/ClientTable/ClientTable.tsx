@@ -1,8 +1,8 @@
+import  { FC, useState } from "react";
 import EditIcon from "@mui/icons-material/Edit";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew"; // Icon for "Open"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Box, CircularProgress, IconButton, Switch } from "@mui/material";
 import { DataGrid, GridRowParams } from "@mui/x-data-grid";
-import { FC, useState } from "react";
 import useGetClients from "../../../hooks/useGetClients";
 import { CLIENTS_PAGE_SIZE } from "../../../utils/const";
 import { ErrorAlert } from "../../common/alerts";
@@ -10,6 +10,9 @@ import {
   ClientDataGridColumns,
   ClientDataGridColumnVisibility,
 } from "./ClientTable.types";
+import EditClientModal from "../../modals/EditClientModal"; 
+import { ClientType } from "../../../types/client.types";
+
 
 export type ClientTableProps = {
   onSelect: (clientId: string) => void;
@@ -22,12 +25,23 @@ export type ClientTableProps = {
  */
 export const ClientTable: FC<ClientTableProps> = ({
   onSelect,
-  onEdit,
   onDelete,
 }: ClientTableProps) => {
   const [page, setPage] = useState(1);
   const { data, isLoading, isError } = useGetClients(page);
   const { clients, totalPage } = data || {};
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedClient, setSelectedClient] = useState<ClientType | null>(null);
+
+  const handleEditClient = (clientId: string) => {
+    const clientToEdit = clients?.find(client => client.id === clientId) || null;
+    setSelectedClient(clientToEdit);
+    setModalOpen(true);
+  };
+
+  const handleUpdateClient = (updatedClient: ClientType) => {
+    console.log("Updated client:", updatedClient);
+  };
 
   /**
    * Client open button component
@@ -45,7 +59,7 @@ export const ClientTable: FC<ClientTableProps> = ({
    */
   const EditButton = ({ clientId }: { clientId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onEdit(clientId)}>
+      <IconButton color="primary" onClick={() => handleEditClient(clientId)}>
         <EditIcon />
       </IconButton>
     );
@@ -132,6 +146,14 @@ export const ClientTable: FC<ClientTableProps> = ({
         }}
         disableColumnMenu
       />
+       {modalOpen && (
+        <EditClientModal
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          clientData={selectedClient!}
+          onUpdate={handleUpdateClient}
+        />
+      )}
     </Box>
   );
 };

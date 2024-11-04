@@ -61,9 +61,9 @@ export const replaceParams = (
 export const requestApi = async <T extends ApiRequests>(
   request: T,
   options?: {
-    body?: ApiRequestBodyType[T];
-    queryParams?: ApiRequestQueryType[T];
-    pathParams?: ApiPathParamsType[T];
+    body?: T extends keyof ApiRequestBodyType ? ApiRequestBodyType[T] : never;
+    queryParams?: T extends keyof ApiRequestQueryType ? ApiRequestQueryType[T] : never;
+    pathParams?: T extends keyof ApiPathParamsType ? ApiPathParamsType[T] : never;
   }
 ): Promise<{
   body: ApiResponseType[T];
