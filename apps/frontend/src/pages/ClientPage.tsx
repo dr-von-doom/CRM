@@ -3,6 +3,7 @@ import { useState } from "react";
 import ClientTable from "../components/clients/ClientTable/ClientTable";
 import SidePanel from "../components/common/SidePanel";
 import BaseLayout from "../layout/BaseLayout";
+import ClientDetails from '../components/clients/ClientDetails'; 
 
 enum ClientSidePanelType {
   CLIENT_DETAILS = "CLIENT_DETAILS",
@@ -18,11 +19,13 @@ const ClientPage = () => {
   const theme = useTheme();
 
   const [selectedClientId, setSelectedClientId] = useState<string | null>(null);
-  const [sidePanelType, setSidePanelType] =
-    useState<ClientSidePanelType | null>(null);
+  const [sidePanelType, setSidePanelType] = useState<ClientSidePanelType | null>(null);
 
-  const openPanel = (type: ClientSidePanelType) => {
+  const openPanel = (type: ClientSidePanelType, clientId?: string) => {
     setSidePanelType(type);
+    if (type === ClientSidePanelType.CLIENT_DETAILS) {
+      setSelectedClientId(clientId || null);
+    }
   };
 
   const closePanel = () => {
@@ -31,7 +34,7 @@ const ClientPage = () => {
 
   const panels = {
     [ClientSidePanelType.CLIENT_DETAILS]: (
-      <Typography>Client details {selectedClientId}</Typography>
+      <ClientDetails clientId={selectedClientId} /> //Client Details! 
     ),
     [ClientSidePanelType.CREATE_CLIENT]: <Typography>Create client</Typography>,
   };
@@ -67,8 +70,7 @@ const ClientPage = () => {
         >
           <ClientTable
             onSelect={(clientId: string) => {
-              setSelectedClientId(clientId);
-              openPanel(ClientSidePanelType.CLIENT_DETAILS);
+              openPanel(ClientSidePanelType.CLIENT_DETAILS, clientId);
             }}
             onDelete={(clientId: string) => {
               console.log("Delete client", clientId);
