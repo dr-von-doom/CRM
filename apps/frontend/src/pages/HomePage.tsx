@@ -1,10 +1,10 @@
-import ClientTable from "../components/clients/ClientTable/ClientTable";
+import BaseLayout from "../layout/BaseLayout";
 
 export const HomePage = () => {
   return (
-    <div>
-      <ClientTable></ClientTable>
-    </div>
+    <BaseLayout title="Home">
+      <p>Welcome to the home page!</p>
+    </BaseLayout>
   );
 };
 

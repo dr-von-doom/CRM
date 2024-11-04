@@ -18,7 +18,6 @@ const BASE_URL =
     : "https://crm-backend-8k3c.onrender.com";
 
 console.log("[api] BASE_URL", env);
-
 /**
  * It replaces the path params in the path
  *
@@ -74,8 +73,8 @@ export const requestApi = async <T extends ApiRequests>(
 
   const route = `${BASE_URL}${replaceParams(
     ApiRequestPaths[request],
-    options?.pathParams as Record<string, string>,
-    options?.queryParams as Record<string, string>
+    options?.pathParams as unknown as Record<string, string>,
+    options?.queryParams as unknown as Record<string, string>
   )}`;
 
   console.log(

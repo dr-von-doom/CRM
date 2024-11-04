@@ -4,16 +4,26 @@ import { http, HttpResponse } from "msw";
 import { ApiRequestPaths } from "../../../types/api.types";
 import ClientTable from "./ClientTable";
 
-const meta = {
+const meta: Meta<typeof ClientTable> = {
   component: ClientTable,
-} satisfies Meta<typeof ClientTable>;
+};
 
 export default meta;
 
 type StoryType = StoryObj<typeof meta>;
 
 export const Default: StoryType = {
-  args: {},
+  args: {
+    onSelect: (clientId: string) => {
+      console.log("onSelect", clientId);
+    },
+    onEdit: (clientId: string) => {
+      console.log("onEdit", clientId);
+    },
+    onDelete: (clientId: string) => {
+      console.log("onDelete", clientId);
+    },
+  },
   decorators: [
     (Story) => {
       const queryClient = new QueryClient(); // Create a new instance per story

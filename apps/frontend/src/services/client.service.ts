@@ -1,6 +1,6 @@
 import { ApiRequests } from "../types/api.types";
 import { ClientType } from "../types/client.types";
-import { CLIENTS_PAGE_SIZE } from "../utils/conts";
+import { CLIENTS_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
 /**
@@ -32,20 +32,4 @@ export const getClients = async (
       ? Math.floor(parseInt(totalCount) / CLIENTS_PAGE_SIZE)
       : null,
   };
-};
-
-/**
- * It updates a client in the API.
- *
- * @param {string} id - The ID of the client to update
- * @param {ClientType} data - The new data for the client
- * @returns {Promise<ClientType>} - The updated client data
- */
-export const updateClient = async (id: string, data: ClientType): Promise<ClientType> => {
-  const { body } = await requestApi(ApiRequests.UPDATE_CLIENT, {
-    body: data,
-    pathParams: { id },
-  });
-
-  return body;
 };
