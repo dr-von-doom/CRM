@@ -9,3 +9,10 @@ export interface ClientType {
   email: string;
   isActive: boolean;
 }
+
+export interface ContactType {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+}

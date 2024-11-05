@@ -41,7 +41,7 @@ const ClientPage = () => {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => {}}
+            onClick={() => { window.location.href = "/clients/create"; }}
             sx={{ ml: "auto" }}
           >
             Create Client

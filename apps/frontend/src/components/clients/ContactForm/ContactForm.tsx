@@ -1,9 +1,9 @@
-import { Contact } from "../../types/api.types";
+import { ContactType } from "../../../types/client.types";
 import { FiPlus } from "react-icons/fi";
 import { FaTrashAlt } from "react-icons/fa";
 
 type ContactFormProps = {
-  contacts: Contact[];
+  contacts: ContactType[];
   handleContactChange: (
     index: number,
     e: React.ChangeEvent<HTMLInputElement>
