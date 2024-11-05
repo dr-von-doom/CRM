@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ClientForm from "../components/ClientForm/ClientForm";
 import ContactForm from "../components/ContactForm/ContactForm";
-import { Client, Contact } from "../types/api.types";
+import { Contact } from "../types/api.types";
+import { ClientType } from "../types/client.types";
 import BaseLayout from "../layout/BaseLayout";
-import { useForm } from "react-hook-form";
 
 const CreateClientPage = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
-  const [client, setClient] = useState<Client>({
+  const [client, setClient] = useState<ClientType>({
+    id: "",
     nit: "",
-    fullName: "",
+    name: "",
     address: "",
     country: "",
     city: "",

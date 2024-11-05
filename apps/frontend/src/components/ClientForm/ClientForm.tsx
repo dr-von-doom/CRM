@@ -1,8 +1,8 @@
-import { Client } from "../../types/api.types";
+import { ClientType } from "../../types/client.types";
 
 
 type PersonalInfoProps = {
-  client: Client;
+  client: ClientType;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -34,7 +34,7 @@ const ClientForm = ({
           type="text"
           id="full-name"
           name="fullName"
-          value={client.fullName}
+          value={client.name}
           onChange={onChange}
           className="border border-black rounded-[4px] shadow-[0px_1.5px_0px_0px_rgba(0,0,0,0.9)] text-sm px-3 py-2 focus:ring-1 focus:ring-black focus:outline-none"
           placeholder="Enter full name..."

@@ -20,7 +20,6 @@ const routes = [
   },
   {
     path: "/clients/create",
-    icon: <PeopleIcon />,
     name: <CreateClientPage/>,
   }
 ];

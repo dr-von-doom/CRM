@@ -4,6 +4,18 @@ import { CLIENTS_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
 /**
+ * Create a new client in the API.
+ *
+ * @param {ClientType} clientData - The data for the new client.
+ * @returns {Promise<ClientType>} - The created client data.
+ */
+export const createClient = async (clientData: ClientType): Promise<ClientType> => {
+  const { body } = await requestApi(ApiRequests.CREATE_CLIENT, { body: clientData }); 
+  return body;
+}
+
+
+/**
  * Fetches clients from the API.
  *
  * @param {number} page - The page number to fetch.
