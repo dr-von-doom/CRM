@@ -1,10 +1,9 @@
 import { useRef, useState } from "react";
-import ClientForm from "../components/clients/ClientForm/ClientForm";
-import ContactForm from "../components/clients/ContactForm/ContactForm";
-import BaseLayout from "../layout/BaseLayout";
-import { ClientType } from "../types/client.types";
-import { ContactType } from "../types/client.types";
+import { ClientForm } from "../components/clients/ClientForm";
+import { ContactForm } from "../components/clients/ContactForm";
 import { useCreateClient } from "../hooks/useCreateClients";
+import BaseLayout from "../layout/BaseLayout";
+import { ClientType, ContactType } from "../types/client.types";
 
 const CreateClientPage = () => {
   const formRef = useRef<{ getValues: () => ClientType }>(null);

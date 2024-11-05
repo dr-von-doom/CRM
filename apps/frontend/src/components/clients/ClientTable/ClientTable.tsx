@@ -37,7 +37,7 @@ export const ClientTable: FC<ClientTableProps> = ({
   const { data, isLoading, isError } = useGetClients(page);
   const { mutate: updateClient, isPending } = useUpdateClient();
 
-  const { clients, totalPage } = data || {};
+  const { clients, totalCount } = data || {};
 
   const onDelete = (clientId: string, isActive: boolean) => {
     updateClient(
@@ -153,9 +153,7 @@ export const ClientTable: FC<ClientTableProps> = ({
           pageSize: CLIENTS_PAGE_SIZE,
         }}
         pageSizeOptions={[CLIENTS_PAGE_SIZE]}
-        rowCount={
-          (totalPage ? totalPage * CLIENTS_PAGE_SIZE : clients?.length) ?? 0
-        }
+        rowCount={totalCount ?? 0}
         paginationMode="server"
         onPaginationModelChange={(newPaginationModel: { page: number }) => {
           setPage(newPaginationModel.page + 1);

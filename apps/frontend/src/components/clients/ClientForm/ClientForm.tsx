@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle } from "react";
 import { useForm } from "react-hook-form";
 import { ClientType } from "../../../types/client.types";
 
-const ClientForm = forwardRef((_, ref) => {
+export const ClientForm = forwardRef((_, ref) => {
   const { register, getValues } = useForm<ClientType>();
 
   useImperativeHandle(ref, () => ({
@@ -12,7 +12,9 @@ const ClientForm = forwardRef((_, ref) => {
   return (
     <form className="flex flex-col gap-4">
       <div className="flex flex-col gap-1">
-        <label htmlFor="nit" className="text-xs">Nit:</label>
+        <label htmlFor="nit" className="text-xs">
+          Nit:
+        </label>
         <input
           type="text"
           id="nit"
@@ -22,7 +24,9 @@ const ClientForm = forwardRef((_, ref) => {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="full-name" className="text-xs">Full Name:</label>
+        <label htmlFor="full-name" className="text-xs">
+          Full Name:
+        </label>
         <input
           type="text"
           id="full-name"
@@ -32,7 +36,9 @@ const ClientForm = forwardRef((_, ref) => {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="address" className="text-xs">Address:</label>
+        <label htmlFor="address" className="text-xs">
+          Address:
+        </label>
         <input
           type="text"
           id="address"
@@ -43,7 +49,9 @@ const ClientForm = forwardRef((_, ref) => {
       </div>
       <div className="flex gap-3">
         <div className="flex flex-col gap-1 w-1/2">
-          <label htmlFor="country" className="text-xs">Country:</label>
+          <label htmlFor="country" className="text-xs">
+            Country:
+          </label>
           <input
             type="text"
             id="country"
@@ -53,7 +61,9 @@ const ClientForm = forwardRef((_, ref) => {
           />
         </div>
         <div className="flex flex-col gap-1 w-1/2">
-          <label htmlFor="city" className="text-xs">City:</label>
+          <label htmlFor="city" className="text-xs">
+            City:
+          </label>
           <input
             type="text"
             id="city"
@@ -65,7 +75,9 @@ const ClientForm = forwardRef((_, ref) => {
       </div>
       <div className="flex flex-col gap-3 md:flex-row">
         <div className="flex flex-col gap-1 md:w-1/2">
-          <label htmlFor="email" className="text-xs">Email:</label>
+          <label htmlFor="email" className="text-xs">
+            Email:
+          </label>
           <input
             type="email"
             id="email"
@@ -75,7 +87,9 @@ const ClientForm = forwardRef((_, ref) => {
           />
         </div>
         <div className="flex flex-col gap-1 md:w-1/2">
-          <label htmlFor="phone" className="text-xs">Phone:</label>
+          <label htmlFor="phone" className="text-xs">
+            Phone:
+          </label>
           <input
             type="tel"
             id="phone"

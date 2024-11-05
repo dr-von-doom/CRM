@@ -1,6 +1,6 @@
-import { ContactType } from "../../../types/client.types";
-import { FiPlus } from "react-icons/fi";
 import { FaTrashAlt } from "react-icons/fa";
+import { FiPlus } from "react-icons/fi";
+import { ContactType } from "../../../types/client.types";
 
 type ContactFormProps = {
   contacts: ContactType[];
@@ -12,7 +12,7 @@ type ContactFormProps = {
   handleAddContact: () => void;
 };
 
-const ContactForm = ({
+export const ContactForm = ({
   contacts,
   handleContactChange,
   handleRemoveContact,
