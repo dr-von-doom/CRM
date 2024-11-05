@@ -74,7 +74,7 @@ const NewClientPage = () => {
           />
           <button
             type="submit"
-            className="mt-8 rounded-md bg-neutral-800 text-white py-3 font-semibold transition-all hover:scale-105 hover:bg-black"
+            className="mt-8 rounded-md bg-neutral-700 text-white py-3 font-semibold transition-all hover:scale-105 hover:bg-black"
           >
             Submit
           </button>
