@@ -1,18 +1,22 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { ClientType } from '../types/client.types';
-import { updateClient } from '../services/client.service';
-import { ApiRequests } from '../types/api.types';
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { updateClient } from "../services/client.service";
+import { ApiRequests } from "../types/api.types";
+import { ClientType } from "../types/client.types";
 
 /**
  * Custom hook for updating a client using React Query's useMutation.
- * 
- * @returns {object}
  */
 const useUpdateClient = () => {
-  const queryClient = useQueryClient(); 
+  const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async ({ id, clientData }: { id: string; clientData: ClientType }) => {
+    mutationFn: async ({
+      id,
+      clientData,
+    }: {
+      id: string;
+      clientData: Partial<ClientType>;
+    }) => {
       return await updateClient(id, clientData);
     },
     onSuccess: () => {

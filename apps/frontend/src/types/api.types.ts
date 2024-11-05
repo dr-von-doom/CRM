@@ -4,6 +4,7 @@ export enum httpMethod {
   GET = "GET",
   POST = "POST",
   PUT = "PUT",
+  PATCH = "PATCH",
   DELETE = "DELETE",
 }
 
@@ -15,41 +16,48 @@ export interface paginationType {
 export enum ApiRequests {
   CHECK_HEALTH = "CHECK_HEALTH",
   GET_CLIENTS = "GET_CLIENTS",
-  UPDATE_CLIENT = "UPDATE_CLIENT", 
+  GET_CLIENT_BY_ID = "GET_CLIENT_BY_ID",
+  UPDATE_CLIENT = "UPDATE_CLIENT",
 }
 
 export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.CHECK_HEALTH]: "/",
   [ApiRequests.GET_CLIENTS]: "/clients",
-  [ApiRequests.UPDATE_CLIENT]: "/clients/:id", 
+  [ApiRequests.GET_CLIENT_BY_ID]: "/clients/:id",
+  [ApiRequests.UPDATE_CLIENT]: "/clients/:id",
 };
 
 export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.CHECK_HEALTH]: httpMethod.GET,
   [ApiRequests.GET_CLIENTS]: httpMethod.GET,
-  [ApiRequests.UPDATE_CLIENT]: httpMethod.PUT, 
+  [ApiRequests.GET_CLIENT_BY_ID]: httpMethod.GET,
+  [ApiRequests.UPDATE_CLIENT]: httpMethod.PATCH,
 };
 
 export type ApiRequestBodyType = {
   [ApiRequests.CHECK_HEALTH]: void;
   [ApiRequests.GET_CLIENTS]: void;
-  [ApiRequests.UPDATE_CLIENT]: ClientType; 
+  [ApiRequests.GET_CLIENT_BY_ID]: void;
+  [ApiRequests.UPDATE_CLIENT]: Partial<ClientType>;
 };
 
 export type ApiRequestQueryType = {
   [ApiRequests.CHECK_HEALTH]: void;
   [ApiRequests.GET_CLIENTS]: paginationType & {};
-  [ApiRequests.UPDATE_CLIENT]: void; 
+  [ApiRequests.GET_CLIENT_BY_ID]: void;
+  [ApiRequests.UPDATE_CLIENT]: void;
 };
 
 export type ApiPathParamsType = {
   [ApiRequests.CHECK_HEALTH]: void;
   [ApiRequests.GET_CLIENTS]: void;
-  [ApiRequests.UPDATE_CLIENT]: { id: string }; 
+  [ApiRequests.GET_CLIENT_BY_ID]: { id: string };
+  [ApiRequests.UPDATE_CLIENT]: { id: string };
 };
 
 export type ApiResponseType = {
   [ApiRequests.CHECK_HEALTH]: { message: string };
   [ApiRequests.GET_CLIENTS]: ClientType[];
-  [ApiRequests.UPDATE_CLIENT]: ClientType; 
+  [ApiRequests.GET_CLIENT_BY_ID]: ClientType;
+  [ApiRequests.UPDATE_CLIENT]: ClientType;
 };

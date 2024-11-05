@@ -20,9 +20,6 @@ export const Default: StoryType = {
     onEdit: (clientId: string) => {
       console.log("onEdit", clientId);
     },
-    onDelete: (clientId: string) => {
-      console.log("onDelete", clientId);
-    },
   },
   decorators: [
     (Story) => {
@@ -45,7 +42,7 @@ export const Default: StoryType = {
 
           console.log("[msw] _page", _page);
 
-          if (!_page || _page === "0")
+          if (!_page || _page === "1")
             return HttpResponse.json(
               [
                 {
@@ -78,7 +75,7 @@ export const Default: StoryType = {
               }
             );
 
-          if (_page === "1")
+          if (_page === "2")
             return HttpResponse.json(
               [
                 {
@@ -100,6 +97,24 @@ export const Default: StoryType = {
               }
             );
         }),
+        http.patch(
+          `${ApiRequestPaths.UPDATE_CLIENT}/33138dfc-983c-4b98-900e-cf4403d5d006`,
+          ({ request }) => {
+            return HttpResponse.json({ ...request.body });
+          }
+        ),
+        http.patch(
+          `${ApiRequestPaths.UPDATE_CLIENT}/9d8fed2b-0ff7-4fe4-b212-22cc5c01ad23`,
+          () => {
+            return HttpResponse.error();
+          }
+        ),
+        http.get(
+          `${ApiRequestPaths.GET_CLIENT_BY_ID}/33138dfc-983c-4b98-900e-cf4403d5d006`,
+          ({ request }) => {
+            return HttpResponse.json({ ...request.body });
+          }
+        ),
       ],
     },
   },
