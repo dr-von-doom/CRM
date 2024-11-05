@@ -62,6 +62,17 @@ const CreateClientPage = () => {
           >
             Submit
           </button>
+
+          {createClient.isSuccess && (
+            <div className="text-green-500 mt-4 bg-green-200 border-2 border-green-500 rounded-lg py-2 text-center">
+              Client created successfully!
+            </div>
+          )}
+          {createClient.isError && (
+            <div className="text-red-500 mt-4 bg-red-200 border-2 border-red-500 rounded-lg py-2 text-center">
+              An error occurred. Please try again.
+            </div>
+          )}
         </div>
       </section>
     </BaseLayout>
