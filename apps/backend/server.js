@@ -1,13 +1,8 @@
 const jsonServer = require("json-server");
-const fs = require("fs");
 const path = require("path");
 
 const server = jsonServer.create();
-const router = jsonServer.router({
-  clients: JSON.parse(
-    fs.readFileSync(path.join(__dirname, "data", "clients.json"))
-  ),
-});
+const router = jsonServer.router(path.join(__dirname, "data", "clients.json"));
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);

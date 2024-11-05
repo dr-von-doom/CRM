@@ -1,42 +1,31 @@
 import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
+import ClientDetails from "../components/clients/ClientDetails/ClientDetails";
 import ClientTable from "../components/clients/ClientTable/ClientTable";
+import EditClientModal from "../components/clients/EditClientModal/EditClientModal";
 import SidePanel from "../components/common/SidePanel";
 import BaseLayout from "../layout/BaseLayout";
-import ClientDetails from '../components/clients/ClientDetails'; 
-
-enum ClientSidePanelType {
-  CLIENT_DETAILS = "CLIENT_DETAILS",
-  CREATE_CLIENT = "CREATE_CLIENT",
-}
-
-const panelTitle = {
-  [ClientSidePanelType.CLIENT_DETAILS]: "Client Details",
-  [ClientSidePanelType.CREATE_CLIENT]: "Create Client",
-};
 
 const ClientPage = () => {
   const theme = useTheme();
 
   const [selectedClientId, setSelectedClientId] = useState<string | null>(null);
-  const [sidePanelType, setSidePanelType] = useState<ClientSidePanelType | null>(null);
 
-  const openPanel = (type: ClientSidePanelType, clientId?: string) => {
-    setSidePanelType(type);
-    if (type === ClientSidePanelType.CLIENT_DETAILS) {
-      setSelectedClientId(clientId || null);
-    }
+  const [sidePanelOpen, setSidePanelOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = (clientId?: string) => {
+    setModalOpen(true);
+    setSelectedClientId(clientId || null);
+  };
+
+  const openPanel = (clientId?: string) => {
+    setSidePanelOpen(true);
+    setSelectedClientId(clientId || null);
   };
 
   const closePanel = () => {
-    setSidePanelType(null);
-  };
-
-  const panels = {
-    [ClientSidePanelType.CLIENT_DETAILS]: (
-      <ClientDetails clientId={selectedClientId} /> //Client Details! 
-    ),
-    [ClientSidePanelType.CREATE_CLIENT]: <Typography>Create client</Typography>,
+    setSidePanelOpen(false);
   };
 
   return (
@@ -52,7 +41,7 @@ const ClientPage = () => {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => openPanel(ClientSidePanelType.CREATE_CLIENT)}
+            onClick={() => {}}
             sx={{ ml: "auto" }}
           >
             Create Client
@@ -70,24 +59,29 @@ const ClientPage = () => {
         >
           <ClientTable
             onSelect={(clientId: string) => {
-              openPanel(ClientSidePanelType.CLIENT_DETAILS, clientId);
-            }}
-            onDelete={(clientId: string) => {
-              console.log("Delete client", clientId);
+              openPanel(clientId);
             }}
             onEdit={(clientId: string) => {
-              console.log("Edit client", clientId);
+              openModal(clientId);
             }}
           />
         </Box>
 
         <SidePanel
-          isOpen={sidePanelType !== null}
+          isOpen={sidePanelOpen}
           onClose={closePanel}
-          title={sidePanelType ? panelTitle[sidePanelType] : ""}
+          title={"Client Details"}
         >
-          {sidePanelType && panels[sidePanelType as ClientSidePanelType]}
+          <ClientDetails clientId={selectedClientId!} />
         </SidePanel>
+
+        {modalOpen && (
+          <EditClientModal
+            open={modalOpen}
+            onClose={() => setModalOpen(false)}
+            clientId={selectedClientId ?? ""}
+          />
+        )}
       </Box>
     </BaseLayout>
   );
