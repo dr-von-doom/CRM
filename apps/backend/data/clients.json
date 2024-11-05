@@ -549,6 +549,16 @@
       "phone": "+15224498178",
       "email": "Virgie.Paucek0@yahoo.com",
       "isActive": true
+    },
+    {
+      "nit": "121212",
+      "name": "Diego Smith",
+      "address": "Street xyc",
+      "country": "Colombia",
+      "city": "Barranquilla",
+      "email": "combxpedagogo+802463@gmail.com",
+      "phone": "3023025249",
+      "id": "YDotdtW"
     }
   ]
 }

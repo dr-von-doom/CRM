@@ -26,7 +26,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_CLIENTS]: "/clients",
   [ApiRequests.GET_CLIENT_BY_ID]: "/clients/:id",
   [ApiRequests.UPDATE_CLIENT]: "/clients/:id",
-  [ApiRequests.CREATE_CLIENT]: "/clients/create",
+  [ApiRequests.CREATE_CLIENT]: "/clients",
 };
 
 export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
