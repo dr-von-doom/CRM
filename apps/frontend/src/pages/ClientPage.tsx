@@ -1,4 +1,11 @@
-import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Link,
+  Toolbar,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useState } from "react";
 import ClientDetails from "../components/clients/ClientDetails/ClientDetails";
 import ClientTable from "../components/clients/ClientTable/ClientTable";
@@ -39,9 +46,10 @@ const ClientPage = () => {
         >
           <Typography variant="h6">Clients list</Typography>
           <Button
+            component={Link}
+            href="/clients/create"
             variant="contained"
             color="primary"
-            onClick={() => { window.location.href = "/clients/create"; }}
             sx={{ ml: "auto" }}
           >
             Create Client
