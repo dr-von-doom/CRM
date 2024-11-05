@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ClientForm from "../components/clients/ClientForm/ClientForm";
 import ContactForm from "../components/clients/ContactForm/ContactForm";
-import { ClientType } from "../types/client.types";
 import BaseLayout from "../layout/BaseLayout";
+import { ClientType } from "../types/client.types";
 
 type Contact = {
   firstName: string;

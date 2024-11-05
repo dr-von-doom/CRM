@@ -2,8 +2,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import PeopleIcon from "@mui/icons-material/People";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ClientsPage from "./pages/ClientPage";
-import HomePage from "./pages/HomePage";
 import CreateClientPage from "./pages/CreateClientPage";
+import HomePage from "./pages/HomePage";
 
 const routes = [
   {
@@ -20,8 +20,9 @@ const routes = [
   },
   {
     path: "/clients/create",
-    name: <CreateClientPage/>,
-  }
+    hidden: true,
+    element: <CreateClientPage />,
+  },
 ];
 
 const router = createBrowserRouter(routes);
