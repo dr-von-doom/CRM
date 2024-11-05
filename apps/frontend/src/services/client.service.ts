@@ -4,34 +4,49 @@ import { CLIENTS_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
 /**
+ * Create a new client in the API.
+ *
+ * @param {ClientType} clientData - The data for the new client.
+ * @returns {Promise<ClientType>} - The created client data.
+ */
+export const createClient = async (
+  clientData: ClientType
+): Promise<ClientType> => {
+  const { body } = await requestApi(ApiRequests.CREATE_CLIENT, {
+    body: clientData,
+  });
+  return body;
+};
+
+/**
  * Fetches clients from the API.
  *
  * @param {number} page - The page number to fetch.
- * @param {number} totalPage - The number of clients to fetch per page.
+ * @param {number} totalPages - The number of clients to fetch per page.
  * @returns {Promise<{ clients: ClientType[]; totalPage: number | null }>} - The clients and total page count.
  */
 export const getClients = async (
   page: number = 1,
-  totalPage: number = CLIENTS_PAGE_SIZE
+  totalPages: number = CLIENTS_PAGE_SIZE
 ): Promise<{
   clients: ClientType[];
-  totalPage: number | null;
+  totalPages: number | null;
+  totalCount: number | null;
 }> => {
   const { body, headers } = await requestApi(ApiRequests.GET_CLIENTS, {
     queryParams: {
       _page: page,
-      _limit: totalPage,
+      _limit: totalPages,
     },
   });
 
-  const totalCount = headers.get("X-Total-Count");
+  const totalCount = parseInt(headers.get("X-Total-Count") ?? "0");
   console.log("[getClients] totalCount", totalCount);
 
   return {
     clients: body,
-    totalPage: totalCount
-      ? Math.floor(parseInt(totalCount) / CLIENTS_PAGE_SIZE)
-      : null,
+    totalPages: totalCount ? Math.ceil(totalCount / CLIENTS_PAGE_SIZE) : null,
+    totalCount,
   };
 };
 

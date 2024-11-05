@@ -18,6 +18,7 @@ export enum ApiRequests {
   GET_CLIENTS = "GET_CLIENTS",
   GET_CLIENT_BY_ID = "GET_CLIENT_BY_ID",
   UPDATE_CLIENT = "UPDATE_CLIENT",
+  CREATE_CLIENT = "CREATE_CLIENT",
 }
 
 export const ApiRequestPaths: Record<ApiRequests, string> = {
@@ -25,6 +26,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_CLIENTS]: "/clients",
   [ApiRequests.GET_CLIENT_BY_ID]: "/clients/:id",
   [ApiRequests.UPDATE_CLIENT]: "/clients/:id",
+  [ApiRequests.CREATE_CLIENT]: "/clients",
 };
 
 export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
@@ -32,6 +34,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.GET_CLIENTS]: httpMethod.GET,
   [ApiRequests.GET_CLIENT_BY_ID]: httpMethod.GET,
   [ApiRequests.UPDATE_CLIENT]: httpMethod.PATCH,
+  [ApiRequests.CREATE_CLIENT]: httpMethod.POST,
 };
 
 export type ApiRequestBodyType = {
@@ -39,6 +42,7 @@ export type ApiRequestBodyType = {
   [ApiRequests.GET_CLIENTS]: void;
   [ApiRequests.GET_CLIENT_BY_ID]: void;
   [ApiRequests.UPDATE_CLIENT]: Partial<ClientType>;
+  [ApiRequests.CREATE_CLIENT]: Partial<ClientType>;
 };
 
 export type ApiRequestQueryType = {
@@ -46,6 +50,7 @@ export type ApiRequestQueryType = {
   [ApiRequests.GET_CLIENTS]: paginationType & {};
   [ApiRequests.GET_CLIENT_BY_ID]: void;
   [ApiRequests.UPDATE_CLIENT]: void;
+  [ApiRequests.CREATE_CLIENT]: void;
 };
 
 export type ApiPathParamsType = {
@@ -53,6 +58,7 @@ export type ApiPathParamsType = {
   [ApiRequests.GET_CLIENTS]: void;
   [ApiRequests.GET_CLIENT_BY_ID]: { id: string };
   [ApiRequests.UPDATE_CLIENT]: { id: string };
+  [ApiRequests.CREATE_CLIENT]: void;
 };
 
 export type ApiResponseType = {
@@ -60,4 +66,5 @@ export type ApiResponseType = {
   [ApiRequests.GET_CLIENTS]: ClientType[];
   [ApiRequests.GET_CLIENT_BY_ID]: ClientType;
   [ApiRequests.UPDATE_CLIENT]: ClientType;
+  [ApiRequests.CREATE_CLIENT]: ClientType;
 };

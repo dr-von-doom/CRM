@@ -549,6 +549,36 @@
       "phone": "+15224498178",
       "email": "Virgie.Paucek0@yahoo.com",
       "isActive": true
+    },
+    {
+      "nit": "121212",
+      "name": "Diego Smith",
+      "address": "Street xyc",
+      "country": "Colombia",
+      "city": "Barranquilla",
+      "email": "combxpedagogo+802463@gmail.com",
+      "phone": "3023025249",
+      "id": "YDotdtW"
+    },
+    {
+      "nit": "aaaa",
+      "name": "Jon Stewart Doe",
+      "address": "1600 Fake Street",
+      "country": "Estados Unidos",
+      "city": "Mountain View",
+      "email": "test@example.us",
+      "phone": "6019521325",
+      "id": "3ev9d1z"
+    },
+    {
+      "nit": "",
+      "name": "",
+      "address": "",
+      "country": "",
+      "city": "",
+      "email": "",
+      "phone": "",
+      "id": "Njew2C4"
     }
   ]
 }
