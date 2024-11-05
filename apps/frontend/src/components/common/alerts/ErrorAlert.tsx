@@ -1,10 +1,18 @@
 import { Alert, AlertTitle } from "@mui/material";
 
-export const ErrorAlert = () => {
+export interface ErrorAlertProps {
+  title?: string;
+  description?: string;
+}
+
+export const ErrorAlert = ({
+  title = "Something went wrong",
+  description = "Please try again later. If the problem persists, please contact support.",
+}: ErrorAlertProps) => {
   return (
     <Alert severity="error">
-      <AlertTitle>Something went wrong</AlertTitle>
-      Please try again later. If the problem persists, please contact support.
+      <AlertTitle>{title}</AlertTitle>
+      {description}
     </Alert>
   );
 };

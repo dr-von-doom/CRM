@@ -1,9 +1,15 @@
 import { useState } from "react";
-import ClientForm from "../components/ClientForm/ClientForm";
-import ContactForm from "../components/ContactForm/ContactForm";
-import { Contact } from "../types/api.types";
+import ClientForm from "../components/clients/ClientForm/ClientForm";
+import ContactForm from "../components/clients/ContactForm/ContactForm";
 import { ClientType } from "../types/client.types";
 import BaseLayout from "../layout/BaseLayout";
+
+type Contact = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+};
 
 const CreateClientPage = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
