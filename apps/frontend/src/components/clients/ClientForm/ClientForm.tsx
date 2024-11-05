@@ -1,4 +1,4 @@
-import { ClientType } from "../../types/client.types";
+import { ClientType } from "../../../types/client.types";
 
 
 type PersonalInfoProps = {
