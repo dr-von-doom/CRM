@@ -1,20 +1,35 @@
+import HomeIcon from "@mui/icons-material/Home";
+import PeopleIcon from "@mui/icons-material/People";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ClientsPage from "./pages/ClientPage";
 import HomePage from "./pages/HomePage";
-import NewClientPage from "./pages/NewClientPage";
+import CreateClientPage from "./pages/CreateClientPage";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
+    name: "Home",
+    icon: <HomeIcon />,
     element: <HomePage />,
   },
   {
-    path: "/new-client",
-    element: <NewClientPage/>
+    path: "/clients",
+    name: "Clients",
+    icon: <PeopleIcon />,
+    element: <ClientsPage />,
+  },
+  {
+    path: "/clients/create",
+    icon: <PeopleIcon />,
+    name: <CreateClientPage/>,
   }
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 export const AppRouter = () => {
   return <RouterProvider router={router} />;
 };
 
+export { routes };
 export default AppRouter;
