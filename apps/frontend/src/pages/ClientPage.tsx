@@ -1,12 +1,6 @@
-import {
-  Box,
-  Button,
-  Link,
-  Toolbar,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ClientDetails from "../components/clients/ClientDetails/ClientDetails";
 import ClientTable from "../components/clients/ClientTable/ClientTable";
 import EditClientModal from "../components/clients/EditClientModal/EditClientModal";
@@ -47,7 +41,7 @@ const ClientPage = () => {
           <Typography variant="h6">Clients list</Typography>
           <Button
             component={Link}
-            href="/clients/create"
+            to={"/clients/create"}
             variant="contained"
             color="primary"
             sx={{ ml: "auto" }}
