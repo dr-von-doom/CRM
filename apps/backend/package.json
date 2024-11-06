@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "generate:clients": "node scripts/generateClient.js"
+    "generate:clients": "node scripts/generateClient.js",
+    "generate:contacts": "node scripts/generateContact.js",
+    "generate:opportunities": "node scripts/generateOpportunities.js"
   },
   "type": "commonjs",
   "keywords": [],
