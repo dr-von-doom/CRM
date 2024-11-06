@@ -1,0 +1,304 @@
+{
+  "": [
+    {
+      "id": "63dfb462-d395-4463-9c7c-f79e00a30b6f",
+      "clientId": "409fdaa5-70a6-44c7-ae1e-3ec5107eaa89",
+      "businessType": "outsourcing",
+      "description": "Amita vicinus creo magni patruus. Crapula expedita laboriosam pauci corrumpo patior audacia compello veritas. Repellat cibo tener.",
+      "budget": "238.48",
+      "estimatedDate": "2025-06-14T23:46:52.854Z",
+      "status": "open",
+      "isDeleted": false
+    },
+    {
+      "id": "59bc690d-93ba-4f8d-8f6b-2c4236afff1c",
+      "clientId": "YDotdtW",
+      "businessType": "web_dev",
+      "description": "Temperantia colo cornu totam acceptus. Defungo aut delicate sortitus. Alias conicio thermae absconditus temperantia.",
+      "budget": "236.71",
+      "estimatedDate": "2025-04-26T23:37:19.733Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "50c29cd6-ce33-4844-9a1e-4b98744a3571",
+      "clientId": "4b7471a6-5838-45e4-bb6a-15028f63d77c",
+      "businessType": "mobile_dev",
+      "description": "Tamquam aliqua bardus dapifer vilicus cunctatio commodi bibo. Ullam decet vinum stipes explicabo cognatus aufero non. Vix custodia audax cunabula ullam.",
+      "budget": "936.20",
+      "estimatedDate": "2025-07-14T23:31:15.137Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "de4d2b80-69fa-43f2-9bcf-de43879970ef",
+      "clientId": "3ab848ac-752d-47f0-b5a5-d2b857799126",
+      "businessType": "mobile_dev",
+      "description": "Suffoco cohors voluptates cotidie ipsum et vallum ipsa cado. Bibo conicio crux conservo cohaero textor crustulum molestiae canto bis. Super inventore tempore dens sum viscus.",
+      "budget": "919.30",
+      "estimatedDate": "2024-12-24T11:08:42.489Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "b9e23d8b-a645-45d2-97d1-84a5bb93e6a9",
+      "clientId": "23318f14-2097-4c1a-a1ab-b0ffd0eb64be",
+      "businessType": "web_dev",
+      "description": "Velociter cattus quidem adflicto usitas arx acidus sapiente. Conventus corpus bos cicuta vero. Eaque solus thymum reprehenderit vapulus.",
+      "budget": "779.88",
+      "estimatedDate": "2025-07-29T05:14:32.344Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "113ecdfa-e2d5-4a7b-9bd7-2db92a8b67bd",
+      "clientId": "a3e287c6-f35f-4165-a6eb-3bfcf4ca17e8",
+      "businessType": "outsourcing",
+      "description": "Ex audentia articulus vehemens vitiosus vomer tricesimus bardus tamquam. Textor quaerat solus pauci praesentium creta stella. Tabgo accommodo amplus speciosus.",
+      "budget": "952.33",
+      "estimatedDate": "2025-04-10T10:05:47.496Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "82f41e89-aaff-4827-b3d6-7b04f7fdf664",
+      "clientId": "3ev9d1z",
+      "businessType": "mobile_dev",
+      "description": "Cursus denuncio vix crepusculum carbo varietas venustas cubo consequatur tempore. Aspicio deleo tribuo coniecto facilis apostolus umquam defleo ager. Articulus abbas degusto cohors.",
+      "budget": "812.05",
+      "estimatedDate": "2025-05-17T09:28:38.973Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "08be49d6-4adb-4742-ae5c-8c1a2be8480f",
+      "clientId": "4de74e93-6159-48cf-ae53-d460449e35e6",
+      "businessType": "web_dev",
+      "description": "Aveho curo magni aureus dignissimos defendo thymbra amissio dicta expedita. Adiuvo vilis decumbo comptus veniam anser decimus charisma caveo. Aliqua ducimus vado dolores venia cras.",
+      "budget": "263.22",
+      "estimatedDate": "2025-03-12T05:57:12.713Z",
+      "status": "open",
+      "isDeleted": false
+    },
+    {
+      "id": "5f966436-d2a5-401a-9e0d-bfd4d65affa1",
+      "clientId": "Njew2C4",
+      "businessType": "outsourcing",
+      "description": "Subito atavus usque ipsum solium. Crepusculum verbum confugo velit tremo tamdiu eaque ait cornu. Crepusculum sub vitiosus soluta cultellus conforto crudelis bis.",
+      "budget": "312.69",
+      "estimatedDate": "2025-03-01T10:54:59.366Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "8aa808a1-ebd4-4cbd-8a87-0da34b783ce7",
+      "clientId": "4de74e93-6159-48cf-ae53-d460449e35e6",
+      "businessType": "web_dev",
+      "description": "Ipsam audax apto spiritus stipes tempora defaeco. Amitto sto tendo ulterius ab aiunt. Vergo vociferor defessus adstringo eligendi.",
+      "budget": "133.96",
+      "estimatedDate": "2025-07-27T09:13:15.625Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "dfa4e34a-9fc0-4727-bdef-48e6b543b56c",
+      "clientId": "b4ce28b7-805b-48cc-a551-f9e9c82ad7d1",
+      "businessType": "mobile_dev",
+      "description": "Bis vilitas deserunt argumentum crux tempus thema varius cedo statim. Demulceo thorax tribuo asporto advenio tyrannus. Cometes surculus vicissitudo cunae truculenter turba comburo totidem veritatis.",
+      "budget": "17.75",
+      "estimatedDate": "2025-03-16T18:41:47.256Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "de4755e3-abb9-42ae-aa5f-4c1c52a50342",
+      "clientId": "b4ce28b7-805b-48cc-a551-f9e9c82ad7d1",
+      "businessType": "mobile_dev",
+      "description": "Claustrum confido venia ambulo succedo vulnero soleo cursim vesco magni. Beatus compono angustus apostolus capto cultellus anser acquiro comburo barba. Atavus clibanus custodia patrocinor confero alius.",
+      "budget": "390.60",
+      "estimatedDate": "2025-05-31T04:59:32.431Z",
+      "status": "open",
+      "isDeleted": false
+    },
+    {
+      "id": "d81f11d0-0fdf-4687-b535-3a30dd65eabe",
+      "clientId": "6f4336ef-abe0-40f8-8935-4ea71f0eec0c",
+      "businessType": "web_dev",
+      "description": "Solus caterva beatus tibi degero videlicet acies cattus credo. Usque attero denuncio velit sui adversus argentum tantillus aqua. Laudantium pel demitto delectatio solutio debeo iure altus.",
+      "budget": "167.53",
+      "estimatedDate": "2025-10-29T10:42:23.153Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "9c959159-c071-400d-88a9-55bc2d149380",
+      "clientId": "6b644196-01de-40f9-b02f-c08834cd7c34",
+      "businessType": "it_consulting",
+      "description": "Altus stabilis officiis sequi tantum vos aestivus. Tubineus suffragium vilicus vetus viduo. Tabesco thesaurus voluptates voluptatem caste avaritia amaritudo hic cultellus antea.",
+      "budget": "171.76",
+      "estimatedDate": "2024-11-10T17:27:39.187Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "6e0bd5f2-11b3-4fea-bbe9-de431c7cac6a",
+      "clientId": "0614aefe-b30b-4c6e-a230-1647e57399d9",
+      "businessType": "mobile_dev",
+      "description": "Ante video tabernus abstergo aedificium demens. Verbum libero suggero currus vinum talis. Demergo antepono comitatus.",
+      "budget": "309.40",
+      "estimatedDate": "2024-12-09T11:42:30.876Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "52265ac8-92c0-4db0-ad4e-6e381d227031",
+      "clientId": "6eac0475-7eac-4386-a301-da37ba4bf7f7",
+      "businessType": "it_consulting",
+      "description": "Carpo comes cavus baiulus pecco. Adsum in conforto ocer adsum tunc certe vinculum cometes nostrum. Caecus summisse tremo cohaero valeo repudiandae architecto sponte sollers.",
+      "budget": "468.65",
+      "estimatedDate": "2025-08-22T21:43:33.499Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "ac8dc2a5-ec03-440b-8daf-c685b11a1a3e",
+      "clientId": "1e055fbe-5aa3-4d7d-b4aa-f1446a8b570c",
+      "businessType": "web_dev",
+      "description": "Comburo ab aegre bestia defleo cupiditas consequatur curatio. Decipio ab urbanus argentum. Nisi coerceo saepe.",
+      "budget": "902.14",
+      "estimatedDate": "2025-05-06T04:37:42.860Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "37aaa341-f7b1-44ed-a38f-8e88289b4b54",
+      "clientId": "e2d02eb2-c368-4a58-a0c1-504bb54b5505",
+      "businessType": "mobile_dev",
+      "description": "Accusator voluptatibus infit tabgo. Coaegresco vulnus apto delinquo deorsum verbera via nobis tempore arx. Animadverto deorsum odio tyrannus somniculosus.",
+      "budget": "141.04",
+      "estimatedDate": "2024-12-16T14:07:15.621Z",
+      "status": "open",
+      "isDeleted": false
+    },
+    {
+      "id": "cc141558-13a6-4d43-a518-9595b428abc5",
+      "clientId": "8579d8ef-e9f8-41a3-9489-c6fbce5a183e",
+      "businessType": "it_consulting",
+      "description": "Tamisium adeo congregatio alias tamen architecto celebrer. Acsi vindico ciminatio circumvenio comminor aperiam amicitia claustrum campana. Vulticulus absque adulescens demitto.",
+      "budget": "492.18",
+      "estimatedDate": "2025-09-16T21:50:07.140Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "9738df93-6c7f-48cc-b4da-cc15b578a60b",
+      "clientId": "6cd4ae7b-38d0-40ed-9866-f9e5cd67080b",
+      "businessType": "web_dev",
+      "description": "Decens vapulus sulum vallum cerno tabella placeat. Porro adsidue inventore. Voveo peccatus adipiscor una.",
+      "budget": "336.44",
+      "estimatedDate": "2025-09-25T09:57:43.819Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "a0d7e3e7-aaf8-4833-ba8d-ad4bc93fc650",
+      "clientId": "79e750b2-66d4-4a2f-bf3d-0e69de677cb7",
+      "businessType": "web_dev",
+      "description": "Adulatio quisquam cibus demergo. Deprimo alias commodo armarium aut tenus veritas. Neque adaugeo angelus canis.",
+      "budget": "654.79",
+      "estimatedDate": "2025-04-10T19:08:27.695Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "033b4d36-fd7f-4caf-b82d-fa377653b2c4",
+      "clientId": "dad94e17-d759-4dcd-9276-7aa9d85aa056",
+      "businessType": "mobile_dev",
+      "description": "Demoror placeat carus. Votum vulpes turbo vix ab. Vinitor damnatio deputo supra delibero cultura admoneo curso demonstro deleo.",
+      "budget": "486.44",
+      "estimatedDate": "2025-09-19T00:01:00.916Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "854712c7-eddd-403a-b61a-d98ae640514a",
+      "clientId": "6e7bc925-d4e0-4670-aa04-2bdc3805dd97",
+      "businessType": "outsourcing",
+      "description": "Confugo cultellus demonstro. Impedit conor tergo abutor repellendus beatae thema utroque universe bis. Velum cumque sublime soleo catena acerbitas.",
+      "budget": "578.91",
+      "estimatedDate": "2025-04-21T19:20:33.054Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "c0e7ed52-e4fe-41b1-891b-633c3bc36f3b",
+      "clientId": "02656686-a189-4785-adec-d8365c826a9c",
+      "businessType": "it_consulting",
+      "description": "Dicta vitium adiuvo atavus abscido minima deripio. Uberrime aer curatio. Solus pauper solio desipio facilis tredecim corona verto ratione vae.",
+      "budget": "561.56",
+      "estimatedDate": "2025-07-31T00:38:52.072Z",
+      "status": "completed",
+      "isDeleted": false
+    },
+    {
+      "id": "e45b6f54-87d2-4bce-b2b6-b57d7f6a8b50",
+      "clientId": "8c07435d-49e9-4911-9749-5e750c3c67e3",
+      "businessType": "it_consulting",
+      "description": "Vilis abeo torqueo ocer coniecto. Ventito molestias cornu curis depraedor curiositas capitulus tenax autem sodalitas. Vivo tribuo combibo succedo temporibus non xiphias.",
+      "budget": "184.77",
+      "estimatedDate": "2025-02-22T21:07:50.705Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "263eeac3-0c30-4243-aa06-0b0417ccb69f",
+      "clientId": "8579d8ef-e9f8-41a3-9489-c6fbce5a183e",
+      "businessType": "mobile_dev",
+      "description": "Apud deorsum volaticus. Paens civis tamisium aestas adfectus arbustum contra caterva. Catena cibo thymbra arma.",
+      "budget": "401.24",
+      "estimatedDate": "2025-05-19T05:40:18.972Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "e94aeee4-f588-4689-8686-12948a8b18e7",
+      "clientId": "13aecd84-d2b5-43ca-b3a6-591860c424c0",
+      "businessType": "outsourcing",
+      "description": "Beatus tantum verto appono aetas comes. Praesentium vir perspiciatis combibo soluta commodi spero vetus usque. Casso viriliter bardus veritatis casus bellicus deduco totidem.",
+      "budget": "564.01",
+      "estimatedDate": "2025-10-15T16:09:50.841Z",
+      "status": "open",
+      "isDeleted": false
+    },
+    {
+      "id": "c299ff3c-6776-4c4d-98e8-7f17ebec894d",
+      "clientId": "f7f0b8f6-4631-4d17-9f7c-5548905f5328",
+      "businessType": "it_consulting",
+      "description": "Arbor nesciunt uberrime vaco cervus contabesco turpis ait expedita. Tracto cursim conitor comes vigilo. Denuncio attonbitus subseco.",
+      "budget": "272.58",
+      "estimatedDate": "2025-01-29T13:18:55.484Z",
+      "status": "purchase_order",
+      "isDeleted": false
+    },
+    {
+      "id": "24d6dffc-9e94-4cd4-b401-70af38959034",
+      "clientId": "e2d02eb2-c368-4a58-a0c1-504bb54b5505",
+      "businessType": "mobile_dev",
+      "description": "Amet artificiose subseco auctus urbs super spes defendo. Adstringo trado unde totus inflammatio vado dolorem. Acerbitas correptius conscendo.",
+      "budget": "567.98",
+      "estimatedDate": "2025-07-14T05:15:55.438Z",
+      "status": "in_study",
+      "isDeleted": false
+    },
+    {
+      "id": "f79fc805-1e76-493e-a62f-36fbd92a5ba2",
+      "clientId": "96598245-d3b9-4c74-a094-24a7b0718b4a",
+      "businessType": "outsourcing",
+      "description": "Colo tergeo quos vobis bibo thema. Curiositas expedita arca versus. Ut absque supellex cornu cilicium ago conspergo.",
+      "budget": "559.00",
+      "estimatedDate": "2025-03-10T11:05:26.682Z",
+      "status": "in_study",
+      "isDeleted": false
+    }
+  ]
+}
