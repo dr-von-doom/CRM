@@ -12,7 +12,7 @@ const generateUUID = () => crypto.randomUUID();
 type FormValues = ClientType & { contacts: Omit<ContactType, "id" | "clientId">[] };
 
 const CreateClientPage = () => {
-  const { handleSubmit, control, register } = useForm<FormValues>();
+  const { handleSubmit, control, register, formState: { errors } } = useForm<FormValues>();
   const { fields, append, remove } = useFieldArray({ control, name: "contacts" });
 
   const createClientMutation = useCreateClient();
@@ -50,25 +50,92 @@ const CreateClientPage = () => {
           <Grid container spacing={2}>
             {/* Campos de cliente */}
             <Grid item xs={12}>
-              <TextField fullWidth label="Nit" required {...register("nit")} />
+              <TextField
+                fullWidth
+                label="Nit"
+                required
+                {...register("nit", {
+                  required: "Este campo es obligatorio",
+                  pattern: {
+                    value: /^[0-9]+$/,
+                    message: "El Nit debe contener solo números"
+                  }
+                })}
+                error={!!errors.nit}
+                helperText={errors.nit?.message}
+              />
             </Grid>
             <Grid item xs={12}>
-              <TextField fullWidth label="Full Name" required {...register("name")} />
+              <TextField
+                fullWidth
+                label="Full Name"
+                required
+                {...register("name", { required: "Este campo es obligatorio" })}
+                error={!!errors.name}
+                helperText={errors.name?.message}
+              />
             </Grid>
             <Grid item xs={12}>
-              <TextField fullWidth label="Address" required {...register("address")} />
+              <TextField
+                fullWidth
+                label="Address"
+                required
+                {...register("address", { required: "Este campo es obligatorio" })}
+                error={!!errors.address}
+                helperText={errors.address?.message}
+              />
             </Grid>
             <Grid item xs={6}>
-              <TextField fullWidth label="City" required {...register("city")} />
+              <TextField
+                fullWidth
+                label="City"
+                required
+                {...register("city", { required: "Este campo es obligatorio" })}
+                error={!!errors.city}
+                helperText={errors.city?.message}
+              />
             </Grid>
             <Grid item xs={6}>
-              <TextField fullWidth label="Country" required {...register("country")} />
+              <TextField
+                fullWidth
+                label="Country"
+                required
+                {...register("country", { required: "Este campo es obligatorio" })}
+                error={!!errors.country}
+                helperText={errors.country?.message}
+              />
             </Grid>
             <Grid item xs={12}>
-              <TextField fullWidth label="Phone" required {...register("phone")} />
+              <TextField
+                fullWidth
+                label="Phone"
+                required
+                {...register("phone", {
+                  required: "Este campo es obligatorio",
+                  pattern: {
+                    value: /^[0-9]+$/,
+                    message: "El teléfono debe contener solo números"
+                  }
+                })}
+                error={!!errors.phone}
+                helperText={errors.phone?.message}
+              />
             </Grid>
             <Grid item xs={12}>
-              <TextField fullWidth label="Email" required {...register("email")} />
+              <TextField
+                fullWidth
+                label="Email"
+                required
+                {...register("email", {
+                  required: "Este campo es obligatorio",
+                  pattern: {
+                    value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                    message: "El email no tiene un formato válido"
+                  }
+                })}
+                error={!!errors.email}
+                helperText={errors.email?.message}
+              />
             </Grid>
 
             {/* Sección de contactos */}
@@ -83,7 +150,14 @@ const CreateClientPage = () => {
                       control={control}
                       name={`contacts.${index}.firstName`}
                       render={({ field }) => (
-                        <TextField fullWidth label="First Name" required {...field} />
+                        <TextField
+                          fullWidth
+                          label="First Name"
+                          required
+                          {...field}
+                          error={!!errors.contacts?.[index]?.firstName}
+                          helperText={errors.contacts?.[index]?.firstName?.message}
+                        />
                       )}
                     />
                   </Grid>
@@ -92,7 +166,14 @@ const CreateClientPage = () => {
                       control={control}
                       name={`contacts.${index}.lastName`}
                       render={({ field }) => (
-                        <TextField fullWidth label="Last Name" required {...field} />
+                        <TextField
+                          fullWidth
+                          label="Last Name"
+                          required
+                          {...field}
+                          error={!!errors.contacts?.[index]?.lastName}
+                          helperText={errors.contacts?.[index]?.lastName?.message}
+                        />
                       )}
                     />
                   </Grid>
@@ -101,7 +182,14 @@ const CreateClientPage = () => {
                       control={control}
                       name={`contacts.${index}.email`}
                       render={({ field }) => (
-                        <TextField fullWidth label="Email" required {...field} />
+                        <TextField
+                          fullWidth
+                          label="Email"
+                          required
+                          {...field}
+                          error={!!errors.contacts?.[index]?.email}
+                          helperText={errors.contacts?.[index]?.email?.message}
+                        />
                       )}
                     />
                   </Grid>
@@ -110,7 +198,14 @@ const CreateClientPage = () => {
                       control={control}
                       name={`contacts.${index}.phone`}
                       render={({ field }) => (
-                        <TextField fullWidth label="Phone" required {...field} />
+                        <TextField
+                          fullWidth
+                          label="Phone"
+                          required
+                          {...field}
+                          error={!!errors.contacts?.[index]?.phone}
+                          helperText={errors.contacts?.[index]?.phone?.message}
+                        />
                       )}
                     />
                   </Grid>
@@ -144,7 +239,7 @@ const CreateClientPage = () => {
                 type="submit"
                 variant="contained"
                 color="primary"
-                sx={{ width: { xs: "340px", md: "600px", lg: "900px" } , py: 1.5 }}
+                sx={{ width: { xs: "340px", md: "600px", lg: "900px" }, py: 1.5 }}
               >
                 Create
               </Button>
