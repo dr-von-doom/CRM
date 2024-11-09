@@ -1,4 +1,4 @@
-import { ClientType } from "./client.types";
+import { ClientType, ContactType } from "./client.types";
 
 export enum httpMethod {
   GET = "GET",
@@ -19,6 +19,7 @@ export enum ApiRequests {
   GET_CLIENT_BY_ID = "GET_CLIENT_BY_ID",
   UPDATE_CLIENT = "UPDATE_CLIENT",
   CREATE_CLIENT = "CREATE_CLIENT",
+  CREATE_CONTACT = "CREATE_CONTACT"
 }
 
 export const ApiRequestPaths: Record<ApiRequests, string> = {
@@ -27,6 +28,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_CLIENT_BY_ID]: "/clients/:id",
   [ApiRequests.UPDATE_CLIENT]: "/clients/:id",
   [ApiRequests.CREATE_CLIENT]: "/clients",
+  [ApiRequests.CREATE_CONTACT]: "/clients"
 };
 
 export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
@@ -35,6 +37,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.GET_CLIENT_BY_ID]: httpMethod.GET,
   [ApiRequests.UPDATE_CLIENT]: httpMethod.PATCH,
   [ApiRequests.CREATE_CLIENT]: httpMethod.POST,
+  [ApiRequests.CREATE_CONTACT]: httpMethod.POST
 };
 
 export type ApiRequestBodyType = {
@@ -43,6 +46,7 @@ export type ApiRequestBodyType = {
   [ApiRequests.GET_CLIENT_BY_ID]: void;
   [ApiRequests.UPDATE_CLIENT]: Partial<ClientType>;
   [ApiRequests.CREATE_CLIENT]: Partial<ClientType>;
+  [ApiRequests.CREATE_CONTACT]: Partial<ClientType>;
 };
 
 export type ApiRequestQueryType = {
@@ -51,6 +55,7 @@ export type ApiRequestQueryType = {
   [ApiRequests.GET_CLIENT_BY_ID]: void;
   [ApiRequests.UPDATE_CLIENT]: void;
   [ApiRequests.CREATE_CLIENT]: void;
+  [ApiRequests.CREATE_CONTACT]: void;
 };
 
 export type ApiPathParamsType = {
@@ -59,6 +64,7 @@ export type ApiPathParamsType = {
   [ApiRequests.GET_CLIENT_BY_ID]: { id: string };
   [ApiRequests.UPDATE_CLIENT]: { id: string };
   [ApiRequests.CREATE_CLIENT]: void;
+  [ApiRequests.CREATE_CONTACT]: void;
 };
 
 export type ApiResponseType = {
@@ -67,4 +73,5 @@ export type ApiResponseType = {
   [ApiRequests.GET_CLIENT_BY_ID]: ClientType;
   [ApiRequests.UPDATE_CLIENT]: ClientType;
   [ApiRequests.CREATE_CLIENT]: ClientType;
+  [ApiRequests.CREATE_CONTACT]: ContactType;
 };

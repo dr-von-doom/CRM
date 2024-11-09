@@ -11,6 +11,8 @@ export interface ClientType {
 }
 
 export interface ContactType {
+  id: string;
+  clientId: string;
   firstName: string;
   lastName: string;
   email: string;
