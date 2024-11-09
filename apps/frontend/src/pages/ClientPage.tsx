@@ -1,5 +1,6 @@
 import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ClientDetails from "../components/clients/ClientDetails/ClientDetails";
 import ClientTable from "../components/clients/ClientTable/ClientTable";
 import EditClientModal from "../components/clients/EditClientModal/EditClientModal";
@@ -39,9 +40,10 @@ const ClientPage = () => {
         >
           <Typography variant="h6">Clients list</Typography>
           <Button
+            component={Link}
+            to={"/clients/create"}
             variant="contained"
             color="primary"
-            onClick={() => { window.location.href = "/clients/create"; }}
             sx={{ ml: "auto" }}
           >
             Create Client

@@ -13,7 +13,7 @@ interface ClientDetailsProps {
   clientId: string;
 }
 
-const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
+export const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
   const { data: client, isLoading, isError } = useGetClientById(clientId);
 
   if (isLoading)
