@@ -15,9 +15,11 @@ export enum OpportunityStatus {
 export interface OpportunityType {
   id: string;
   clientId: string;
+  businessName: string;
   businessType: OpportunityBusinessType;
   description: string;
   status: OpportunityStatus;
   estimatedDate: string;
+  estimatedValue: number;
   isDeleted: boolean;
 }
