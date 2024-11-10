@@ -19,8 +19,8 @@ const routes = [
     element: <ClientsPage />,
   },
   {
-    path: "/clients/create",
-    name: "Create client",
+    path: "/clients/create", // Create client route
+    hidden: true,
     element: <CreateClientPage />,
   },
 ];
@@ -33,3 +33,4 @@ export const AppRouter = () => {
 
 export { routes };
 export default AppRouter;
+

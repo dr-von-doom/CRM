@@ -51,6 +51,18 @@ export const getClients = async (
 };
 
 /**
+ * Fetches all clients from the API.
+ *
+ */
+
+export const getAllClients = async (): Promise<ClientType[]> => {
+  const { body } = await requestApi(ApiRequests.GET_CLIENTS); 
+
+  return body; 
+};
+
+
+/**
  * Fetches a client by ID from the API.
  *
  * @param {string} id Client ID
