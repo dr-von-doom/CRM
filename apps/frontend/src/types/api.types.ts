@@ -1,4 +1,4 @@
-import { ClientType, ContactType } from "./client.types";
+import { ClientType, ContactType  } from "./client.types";
 import { OpportunityType } from "./opportunity";
 
 export enum httpMethod {
@@ -21,9 +21,10 @@ export enum ApiRequests {
   GET_CLIENT_BY_ID = "GET_CLIENT_BY_ID",
   UPDATE_CLIENT = "UPDATE_CLIENT",
   CREATE_CLIENT = "CREATE_CLIENT",
-  /** Contact route */
+  /** Contact routes */
   GET_CONTACTS = "GET_CONTACTS",
   CREATE_CONTACT = "CREATE_CONTACT",
+  UPDATE_CONTACT = "UPDATE_CONTACT", 
   /** Opportunity routes */
   GET_OPPORTUNITIES = "GET_OPPORTUNITIES",
   GET_OPPORTUNITY_BY_ID = "GET_OPPORTUNITY_BY_ID",
@@ -41,6 +42,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   /** Contact paths */
   [ApiRequests.GET_CONTACTS]: "/contacts",
   [ApiRequests.CREATE_CONTACT]: "/contacts",
+  [ApiRequests.UPDATE_CONTACT]: "/contacts/:id",  
   /** Opportunity paths */
   [ApiRequests.GET_OPPORTUNITIES]: "/opportunities",
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: "/opportunities/:id",
@@ -58,6 +60,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   /** Contact request methods */
   [ApiRequests.GET_CONTACTS]: httpMethod.GET,
   [ApiRequests.CREATE_CONTACT]: httpMethod.POST,
+  [ApiRequests.UPDATE_CONTACT]: httpMethod.PATCH,  
   /** Opportunity request methods */
   [ApiRequests.GET_OPPORTUNITIES]: httpMethod.GET,
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: httpMethod.GET,
@@ -75,6 +78,7 @@ export type ApiRequestBodyType = {
   /** Contact body types */
   [ApiRequests.GET_CONTACTS]: void;
   [ApiRequests.CREATE_CONTACT]: ContactType;
+  [ApiRequests.UPDATE_CONTACT]: ContactType; 
   /** Opportunity body types */
   [ApiRequests.GET_OPPORTUNITIES]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: void;
@@ -92,6 +96,7 @@ export type ApiRequestQueryType = {
   /** Contact query types */
   [ApiRequests.GET_CONTACTS]: Partial<ContactType>;
   [ApiRequests.CREATE_CONTACT]: void;
+  [ApiRequests.UPDATE_CONTACT]: void; 
   /** Opportunity query types */
   [ApiRequests.GET_OPPORTUNITIES]: paginationType & Partial<OpportunityType>;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: void;
@@ -109,6 +114,7 @@ export type ApiPathParamsType = {
   /** Contact path params */
   [ApiRequests.GET_CONTACTS]: void;
   [ApiRequests.CREATE_CONTACT]: void;
+  [ApiRequests.UPDATE_CONTACT]: { id: string };
   /** Opportunity path params */
   [ApiRequests.GET_OPPORTUNITIES]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: { id: string };
@@ -118,7 +124,7 @@ export type ApiPathParamsType = {
 
 export type ApiResponseType = {
   [ApiRequests.CHECK_HEALTH]: { message: string };
-  /** Opportunity response types */
+  /** Client response types */
   [ApiRequests.GET_CLIENTS]: ClientType[];
   [ApiRequests.GET_CLIENT_BY_ID]: ClientType;
   [ApiRequests.UPDATE_CLIENT]: ClientType;
@@ -126,6 +132,7 @@ export type ApiResponseType = {
   /** Contact response types */
   [ApiRequests.GET_CONTACTS]: ContactType[];
   [ApiRequests.CREATE_CONTACT]: ContactType;
+  [ApiRequests.UPDATE_CONTACT]: ContactType;
   /** Opportunity response types */
   [ApiRequests.GET_OPPORTUNITIES]: OpportunityType[];
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: OpportunityType;
