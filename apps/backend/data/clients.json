@@ -569,27 +569,6 @@
       "email": "test@example.us",
       "phone": "6019521325",
       "id": "3ev9d1z"
-    },
-    {
-      "nit": "",
-      "name": "",
-      "address": "",
-      "country": "",
-      "city": "",
-      "email": "",
-      "phone": "",
-      "id": "Njew2C4"
-    },
-    {
-      "nit": "11111",
-      "name": "AAAA",
-      "address": "1121 Aniyah Corners",
-      "city": "Octaviaborough",
-      "country": "Montenegro",
-      "phone": "+12594055611",
-      "email": "Mavis_Heidenreich19@yahoo.com",
-      "isActive": false,
-      "id": "kQGYiYG"
     }
   ]
 }

@@ -7,8 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 import useGetClientById from "../../../hooks/clients/useGetClientById";
-//import useGetOpportunitiesByClientId from "../../../hooks/opportunity/useGetOpportunitiesByClientId";
-//import useGetContactsByClientId from "../../../hooks/clients/useGetContactByClientId";
+import useGetOpportunitiesByClientId from "../../../hooks/opportunity/useGetOpportunitiesByClientId";
+import useGetContactsByClientId from "../../../hooks/clients/useGetContactByClientId";
 import { ErrorAlert } from "../../common/alerts";
 
 interface ClientDetailsProps {
@@ -17,8 +17,8 @@ interface ClientDetailsProps {
 
 export const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
   const { data: client, isLoading, isError } = useGetClientById(clientId);
-  //const { data } = useGetOpportunitiesByClientId(clientId);
-  //const { data } = useGetContactsByClientId(clientId);
+  const { data: opportunities } = useGetOpportunitiesByClientId(clientId);
+  const { data: contacts } = useGetContactsByClientId(clientId);
 
   if (isLoading)
     return (
@@ -37,7 +37,7 @@ export const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
   if (!client) return <ErrorAlert title="Client not found" description="" />;
 
   return (
-    <Box display="flex" justifyContent="center" sx={{ marginTop: 0.5 }}>
+    <Box display="flex" flexDirection="column" gap={2} justifyContent="center" sx={{ marginTop: 0.5 }}>
       <Card sx={{ margin: 1, width: "100%", maxWidth: 600 }}>
         <CardContent>
           <Typography variant="h6" gutterBottom>
@@ -67,6 +67,37 @@ export const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
             variant="filled"
             sx={{ marginTop: 1 }}
           />
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <Typography variant="h6" gutterBottom>
+            Opportunities
+          </Typography>
+          {opportunities?.map((opportunity) => (
+            <Chip
+              key={opportunity.id}
+              label={opportunity.businessName}
+              color="primary"
+              sx={{ marginRight: 1, marginBottom: 1 }}
+            />
+
+          ))}
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <Typography variant="h6" gutterBottom>
+            Contacts
+          </Typography>
+          {contacts?.map((contact) => (
+            <Chip
+              key={contact.id}
+              label={contact.firstName + " " + contact.lastName}
+              color="primary"
+              sx={{ marginRight: 1, marginBottom: 1 }}
+            />
+          ))}
         </CardContent>
       </Card>
     </Box>
