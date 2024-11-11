@@ -1,9 +1,9 @@
 {
-  "clients": [
+  "": [
     {
       "id": "0614aefe-b30b-4c6e-a230-1647e57399d9",
       "nit": "39607873",
-      "name": "Kurtis BC",
+      "name": "Frailejon",
       "address": "1121 Aniyah Corners",
       "city": "Octaviaborough",
       "country": "Montenegro",
@@ -581,14 +581,15 @@
       "id": "Njew2C4"
     },
     {
-      "nit": "",
-      "name": "",
-      "address": "",
-      "country": "",
-      "city": "",
-      "email": "",
-      "phone": "",
-      "id": "8ZSobY7"
+      "nit": "11111",
+      "name": "AAAA",
+      "address": "1121 Aniyah Corners",
+      "city": "Octaviaborough",
+      "country": "Montenegro",
+      "phone": "+12594055611",
+      "email": "Mavis_Heidenreich19@yahoo.com",
+      "isActive": false,
+      "id": "kQGYiYG"
     }
   ]
 }

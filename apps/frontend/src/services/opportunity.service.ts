@@ -1,4 +1,4 @@
-import { OpportunityType } from "../types/opportunities";
+import { OpportunityType } from "../types/opportunity.types";
 import { ApiRequests } from "../types/api.types";
 import { requestApi } from "./api";
 

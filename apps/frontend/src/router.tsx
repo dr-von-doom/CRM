@@ -5,6 +5,7 @@ import ClientsPage from "./pages/ClientPage";
 import CreateClientPage from "./pages/CreateClientPage";
 import HomePage from "./pages/HomePage";
 
+
 const routes = [
   {
     path: "/",

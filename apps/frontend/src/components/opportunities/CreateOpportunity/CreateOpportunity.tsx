@@ -17,7 +17,7 @@ import {
   OpportunityBusinessType,
   OpportunityType,
   OpportunityStatus,
-} from "../../../types/opportunities";
+} from "../../../types/opportunity.types";
 import { ClientType } from "../../../types/client.types"; 
 
 type FormValues = Omit<OpportunityType, "id" | "status" | "isDeleted">;
