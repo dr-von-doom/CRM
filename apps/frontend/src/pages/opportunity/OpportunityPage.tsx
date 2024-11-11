@@ -1,5 +1,6 @@
 import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
+import { OpportunityTable } from "../../components/opportunity/OpportunityTable";
 import BaseLayout from "../../layout/BaseLayout";
 
 export const OpportunityPage = () => {
@@ -34,7 +35,12 @@ export const OpportunityPage = () => {
               paddingRight: theme.spacing(3),
             },
           }}
-        ></Box>
+        >
+          <OpportunityTable
+            onSelect={(OpportunityId: string) => {}}
+            onEdit={(OpportunityId: string) => {}}
+          />
+        </Box>
       </Box>
     </BaseLayout>
   );

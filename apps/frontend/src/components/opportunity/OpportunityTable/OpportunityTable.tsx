@@ -10,38 +10,40 @@ import {
 } from "@mui/material";
 import { DataGrid, GridRowParams } from "@mui/x-data-grid";
 import { FC, useState } from "react";
-import useGetClients from "../../../hooks/clients/useGetClients";
-import useUpdateClient from "../../../hooks/clients/useUpdateClients";
-import { CLIENTS_PAGE_SIZE } from "../../../utils/const";
+import useGetOpportunities from "../../../hooks/opportunity/useGetOpportunities";
+import { OPPORTUNITIES_PAGE_SIZE } from "../../../utils/const";
 import { ErrorAlert } from "../../common/alerts";
 import {
-  ClientDataGridColumns,
-  ClientDataGridColumnVisibility,
-} from "./ClientTable.types";
+  OpportunityDataGridColumns,
+  OpportunityDataGridColumnVisibility,
+} from "./OpportunityTable.types";
 
-export type ClientTableProps = {
-  onSelect: (clientId: string) => void;
-  onEdit: (clientId: string) => void;
+export type OpportunityTableProps = {
+  onSelect: (OpportunityId: string) => void;
+  onEdit: (OpportunityId: string) => void;
 };
 
 /**
- * Client table component
+ * Opportunity table component
  */
-export const ClientTable: FC<ClientTableProps> = ({
+export const OpportunityTable: FC<OpportunityTableProps> = ({
   onSelect,
   onEdit,
-}: ClientTableProps) => {
+}: OpportunityTableProps) => {
   const [page, setPage] = useState(1);
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const { data, isLoading, isError } = useGetClients(page);
-  const { mutate: updateClient, isPending } = useUpdateClient();
+  const { data, isLoading, isError } = useGetOpportunities(page);
+  const { mutate: updateOpportunity, isPending } = {
+    mutate: (args1: any, args2: any) => {},
+    isPending: false,
+  };
 
-  const { clients, totalCount } = data || {};
+  const { opportunities, totalCount } = data || {};
 
-  const onDelete = (clientId: string, isActive: boolean) => {
-    updateClient(
-      { id: clientId, clientData: { isActive: !isActive } },
+  const onDelete = (OpportunityId: string, isActive: boolean) => {
+    updateOpportunity(
+      { id: OpportunityId, OpportunityData: { isActive: !isActive } },
       {
         onError: () => {
           setOpenSnackbar(true);
@@ -55,41 +57,41 @@ export const ClientTable: FC<ClientTableProps> = ({
   };
 
   /**
-   * Client open button component
+   * Opportunity open button component
    */
-  const OpenButton = ({ clientId }: { clientId: string }) => {
+  const OpenButton = ({ OpportunityId }: { OpportunityId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onSelect(clientId)}>
+      <IconButton color="primary" onClick={() => onSelect(OpportunityId)}>
         <OpenInNewIcon />
       </IconButton>
     );
   };
 
   /**
-   * Client edit button component
+   * Opportunity edit button component
    */
-  const EditButton = ({ clientId }: { clientId: string }) => {
+  const EditButton = ({ OpportunityId }: { OpportunityId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onEdit(clientId)}>
+      <IconButton color="primary" onClick={() => onEdit(OpportunityId)}>
         <EditIcon />
       </IconButton>
     );
   };
 
   /**
-   * Client delete button component
+   * Opportunity delete button component
    */
   const ActiveButton = ({
-    clientId,
+    OpportunityId,
     isActive,
   }: {
-    clientId: string;
+    OpportunityId: string;
     isActive: boolean;
   }) => {
     return (
       <Switch
         checked={isActive}
-        onChange={() => onDelete(clientId, isActive)}
+        onChange={() => onDelete(OpportunityId, isActive)}
       />
     );
   };
@@ -100,24 +102,24 @@ export const ClientTable: FC<ClientTableProps> = ({
       headerName: "Open",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <OpenButton clientId={row.id} />;
+        return <OpenButton OpportunityId={row.id} />;
       },
     },
-    ...ClientDataGridColumns,
+    ...OpportunityDataGridColumns,
     {
       field: "edit",
       headerName: "Edit",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <EditButton clientId={row.id} />;
+        return <EditButton OpportunityId={row.id} />;
       },
     },
     {
       field: "delete",
-      headerName: "Active",
+      headerName: "Delete",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <ActiveButton clientId={row.id} isActive={row.isActive} />;
+        return <ActiveButton OpportunityId={row.id} isActive={row.isActive} />;
       },
     },
   ];
@@ -145,14 +147,14 @@ export const ClientTable: FC<ClientTableProps> = ({
     <Box>
       <DataGrid
         loading={isLoading || isPending}
-        rows={clients || []}
+        rows={opportunities || []}
         columns={columns}
-        columnVisibilityModel={ClientDataGridColumnVisibility}
+        columnVisibilityModel={OpportunityDataGridColumnVisibility}
         paginationModel={{
           page: page - 1,
-          pageSize: CLIENTS_PAGE_SIZE,
+          pageSize: OPPORTUNITIES_PAGE_SIZE,
         }}
-        pageSizeOptions={[CLIENTS_PAGE_SIZE]}
+        pageSizeOptions={[OPPORTUNITIES_PAGE_SIZE]}
         rowCount={totalCount ?? 0}
         paginationMode="server"
         onPaginationModelChange={(newPaginationModel: { page: number }) => {
@@ -173,11 +175,11 @@ export const ClientTable: FC<ClientTableProps> = ({
           variant="filled"
           sx={{ width: "100%" }}
         >
-          Error updating client
+          Error updating Opportunity
         </Alert>
       </Snackbar>
     </Box>
   );
 };
 
-export default ClientTable;
+export default OpportunityTable;

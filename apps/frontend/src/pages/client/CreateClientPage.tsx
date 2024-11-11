@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { ClientForm } from "../../components/clients/ClientForm";
 import { ContactForm } from "../../components/clients/ContactForm";
-import { useCreateClient } from "../../hooks/useCreateClients";
+import { useCreateClient } from "../../hooks/clients/useCreateClients";
 import BaseLayout from "../../layout/BaseLayout";
 import { ClientType, ContactType } from "../../types/client.types";
 

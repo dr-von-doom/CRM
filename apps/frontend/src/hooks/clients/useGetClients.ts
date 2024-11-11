@@ -1,7 +1,7 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { getClients } from "../services/client.service";
-import { ApiRequests } from "../types/api.types";
-import { CLIENTS_PAGE_SIZE } from "../utils/const";
+import { getClients } from "../../services/client.service";
+import { ApiRequests } from "../../types/api.types";
+import { CLIENTS_PAGE_SIZE } from "../../utils/const";
 
 export const useGetClients = (page: number, totalPage = CLIENTS_PAGE_SIZE) => {
   return useQuery({
