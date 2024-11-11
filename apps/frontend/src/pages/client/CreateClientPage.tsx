@@ -1,4 +1,9 @@
-import { useForm, useFieldArray, SubmitHandler, Controller } from "react-hook-form";
+import {
+  useForm,
+  useFieldArray,
+  SubmitHandler,
+  Controller,
+} from "react-hook-form";
 import { FaTrashAlt } from "react-icons/fa";
 import BaseLayout from "../../layout/BaseLayout";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
@@ -9,11 +14,21 @@ import { ClientType, ContactType } from "../../types/client.types";
 // Función para generar UUID
 const generateUUID = () => crypto.randomUUID();
 
-type FormValues = ClientType & { contacts: Omit<ContactType, "id" | "clientId">[] };
+type FormValues = ClientType & {
+  contacts: Omit<ContactType, "id" | "clientId">[];
+};
 
 const CreateClientPage = () => {
-  const { handleSubmit, control, register, formState: { errors } } = useForm<FormValues>();
-  const { fields, append, remove } = useFieldArray({ control, name: "contacts" });
+  const {
+    handleSubmit,
+    control,
+    register,
+    formState: { errors },
+  } = useForm<FormValues>();
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: "contacts",
+  });
 
   const createClientMutation = useCreateClient();
   const createContactMutation = useCreateContact();
@@ -27,7 +42,11 @@ const CreateClientPage = () => {
       // Crear contactos con ID y clientId
       await Promise.all(
         data.contacts.map((contact) =>
-          createContactMutation.mutateAsync({ ...contact, clientId, id: generateUUID() })
+          createContactMutation.mutateAsync({
+            ...contact,
+            clientId,
+            id: generateUUID(),
+          })
         )
       );
 
@@ -39,7 +58,13 @@ const CreateClientPage = () => {
 
   return (
     <BaseLayout>
-      <Box sx={{ width: { xs: "340px", md: "600px", lg: "900px" }, margin: "auto", my: 2 }}>
+      <Box
+        sx={{
+          width: { xs: "340px", md: "600px", lg: "900px" },
+          margin: "auto",
+          my: 2,
+        }}
+      >
         <Typography variant="h4" component="h1" sx={{ fontWeight: "600" }}>
           Create Client
         </Typography>
@@ -58,8 +83,8 @@ const CreateClientPage = () => {
                   required: "Este campo es obligatorio",
                   pattern: {
                     value: /^[0-9]+$/,
-                    message: "El Nit debe contener solo números"
-                  }
+                    message: "El Nit debe contener solo números",
+                  },
                 })}
                 error={!!errors.nit}
                 helperText={errors.nit?.message}
@@ -80,7 +105,9 @@ const CreateClientPage = () => {
                 fullWidth
                 label="Address"
                 required
-                {...register("address", { required: "Este campo es obligatorio" })}
+                {...register("address", {
+                  required: "Este campo es obligatorio",
+                })}
                 error={!!errors.address}
                 helperText={errors.address?.message}
               />
@@ -100,7 +127,9 @@ const CreateClientPage = () => {
                 fullWidth
                 label="Country"
                 required
-                {...register("country", { required: "Este campo es obligatorio" })}
+                {...register("country", {
+                  required: "Este campo es obligatorio",
+                })}
                 error={!!errors.country}
                 helperText={errors.country?.message}
               />
@@ -114,8 +143,8 @@ const CreateClientPage = () => {
                   required: "Este campo es obligatorio",
                   pattern: {
                     value: /^[0-9]+$/,
-                    message: "El teléfono debe contener solo números"
-                  }
+                    message: "El teléfono debe contener solo números",
+                  },
                 })}
                 error={!!errors.phone}
                 helperText={errors.phone?.message}
@@ -130,8 +159,8 @@ const CreateClientPage = () => {
                   required: "Este campo es obligatorio",
                   pattern: {
                     value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: "El email no tiene un formato válido"
-                  }
+                    message: "El email no tiene un formato válido",
+                  },
                 })}
                 error={!!errors.email}
                 helperText={errors.email?.message}
@@ -156,7 +185,9 @@ const CreateClientPage = () => {
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.firstName}
-                          helperText={errors.contacts?.[index]?.firstName?.message}
+                          helperText={
+                            errors.contacts?.[index]?.firstName?.message
+                          }
                         />
                       )}
                     />
@@ -172,7 +203,9 @@ const CreateClientPage = () => {
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.lastName}
-                          helperText={errors.contacts?.[index]?.lastName?.message}
+                          helperText={
+                            errors.contacts?.[index]?.lastName?.message
+                          }
                         />
                       )}
                     />
@@ -227,19 +260,46 @@ const CreateClientPage = () => {
               <Button
                 variant="outlined"
                 color="primary"
-                onClick={() => append({ firstName: "", lastName: "", email: "", phone: "" })}
+                onClick={() =>
+                  append({ firstName: "", lastName: "", email: "", phone: "" })
+                }
               >
                 Add Contact
               </Button>
             </Grid>
-
             {/* Botón de envío */}
+            <>
+              {/* Aqui se muestra un anuncio para que el usuario sepa que se creó el cliente exitosamente */}
+              {createClientMutation.isSuccess && (
+                <Grid item xs={12}>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "success.main", mb: 2, bgcolor: "#d2fcdd", py: 2, textAlign: "center", borderColor: "success.main", borderWidth: 2, borderRadius: 1.5 }}
+                >
+                  Client created successfully!
+                </Typography>
+              </Grid>
+              )}
+              {createClientMutation.isError && (
+                <Grid item xs={12}>
+              <Typography
+                variant="body2"
+                sx={{ color: "error.main", mb: 2, bgcolor: "#fcd2d2", py: 2, textAlign: "center", borderColor: "error.main", borderWidth: 2, borderRadius: 1.5 }}
+              >
+                Client created successfully!
+              </Typography>
+            </Grid>
+              )}
+            </>
             <Grid item xs={12}>
               <Button
                 type="submit"
                 variant="contained"
                 color="primary"
-                sx={{ width: { xs: "340px", md: "600px", lg: "900px" }, py: 1.5 }}
+                sx={{
+                  width: { xs: "340px", md: "600px", lg: "900px" },
+                  py: 1.5,
+                }}
               >
                 Create
               </Button>
