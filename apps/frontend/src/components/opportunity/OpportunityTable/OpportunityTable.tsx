@@ -1,3 +1,4 @@
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import {
@@ -6,7 +7,6 @@ import {
   CircularProgress,
   IconButton,
   Snackbar,
-  Switch,
 } from "@mui/material";
 import { DataGrid, GridRowParams } from "@mui/x-data-grid";
 import { FC, useState } from "react";
@@ -83,7 +83,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
   /**
    * Opportunity delete button component
    */
-  const ActiveButton = ({
+  const DeleteButton = ({
     OpportunityId,
     isActive,
   }: {
@@ -91,10 +91,12 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     isActive: boolean;
   }) => {
     return (
-      <Switch
-        checked={isActive}
-        onChange={() => onDelete(OpportunityId, isActive)}
-      />
+      <IconButton
+        color="error"
+        onClick={() => onDelete(OpportunityId, isActive)}
+      >
+        <DeleteForeverIcon />
+      </IconButton>
     );
   };
 
@@ -121,7 +123,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       headerName: "Delete",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <ActiveButton OpportunityId={row.id} isActive={row.isActive} />;
+        return <DeleteButton OpportunityId={row.id} isActive={row.isActive} />;
       },
     },
   ];
