@@ -21,8 +21,7 @@ const routes = [
     element: <ClientsPage />,
   },
   {
-    path: "/clients/create", // Create client route
-    hidden: true,
+    path: "/clients/create", 
     element: <CreateClientPage />,
     showInNav: true,
   },
@@ -33,8 +32,7 @@ const routes = [
     element: <OpportunityPage />,
   },
   {
-    path: "/opportunities/create", // Create client route
-    hidden: true,
+    path: "/opportunities/create", 
     element: <CreateOpportunityPage />,
     showInNav: true,
   },
