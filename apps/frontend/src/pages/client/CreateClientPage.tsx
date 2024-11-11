@@ -11,7 +11,7 @@ import { useCreateClient } from "../../hooks/clients/useCreateClients";
 import { useCreateContact } from "../../hooks/useCreateContact";
 import { ClientType, ContactType } from "../../types/client.types";
 
-// Generador de UUID
+// UUID generator
 const generateUUID = () => crypto.randomUUID();
 
 type FormValues = Omit<ClientType, "id"> & {
@@ -35,7 +35,7 @@ const CreateClientPage = () => {
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
-      // Crear cliente y obtener su ID
+      // Create client and obtain its ID
       const newClient = await createClientMutation.mutateAsync({
         id: generateUUID(),
         nit: data.nit,
@@ -49,7 +49,7 @@ const CreateClientPage = () => {
       });
       const clientId = newClient.id;
 
-      // Crear contactos asociados al cliente utilizando clientId
+      // Create contacts associated with the client using clientId
       await Promise.all(
         data.contacts.map((contact) =>
           createContactMutation.mutateAsync({
@@ -60,9 +60,9 @@ const CreateClientPage = () => {
         )
       );
 
-      console.log("Cliente y contactos creados con éxito");
+      console.log("Client and contacts created successfully");
     } catch (error) {
-      console.error("Error al crear cliente o contactos:", error);
+      console.error("Error creating client or contacts:", error);
     }
   };
 
@@ -76,24 +76,24 @@ const CreateClientPage = () => {
         }}
       >
         <Typography variant="h4" component="h1" sx={{ fontWeight: "600" }}>
-          Crear Cliente
+          Create Client
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary", mb: 2 }}>
-          Llena el formulario para crear un nuevo cliente.
+          Fill out the form to create a new client.
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
-            {/* Campos de cliente */}
+            {/* Client fields */}
             <Grid item xs={12}>
               <TextField
                 fullWidth
                 label="Nit"
                 required
                 {...register("nit", {
-                  required: "Este campo es obligatorio",
+                  required: "This field is required",
                   pattern: {
                     value: /^[0-9]+$/,
-                    message: "El Nit debe contener solo números",
+                    message: "Nit must contain only numbers",
                   },
                 })}
                 error={!!errors.nit}
@@ -103,9 +103,9 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Nombre Completo"
+                label="Full Name"
                 required
-                {...register("name", { required: "Este campo es obligatorio" })}
+                {...register("name", { required: "This field is required" })}
                 error={!!errors.name}
                 helperText={errors.name?.message}
               />
@@ -113,10 +113,10 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Dirección"
+                label="Address"
                 required
                 {...register("address", {
-                  required: "Este campo es obligatorio",
+                  required: "This field is required",
                 })}
                 error={!!errors.address}
                 helperText={errors.address?.message}
@@ -125,9 +125,9 @@ const CreateClientPage = () => {
             <Grid item xs={6}>
               <TextField
                 fullWidth
-                label="Ciudad"
+                label="City"
                 required
-                {...register("city", { required: "Este campo es obligatorio" })}
+                {...register("city", { required: "This field is required" })}
                 error={!!errors.city}
                 helperText={errors.city?.message}
               />
@@ -135,10 +135,10 @@ const CreateClientPage = () => {
             <Grid item xs={6}>
               <TextField
                 fullWidth
-                label="País"
+                label="Country"
                 required
                 {...register("country", {
-                  required: "Este campo es obligatorio",
+                  required: "This field is required",
                 })}
                 error={!!errors.country}
                 helperText={errors.country?.message}
@@ -147,13 +147,13 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Teléfono"
+                label="Phone"
                 required
                 {...register("phone", {
-                  required: "Este campo es obligatorio",
+                  required: "This field is required",
                   pattern: {
                     value: /^[0-9]+$/,
-                    message: "El teléfono debe contener solo números",
+                    message: "Phone must contain only numbers",
                   },
                 })}
                 error={!!errors.phone}
@@ -163,13 +163,13 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Correo Electrónico"
+                label="Email"
                 required
                 {...register("email", {
-                  required: "Este campo es obligatorio",
+                  required: "This field is required",
                   pattern: {
                     value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: "El correo no tiene un formato válido",
+                    message: "Invalid email format",
                   },
                 })}
                 error={!!errors.email}
@@ -177,11 +177,11 @@ const CreateClientPage = () => {
               />
             </Grid>
 
-            {/* Sección de contactos */}
+            {/* Contacts section */}
             {fields.map((field, index) => (
               <Grid item xs={12} key={field.id}>
                 <Typography variant="h5" sx={{ fontWeight: "600", mb: 2 }}>
-                  Contacto #{index + 1}
+                  Contact #{index + 1}
                 </Typography>
                 <Grid container spacing={2}>
                   <Grid item xs={6}>
@@ -191,7 +191,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="Nombre"
+                          label="First Name"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.firstName}
@@ -209,7 +209,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="Apellido"
+                          label="Last Name"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.lastName}
@@ -227,7 +227,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="Correo"
+                          label="Email"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.email}
@@ -243,7 +243,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="Teléfono"
+                          label="Phone"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.phone}
@@ -260,12 +260,12 @@ const CreateClientPage = () => {
                   onClick={() => remove(index)}
                   sx={{ mt: 1 }}
                 >
-                  Quitar Contacto
+                  Remove Contact
                 </Button>
               </Grid>
             ))}
 
-            {/* Botón para añadir contactos */}
+            {/* Button to add contacts */}
             <Grid item xs={12}>
               <Button
                 variant="outlined"
@@ -274,13 +274,13 @@ const CreateClientPage = () => {
                   append({ firstName: "", lastName: "", email: "", phone: "" })
                 }
               >
-                Añadir Contacto
+                Add Contact
               </Button>
             </Grid>
 
-            {/* Botón de envío */}
+            {/* Submit button */}
             <>
-              {/* Aqui se muestra un anuncio para que el usuario sepa que se creó el cliente exitosamente */}
+              {/* Display a message to inform the user that the client was created successfully */}
               {createClientMutation.isSuccess && (
                 <Grid item xs={12}>
                   <Typography
@@ -315,7 +315,7 @@ const CreateClientPage = () => {
                       borderRadius: 1.5,
                     }}
                   >
-                    Client created successfully!
+                    An error occurred while creating the client.
                   </Typography>
                 </Grid>
               )}
@@ -330,7 +330,7 @@ const CreateClientPage = () => {
                   py: 1.5,
                 }}
               >
-                Crear
+                Create
               </Button>
             </Grid>
           </Grid>
@@ -341,3 +341,4 @@ const CreateClientPage = () => {
 };
 
 export default CreateClientPage;
+
