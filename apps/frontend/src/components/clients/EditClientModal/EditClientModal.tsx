@@ -1,11 +1,11 @@
 import { Box, Button, Grid, Modal, TextField, Typography, List, ListItem, ListItemText } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import useGetClientById from "../../../hooks/useGetClientById";
-import useUpdateClient from "../../../hooks/useUpdateClients";
 import { ClientType, ContactType } from "../../../types/client.types";
 import useUpdateContact from "../../../hooks/useUpdateContact";
 import useGetContactsByClientId from "../../../hooks/useGetContactsByClientId";
+import useUpdateClient from "../../../hooks/clients/useUpdateClients";
+import useGetClientById from "../../../hooks/clients/useGetClientById";
 
 interface EditClientModalProps {
   open: boolean;
@@ -114,7 +114,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
             </Grid>
 
             {/* Lista de contactos con botones antes de los botones de actualización */}
-            <Typography variant="h6" sx={{ mt: 3, fontWeight: "bold" }}>
+            <Typography variant="h6" sx={{ mt: 3}}>
               Contacts
             </Typography>
             {contactsLoading ? (

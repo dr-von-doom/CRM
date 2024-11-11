@@ -17,21 +17,21 @@ import {
   OpportunityDataGridColumns,
   OpportunityDataGridColumnVisibility,
 } from "./OpportunityTable.types";
+import EditOpportunityModal from "../Modal/EditOpportunityModal";
 
 export type OpportunityTableProps = {
   onSelect: (OpportunityId: string) => void;
   onEdit: (OpportunityId: string) => void;
 };
 
-/**
- * Opportunity table component
- */
 export const OpportunityTable: FC<OpportunityTableProps> = ({
   onSelect,
   onEdit,
 }: OpportunityTableProps) => {
   const [page, setPage] = useState(1);
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [selectedOpportunityId, setSelectedOpportunityId] = useState<string | null>(null);
 
   const { data, isLoading, isError } = useGetOpportunities(page);
   const { mutate: updateOpportunity, isPending } = {
@@ -58,9 +58,18 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     setOpenSnackbar(false);
   };
 
-  /**
-   * Opportunity open button component
-   */
+  // Abrir modal de edición
+  const handleEdit = (OpportunityId: string) => {
+    setSelectedOpportunityId(OpportunityId);
+    setIsEditModalOpen(true);
+  };
+
+  // Cerrar modal de edición
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setSelectedOpportunityId(null);
+  };
+
   const OpenButton = ({ OpportunityId }: { OpportunityId: string }) => {
     return (
       <IconButton color="primary" onClick={() => onSelect(OpportunityId)}>
@@ -69,20 +78,14 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     );
   };
 
-  /**
-   * Opportunity edit button component
-   */
   const EditButton = ({ OpportunityId }: { OpportunityId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onEdit(OpportunityId)}>
+      <IconButton color="primary" onClick={() => handleEdit(OpportunityId)}>
         <EditIcon />
       </IconButton>
     );
   };
 
-  /**
-   * Opportunity delete button component
-   */
   const DeleteButton = ({
     OpportunityId,
     isActive,
@@ -138,7 +141,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
           height: "100%",
         }}
       >
-        <CircularProgress />;
+        <CircularProgress />
       </Box>
     );
   }
@@ -182,6 +185,15 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
           Error updating Opportunity
         </Alert>
       </Snackbar>
+
+      {/* Modal de edición */}
+      {selectedOpportunityId && (
+        <EditOpportunityModal
+          open={isEditModalOpen}
+          opportunityId={selectedOpportunityId}
+          onClose={handleCloseEditModal}
+        />
+      )}
     </Box>
   );
 };
