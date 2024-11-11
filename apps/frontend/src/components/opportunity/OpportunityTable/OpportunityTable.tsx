@@ -35,7 +35,9 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
 
   const { data, isLoading, isError } = useGetOpportunities(page);
   const { mutate: updateOpportunity, isPending } = {
-    mutate: (args1: any, args2: any) => {},
+    mutate: (args1: any, args2: any) => {
+      console.log(args1, args2);
+    },
     isPending: false,
   };
 

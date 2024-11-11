@@ -37,8 +37,12 @@ export const OpportunityPage = () => {
           }}
         >
           <OpportunityTable
-            onSelect={(OpportunityId: string) => {}}
-            onEdit={(OpportunityId: string) => {}}
+            onSelect={(OpportunityId: string) => {
+              console.log(OpportunityId);
+            }}
+            onEdit={(OpportunityId: string) => {
+              console.log(OpportunityId);
+            }}
           />
         </Box>
       </Box>
