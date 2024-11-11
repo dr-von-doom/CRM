@@ -1,11 +1,11 @@
 import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ClientDetails from "../components/clients/ClientDetails/ClientDetails";
-import ClientTable from "../components/clients/ClientTable/ClientTable";
-import EditClientModal from "../components/clients/EditClientModal/EditClientModal";
-import SidePanel from "../components/common/SidePanel";
-import BaseLayout from "../layout/BaseLayout";
+import ClientDetails from "../../components/clients/ClientDetails/ClientDetails";
+import ClientTable from "../../components/clients/ClientTable/ClientTable";
+import EditClientModal from "../../components/clients/EditClientModal/EditClientModal";
+import SidePanel from "../../components/common/SidePanel";
+import BaseLayout from "../../layout/BaseLayout";
 
 const ClientPage = () => {
   const theme = useTheme();
