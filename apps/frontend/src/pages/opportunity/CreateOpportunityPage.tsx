@@ -50,8 +50,13 @@ const CreateOpportunity = () => {
   };
 
   if (isLoading) {
-
-    return <BaseLayout> <CircularProgress /></BaseLayout>
+    return (
+      <BaseLayout>
+        <div className="flex items-center justify-center h-screen">
+          <CircularProgress />
+        </div>
+      </BaseLayout>
+    );
   }
 
   if (isError) {
@@ -166,9 +171,8 @@ const CreateOpportunity = () => {
                 {...register("estimatedValue", {
                   required: "This field is required",
                   pattern: {
-                    value: /^\d+(\.\d+)?$/, 
-                    message:
-                      "Please enter a valid number",
+                    value: /^\d+(\.\d+)?$/,
+                    message: "Please enter a valid number",
                   },
                 })}
                 onInput={(e) => {
