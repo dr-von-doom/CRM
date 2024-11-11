@@ -138,7 +138,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
           height: "100%",
         }}
       >
-        <CircularProgress />;
+        <CircularProgress />
       </Box>
     );
   }
