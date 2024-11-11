@@ -1,14 +1,17 @@
 import { ContactType } from "../types/client.types";
-import { ApiRequests } from "../types/api.types";
+import {  ApiRequests } from "../types/api.types";
 import { requestApi } from "./api";
 
-export const fetchContactsByClientId = async (clientId: string) => {
-  const response = await fetch(`/api/clients/${clientId}/contacts`);
-  if (!response.ok) {
-    throw new Error('Failed to fetch contacts');
-  }
-  return response.json();
+export const getContactsByClientId = async (clientId: string): Promise<ContactType[]> => {
+  const { body } = await requestApi(ApiRequests.GET_CONTACTS, {
+    queryParams: { clientId },  // Pasamos el clientId en los parámetros de consulta
+  });
+
+  return body;  // Retorna el cuerpo de la respuesta con los contactos
 };
+
+
+
 /**
  * Updates a contact in the API.
  *

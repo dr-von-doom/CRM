@@ -94,7 +94,7 @@ export type ApiRequestQueryType = {
   [ApiRequests.UPDATE_CLIENT]: void;
   [ApiRequests.CREATE_CLIENT]: void;
   /** Contact query types */
-  [ApiRequests.GET_CONTACTS]: Partial<ContactType>;
+  [ApiRequests.GET_CONTACTS]: { clientId?: string } & Partial<ContactType>;
   [ApiRequests.CREATE_CONTACT]: void;
   [ApiRequests.UPDATE_CONTACT]: void; 
   /** Opportunity query types */

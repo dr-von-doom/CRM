@@ -4,8 +4,8 @@ import { Controller, useForm } from "react-hook-form";
 import useGetClientById from "../../../hooks/useGetClientById";
 import useUpdateClient from "../../../hooks/useUpdateClients";
 import { ClientType, ContactType } from "../../../types/client.types";
-import useGetContactsByClientId from "../../../hooks/useGetContactsByClientId";
 import useUpdateContact from "../../../hooks/useUpdateContact";
+import useGetContactsByClientId from "../../../hooks/useGetContactsByClientId";
 
 interface EditClientModalProps {
   open: boolean;
@@ -21,6 +21,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
   const { data: clientData } = useGetClientById(clientId);
   const { mutate: updateClientHandler, isError } = useUpdateClient();
   const { data: contacts, isLoading: contactsLoading } = useGetContactsByClientId(clientId); 
+  console.log("Contactos recibidos:", clientId);
   const { mutate: updateContactHandler } = useUpdateContact(); 
 
   const { control, handleSubmit, reset } = useForm<ClientType>({
