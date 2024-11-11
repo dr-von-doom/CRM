@@ -21,7 +21,7 @@ const routes = [
   },
   {
     path: "/clients/create",
-    hidden: true,
+    name: "Create client",
     element: <CreateClientPage />,
   },
   {

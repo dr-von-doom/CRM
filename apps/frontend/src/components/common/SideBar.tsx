@@ -59,49 +59,47 @@ export const SideBar = ({
 
       <Box sx={{ overflow: "auto" }}>
         <List>
-          {routes
-            .filter(({ hidden }) => !hidden)
-            .map(({ path, name, icon }) => (
-              <ListItem
-                key={path}
-                component={Link}
-                to={path!}
-                onClick={() => setIsSideBarOpen(false)}
-                onMouseEnter={(e: {
-                  currentTarget: { style: { backgroundColor: string } };
-                }) =>
-                  (e.currentTarget.style.backgroundColor =
-                    location.pathname === path ? "#1e293a" : "#202c3f")
-                }
-                onMouseLeave={(e: {
-                  currentTarget: { style: { backgroundColor: string } };
-                }) =>
-                  (e.currentTarget.style.backgroundColor =
-                    location.pathname === path ? "#1e293a" : "transparent")
-                }
-                sx={{
-                  backgroundColor:
-                    location.pathname === path ? "#1e293a" : "inherit",
-                  cursor: "pointer",
-                  textDecoration: "none",
-                  color: "#eeeeee",
-                  "&:hover": {
-                    backgroundColor: "#202c3f",
-                  },
+          {routes.map(({ path, name, icon }) => (
+            <ListItem
+              key={path}
+              component={Link}
+              to={path!}
+              onClick={() => setIsSideBarOpen(false)}
+              onMouseEnter={(e: {
+                currentTarget: { style: { backgroundColor: string } };
+              }) =>
+                (e.currentTarget.style.backgroundColor =
+                  location.pathname === path ? "#1e293a" : "#202c3f")
+              }
+              onMouseLeave={(e: {
+                currentTarget: { style: { backgroundColor: string } };
+              }) =>
+                (e.currentTarget.style.backgroundColor =
+                  location.pathname === path ? "#1e293a" : "transparent")
+              }
+              sx={{
+                backgroundColor:
+                  location.pathname === path ? "#1e293a" : "inherit",
+                cursor: "pointer",
+                textDecoration: "none",
+                color: "#eeeeee",
+                "&:hover": {
+                  backgroundColor: "#202c3f",
+                },
+              }}
+            >
+              {icon && (
+                <ListItemIcon sx={{ color: "#898f99" }}>{icon}</ListItemIcon>
+              )}
+              <ListItemText
+                primary={name}
+                primaryTypographyProps={{
+                  fontSize: ".9rem",
+                  fontWeight: "light",
                 }}
-              >
-                {icon && (
-                  <ListItemIcon sx={{ color: "#898f99" }}>{icon}</ListItemIcon>
-                )}
-                <ListItemText
-                  primary={name}
-                  primaryTypographyProps={{
-                    fontSize: ".9rem",
-                    fontWeight: "light",
-                  }}
-                />
-              </ListItem>
-            ))}
+              />
+            </ListItem>
+          ))}
         </List>
       </Box>
     </Drawer>
