@@ -50,7 +50,8 @@ const CreateOpportunity = () => {
   };
 
   if (isLoading) {
-    return <CircularProgress />;
+
+    return <BaseLayout> <CircularProgress /></BaseLayout>
   }
 
   if (isError) {
