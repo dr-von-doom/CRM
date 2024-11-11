@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { createClient } from "../services/client.service";
-import { ApiRequests } from "../types/api.types";
-import { ClientType } from "../types/client.types";
+import { createClient } from "../../services/client.service";
+import { ApiRequests } from "../../types/api.types";
+import { ClientType } from "../../types/client.types";
 
 /**
  * Custom hook for creating a client using React Query's useMutation.

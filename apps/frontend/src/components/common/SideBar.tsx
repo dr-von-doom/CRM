@@ -59,7 +59,9 @@ export const SideBar = ({
 
       <Box sx={{ overflow: "auto" }}>
         <List>
-          {routes.map(({ path, name, icon }) => (
+          {routes
+          .filter(({ showInNav})=> !showInNav)
+          .map(({ path, name, icon }) => (
             <ListItem
               key={path}
               component={Link}

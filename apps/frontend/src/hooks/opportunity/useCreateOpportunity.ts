@@ -1,6 +1,6 @@
-import { useMutation } from '@tanstack/react-query';
-import { OpportunityType } from '../types/opportunities';
-import { createOpportunity } from '../services/opportunity.service';
+import { useMutation } from "@tanstack/react-query";
+import { createOpportunity } from "../../services/opportunity.service";
+import { OpportunityType } from "../../types/opportunity.types";
 
 export const useCreateOpportunity = () => {
   return useMutation({
