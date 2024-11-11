@@ -11,10 +11,10 @@ import { useCreateClient } from "../../hooks/clients/useCreateClients";
 import { useCreateContact } from "../../hooks/useCreateContact";
 import { ClientType, ContactType } from "../../types/client.types";
 
-// Función para generar UUID
+// Generador de UUID
 const generateUUID = () => crypto.randomUUID();
 
-type FormValues = ClientType & {
+type FormValues = Omit<ClientType, "id"> & {
   contacts: Omit<ContactType, "id" | "clientId">[];
 };
 
@@ -35,11 +35,21 @@ const CreateClientPage = () => {
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
-      // Crear el cliente y obtener su ID
-      const newClient = await createClientMutation.mutateAsync(data);
+      // Crear cliente y obtener su ID
+      const newClient = await createClientMutation.mutateAsync({
+        id: generateUUID(),
+        nit: data.nit,
+        name: data.name,
+        address: data.address,
+        city: data.city,
+        country: data.country,
+        phone: data.phone,
+        email: data.email,
+        isActive: true,
+      });
       const clientId = newClient.id;
 
-      // Crear contactos con ID y clientId
+      // Crear contactos asociados al cliente utilizando clientId
       await Promise.all(
         data.contacts.map((contact) =>
           createContactMutation.mutateAsync({
@@ -66,10 +76,10 @@ const CreateClientPage = () => {
         }}
       >
         <Typography variant="h4" component="h1" sx={{ fontWeight: "600" }}>
-          Create Client
+          Crear Cliente
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary", mb: 2 }}>
-          Fill in the form below to create a new client.
+          Llena el formulario para crear un nuevo cliente.
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
@@ -93,7 +103,7 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Full Name"
+                label="Nombre Completo"
                 required
                 {...register("name", { required: "Este campo es obligatorio" })}
                 error={!!errors.name}
@@ -103,7 +113,7 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Address"
+                label="Dirección"
                 required
                 {...register("address", {
                   required: "Este campo es obligatorio",
@@ -115,7 +125,7 @@ const CreateClientPage = () => {
             <Grid item xs={6}>
               <TextField
                 fullWidth
-                label="City"
+                label="Ciudad"
                 required
                 {...register("city", { required: "Este campo es obligatorio" })}
                 error={!!errors.city}
@@ -125,7 +135,7 @@ const CreateClientPage = () => {
             <Grid item xs={6}>
               <TextField
                 fullWidth
-                label="Country"
+                label="País"
                 required
                 {...register("country", {
                   required: "Este campo es obligatorio",
@@ -137,7 +147,7 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Phone"
+                label="Teléfono"
                 required
                 {...register("phone", {
                   required: "Este campo es obligatorio",
@@ -153,13 +163,13 @@ const CreateClientPage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Email"
+                label="Correo Electrónico"
                 required
                 {...register("email", {
                   required: "Este campo es obligatorio",
                   pattern: {
                     value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: "El email no tiene un formato válido",
+                    message: "El correo no tiene un formato válido",
                   },
                 })}
                 error={!!errors.email}
@@ -171,7 +181,7 @@ const CreateClientPage = () => {
             {fields.map((field, index) => (
               <Grid item xs={12} key={field.id}>
                 <Typography variant="h5" sx={{ fontWeight: "600", mb: 2 }}>
-                  Contact #{index + 1}
+                  Contacto #{index + 1}
                 </Typography>
                 <Grid container spacing={2}>
                   <Grid item xs={6}>
@@ -181,7 +191,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="First Name"
+                          label="Nombre"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.firstName}
@@ -199,7 +209,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="Last Name"
+                          label="Apellido"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.lastName}
@@ -217,7 +227,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="Email"
+                          label="Correo"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.email}
@@ -233,7 +243,7 @@ const CreateClientPage = () => {
                       render={({ field }) => (
                         <TextField
                           fullWidth
-                          label="Phone"
+                          label="Teléfono"
                           required
                           {...field}
                           error={!!errors.contacts?.[index]?.phone}
@@ -250,7 +260,7 @@ const CreateClientPage = () => {
                   onClick={() => remove(index)}
                   sx={{ mt: 1 }}
                 >
-                  Remove Contact
+                  Quitar Contacto
                 </Button>
               </Grid>
             ))}
@@ -264,31 +274,50 @@ const CreateClientPage = () => {
                   append({ firstName: "", lastName: "", email: "", phone: "" })
                 }
               >
-                Add Contact
+                Añadir Contacto
               </Button>
             </Grid>
+
             {/* Botón de envío */}
             <>
               {/* Aqui se muestra un anuncio para que el usuario sepa que se creó el cliente exitosamente */}
               {createClientMutation.isSuccess && (
                 <Grid item xs={12}>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "success.main", mb: 2, bgcolor: "#d2fcdd", py: 2, textAlign: "center", borderColor: "success.main", borderWidth: 2, borderRadius: 1.5 }}
-                >
-                  Client created successfully!
-                </Typography>
-              </Grid>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "success.main",
+                      mb: 2,
+                      bgcolor: "#d2fcdd",
+                      py: 2,
+                      textAlign: "center",
+                      borderColor: "success.main",
+                      borderWidth: 2,
+                      borderRadius: 1.5,
+                    }}
+                  >
+                    Client created successfully!
+                  </Typography>
+                </Grid>
               )}
               {createClientMutation.isError && (
                 <Grid item xs={12}>
-              <Typography
-                variant="body2"
-                sx={{ color: "error.main", mb: 2, bgcolor: "#fcd2d2", py: 2, textAlign: "center", borderColor: "error.main", borderWidth: 2, borderRadius: 1.5 }}
-              >
-                Client created successfully!
-              </Typography>
-            </Grid>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "error.main",
+                      mb: 2,
+                      bgcolor: "#fcd2d2",
+                      py: 2,
+                      textAlign: "center",
+                      borderColor: "error.main",
+                      borderWidth: 2,
+                      borderRadius: 1.5,
+                    }}
+                  >
+                    Client created successfully!
+                  </Typography>
+                </Grid>
               )}
             </>
             <Grid item xs={12}>
@@ -301,7 +330,7 @@ const CreateClientPage = () => {
                   py: 1.5,
                 }}
               >
-                Create
+                Crear
               </Button>
             </Grid>
           </Grid>
