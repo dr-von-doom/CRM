@@ -6,7 +6,7 @@ import {
   CircularProgress,
   Typography,
 } from "@mui/material";
-import useGetClientById from "../../../hooks/useGetClientById";
+import useGetClientById from "../../../hooks/clients/useGetClientById";
 import { ErrorAlert } from "../../common/alerts";
 
 interface ClientDetailsProps {
