@@ -1,5 +1,5 @@
-import { ClientType, ContactType  } from "./client.types";
-import { OpportunityType } from "./opportunity";
+import { ClientType, ContactType } from "./client.types";
+import { OpportunityType } from "./opportunity.types";
 
 export enum httpMethod {
   GET = "GET",

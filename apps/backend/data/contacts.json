@@ -33,34 +33,6 @@
       "phone": "+18033719725"
     },
     {
-      "0": {
-        "0": {
-          "0": {
-            "id": "e4eba781-c5f0-47e2-bc8d-8167d2b7faf3",
-            "clientId": "08f0fdaa-4202-4e42-a954-168e7b1d3731",
-            "firstName": "Rowena",
-            "lastName": "Quitzon",
-            "email": "Ricky_Rau@hotmail.com",
-            "phone": "+14053780103",
-            "name": "Jose Almenarez",
-            "address": "931 Isobel Trace"
-          },
-          "id": "e4eba781-c5f0-47e2-bc8d-8167d2b7faf3",
-          "clientId": "08f0fdaa-4202-4e42-a954-168e7b1d3731",
-          "firstName": "Rowena",
-          "lastName": "Quitzon",
-          "email": "Ricky_Rau@hotmail.com",
-          "phone": "+14053780103",
-          "name": "Connor",
-          "address": "931 Isobel Trace"
-        },
-        "id": "e4eba781-c5f0-47e2-bc8d-8167d2b7faf3",
-        "clientId": "08f0fdaa-4202-4e42-a954-168e7b1d3731",
-        "firstName": "Rowena",
-        "lastName": "Quitzon",
-        "email": "Ricky_Rau@hotmail.com",
-        "phone": "+14053780103"
-      },
       "id": "e4eba781-c5f0-47e2-bc8d-8167d2b7faf3",
       "clientId": "08f0fdaa-4202-4e42-a954-168e7b1d3731",
       "firstName": "Rowena",
@@ -237,36 +209,9 @@
       "phone": "+13093969323"
     },
     {
-      "0": {
-        "0": {
-          "0": {
-            "id": "b58b4765-97e3-4325-8150-eaf96e204eb3",
-            "clientId": "b24d9c42-0377-45ef-96d7-7af7627a0b56",
-            "firstName": "Damon",
-            "lastName": "Aufderhar",
-            "email": "Natalia_Mante@hotmail.com",
-            "phone": "+18273003922",
-            "address": "ssssssss"
-          },
-          "id": "b58b4765-97e3-4325-8150-eaf96e204eb3",
-          "clientId": "b24d9c42-0377-45ef-96d7-7af7627a0b56",
-          "firstName": "Damon",
-          "lastName": "Aufderhar",
-          "email": "Natalia_Mante@hotmail.com",
-          "phone": "+18273003922",
-          "address": "sdsdsd"
-        },
-        "id": "b58b4765-97e3-4325-8150-eaf96e204eb3",
-        "clientId": "b24d9c42-0377-45ef-96d7-7af7627a0b56",
-        "firstName": "Damon",
-        "lastName": "Aufderhar",
-        "email": "Natalia_Mante@hotmail.com",
-        "phone": "+18273003922",
-        "address": "sdsdsdsds"
-      },
       "id": "b58b4765-97e3-4325-8150-eaf96e204eb3",
       "clientId": "b24d9c42-0377-45ef-96d7-7af7627a0b56",
-      "firstName": "Damian",
+      "firstName": "Damon",
       "lastName": "Aufderhar",
       "email": "Natalia_Mante@hotmail.com",
       "phone": "+18273003922"

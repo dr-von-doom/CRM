@@ -21,9 +21,10 @@ for (let i = 0; i < 30; i++) {
       "it_consulting",
       "outsourcing",
     ]),
+    businessName: faker.company.name(),
     description: faker.lorem.paragraph(),
-    budget: faker.finance.amount(),
     estimatedDate: faker.date.future(),
+    estimatedValue: faker.finance.amount(),
     status: faker.helpers.arrayElement([
       "open",
       "in_study",
