@@ -22,7 +22,7 @@ import {
 } from "../../types/opportunity.types";
 import BaseLayout from "../../layout/BaseLayout";
 
-type FormValues = Omit<OpportunityType, "id" | "isDeleted">;
+type FormValues = Omit<OpportunityType, "isDeleted">;
 
 const CreateOpportunity = () => {
   const {

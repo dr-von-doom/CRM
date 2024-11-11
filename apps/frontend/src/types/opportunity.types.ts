@@ -30,7 +30,7 @@ export const opportunityStatusMap: Record<OpportunityStatus, string> = {
 };
 
 export interface OpportunityType {
-  id?: string;
+  id: string;
   clientId: string;
   businessName: string;
   businessType: OpportunityBusinessType;
