@@ -1,8 +1,8 @@
 import { Box, Button, Grid, Modal, TextField, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-import useGetClientById from "../../../hooks/useGetClientById.ts";
-import useUpdateClient from "../../../hooks/useUpdateClients.ts";
+import useGetClientById from "../../../hooks/clients/useGetClientById.ts";
+import useUpdateClient from "../../../hooks/clients/useUpdateClients.ts";
 import { ClientType } from "../../../types/client.types.ts";
 
 interface EditClientModalProps {

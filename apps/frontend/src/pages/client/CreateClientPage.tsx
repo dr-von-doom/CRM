@@ -1,10 +1,10 @@
 import { useForm, useFieldArray, SubmitHandler, Controller } from "react-hook-form";
 import { FaTrashAlt } from "react-icons/fa";
-import BaseLayout from "../layout/BaseLayout";
+import BaseLayout from "../../layout/BaseLayout";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
-import { useCreateClient } from "../hooks/useCreateClients";
-import { useCreateContact } from "../hooks/useCreateContact";
-import { ClientType, ContactType } from "../types/client.types";
+import { useCreateClient } from "../../hooks/clients/useCreateClients";
+import { useCreateContact } from "../../hooks/useCreateContact";
+import { ClientType, ContactType } from "../../types/client.types";
 
 // Función para generar UUID
 const generateUUID = () => crypto.randomUUID();

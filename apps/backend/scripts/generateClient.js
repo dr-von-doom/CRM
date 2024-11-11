@@ -17,4 +17,4 @@ for (let i = 0; i < 50; i++) {
   });
 }
 
-writeFileSync("./data/clients.json", JSON.stringify(clients, null, 2));
+writeFileSync("./data/clients.json", JSON.stringify({ "": clients }, null, 2));
