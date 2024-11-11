@@ -7,6 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 import useGetClientById from "../../../hooks/clients/useGetClientById";
+//import useGetOpportunitiesByClientId from "../../../hooks/opportunity/useGetOpportunitiesByClientId";
+//import useGetContactsByClientId from "../../../hooks/clients/useGetContactByClientId";
 import { ErrorAlert } from "../../common/alerts";
 
 interface ClientDetailsProps {
@@ -15,6 +17,8 @@ interface ClientDetailsProps {
 
 export const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
   const { data: client, isLoading, isError } = useGetClientById(clientId);
+  //const { data } = useGetOpportunitiesByClientId(clientId);
+  //const { data } = useGetContactsByClientId(clientId);
 
   if (isLoading)
     return (
