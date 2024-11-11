@@ -8,7 +8,7 @@ import {
   IconButton,
   Snackbar,
 } from "@mui/material";
-import { DataGrid, GridRowParams } from "@mui/x-data-grid";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { FC, useState } from "react";
 import useGetOpportunities from "../../../hooks/opportunity/useGetOpportunities";
 import { OPPORTUNITIES_PAGE_SIZE } from "../../../utils/const";
@@ -26,7 +26,6 @@ export type OpportunityTableProps = {
 
 export const OpportunityTable: FC<OpportunityTableProps> = ({
   onSelect,
-  onEdit,
 }: OpportunityTableProps) => {
   const [page, setPage] = useState(1);
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -103,12 +102,12 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     );
   };
 
-  const columns = [
+  const columns: GridColDef[] = [
     {
       field: "open",
       headerName: "Open",
       sortable: false,
-      renderCell: ({ row }: Partial<GridRowParams>) => {
+      renderCell: ({ row }: any) => {
         return <OpenButton OpportunityId={row.id} />;
       },
     },
@@ -117,7 +116,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       field: "edit",
       headerName: "Edit",
       sortable: false,
-      renderCell: ({ row }: Partial<GridRowParams>) => {
+      renderCell: ({ row }: any) => {
         return <EditButton OpportunityId={row.id} />;
       },
     },
@@ -125,12 +124,11 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       field: "delete",
       headerName: "Delete",
       sortable: false,
-      renderCell: ({ row }: Partial<GridRowParams>) => {
+      renderCell: ({ row }: any) => {
         return <DeleteButton OpportunityId={row.id} isActive={row.isActive} />;
       },
     },
   ];
-
   if (isLoading) {
     return (
       <Box

@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Modal, TextField, Typography, MenuItem, Select } from "@mui/material";
 import React, { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { OpportunityType } from "../../../types/opportunity";
+import { OpportunityType } from "../../../types/opportunity.types";
 import useGetOpportunityById from "../../../hooks/useGetOpportunityById";
 import useUpdateOpportunity from "../../../hooks/useUpdateOpportunity";
 

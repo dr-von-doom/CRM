@@ -34,7 +34,11 @@ const CreateClientPage = () => {
   const handleAddContact = () => {
     setContacts([
       ...contacts,
-      { firstName: "", lastName: "", email: "", phone: "" },
+      {
+        firstName: "", lastName: "", email: "", phone: "",
+        id: "",
+        clientId: ""
+      },
     ]);
   };
 
