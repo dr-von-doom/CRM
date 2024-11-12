@@ -24,11 +24,13 @@ export enum ApiRequests {
   /** Contact route */
   GET_CONTACTS = "GET_CONTACTS",
   CREATE_CONTACT = "CREATE_CONTACT",
+  GET_CONTACTS_BY_CLIENT_ID = "GET_CONTACTS_BY_CLIENT_ID",
   /** Opportunity routes */
   GET_OPPORTUNITIES = "GET_OPPORTUNITIES",
   GET_OPPORTUNITY_BY_ID = "GET_OPPORTUNITY_BY_ID",
   UPDATE_OPPORTUNITY = "UPDATE_OPPORTUNITY",
   CREATE_OPPORTUNITY = "CREATE_OPPORTUNITY",
+  GET_OPPORTUNITY_BY_CLIENT_ID = "GET_OPPORTUNITY_BY_CLIENT_ID",
 }
 
 export const ApiRequestPaths: Record<ApiRequests, string> = {
@@ -41,11 +43,13 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   /** Contact paths */
   [ApiRequests.GET_CONTACTS]: "/contacts",
   [ApiRequests.CREATE_CONTACT]: "/contacts",
+  [ApiRequests.GET_CONTACTS_BY_CLIENT_ID]: "/contacts?clientId=:clientId",
   /** Opportunity paths */
   [ApiRequests.GET_OPPORTUNITIES]: "/opportunities",
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: "/opportunities/:id",
   [ApiRequests.UPDATE_OPPORTUNITY]: "/opportunities/:id",
   [ApiRequests.CREATE_OPPORTUNITY]: "/opportunities",
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: "/opportunities?clientId=:clientId",
 };
 
 export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
@@ -58,11 +62,13 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   /** Contact request methods */
   [ApiRequests.GET_CONTACTS]: httpMethod.GET,
   [ApiRequests.CREATE_CONTACT]: httpMethod.POST,
+  [ApiRequests.GET_CONTACTS_BY_CLIENT_ID]: httpMethod.GET,
   /** Opportunity request methods */
   [ApiRequests.GET_OPPORTUNITIES]: httpMethod.GET,
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: httpMethod.GET,
   [ApiRequests.UPDATE_OPPORTUNITY]: httpMethod.PATCH,
   [ApiRequests.CREATE_OPPORTUNITY]: httpMethod.POST,
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: httpMethod.GET,
 };
 
 export type ApiRequestBodyType = {
@@ -75,11 +81,13 @@ export type ApiRequestBodyType = {
   /** Contact body types */
   [ApiRequests.GET_CONTACTS]: void;
   [ApiRequests.CREATE_CONTACT]: Partial<ContactType>;
+  [ApiRequests.GET_CONTACTS_BY_CLIENT_ID]: void;
   /** Opportunity body types */
   [ApiRequests.GET_OPPORTUNITIES]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: void;
   [ApiRequests.UPDATE_OPPORTUNITY]: Partial<OpportunityType>;
   [ApiRequests.CREATE_OPPORTUNITY]: OpportunityType;
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: void;
 };
 
 export type ApiRequestQueryType = {
@@ -92,11 +100,13 @@ export type ApiRequestQueryType = {
   /** Contact query types */
   [ApiRequests.GET_CONTACTS]: Partial<ContactType>;
   [ApiRequests.CREATE_CONTACT]: void;
+  [ApiRequests.GET_CONTACTS_BY_CLIENT_ID]: void;
   /** Opportunity query types */
   [ApiRequests.GET_OPPORTUNITIES]: paginationType & Partial<OpportunityType>;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: void;
   [ApiRequests.UPDATE_OPPORTUNITY]: void;
   [ApiRequests.CREATE_OPPORTUNITY]: void;
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: void;
 };
 
 export type ApiPathParamsType = {
@@ -109,11 +119,13 @@ export type ApiPathParamsType = {
   /** Contact path params */
   [ApiRequests.GET_CONTACTS]: void;
   [ApiRequests.CREATE_CONTACT]: void;
+  [ApiRequests.GET_CONTACTS_BY_CLIENT_ID]: { clientId: string };
   /** Opportunity path params */
   [ApiRequests.GET_OPPORTUNITIES]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: { id: string };
   [ApiRequests.UPDATE_OPPORTUNITY]: { id: string };
   [ApiRequests.CREATE_OPPORTUNITY]: void;
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: { clientId: string };
 };
 
 export type ApiResponseType = {
@@ -126,9 +138,11 @@ export type ApiResponseType = {
   /** Contact response types */
   [ApiRequests.GET_CONTACTS]: ContactType[];
   [ApiRequests.CREATE_CONTACT]: ContactType;
+  [ApiRequests.GET_CONTACTS_BY_CLIENT_ID]: ContactType[];
   /** Opportunity response types */
   [ApiRequests.GET_OPPORTUNITIES]: OpportunityType[];
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: OpportunityType;
   [ApiRequests.UPDATE_OPPORTUNITY]: OpportunityType;
   [ApiRequests.CREATE_OPPORTUNITY]: OpportunityType;
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: OpportunityType[];
 };
