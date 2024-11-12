@@ -113,7 +113,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
               ))}
             </Grid>
 
-            {/* Lista de contactos con botones antes de los botones de actualización */}
+            {/* Contact list */}
             <Typography variant="h6" sx={{ mt: 3}}>
               Contacts
             </Typography>
@@ -143,7 +143,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
               </List>
             )}
 
-            {/* Botones de acción */}
+            {/* Action button */}
             <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}>
               <Button
                 variant="outlined"
@@ -167,7 +167,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
         </Box>
       </Modal>
 
-      {/* Modal para editar el contacto */}
+      {/* Edit contact modal */}
       {selectedContact && (
         <Modal
           open={contactModalOpen}
@@ -219,7 +219,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
                 ))}
               </Grid>
 
-              {/* Botones de acción */}
+              {/* Action button */}
               <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}>
                 <Button
                   variant="outlined"

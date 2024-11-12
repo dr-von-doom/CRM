@@ -4,10 +4,10 @@ import { requestApi } from "./api";
 
 export const getContactsByClientId = async (clientId: string): Promise<ContactType[]> => {
   const { body } = await requestApi(ApiRequests.GET_CONTACTS, {
-    queryParams: { clientId },  // Pasamos el clientId en los parámetros de consulta
+    queryParams: { clientId }, 
   });
 
-  return body;  // Retorna el cuerpo de la respuesta con los contactos
+  return body;  
 };
 
 

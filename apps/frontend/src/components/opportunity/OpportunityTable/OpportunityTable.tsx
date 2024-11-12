@@ -8,7 +8,7 @@ import {
   IconButton,
   Snackbar,
 } from "@mui/material";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { DataGrid} from "@mui/x-data-grid";
 import { FC, useState } from "react";
 import useGetOpportunities from "../../../hooks/opportunity/useGetOpportunities";
 import { OPPORTUNITIES_PAGE_SIZE } from "../../../utils/const";
@@ -102,7 +102,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     );
   };
 
-  const columns: GridColDef[] = [
+  const columns = [
     {
       field: "open",
       headerName: "Open",

@@ -1,5 +1,5 @@
 import { ApiRequests } from "../types/api.types";
-import { OpportunityType } from "../types/opportunity";
+import { OpportunityType } from "../types/opportunity.types";
 import { OPPORTUNITIES_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
