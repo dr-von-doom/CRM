@@ -25,7 +25,7 @@
     {
       "id": "8f7553f9-c1eb-47df-9e05-784a1a2dd8d9",
       "clientId": "6b644196-01de-40f9-b02f-c08834cd7c34",
-      "businessType": "mobile_dev",
+      "businessType": "web_dev",
       "businessName": "Batz, Heathcote and Reilly",
       "description": "Sol suggero vox asporto voro tam calco somnus usitas canonicus. Fuga terebro stips ulciscor at bis bardus sollers ver sponte. Sopor tum reiciendis cura subseco arceo calcar dens bos.",
       "estimatedDate": "2025-05-04T02:38:18.680Z",
@@ -42,7 +42,7 @@
       "estimatedDate": "2025-10-13T01:09:39.491Z",
       "estimatedValue": "744.99",
       "status": "in_study",
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "c5046422-92bb-4f8c-b885-75c614511f9e",
@@ -96,7 +96,7 @@
       "description": "Vulgaris crux venustas ambulo vir surgo contra. Adsum cultura adduco aperiam clarus non corrupti sursum. Spoliatio quidem velut tracto utrimque demergo adipisci doloribus curiositas allatus.",
       "estimatedDate": "2025-01-09T06:17:46.784Z",
       "estimatedValue": "990.69",
-      "status": "open",
+      "status": "purchase_order",
       "isDeleted": false
     },
     {
@@ -108,7 +108,7 @@
       "estimatedDate": "2025-04-11T08:44:46.864Z",
       "estimatedValue": "497.30",
       "status": "in_study",
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "dfe3388a-bacd-4bf0-b66e-fa7384313268",

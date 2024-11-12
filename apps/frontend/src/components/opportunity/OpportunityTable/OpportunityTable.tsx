@@ -14,7 +14,7 @@ import {
   IconButton,
   Snackbar,
 } from "@mui/material";
-import { DataGrid, GridRowParams } from "@mui/x-data-grid";
+import { DataGrid, GridRowParams} from "@mui/x-data-grid";
 import { FC, useState } from "react";
 import useGetOpportunities from "../../../hooks/opportunity/useGetOpportunities";
 import useUpdateOpportunity from "../../../hooks/opportunity/useUpdateOpportunity";
@@ -24,21 +24,19 @@ import {
   OpportunityDataGridColumns,
   OpportunityDataGridColumnVisibility,
 } from "./OpportunityTable.types";
+import EditOpportunityModal from "../Modal/EditOpportunityModal";
 
 export type OpportunityTableProps = {
   onSelect: (opportunityId: string) => void;
   onEdit: (opportunityId: string) => void;
 };
 
-/**
- * Opportunity table component
- */
 export const OpportunityTable: FC<OpportunityTableProps> = ({
   onSelect,
-  onEdit,
 }: OpportunityTableProps) => {
   const [page, setPage] = useState(1);
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
   const [selectedOpportunityId, setSelectedOpportunityId] = useState<string | null>(null);
 
@@ -83,15 +81,27 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     setOpenSnackbar(false);
   };
 
+  
+ 
+  const handleEdit = (OpportunityId: string) => {
+    setSelectedOpportunityId(OpportunityId);
+    setIsEditModalOpen(true);
+  };
+
   const handleCloseDialog = () => {
     setOpenConfirmDialog(false);
     setSelectedOpportunityId(null);
   };
 
-  /**
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setSelectedOpportunityId(null);
+  };
+
+   /**
    * Opportunity open button component
    */
-  const OpenButton = ({ opportunityId }: { opportunityId: string }) => {
+   const OpenButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
       <IconButton color="primary" onClick={() => onSelect(opportunityId)}>
         <OpenInNewIcon />
@@ -99,20 +109,15 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     );
   };
 
-  /**
-   * Opportunity edit button component
-   */
-  const EditButton = ({ opportunityId }: { opportunityId: string }) => {
+
+  const EditButton = ({ OpportunityId }: { OpportunityId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onEdit(opportunityId)}>
+      <IconButton color="primary" onClick={() => handleEdit(OpportunityId)}>
         <EditIcon />
       </IconButton>
     );
   };
 
-  /**
-   * Opportunity delete button component
-   */
   const DeleteButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
       <IconButton color="error" onClick={() => handleDeleteClick(opportunityId)}>
@@ -135,8 +140,8 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       field: "edit",
       headerName: "Edit",
       sortable: false,
-      renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <EditButton opportunityId={row.id} />;
+      renderCell: ({ row }: any) => {
+        return <EditButton OpportunityId={row.id} />;
       },
     },
     {
@@ -148,7 +153,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       },
     },
   ];
-
+  
   if (isLoading) {
     return (
       <Box
@@ -229,6 +234,15 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
           Error deleting opportunity
         </Alert>
       </Snackbar>
+
+      {/* edit modal */}
+      {selectedOpportunityId && (
+        <EditOpportunityModal
+          open={isEditModalOpen}
+          opportunityId={selectedOpportunityId}
+          onClose={handleCloseEditModal}
+        />
+      )}
     </Box>
   );
 };
