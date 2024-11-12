@@ -569,17 +569,6 @@
       "email": "test@example.us",
       "phone": "6019521325",
       "id": "3ev9d1z"
-    },
-    {
-      "nit": "1001942939",
-      "name": "Daniel Andres Olivares Rodelo",
-      "address": "Street xyc",
-      "city": "Barranquilla",
-      "country": "Colombia",
-      "phone": "3502080093",
-      "email": "daolivares@uninorte.edu.co",
-      "isActive": true,
-      "id": "4Y7I01P"
     }
   ]
 }
