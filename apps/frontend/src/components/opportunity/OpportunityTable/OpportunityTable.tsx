@@ -14,7 +14,7 @@ import {
   IconButton,
   Snackbar,
 } from "@mui/material";
-import { DataGrid} from "@mui/x-data-grid";
+import { DataGrid, GridRowParams} from "@mui/x-data-grid";
 import { FC, useState } from "react";
 import useGetOpportunities from "../../../hooks/opportunity/useGetOpportunities";
 import useUpdateOpportunity from "../../../hooks/opportunity/useUpdateOpportunity";
@@ -81,10 +81,16 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     setOpenSnackbar(false);
   };
 
+  
   // Abrir modal de edición
   const handleEdit = (OpportunityId: string) => {
     setSelectedOpportunityId(OpportunityId);
     setIsEditModalOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenConfirmDialog(false);
+    setSelectedOpportunityId(null);
   };
 
   // Cerrar modal de edición
@@ -93,13 +99,17 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     setSelectedOpportunityId(null);
   };
 
-  const OpenButton = ({ OpportunityId }: { OpportunityId: string }) => {
+   /**
+   * Opportunity open button component
+   */
+   const OpenButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
       <IconButton color="primary" onClick={() => onSelect(opportunityId)}>
         <OpenInNewIcon />
       </IconButton>
     );
   };
+
 
   const EditButton = ({ OpportunityId }: { OpportunityId: string }) => {
     return (
@@ -109,13 +119,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     );
   };
 
-  const DeleteButton = ({
-    OpportunityId,
-    isActive,
-  }: {
-    OpportunityId: string;
-    isActive: boolean;
-  }) => {
+  const DeleteButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
       <IconButton color="error" onClick={() => handleDeleteClick(opportunityId)}>
         <DeleteForeverIcon />
@@ -128,8 +132,8 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       field: "open",
       headerName: "Open",
       sortable: false,
-      renderCell: ({ row }: any) => {
-        return <OpenButton OpportunityId={row.id} />;
+      renderCell: ({ row }: Partial<GridRowParams>) => {
+        return <OpenButton opportunityId={row.id} />;
       },
     },
     ...OpportunityDataGridColumns,
@@ -145,11 +149,12 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       field: "delete",
       headerName: "Delete",
       sortable: false,
-      renderCell: ({ row }: any) => {
-        return <DeleteButton OpportunityId={row.id} isActive={row.isActive} />;
+      renderCell: ({ row }: Partial<GridRowParams>) => {
+        return <DeleteButton opportunityId={row.id} />;
       },
     },
   ];
+  
   if (isLoading) {
     return (
       <Box

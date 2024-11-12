@@ -89,28 +89,3 @@ export const createOpportunity = async (opportunityData: OpportunityType): Promi
   return body;
 };
 
-/**
- * Updates an opportunity in the API.
- *
- * @param {string} id - The ID of the opportunity to update.
- * @param {Partial<OpportunityType>} opportunityData - The new data for the opportunity.
- * @returns {Promise<OpportunityType>} - The updated opportunity data.
- */
-export const updateOpportunity = async (
-  id: string,
-  opportunityData: Partial<OpportunityType>
-): Promise<OpportunityType> => {
-  const options = {
-    body: opportunityData,
-    pathParams: { id },
-  };
-
-  const { body } = await requestApi(ApiRequests.UPDATE_OPPORTUNITY, options);
-
-  return body;
-};
-
-export default {
-  getOpportunityById,
-  updateOpportunity,
-};
