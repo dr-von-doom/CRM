@@ -4,13 +4,20 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import {
   Alert,
   Box,
+  Button,
   CircularProgress,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
   IconButton,
   Snackbar,
 } from "@mui/material";
 import { DataGrid, GridRowParams } from "@mui/x-data-grid";
 import { FC, useState } from "react";
 import useGetOpportunities from "../../../hooks/opportunity/useGetOpportunities";
+import useUpdateOpportunity from "../../../hooks/opportunity/useUpdateOpportunity";
 import { OPPORTUNITIES_PAGE_SIZE } from "../../../utils/const";
 import { ErrorAlert } from "../../common/alerts";
 import {
@@ -19,8 +26,8 @@ import {
 } from "./OpportunityTable.types";
 
 export type OpportunityTableProps = {
-  onSelect: (OpportunityId: string) => void;
-  onEdit: (OpportunityId: string) => void;
+  onSelect: (opportunityId: string) => void;
+  onEdit: (opportunityId: string) => void;
 };
 
 /**
@@ -32,38 +39,61 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
 }: OpportunityTableProps) => {
   const [page, setPage] = useState(1);
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
+  const [selectedOpportunityId, setSelectedOpportunityId] = useState<string | null>(null);
 
   const { data, isLoading, isError } = useGetOpportunities(page);
-  const { mutate: updateOpportunity, isPending } = {
-    mutate: (args1: any, args2: any) => {
-      console.log(args1, args2);
-    },
-    isPending: false,
-  };
+  const { mutate: updateOpportunity, isPending } = useUpdateOpportunity();
 
   const { opportunities, totalCount } = data || {};
 
-  const onDelete = (OpportunityId: string, isActive: boolean) => {
+  // Filter opportunities where isDeleted is false
+  const filteredOpportunities = (opportunities || []).filter(
+    (opportunity) => !opportunity.isDeleted
+  );
+
+  const onDelete = (opportunityId: string) => {
     updateOpportunity(
-      { id: OpportunityId, OpportunityData: { isActive: !isActive } },
+      { id: opportunityId, opportunityData: { isDeleted: true } },
       {
         onError: () => {
           setOpenSnackbar(true);
+        },
+        onSettled: () => {
+          // Close the confirmation dialog after the mutation settles
+          setOpenConfirmDialog(false);
+          setSelectedOpportunityId(null);
         },
       }
     );
   };
 
-  const handleClose = () => {
+  const handleDeleteClick = (opportunityId: string) => {
+    setSelectedOpportunityId(opportunityId);
+    setOpenConfirmDialog(true);
+  };
+
+  const handleConfirmDelete = () => {
+    if (selectedOpportunityId) {
+      onDelete(selectedOpportunityId);
+    }
+  };
+
+  const handleCloseSnackbar = () => {
     setOpenSnackbar(false);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenConfirmDialog(false);
+    setSelectedOpportunityId(null);
   };
 
   /**
    * Opportunity open button component
    */
-  const OpenButton = ({ OpportunityId }: { OpportunityId: string }) => {
+  const OpenButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onSelect(OpportunityId)}>
+      <IconButton color="primary" onClick={() => onSelect(opportunityId)}>
         <OpenInNewIcon />
       </IconButton>
     );
@@ -72,9 +102,9 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
   /**
    * Opportunity edit button component
    */
-  const EditButton = ({ OpportunityId }: { OpportunityId: string }) => {
+  const EditButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onEdit(OpportunityId)}>
+      <IconButton color="primary" onClick={() => onEdit(opportunityId)}>
         <EditIcon />
       </IconButton>
     );
@@ -83,18 +113,9 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
   /**
    * Opportunity delete button component
    */
-  const DeleteButton = ({
-    OpportunityId,
-    isActive,
-  }: {
-    OpportunityId: string;
-    isActive: boolean;
-  }) => {
+  const DeleteButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
-      <IconButton
-        color="error"
-        onClick={() => onDelete(OpportunityId, isActive)}
-      >
+      <IconButton color="error" onClick={() => handleDeleteClick(opportunityId)}>
         <DeleteForeverIcon />
       </IconButton>
     );
@@ -106,7 +127,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       headerName: "Open",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <OpenButton OpportunityId={row.id} />;
+        return <OpenButton opportunityId={row.id} />;
       },
     },
     ...OpportunityDataGridColumns,
@@ -115,7 +136,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       headerName: "Edit",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <EditButton OpportunityId={row.id} />;
+        return <EditButton opportunityId={row.id} />;
       },
     },
     {
@@ -123,7 +144,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       headerName: "Delete",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <DeleteButton OpportunityId={row.id} isActive={row.isActive} />;
+        return <DeleteButton opportunityId={row.id} />;
       },
     },
   ];
@@ -138,7 +159,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
           height: "100%",
         }}
       >
-        <CircularProgress />;
+        <CircularProgress />
       </Box>
     );
   }
@@ -151,7 +172,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     <Box>
       <DataGrid
         loading={isLoading || isPending}
-        rows={opportunities || []}
+        rows={filteredOpportunities}
         columns={columns}
         columnVisibilityModel={OpportunityDataGridColumnVisibility}
         paginationModel={{
@@ -167,19 +188,45 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
         disableColumnMenu
       />
 
+      {/* Confirmation Dialog */}
+      <Dialog
+        open={openConfirmDialog}
+        onClose={handleCloseDialog}
+        aria-labelledby="confirm-delete-dialog"
+      >
+        <DialogTitle id="confirm-delete-dialog">Confirm Delete</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Are you sure you want to delete this opportunity? This action cannot be undone.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialog} color="inherit">
+            Cancel
+          </Button>
+          <Button
+            onClick={handleConfirmDelete}
+            color="error"
+            disabled={isPending}
+          >
+            {isPending ? "Deleting..." : "Delete"}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Error Snackbar */}
       <Snackbar
         open={openSnackbar}
-        onClose={handleClose}
+        onClose={handleCloseSnackbar}
         autoHideDuration={3000}
-        message="Note archived"
       >
         <Alert
-          onClose={handleClose}
+          onClose={handleCloseSnackbar}
           severity="error"
           variant="filled"
           sx={{ width: "100%" }}
         >
-          Error updating Opportunity
+          Error deleting opportunity
         </Alert>
       </Snackbar>
     </Box>
