@@ -81,14 +81,6 @@ export const getOpportunityByClientId = async (clientId: string): Promise<Opport
   return body;
 };
 
-export default {
-  getOpportunityById,
-  updateOpportunity,
-  createOpportunity,
-  getOpportunities,
-  getOpportunityByClientId,
-};
-
 /*
  * Create a new opportunity in the API
  *
@@ -98,5 +90,15 @@ export default {
 export const createOpportunity = async (opportunityData: OpportunityType): Promise<OpportunityType> => {
   const { body } = await requestApi(ApiRequests.CREATE_OPPORTUNITY, { body: opportunityData });
   return body;
+};
+
+
+
+export default {
+  getOpportunityById,
+  updateOpportunity,
+  createOpportunity,
+  getOpportunities,
+  getOpportunityByClientId,
 };
 
