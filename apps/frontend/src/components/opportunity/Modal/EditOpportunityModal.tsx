@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Modal, TextField, Typography, MenuItem, Select } from "@mui/material";
 import React, { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { OpportunityType } from "../../../types/opportunity.types";
+import { opportunityBusinessTypeMap, OpportunityType } from "../../../types/opportunity.types";
 import useGetOpportunityById from "../../../hooks/useGetOpportunityById";
 import useUpdateOpportunity from "../../../hooks/useUpdateOpportunity";
 
@@ -74,10 +74,11 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                     label="Business Type"
                     defaultValue={opportunityData.businessType || ""}
                   >
-                    <MenuItem value="it_consulting">it_consulting</MenuItem>
-                    <MenuItem value="web_dev">web_dev</MenuItem>
-                    <MenuItem value="mobile_dev">mobile_dev</MenuItem>
-                    <MenuItem value="outsourcing">outsourcing</MenuItem>
+                    {Object.entries(opportunityBusinessTypeMap).map(([value, label]) => (
+                      <MenuItem key={value} value={value}>
+                        {label}
+                      </MenuItem>
+                    ))}
                   </Select>
                 )}
               />
@@ -135,10 +136,10 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                     label="Status"
                     defaultValue={opportunityData.status || ""}
                   >
-                    <MenuItem value="open">open</MenuItem>
-                    <MenuItem value="in_study">in_study</MenuItem>
-                    <MenuItem value="purchase_order">purchase_order</MenuItem>
-                    <MenuItem value="completed">completed</MenuItem>
+                    <MenuItem value="open">Apertura</MenuItem>
+                    <MenuItem value="in_study">En Estudio</MenuItem>
+                    <MenuItem value="purchase_order">Orden de Compra</MenuItem>
+                    <MenuItem value="completed">Finalizada</MenuItem>
                   </Select>
                 )}
               />
