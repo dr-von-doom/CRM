@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateOpportunity } from "../services/opportunity.service";
 import { ApiRequests } from "../types/api.types";
-import { OpportunityType } from "../types/opportunity";
+import { OpportunityType } from "../types/opportunity.types";
 
 /**
  * Custom hook for updating an opportunity using React Query's useMutation.
