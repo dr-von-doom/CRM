@@ -131,7 +131,7 @@ export const ClientTable: FC<ClientTableProps> = ({
           height: "100%",
         }}
       >
-        <CircularProgress />;
+        <CircularProgress />
       </Box>
     );
   }
