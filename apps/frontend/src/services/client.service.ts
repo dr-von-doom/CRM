@@ -9,7 +9,7 @@ import { requestApi } from "./api";
  * @param {ClientType} clientData - Datos del cliente.
  * @returns {Promise<ClientType>} - Datos del cliente creado.
  */
-export const createClient = async (clientData: ClientType): Promise<ClientType> => {
+export const createClient = async (clientData: Partial<ClientType>): Promise<Partial<ClientType>> => {
   const { body } = await requestApi(ApiRequests.CREATE_CLIENT, { body: clientData });
   return body;
 };
@@ -20,7 +20,7 @@ export const createClient = async (clientData: ClientType): Promise<ClientType> 
  * @param {ContactType} contactData - Datos del contacto.
  * @returns {Promise<ContactType>} - Datos del contacto creado.
  */
-export const createContact = async (contactData: ContactType): Promise<ContactType> => {
+export const createContact = async (contactData: Partial<ContactType>): Promise<Partial<ContactType>> => {
   const { body } = await requestApi(ApiRequests.CREATE_CONTACT, { body: contactData });
   return body;
 };

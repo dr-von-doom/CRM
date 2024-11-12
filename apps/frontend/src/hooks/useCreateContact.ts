@@ -10,7 +10,7 @@ import { createContact } from '../services/client.service';
 export const useCreateContact = () => {
 
   return useMutation({
-    mutationFn: async (contactData: ContactType) => {
+    mutationFn: async (contactData: Partial<ContactType>) => {
       return await createContact(contactData);
     },
     onError: (error) => {
