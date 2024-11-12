@@ -4,6 +4,20 @@ import { OPPORTUNITIES_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
 /**
+ * Fetches an opportunity by ID from the API.
+ *
+ * @param {string} id - Opportunity ID
+ * @returns {Promise<OpportunityType>} - The opportunity data.
+ */
+export const getOpportunityById = async (id: string): Promise<OpportunityType> => {
+  const { body } = await requestApi(ApiRequests.GET_OPPORTUNITY_BY_ID, {
+    pathParams: { id },
+  });
+
+  return body;
+};
+
+/**
  * Fetches opportunities from the API.
  *
  * @param {number} page - The page number to fetch.
