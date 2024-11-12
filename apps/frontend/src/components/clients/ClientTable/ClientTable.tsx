@@ -23,7 +23,6 @@ export type ClientTableProps = {
   onSelect: (clientId: string) => void;
   onEdit: (clientId: string) => void;
 };
-
 /**
  * Client table component
  */
@@ -132,7 +131,7 @@ export const ClientTable: FC<ClientTableProps> = ({
           height: "100%",
         }}
       >
-        <CircularProgress />;
+        <CircularProgress />
       </Box>
     );
   }

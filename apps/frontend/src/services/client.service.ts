@@ -3,6 +3,8 @@ import { ClientType, ContactType } from "../types/client.types";
 import { CLIENTS_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
+
+
 /**
  * Crea un nuevo cliente en la API.
  *
@@ -56,6 +58,18 @@ export const getClients = async (
     totalCount,
   };
 };
+
+/**
+ * Fetches all clients from the API.
+ *
+ */
+
+export const getAllClients = async (): Promise<ClientType[]> => {
+  const { body } = await requestApi(ApiRequests.GET_CLIENTS); 
+
+  return body; 
+};
+
 
 /**
  * Fetches a client by ID from the API.
