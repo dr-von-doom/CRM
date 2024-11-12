@@ -1,20 +1,29 @@
 import { ApiRequests } from "../types/api.types";
-import { ClientType } from "../types/client.types";
+import { ClientType, ContactType } from "../types/client.types";
 import { CLIENTS_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
+
+
 /**
- * Create a new client in the API.
+ * Crea un nuevo cliente en la API.
  *
- * @param {ClientType} clientData - The data for the new client.
- * @returns {Promise<ClientType>} - The created client data.
+ * @param {ClientType} clientData - Datos del cliente.
+ * @returns {Promise<ClientType>} - Datos del cliente creado.
  */
-export const createClient = async (
-  clientData: ClientType
-): Promise<ClientType> => {
-  const { body } = await requestApi(ApiRequests.CREATE_CLIENT, {
-    body: clientData,
-  });
+export const createClient = async (clientData: Partial<ClientType>): Promise<Partial<ClientType>> => {
+  const { body } = await requestApi(ApiRequests.CREATE_CLIENT, { body: clientData });
+  return body;
+};
+
+/**
+ * Crea un nuevo contacto en la API.
+ *
+ * @param {ContactType} contactData - Datos del contacto.
+ * @returns {Promise<ContactType>} - Datos del contacto creado.
+ */
+export const createContact = async (contactData: Partial<ContactType>): Promise<Partial<ContactType>> => {
+  const { body } = await requestApi(ApiRequests.CREATE_CONTACT, { body: contactData });
   return body;
 };
 

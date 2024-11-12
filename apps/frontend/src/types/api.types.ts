@@ -80,9 +80,9 @@ export type ApiRequestBodyType = {
   [ApiRequests.CREATE_CLIENT]: Partial<ClientType>;
   /** Contact body types */
   [ApiRequests.GET_CONTACTS]: void;
-  [ApiRequests.CREATE_CONTACT]: ContactType;
   [ApiRequests.UPDATE_CONTACT]: ContactType;
   [ApiRequests.GET_CONTACTS_BY_CLIENT_ID]: void; 
+  [ApiRequests.CREATE_CONTACT]: Partial<ContactType>;
   /** Opportunity body types */
   [ApiRequests.GET_OPPORTUNITIES]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: void;

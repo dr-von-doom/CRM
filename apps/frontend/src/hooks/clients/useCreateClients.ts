@@ -12,7 +12,7 @@ export const useCreateClient = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (clientData: ClientType) => {
+    mutationFn: async (clientData: Partial<ClientType>) => {
       return await createClient(clientData);
     },
     onSuccess: () => {
