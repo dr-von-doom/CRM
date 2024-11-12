@@ -21,6 +21,7 @@ const CreateClientPage = () => {
     control,
     register,
     formState: { errors },
+    reset, // Import reset function
   } = useForm<FormValues>();
   const { fields, append, remove } = useFieldArray({
     control,
@@ -55,7 +56,18 @@ const CreateClientPage = () => {
         )
       );
 
-      console.log("Client and contacts created successfully");
+      // Reset the form values after successful submission
+      reset({
+        nit: "",
+        name: "",
+        address: "",
+        city: "",
+        country: "",
+        phone: "",
+        email: "",
+        isActive: true,
+        contacts: [], // Clear contacts list as well
+      });
     } catch (error) {
       console.error("Error creating client or contacts:", error);
     }
@@ -336,4 +348,3 @@ const CreateClientPage = () => {
 };
 
 export default CreateClientPage;
-
