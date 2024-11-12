@@ -4,9 +4,18 @@ import {
   SubmitHandler,
   Controller,
 } from "react-hook-form";
+import { useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import BaseLayout from "../../layout/BaseLayout";
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  Snackbar,
+  Alert,
+} from "@mui/material";
 import { useCreateClient } from "../../hooks/clients/useCreateClients";
 import { useCreateContact } from "../../hooks/useCreateContact";
 import { ClientType, ContactType } from "../../types/client.types";
@@ -21,7 +30,7 @@ const CreateClientPage = () => {
     control,
     register,
     formState: { errors },
-    reset, // Import reset function
+    reset,
   } = useForm<FormValues>();
   const { fields, append, remove } = useFieldArray({
     control,
@@ -31,9 +40,15 @@ const CreateClientPage = () => {
   const createClientMutation = useCreateClient();
   const createContactMutation = useCreateContact();
 
+  // State for Snackbar
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">(
+    "success"
+  );
+
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
-      // Create client and obtain its ID
       const newClient = await createClientMutation.mutateAsync({
         nit: data.nit,
         name: data.name,
@@ -46,7 +61,6 @@ const CreateClientPage = () => {
       });
       const clientId = newClient.id as string;
 
-      // Create contacts associated with the client using clientId
       await Promise.all(
         data.contacts.map((contact) =>
           createContactMutation.mutateAsync({
@@ -56,7 +70,11 @@ const CreateClientPage = () => {
         )
       );
 
-      // Reset the form values after successful submission
+      // Show success Snackbar
+      setSnackbarMessage("Client created successfully!");
+      setSnackbarSeverity("success");
+      setOpenSnackbar(true);
+
       reset({
         nit: "",
         name: "",
@@ -66,11 +84,27 @@ const CreateClientPage = () => {
         phone: "",
         email: "",
         isActive: true,
-        contacts: [], // Clear contacts list as well
+        contacts: [],
       });
     } catch (error) {
       console.error("Error creating client or contacts:", error);
+
+      // Show error Snackbar
+      setSnackbarMessage("An error occurred while creating the client.");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true);
     }
+  };
+
+  // Close Snackbar handler
+  const handleCloseSnackbar = (
+    _event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenSnackbar(false);
   };
 
   return (
@@ -286,47 +320,6 @@ const CreateClientPage = () => {
             </Grid>
 
             {/* Submit button */}
-            <>
-              {/* Display a message to inform the user that the client was created successfully */}
-              {createClientMutation.isSuccess && (
-                <Grid item xs={12}>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: "success.main",
-                      mb: 2,
-                      bgcolor: "#d2fcdd",
-                      py: 2,
-                      textAlign: "center",
-                      borderColor: "success.main",
-                      borderWidth: 2,
-                      borderRadius: 1.5,
-                    }}
-                  >
-                    Client created successfully!
-                  </Typography>
-                </Grid>
-              )}
-              {createClientMutation.isError && (
-                <Grid item xs={12}>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: "error.main",
-                      mb: 2,
-                      bgcolor: "#fcd2d2",
-                      py: 2,
-                      textAlign: "center",
-                      borderColor: "error.main",
-                      borderWidth: 2,
-                      borderRadius: 1.5,
-                    }}
-                  >
-                    An error occurred while creating the client.
-                  </Typography>
-                </Grid>
-              )}
-            </>
             <Grid item xs={12}>
               <Button
                 type="submit"
@@ -339,6 +332,21 @@ const CreateClientPage = () => {
               >
                 Create
               </Button>
+              {/* Snackbar for success and error messages */}
+              <Snackbar
+                open={openSnackbar}
+                autoHideDuration={6000}
+                onClose={handleCloseSnackbar}
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+              >
+                <Alert
+                  onClose={handleCloseSnackbar}
+                  severity={snackbarSeverity}
+                  sx={{ width: "100%" }}
+                >
+                  {snackbarMessage}
+                </Alert>
+              </Snackbar>
             </Grid>
           </Grid>
         </form>
