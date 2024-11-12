@@ -135,7 +135,6 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                     ? formatDate(new Date(field.value))
                     : "";
 
-                  console.log(value);
                   return (
                     <TextField
                       {...field}
