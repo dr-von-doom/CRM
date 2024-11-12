@@ -18,7 +18,7 @@ export const OpportunityPage = () => {
           <Typography variant="h6">Opportunities list</Typography>
           <Button
             component={Link}
-            to={"#"}
+            to={"/opportunities/create"}
             variant="contained"
             color="primary"
             sx={{ ml: "auto" }}
