@@ -1,11 +1,21 @@
-import { Box, Button, Grid, Modal, TextField, Typography, List, ListItem, ListItemText } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  Modal,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { ClientType, ContactType } from "../../../types/client.types";
-import useUpdateContact from "../../../hooks/useUpdateContact";
-import useGetContactsByClientId from "../../../hooks/useGetContactsByClientId";
-import useUpdateClient from "../../../hooks/clients/useUpdateClients";
 import useGetClientById from "../../../hooks/clients/useGetClientById";
+import useUpdateClient from "../../../hooks/clients/useUpdateClients";
+import useGetContactsByClientId from "../../../hooks/contact/useGetContactByClientId";
+import useUpdateContact from "../../../hooks/contact/useUpdateContact";
+import { ClientType, ContactType } from "../../../types/client.types";
 
 interface EditClientModalProps {
   open: boolean;
@@ -20,16 +30,19 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
 }) => {
   const { data: clientData } = useGetClientById(clientId);
   const { mutate: updateClientHandler, isError } = useUpdateClient();
-  const { data: contacts, isLoading: contactsLoading } = useGetContactsByClientId(clientId); 
+  const { data: contacts, isLoading: contactsLoading } =
+    useGetContactsByClientId(clientId);
   console.log("Contactos recibidos:", clientId);
-  const { mutate: updateContactHandler } = useUpdateContact(); 
+  const { mutate: updateContactHandler } = useUpdateContact();
 
   const { control, handleSubmit, reset } = useForm<ClientType>({
     defaultValues: clientData,
   });
 
-  const [selectedContact, setSelectedContact] = useState<ContactType | null>(null); 
-  const [contactModalOpen, setContactModalOpen] = useState<boolean>(false); 
+  const [selectedContact, setSelectedContact] = useState<ContactType | null>(
+    null
+  );
+  const [contactModalOpen, setContactModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     reset(clientData);
@@ -50,17 +63,17 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
   };
 
   const handleContactClick = (contact: ContactType) => {
-    setSelectedContact(contact); 
-    setContactModalOpen(true); 
+    setSelectedContact(contact);
+    setContactModalOpen(true);
   };
 
   const handleContactUpdate = (contactData: ContactType) => {
     updateContactHandler(
-      { id: contactData.id, contactData: contactData }, 
+      { id: contactData.id, contactData: contactData },
       {
         onSuccess: () => {
-          setContactModalOpen(false); 
-          setSelectedContact(null); 
+          setContactModalOpen(false);
+          setSelectedContact(null);
         },
         onError: (error) => {
           console.error("Error updating contact:", error);
@@ -105,16 +118,14 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
                   <Controller
                     name={field as keyof ClientType}
                     control={control}
-                    render={({ field }) => (
-                      <TextField {...field} fullWidth />
-                    )}
+                    render={({ field }) => <TextField {...field} fullWidth />}
                   />
                 </Grid>
               ))}
             </Grid>
 
             {/* Contact list */}
-            <Typography variant="h6" sx={{ mt: 3}}>
+            <Typography variant="h6" sx={{ mt: 3 }}>
               Contacts
             </Typography>
             {contactsLoading ? (
@@ -122,13 +133,21 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
             ) : (
               <List>
                 {contacts?.map((contact: ContactType) => (
-                  <ListItem key={contact.id} sx={{ mb: 1, border: "1px solid #ddd", borderRadius: "4px", padding: "8px 16px" }}>
+                  <ListItem
+                    key={contact.id}
+                    sx={{
+                      mb: 1,
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      padding: "8px 16px",
+                    }}
+                  >
                     <Button
-                      onClick={() => handleContactClick(contact)} 
+                      onClick={() => handleContactClick(contact)}
                       sx={{
-                        width: "100%", 
+                        width: "100%",
                         textAlign: "left",
-                        '&:hover': {
+                        "&:hover": {
                           backgroundColor: "#f0f0f0",
                         },
                       }}
@@ -197,12 +216,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
               }}
             >
               <Grid container spacing={2} sx={{ mt: 2 }}>
-                {[
-                  "firstName",
-                  "lastName",
-                  "email",
-                  "phone",
-                ].map((field) => (
+                {["firstName", "lastName", "email", "phone"].map((field) => (
                   <Grid item xs={12} key={field}>
                     <TextField
                       fullWidth

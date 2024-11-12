@@ -232,17 +232,6 @@
       "isDeleted": false
     },
     {
-      "id": "6af341ce-cc73-4e23-b1bb-38da05533367",
-      "clientId": "kQGYiYG",
-      "businessType": "mobile_dev",
-      "businessName": "Wuckert, Boehm and White",
-      "description": "Aegrus solitudo similique auditor amiculum ager. Doloremque vulnus nemo vero dolor decens vapulus cedo viscus theca. Tamen delinquo clam crustulum tantillus somnus uterque.",
-      "estimatedDate": "2025-01-07T10:47:22.197Z",
-      "estimatedValue": "430.64",
-      "status": "open",
-      "isDeleted": false
-    },
-    {
       "id": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
       "clientId": "7ad6d79a-1634-4fae-aece-f75d48fda4fe",
       "businessType": "outsourcing",
@@ -329,6 +318,17 @@
       "estimatedValue": "951.53",
       "status": "completed",
       "isDeleted": false
+    },
+    {
+      "clientId": "D9FR6Ju",
+      "businessName": "Asereje",
+      "businessType": "outsourcing",
+      "description": "job",
+      "estimatedValue": "1",
+      "estimatedDate": "1111-11-11",
+      "status": "open",
+      "isDeleted": false,
+      "id": "eOnkHQi"
     }
   ]
 }

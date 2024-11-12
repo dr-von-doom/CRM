@@ -1,14 +1,11 @@
-import { useMutation } from '@tanstack/react-query';
-import { ContactType } from '../types/client.types';
-import { createContact } from '../services/client.service';
+import { useMutation } from "@tanstack/react-query";
+import { createContact } from "../../services/client.service";
+import { ContactType } from "../../types/client.types";
 
 /**
  * Custom hook for creating a contact using React Query's useMutation.
- * 
- * @returns {object}
  */
 export const useCreateContact = () => {
-
   return useMutation({
     mutationFn: async (contactData: Partial<ContactType>) => {
       return await createContact(contactData);
@@ -16,5 +13,5 @@ export const useCreateContact = () => {
     onError: (error) => {
       console.error("Error creating client:", error);
     },
-  })
+  });
 };

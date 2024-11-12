@@ -1,9 +1,23 @@
-import { Box, Button, Grid, Modal, TextField, Typography, MenuItem, Select } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  MenuItem,
+  Modal,
+  Select,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React, { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { opportunityBusinessTypeMap, OpportunityType } from "../../../types/opportunity.types";
-import useGetOpportunityById from "../../../hooks/useGetOpportunityById";
-import useUpdateOpportunity from "../../../hooks/useUpdateOpportunity";
+import useGetOpportunityById from "../../../hooks/opportunity/useGetOpportunityById";
+import useUpdateOpportunity from "../../../hooks/opportunity/useUpdateOpportunity";
+import {
+  opportunityBusinessTypeMap,
+  opportunityStatusMap,
+  OpportunityType,
+} from "../../../types/opportunity.types";
+import { formatDate } from "../../../utils/dates";
 
 interface EditOpportunityModalProps {
   open: boolean;
@@ -44,7 +58,11 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
   if (!opportunityData) return null;
 
   return (
-    <Modal open={open} onClose={onClose} aria-labelledby="edit-opportunity-modal">
+    <Modal
+      open={open}
+      onClose={onClose}
+      aria-labelledby="edit-opportunity-modal"
+    >
       <Box
         sx={{
           position: "absolute" as "absolute",
@@ -74,11 +92,13 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                     label="Business Type"
                     defaultValue={opportunityData.businessType || ""}
                   >
-                    {Object.entries(opportunityBusinessTypeMap).map(([value, label]) => (
-                      <MenuItem key={value} value={value}>
-                        {label}
-                      </MenuItem>
-                    ))}
+                    {Object.entries(opportunityBusinessTypeMap).map(
+                      ([value, label]) => (
+                        <MenuItem key={value} value={value}>
+                          {label}
+                        </MenuItem>
+                      )
+                    )}
                   </Select>
                 )}
               />
@@ -97,7 +117,12 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                 name="description"
                 control={control}
                 render={({ field }) => (
-                  <TextField {...field} fullWidth label="Description" multiline />
+                  <TextField
+                    {...field}
+                    fullWidth
+                    label="Description"
+                    multiline
+                  />
                 )}
               />
             </Grid>
@@ -105,15 +130,22 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
               <Controller
                 name="estimatedDate"
                 control={control}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    fullWidth
-                    label="Estimated Date"
-                    type="date"
-                    InputLabelProps={{ shrink: true }}
-                  />
-                )}
+                render={({ field }) => {
+                  const value = field.value
+                    ? formatDate(new Date(field.value))
+                    : "";
+
+                  return (
+                    <TextField
+                      {...field}
+                      value={value}
+                      fullWidth
+                      label="Estimated Date"
+                      type="date"
+                      InputLabelProps={{ shrink: true }}
+                    />
+                  );
+                }}
               />
             </Grid>
             <Grid item xs={12}>
@@ -121,7 +153,12 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                 name="estimatedValue"
                 control={control}
                 render={({ field }) => (
-                  <TextField {...field} fullWidth label="Estimated Value" type="number" />
+                  <TextField
+                    {...field}
+                    fullWidth
+                    label="Estimated Value"
+                    type="number"
+                  />
                 )}
               />
             </Grid>
@@ -136,10 +173,13 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                     label="Status"
                     defaultValue={opportunityData.status || ""}
                   >
-                    <MenuItem value="open">Apertura</MenuItem>
-                    <MenuItem value="in_study">En Estudio</MenuItem>
-                    <MenuItem value="purchase_order">Orden de Compra</MenuItem>
-                    <MenuItem value="completed">Finalizada</MenuItem>
+                    {Object.entries(opportunityStatusMap).map(
+                      ([key, label]) => (
+                        <MenuItem key={key} value={key}>
+                          {label}
+                        </MenuItem>
+                      )
+                    )}
                   </Select>
                 )}
               />
