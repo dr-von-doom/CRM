@@ -28,6 +28,7 @@ const CreateOpportunity = () => {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
   } = useForm<FormValues>();
   const createOpportunityMutation = useCreateOpportunity();
@@ -43,6 +44,7 @@ const CreateOpportunity = () => {
         isDeleted: false,
       });
       setSuccessMessage("Opportunity created successfully");
+      reset();
     } catch (error) {
       setErrorMessage("Error creating opportunity");
       console.error("Error creating opportunity:", error);
@@ -76,28 +78,28 @@ const CreateOpportunity = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2} sx={{ width: "100%" }}>
             <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Client"
-                select
-                required
-                {...register("clientId", {
-                  required: "This field is required",
-                })}
-                error={!!errors.clientId}
-                helperText={errors.clientId?.message}
-                sx={{
-                  "& .MuiInputLabel-root": { fontSize: 14 },
-                  "& .MuiInputBase-root": { borderRadius: "4px" },
-                  "& .MuiFormHelperText-root": { fontSize: 12 },
-                }}
-              >
-                {clients?.map((client: ClientType) => (
-                  <MenuItem key={client.id} value={client.id}>
-                    {client.name}
-                  </MenuItem>
-                ))}
-              </TextField>
+                <TextField
+                  fullWidth
+                  label="Client"
+                  select
+                  required
+                  {...register("clientId", {
+                    required: "This field is required",
+                  })}
+                  error={!!errors.clientId}
+                  helperText={errors.clientId?.message}
+                  sx={{
+                    "& .MuiInputLabel-root": { fontSize: 14 },
+                    "& .MuiInputBase-root": { borderRadius: "4px" },
+                    "& .MuiFormHelperText-root": { fontSize: 12 },
+                  }}
+                >
+                  {clients?.map((client: ClientType) => (
+                    <MenuItem key={client.id} value={client.id}>
+                      {client.name}
+                    </MenuItem>
+                  ))} 
+                </TextField>
             </Grid>
             <Grid item xs={12}>
               <TextField
