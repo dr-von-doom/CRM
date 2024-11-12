@@ -7,8 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 import useGetClientById from "../../../hooks/clients/useGetClientById";
+import useGetContactsByClientId from "../../../hooks/contact/useGetContactByClientId";
 import useGetOpportunitiesByClientId from "../../../hooks/opportunity/useGetOpportunitiesByClientId";
-import useGetContactsByClientId from "../../../hooks/clients/useGetContactByClientId";
 import { ErrorAlert } from "../../common/alerts";
 
 interface ClientDetailsProps {
@@ -37,7 +37,13 @@ export const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
   if (!client) return <ErrorAlert title="Client not found" description="" />;
 
   return (
-    <Box display="flex" flexDirection="column" gap={2} justifyContent="center" sx={{ marginTop: 0.5 }}>
+    <Box
+      display="flex"
+      flexDirection="column"
+      gap={2}
+      justifyContent="center"
+      sx={{ marginTop: 0.5 }}
+    >
       <Card sx={{ margin: 1, width: "100%", maxWidth: 600 }}>
         <CardContent>
           <Typography variant="h6" gutterBottom>
@@ -81,7 +87,6 @@ export const ClientDetails: React.FC<ClientDetailsProps> = ({ clientId }) => {
               color="primary"
               sx={{ marginRight: 1, marginBottom: 1 }}
             />
-
           ))}
         </CardContent>
       </Card>

@@ -11,16 +11,16 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import useGetAllClients from "../../hooks/clients/useGetAllClients";
 import { useCreateOpportunity } from "../../hooks/opportunity/useCreateOpportunity";
-import useGetAllClients from "../../hooks/opportunity/useGetAllClients";
+import BaseLayout from "../../layout/BaseLayout";
 import { ClientType } from "../../types/client.types";
 import {
   OpportunityStatus,
   OpportunityType,
-  opportunityStatusMap,
   opportunityBusinessTypeMap,
+  opportunityStatusMap,
 } from "../../types/opportunity.types";
-import BaseLayout from "../../layout/BaseLayout";
 
 type FormValues = Omit<OpportunityType, "isDeleted">;
 

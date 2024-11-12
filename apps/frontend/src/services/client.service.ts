@@ -3,27 +3,33 @@ import { ClientType, ContactType } from "../types/client.types";
 import { CLIENTS_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
-
-
 /**
- * Crea un nuevo cliente en la API.
+ * Create a new client in the API.
  *
- * @param {ClientType} clientData - Datos del cliente.
- * @returns {Promise<ClientType>} - Datos del cliente creado.
+ * @param {ClientType} clientData - Client data.
+ * @returns {Promise<ClientType>} - Created client data.
  */
-export const createClient = async (clientData: Partial<ClientType>): Promise<Partial<ClientType>> => {
-  const { body } = await requestApi(ApiRequests.CREATE_CLIENT, { body: clientData });
+export const createClient = async (
+  clientData: Partial<ClientType>
+): Promise<Partial<ClientType>> => {
+  const { body } = await requestApi(ApiRequests.CREATE_CLIENT, {
+    body: clientData,
+  });
   return body;
 };
 
 /**
- * Crea un nuevo contacto en la API.
+ * Create a new contact in the API.
  *
- * @param {ContactType} contactData - Datos del contacto.
- * @returns {Promise<ContactType>} - Datos del contacto creado.
+ * @param {ContactType} contactData - Contact data.
+ * @returns {Promise<ContactType>} - Created contact data.
  */
-export const createContact = async (contactData: Partial<ContactType>): Promise<Partial<ContactType>> => {
-  const { body } = await requestApi(ApiRequests.CREATE_CONTACT, { body: contactData });
+export const createContact = async (
+  contactData: Partial<ContactType>
+): Promise<Partial<ContactType>> => {
+  const { body } = await requestApi(ApiRequests.CREATE_CONTACT, {
+    body: contactData,
+  });
   return body;
 };
 
@@ -62,14 +68,19 @@ export const getClients = async (
 /**
  * Fetches all clients from the API.
  *
+ * @returns {Promise<ClientType[]>} - The clients data.
  */
+export const getAllClients = async (
+  getDeleted = false
+): Promise<ClientType[]> => {
+  const { body } = await requestApi(ApiRequests.GET_CLIENTS, {
+    queryParams: {
+      isActive: !getDeleted,
+    },
+  });
 
-export const getAllClients = async (): Promise<ClientType[]> => {
-  const { body } = await requestApi(ApiRequests.GET_CLIENTS); 
-
-  return body; 
+  return body;
 };
-
 
 /**
  * Fetches a client by ID from the API.
@@ -86,12 +97,14 @@ export const getClientById = async (id: string): Promise<ClientType> => {
 };
 
 /**
- * 
- * @param clientId 
- * @returns 
+ * Fetches contacts by client ID from the API.
+ *
+ * @param {string} clientId - The ID of the client to fetch contacts for.
+ * @returns {Promise<ContactType[]>} - The contacts for the client.
  */
-
-export const getContactsByClientId = async (clientId: string): Promise<ContactType[]> => {
+export const getContactsByClientId = async (
+  clientId: string
+): Promise<ContactType[]> => {
   const { body } = await requestApi(ApiRequests.GET_CONTACTS_BY_CLIENT_ID, {
     pathParams: { clientId },
   });

@@ -14,10 +14,9 @@ const BASE_URL =
   env === "development"
     ? "http://localhost:3000"
     : env === "storybook"
-    ? ""
-    : "https://crm-backend-8k3c.onrender.com";
+      ? ""
+      : "https://crm-backend-8k3c.onrender.com";
 
-console.log("[api] BASE_URL", env);
 /**
  * It replaces the path params in the path
  *
@@ -62,8 +61,12 @@ export const requestApi = async <T extends ApiRequests>(
   request: T,
   options?: {
     body?: T extends keyof ApiRequestBodyType ? ApiRequestBodyType[T] : never;
-    queryParams?: T extends keyof ApiRequestQueryType ? ApiRequestQueryType[T] : never;
-    pathParams?: T extends keyof ApiPathParamsType ? ApiPathParamsType[T] : never;
+    queryParams?: T extends keyof ApiRequestQueryType
+      ? ApiRequestQueryType[T]
+      : never;
+    pathParams?: T extends keyof ApiPathParamsType
+      ? ApiPathParamsType[T]
+      : never;
   }
 ): Promise<{
   body: ApiResponseType[T];

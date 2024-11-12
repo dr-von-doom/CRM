@@ -14,17 +14,17 @@ import {
   IconButton,
   Snackbar,
 } from "@mui/material";
-import { DataGrid, GridRowParams} from "@mui/x-data-grid";
+import { DataGrid, GridRowParams } from "@mui/x-data-grid";
 import { FC, useState } from "react";
 import useGetOpportunities from "../../../hooks/opportunity/useGetOpportunities";
 import useUpdateOpportunity from "../../../hooks/opportunity/useUpdateOpportunity";
 import { OPPORTUNITIES_PAGE_SIZE } from "../../../utils/const";
 import { ErrorAlert } from "../../common/alerts";
+import EditOpportunityModal from "../EditOpportunityModal/EditOpportunityModal";
 import {
   OpportunityDataGridColumns,
   OpportunityDataGridColumnVisibility,
 } from "./OpportunityTable.types";
-import EditOpportunityModal from "../Modal/EditOpportunityModal";
 
 export type OpportunityTableProps = {
   onSelect: (opportunityId: string) => void;
@@ -38,17 +38,14 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
-  const [selectedOpportunityId, setSelectedOpportunityId] = useState<string | null>(null);
+  const [selectedOpportunityId, setSelectedOpportunityId] = useState<
+    string | null
+  >(null);
 
   const { data, isLoading, isError } = useGetOpportunities(page);
   const { mutate: updateOpportunity, isPending } = useUpdateOpportunity();
 
   const { opportunities, totalCount } = data || {};
-
-  // Filter opportunities where isDeleted is false
-  const filteredOpportunities = (opportunities || []).filter(
-    (opportunity) => !opportunity.isDeleted
-  );
 
   const onDelete = (opportunityId: string) => {
     updateOpportunity(
@@ -81,8 +78,6 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     setOpenSnackbar(false);
   };
 
-  
- 
   const handleEdit = (OpportunityId: string) => {
     setSelectedOpportunityId(OpportunityId);
     setIsEditModalOpen(true);
@@ -98,17 +93,16 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     setSelectedOpportunityId(null);
   };
 
-   /**
+  /**
    * Opportunity open button component
    */
-   const OpenButton = ({ opportunityId }: { opportunityId: string }) => {
+  const OpenButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
       <IconButton color="primary" onClick={() => onSelect(opportunityId)}>
         <OpenInNewIcon />
       </IconButton>
     );
   };
-
 
   const EditButton = ({ OpportunityId }: { OpportunityId: string }) => {
     return (
@@ -120,7 +114,10 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
 
   const DeleteButton = ({ opportunityId }: { opportunityId: string }) => {
     return (
-      <IconButton color="error" onClick={() => handleDeleteClick(opportunityId)}>
+      <IconButton
+        color="error"
+        onClick={() => handleDeleteClick(opportunityId)}
+      >
         <DeleteForeverIcon />
       </IconButton>
     );
@@ -153,7 +150,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
       },
     },
   ];
-  
+
   if (isLoading) {
     return (
       <Box
@@ -177,7 +174,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     <Box>
       <DataGrid
         loading={isLoading || isPending}
-        rows={filteredOpportunities}
+        rows={opportunities}
         columns={columns}
         columnVisibilityModel={OpportunityDataGridColumnVisibility}
         paginationModel={{
@@ -202,7 +199,8 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
         <DialogTitle id="confirm-delete-dialog">Confirm Delete</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Are you sure you want to delete this opportunity? This action cannot be undone.
+            Are you sure you want to delete this opportunity? This action cannot
+            be undone.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

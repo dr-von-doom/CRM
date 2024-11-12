@@ -1,14 +1,14 @@
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import {
-  useForm,
-  useFieldArray,
-  SubmitHandler,
   Controller,
+  SubmitHandler,
+  useFieldArray,
+  useForm,
 } from "react-hook-form";
 import { FaTrashAlt } from "react-icons/fa";
-import BaseLayout from "../../layout/BaseLayout";
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import { useCreateClient } from "../../hooks/clients/useCreateClients";
-import { useCreateContact } from "../../hooks/useCreateContact";
+import { useCreateContact } from "../../hooks/contact/useCreateContact";
+import BaseLayout from "../../layout/BaseLayout";
 import { ClientType, ContactType } from "../../types/client.types";
 
 type FormValues = Omit<ClientType, "id"> & {
@@ -336,4 +336,3 @@ const CreateClientPage = () => {
 };
 
 export default CreateClientPage;
-

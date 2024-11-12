@@ -1,9 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-
-import { ApiRequests } from "../types/api.types";
-import { OpportunityType } from "../types/opportunity.types";
-import { getOpportunityById } from "../services/opportunity.service.ts";
-
+import { getOpportunityById } from "../../services/opportunity.service";
+import { ApiRequests } from "../../types/api.types";
+import { OpportunityType } from "../../types/opportunity.types";
 
 export const useGetOpportunityById = (id: string) => {
   return useQuery<OpportunityType>({
