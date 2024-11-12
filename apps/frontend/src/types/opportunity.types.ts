@@ -40,3 +40,13 @@ export interface OpportunityType {
   estimatedValue: number;
   isDeleted: boolean;
 }
+
+export interface OpportunityType {
+  id: string;
+  clientId: string;
+  businessType: OpportunityBusinessType;
+  description: string;
+  status: OpportunityStatus;
+  estimatedDate: string;
+  isDeleted: boolean;
+}

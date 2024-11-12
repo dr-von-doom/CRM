@@ -23,7 +23,6 @@ export type ClientTableProps = {
   onSelect: (clientId: string) => void;
   onEdit: (clientId: string) => void;
 };
-
 /**
  * Client table component
  */
