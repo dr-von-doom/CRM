@@ -37,7 +37,6 @@ const CreateClientPage = () => {
     try {
       // Create client and obtain its ID
       const newClient = await createClientMutation.mutateAsync({
-        id: generateUUID(),
         nit: data.nit,
         name: data.name,
         address: data.address,
@@ -47,7 +46,8 @@ const CreateClientPage = () => {
         email: data.email,
         isActive: true,
       });
-      const clientId = newClient.id;
+
+      const clientId = newClient.id as string;
 
       // Create contacts associated with the client using clientId
       await Promise.all(
