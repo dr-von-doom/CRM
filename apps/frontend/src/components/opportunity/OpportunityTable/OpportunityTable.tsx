@@ -82,7 +82,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
   };
 
   
-  // Abrir modal de edición
+ 
   const handleEdit = (OpportunityId: string) => {
     setSelectedOpportunityId(OpportunityId);
     setIsEditModalOpen(true);
@@ -93,7 +93,6 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
     setSelectedOpportunityId(null);
   };
 
-  // Cerrar modal de edición
   const handleCloseEditModal = () => {
     setIsEditModalOpen(false);
     setSelectedOpportunityId(null);
@@ -236,7 +235,7 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
         </Alert>
       </Snackbar>
 
-      {/* Modal de edición */}
+      {/* edit modal */}
       {selectedOpportunityId && (
         <EditOpportunityModal
           open={isEditModalOpen}
