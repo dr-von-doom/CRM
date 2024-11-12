@@ -9,7 +9,7 @@
       "estimatedDate": "2025-06-29T19:03:45.006Z",
       "estimatedValue": "231.19",
       "status": "completed",
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
@@ -20,7 +20,7 @@
       "estimatedDate": "2025-03-08T21:23:38.549Z",
       "estimatedValue": "980.15",
       "status": "purchase_order",
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "8f7553f9-c1eb-47df-9e05-784a1a2dd8d9",
@@ -31,7 +31,7 @@
       "estimatedDate": "2025-05-04T02:38:18.680Z",
       "estimatedValue": "157.98",
       "status": "completed",
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "5a6c498c-6f8f-4d9d-abc6-d3c588f20e61",
@@ -64,7 +64,7 @@
       "estimatedDate": "2025-01-14T04:26:24.291Z",
       "estimatedValue": "975.04",
       "status": "open",
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "0abc188f-9269-43b9-91c1-8b83c352df8c",
