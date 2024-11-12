@@ -11,9 +11,6 @@ import { useCreateClient } from "../../hooks/clients/useCreateClients";
 import { useCreateContact } from "../../hooks/useCreateContact";
 import { ClientType, ContactType } from "../../types/client.types";
 
-// UUID generator
-const generateUUID = () => crypto.randomUUID();
-
 type FormValues = Omit<ClientType, "id"> & {
   contacts: Omit<ContactType, "id" | "clientId">[];
 };
@@ -46,7 +43,6 @@ const CreateClientPage = () => {
         email: data.email,
         isActive: true,
       });
-
       const clientId = newClient.id as string;
 
       // Create contacts associated with the client using clientId
@@ -55,7 +51,6 @@ const CreateClientPage = () => {
           createContactMutation.mutateAsync({
             ...contact,
             clientId,
-            id: generateUUID(),
           })
         )
       );
@@ -341,3 +336,4 @@ const CreateClientPage = () => {
 };
 
 export default CreateClientPage;
+

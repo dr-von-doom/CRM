@@ -73,9 +73,20 @@ export const updateOpportunity = async (
   return body;
 };
 
+export const getOpportunityByClientId = async (clientId: string): Promise<OpportunityType[]> => {
+  const { body } = await requestApi(ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID, {
+    pathParams: { clientId },
+  });
+
+  return body;
+};
+
 export default {
   getOpportunityById,
   updateOpportunity,
+  createOpportunity,
+  getOpportunities,
+  getOpportunityByClientId,
 };
 
 /*
