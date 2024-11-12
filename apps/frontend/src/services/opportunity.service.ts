@@ -17,7 +17,6 @@ export const getOpportunityById = async (id: string): Promise<OpportunityType> =
   return body;
 };
 
-
 /**
  * Fetches opportunities from the API.
  *
@@ -51,6 +50,43 @@ export const getOpportunities = async (
       : null,
     totalCount,
   }
+};
+
+/**
+ * Updates an opportunity in the API.
+ *
+ * @param {string} id - The ID of the opportunity to update.
+ * @param {Partial<OpportunityType>} opportunityData - The new data for the opportunity.
+ * @returns {Promise<OpportunityType>} - The updated opportunity data.
+ */
+export const updateOpportunity = async (
+  id: string,
+  opportunityData: Partial<OpportunityType>
+): Promise<OpportunityType> => {
+  const options = {
+    body: opportunityData,
+    pathParams: { id },
+  };
+
+  const { body } = await requestApi(ApiRequests.UPDATE_OPPORTUNITY, options);
+
+  return body;
+};
+
+export default {
+  getOpportunityById,
+  updateOpportunity,
+};
+
+/*
+ * Create a new opportunity in the API
+ *
+ * @param {OpportunityType} opportunityData - Datos de la oportunidad.
+ * @returns {Promise<OpportunityType>} - Datos de la oportunidad creada.
+ */
+export const createOpportunity = async (opportunityData: OpportunityType): Promise<OpportunityType> => {
+  const { body } = await requestApi(ApiRequests.CREATE_OPPORTUNITY, { body: opportunityData });
+  return body;
 };
 
 /**
