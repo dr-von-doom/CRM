@@ -97,22 +97,6 @@ export const getClientById = async (id: string): Promise<ClientType> => {
 };
 
 /**
- * Fetches contacts by client ID from the API.
- *
- * @param {string} clientId - The ID of the client to fetch contacts for.
- * @returns {Promise<ContactType[]>} - The contacts for the client.
- */
-export const getContactsByClientId = async (
-  clientId: string
-): Promise<ContactType[]> => {
-  const { body } = await requestApi(ApiRequests.GET_CONTACTS_BY_CLIENT_ID, {
-    pathParams: { clientId },
-  });
-
-  return body;
-};
-
-/**
  * Updates a client in the API.
  *
  * @param {string} id - The ID of the client to update.
