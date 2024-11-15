@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Controller, useForm } from "react-hook-form";
+import { Controller, useForm, SubmitHandler } from "react-hook-form";
 import useGetClientById from "../../../hooks/clients/useGetClientById";
 import useUpdateClient from "../../../hooks/clients/useUpdateClients";
 import useGetContactsByClientId from "../../../hooks/contact/useGetContactByClientId";
@@ -32,23 +32,20 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
   const { mutate: updateClientHandler, isError } = useUpdateClient();
   const { data: contacts, isLoading: contactsLoading } =
     useGetContactsByClientId(clientId);
-  console.log("Contactos recibidos:", clientId);
   const { mutate: updateContactHandler } = useUpdateContact();
 
-  const { control, handleSubmit, reset } = useForm<ClientType>({
+  const { control, handleSubmit, reset, formState: { errors } } = useForm<ClientType>({
     defaultValues: clientData,
   });
 
-  const [selectedContact, setSelectedContact] = useState<ContactType | null>(
-    null
-  );
+  const [selectedContact, setSelectedContact] = useState<ContactType | null>(null);
   const [contactModalOpen, setContactModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     reset(clientData);
   }, [clientData, reset]);
 
-  const onSubmit = (data: ClientType) => {
+  const onSubmit: SubmitHandler<ClientType> = (data) => {
     updateClientHandler(
       { id: data.id, clientData: data },
       {
@@ -93,7 +90,9 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: 500,
+            width: { xs: "90%", sm: "500px" },
+            maxHeight: "90vh",
+            overflowY: "auto",
             bgcolor: "background.paper",
             boxShadow: 24,
             p: 4,
@@ -105,20 +104,33 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
           </Typography>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Grid container spacing={2} sx={{ mt: 2 }}>
+              {/* Client field */}
               {[
-                "nit",
-                "name",
-                "address",
-                "city",
-                "country",
-                "phone",
-                "email",
-              ].map((field) => (
-                <Grid item xs={12} key={field}>
+                { name: "nit", label: "Nit", pattern: /^[0-9]+$/, helperText: "Must contain only numbers" },
+                { name: "name", label: "Name" },
+                { name: "address", label: "Address" },
+                { name: "city", label: "City" },
+                { name: "country", label: "Country" },
+                { name: "phone", label: "Phone", pattern: /^[0-9]+$/, helperText: "Must contain only numbers" },
+                { name: "email", label: "Email", pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, helperText: "Invalid email format" },
+              ].map(({ name, label, pattern, helperText }) => (
+                <Grid item xs={12} key={name}>
                   <Controller
-                    name={field as keyof ClientType}
+                    name={name as keyof ClientType}
                     control={control}
-                    render={({ field }) => <TextField {...field} fullWidth />}
+                    rules={{
+                      required: "This field is required",
+                      pattern: pattern ? { value: pattern, message: helperText } : undefined,
+                    }}
+                    render={({ field }) => (
+                      <TextField
+                        {...field}
+                        fullWidth
+                        label={label}
+                        error={!!errors[name as keyof ClientType]}
+                        helperText={errors[name as keyof ClientType]?.message || helperText}
+                      />
+                    )}
                   />
                 </Grid>
               ))}
@@ -131,25 +143,14 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
             {contactsLoading ? (
               <Typography>Loading contacts...</Typography>
             ) : (
-              <List>
+              <List sx={{ maxHeight: "150px", overflowY: "auto" }}>
                 {contacts?.map((contact: ContactType) => (
-                  <ListItem
-                    key={contact.id}
-                    sx={{
-                      mb: 1,
-                      border: "1px solid #ddd",
-                      borderRadius: "4px",
-                      padding: "8px 16px",
-                    }}
-                  >
+                  <ListItem key={contact.id}>
                     <Button
                       onClick={() => handleContactClick(contact)}
                       sx={{
                         width: "100%",
                         textAlign: "left",
-                        "&:hover": {
-                          backgroundColor: "#f0f0f0",
-                        },
                       }}
                     >
                       <ListItemText
@@ -164,12 +165,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
 
             {/* Action button */}
             <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}>
-              <Button
-                variant="outlined"
-                onClick={onClose}
-                color="error"
-                sx={{ mr: 2 }}
-              >
+              <Button variant="outlined" onClick={onClose} color="error" sx={{ mr: 2 }}>
                 Cancel
               </Button>
               <Button variant="outlined" type="submit" color="primary">
@@ -186,7 +182,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
         </Box>
       </Modal>
 
-      {/* Edit contact modal */}
+      {/* Contact edition modal */}
       {selectedContact && (
         <Modal
           open={contactModalOpen}
@@ -199,7 +195,9 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              width: 500,
+              width: { xs: "90%", sm: "500px" },
+              maxHeight: "90vh",
+              overflowY: "auto",
               bgcolor: "background.paper",
               boxShadow: 24,
               p: 4,
@@ -235,12 +233,7 @@ const EditClientModal: React.FC<EditClientModalProps> = ({
 
               {/* Action button */}
               <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}>
-                <Button
-                  variant="outlined"
-                  onClick={() => setContactModalOpen(false)}
-                  color="error"
-                  sx={{ mr: 2 }}
-                >
+                <Button variant="outlined" onClick={() => setContactModalOpen(false)} color="error" sx={{ mr: 2 }}>
                   Cancel
                 </Button>
                 <Button variant="outlined" type="submit" color="primary">
