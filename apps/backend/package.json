@@ -7,7 +7,8 @@
     "dev": "nodemon server.js",
     "generate:clients": "node scripts/generateClient.js",
     "generate:contacts": "node scripts/generateContact.js",
-    "generate:opportunities": "node scripts/generateOpportunities.js"
+    "generate:opportunities": "node scripts/generateOpportunities.js",
+    "generate:followups": "node scripts/generateFollowUps.js" 
   },
   "type": "commonjs",
   "keywords": [],
