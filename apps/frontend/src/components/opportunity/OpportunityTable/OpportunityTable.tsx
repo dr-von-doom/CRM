@@ -33,7 +33,6 @@ export type OpportunityTableProps = {
 };
 
 export const OpportunityTable: FC<OpportunityTableProps> = ({
-  onSelect,
 }: OpportunityTableProps) => {
   const [page, setPage] = useState(1);
   const [openSnackbar, setOpenSnackbar] = useState(false);
