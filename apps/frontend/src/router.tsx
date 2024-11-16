@@ -7,6 +7,7 @@ import CreateClientPage from "./pages/client/CreateClientPage";
 import HomePage from "./pages/HomePage";
 import { OpportunityPage } from "./pages/opportunity/OpportunityPage";
 import CreateOpportunityPage  from "./pages/opportunity/CreateOpportunityPage";
+import OpportunityDetailPage from "./pages/opportunity/OpportunityDetailPage";
 const routes = [
   {
     path: "/",
@@ -34,6 +35,11 @@ const routes = [
   {
     path: "/opportunities/create", 
     element: <CreateOpportunityPage />,
+    showInNav: true,
+  },
+  {
+    path: "/opportunities/:id", 
+    element: <OpportunityDetailPage />,
     showInNav: true,
   },
 ];

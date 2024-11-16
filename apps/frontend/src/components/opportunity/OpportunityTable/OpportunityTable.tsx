@@ -25,6 +25,7 @@ import {
   OpportunityDataGridColumns,
   OpportunityDataGridColumnVisibility,
 } from "./OpportunityTable.types";
+import { useNavigate } from "react-router-dom";
 
 export type OpportunityTableProps = {
   onSelect: (opportunityId: string) => void;
@@ -97,8 +98,13 @@ export const OpportunityTable: FC<OpportunityTableProps> = ({
    * Opportunity open button component
    */
   const OpenButton = ({ opportunityId }: { opportunityId: string }) => {
+    const navigate = useNavigate();
+  
     return (
-      <IconButton color="primary" onClick={() => onSelect(opportunityId)}>
+      <IconButton
+        color="primary"
+        onClick={() => navigate(`/opportunities/${opportunityId}`)}
+      >
         <OpenInNewIcon />
       </IconButton>
     );
