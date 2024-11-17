@@ -33,24 +33,32 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
   const { data: opportunityData } = useGetOpportunityById(opportunityId);
   const { mutate: updateOpportunityHandler, isError } = useUpdateOpportunity();
 
-  const { control, handleSubmit, reset } = useForm<OpportunityType>({
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<OpportunityType>({
     defaultValues: opportunityData,
   });
 
   useEffect(() => {
-    reset(opportunityData);
+    if (opportunityData) {
+      reset({
+        ...opportunityData,
+        estimatedDate: opportunityData.estimatedDate
+          ? formatDate(new Date(opportunityData.estimatedDate), "YYYY-MM-DD")
+          : "", 
+      });
+    }
   }, [opportunityData, reset]);
 
   const onSubmit = (data: OpportunityType) => {
     updateOpportunityHandler(
       { id: data.id, opportunityData: data },
       {
-        onSuccess: () => {
-          onClose();
-        },
-        onError: (error) => {
-          console.error("Error updating opportunity:", error);
-        },
+        onSuccess: () => onClose(),
+        onError: (error) => console.error("Error updating opportunity:", error),
       }
     );
   };
@@ -58,11 +66,7 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
   if (!opportunityData) return null;
 
   return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      aria-labelledby="edit-opportunity-modal"
-    >
+    <Modal open={open} onClose={onClose} aria-labelledby="edit-opportunity-modal">
       <Box
         sx={{
           position: "absolute" as "absolute",
@@ -85,13 +89,9 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
               <Controller
                 name="businessType"
                 control={control}
+                rules={{ required: "This field is required" }}
                 render={({ field }) => (
-                  <Select
-                    {...field}
-                    fullWidth
-                    label="Business Type"
-                    defaultValue={opportunityData.businessType || ""}
-                  >
+                  <Select {...field} fullWidth error={!!errors.businessType}>
                     {Object.entries(opportunityBusinessTypeMap).map(
                       ([value, label]) => (
                         <MenuItem key={value} value={value}>
@@ -102,102 +102,120 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                   </Select>
                 )}
               />
+              <Typography color="error" variant="body2">
+                {errors.businessType?.message}
+              </Typography>
             </Grid>
+
             <Grid item xs={12}>
               <Controller
                 name="businessName"
                 control={control}
+                rules={{ required: "This field is required" }}
                 render={({ field }) => (
-                  <TextField {...field} fullWidth label="Business Name" />
+                  <TextField
+                    {...field}
+                    fullWidth
+                    label="Business Name"
+                    error={!!errors.businessName}
+                    helperText={errors.businessName?.message}
+                  />
                 )}
               />
             </Grid>
+
             <Grid item xs={12}>
               <Controller
                 name="description"
                 control={control}
+                rules={{ required: "This field is required" }}
                 render={({ field }) => (
                   <TextField
                     {...field}
                     fullWidth
                     label="Description"
                     multiline
+                    rows={4}
+                    error={!!errors.description}
+                    helperText={errors.description?.message}
                   />
                 )}
               />
             </Grid>
+
             <Grid item xs={12}>
               <Controller
                 name="estimatedDate"
                 control={control}
-                render={({ field }) => {
-                  const value = field.value
-                    ? formatDate(new Date(field.value))
-                    : "";
-
-                  return (
-                    <TextField
-                      {...field}
-                      value={value}
-                      fullWidth
-                      label="Estimated Date"
-                      type="date"
-                      InputLabelProps={{ shrink: true }}
-                    />
-                  );
-                }}
+                rules={{ required: "This field is required" }}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    fullWidth
+                    label="Estimated Date"
+                    type="date"
+                    InputLabelProps={{ shrink: true }}
+                    error={!!errors.estimatedDate}
+                    helperText={errors.estimatedDate?.message}
+                  />
+                )}
               />
             </Grid>
+
             <Grid item xs={12}>
               <Controller
                 name="estimatedValue"
                 control={control}
+                rules={{
+                  required: "This field is required",
+                  pattern: {
+                    value: /^\d+(\.\d+)?$/,
+                    message: "Please enter a valid number",
+                  },
+                }}
                 render={({ field }) => (
                   <TextField
                     {...field}
                     fullWidth
                     label="Estimated Value"
                     type="number"
+                    error={!!errors.estimatedValue}
+                    helperText={errors.estimatedValue?.message}
                   />
                 )}
               />
             </Grid>
+
             <Grid item xs={12}>
               <Controller
                 name="status"
                 control={control}
+                rules={{ required: "This field is required" }}
                 render={({ field }) => (
-                  <Select
-                    {...field}
-                    fullWidth
-                    label="Status"
-                    defaultValue={opportunityData.status || ""}
-                  >
-                    {Object.entries(opportunityStatusMap).map(
-                      ([key, label]) => (
-                        <MenuItem key={key} value={key}>
-                          {label}
-                        </MenuItem>
-                      )
-                    )}
+                  <Select {...field} fullWidth error={!!errors.status}>
+                    {Object.entries(opportunityStatusMap).map(([key, label]) => (
+                      <MenuItem key={key} value={key}>
+                        {label}
+                      </MenuItem>
+                    ))}
                   </Select>
                 )}
               />
+              <Typography color="error" variant="body2">
+                {errors.status?.message}
+              </Typography>
             </Grid>
           </Grid>
+
           <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}>
-            <Button
-              variant="outlined"
-              onClick={onClose}
-              color="error"
-              sx={{ mr: 2 }}
-            >
+            <Button variant="outlined" onClick={onClose} color="error" sx={{ mr: 2 }}>
               Cancel
             </Button>
             <Button variant="outlined" type="submit" color="primary">
               Update
             </Button>
           </Box>
+
           {isError && (
             <Typography color="error" sx={{ mt: 2 }}>
               Error updating opportunity. Please try again.

@@ -39,6 +39,7 @@ export enum ApiRequests {
   GET_FOLLOW_UPS = "GET_FOLLOW_UPS",
   CREATE_FOLLOW_UP = "CREATE_FOLLOW_UP",
   UPDATE_FOLLOW_UP = "UPDATE_FOLLOW_UP",
+  GET_FOLLOW_UP_BY_ID = "GET_FOLLOW_UP_BY_ID", 
 }
 
 // Mapping API requests to their respective paths
@@ -58,11 +59,13 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: "/opportunities/:id",
   [ApiRequests.UPDATE_OPPORTUNITY]: "/opportunities/:id",
   [ApiRequests.CREATE_OPPORTUNITY]: "/opportunities",
-  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: "/opportunities?clientId=:clientId",
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]:
+    "/opportunities?clientId=:clientId",
   /* Follow-up paths */
   [ApiRequests.GET_FOLLOW_UPS]: "/follow-ups",
   [ApiRequests.CREATE_FOLLOW_UP]: "/follow-ups",
   [ApiRequests.UPDATE_FOLLOW_UP]: "/follow-ups/:id",
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: "/follow-ups/:id", 
 };
 
 // Mapping API requests to their respective HTTP methods
@@ -87,6 +90,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.GET_FOLLOW_UPS]: httpMethod.GET,
   [ApiRequests.CREATE_FOLLOW_UP]: httpMethod.POST,
   [ApiRequests.UPDATE_FOLLOW_UP]: httpMethod.PATCH,
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: httpMethod.GET, 
 };
 
 // Body types for API requests
@@ -111,6 +115,7 @@ export type ApiRequestBodyType = {
   [ApiRequests.GET_FOLLOW_UPS]: void;
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: Partial<FollowUpType>;
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: void; 
 };
 
 // Query parameter types for API requests
@@ -132,9 +137,10 @@ export type ApiRequestQueryType = {
   [ApiRequests.CREATE_OPPORTUNITY]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: void;
   /* Follow-up query types */
-  [ApiRequests.GET_FOLLOW_UPS]: { opportunityId?: string };
+  [ApiRequests.GET_FOLLOW_UPS]: Partial<FollowUpType>;
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: void;
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: void; 
 };
 
 // Path parameter types for API requests
@@ -159,6 +165,7 @@ export type ApiPathParamsType = {
   [ApiRequests.GET_FOLLOW_UPS]: void;
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: { id: string };
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: { id: string }; 
 };
 
 // Response types for API requests
@@ -183,4 +190,5 @@ export type ApiResponseType = {
   [ApiRequests.GET_FOLLOW_UPS]: FollowUpType[];
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: FollowUpType;
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: FollowUpType; 
 };
