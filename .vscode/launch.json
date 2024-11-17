@@ -25,7 +25,6 @@
     {
       "name": "Run all",
       "configurations": ["backend", "frontend"],
-      "preLaunchTask": "${defaultBuildTask}",
       "stopAll": true
     }
   ]

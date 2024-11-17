@@ -20,7 +20,9 @@ const useUpdateOpportunity = () => {
       return await updateOpportunity(id, opportunityData);
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [ApiRequests.GET_OPPORTUNITIES] });
+      queryClient.invalidateQueries({
+        queryKey: [ApiRequests.GET_OPPORTUNITIES],
+      });
     },
     onError: (error) => {
       console.error("Error updating opportunity:", error);

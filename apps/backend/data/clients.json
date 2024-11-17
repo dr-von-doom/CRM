@@ -569,6 +569,39 @@
       "email": "test@example.us",
       "phone": "6019521325",
       "id": "3ev9d1z"
+    },
+    {
+      "nit": "1001942939",
+      "name": "Daniel Andres Olivares Rodelo",
+      "address": "Street xyc",
+      "city": "Barranquilla",
+      "country": "Colombia",
+      "phone": "3502080093",
+      "email": "daolivares@uninorte.edu.co",
+      "isActive": true,
+      "id": "4Y7I01P"
+    },
+    {
+      "nit": "1001822184",
+      "name": "Jon Stewart Doe",
+      "address": "1600 Fake Street",
+      "city": "Mountain View",
+      "country": "Estados Unidos",
+      "phone": "6019521325",
+      "email": "test@example.us",
+      "isActive": true,
+      "id": "D9FR6Ju"
+    },
+    {
+      "nit": "68830062",
+      "name": "Jon Stewart Doe",
+      "address": "1600 Fake Street",
+      "city": "Mountain View",
+      "country": "Estados Unidos",
+      "phone": "6019521325",
+      "email": "test@example.us",
+      "isActive": true,
+      "id": "8Wlcjqp"
     }
   ]
 }

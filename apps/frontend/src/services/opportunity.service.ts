@@ -9,7 +9,9 @@ import { requestApi } from "./api";
  * @param {string} id - Opportunity ID
  * @returns {Promise<OpportunityType>} - The opportunity data.
  */
-export const getOpportunityById = async (id: string): Promise<OpportunityType> => {
+export const getOpportunityById = async (
+  id: string
+): Promise<OpportunityType> => {
   const { body } = await requestApi(ApiRequests.GET_OPPORTUNITY_BY_ID, {
     pathParams: { id },
   });
@@ -27,7 +29,8 @@ export const getOpportunityById = async (id: string): Promise<OpportunityType> =
  */
 export const getOpportunities = async (
   page: number = 1,
-  totalPages: number = OPPORTUNITIES_PAGE_SIZE
+  totalPages: number = OPPORTUNITIES_PAGE_SIZE,
+  getDeleted: boolean = false
 ): Promise<{
   opportunities: OpportunityType[];
   totalPages: number | null;
@@ -37,6 +40,7 @@ export const getOpportunities = async (
     queryParams: {
       _page: page,
       _limit: totalPages,
+      isDeleted: getDeleted,
     },
   });
 
@@ -49,7 +53,7 @@ export const getOpportunities = async (
       ? Math.ceil(totalCount / OPPORTUNITIES_PAGE_SIZE)
       : null,
     totalCount,
-  }
+  };
 };
 
 /**
@@ -73,7 +77,9 @@ export const updateOpportunity = async (
   return body;
 };
 
-export const getOpportunityByClientId = async (clientId: string): Promise<OpportunityType[]> => {
+export const getOpportunityByClientId = async (
+  clientId: string
+): Promise<OpportunityType[]> => {
   const { body } = await requestApi(ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID, {
     pathParams: { clientId },
   });
@@ -81,18 +87,20 @@ export const getOpportunityByClientId = async (clientId: string): Promise<Opport
   return body;
 };
 
-/*
+/**
  * Create a new opportunity in the API
  *
- * @param {OpportunityType} opportunityData - Datos de la oportunidad.
- * @returns {Promise<OpportunityType>} - Datos de la oportunidad creada.
+ * @param {OpportunityType} opportunityData - Opportunity data to create.
+ * @returns {Promise<OpportunityType>} - Created opportunity data.
  */
-export const createOpportunity = async (opportunityData: OpportunityType): Promise<OpportunityType> => {
-  const { body } = await requestApi(ApiRequests.CREATE_OPPORTUNITY, { body: opportunityData });
+export const createOpportunity = async (
+  opportunityData: OpportunityType
+): Promise<OpportunityType> => {
+  const { body } = await requestApi(ApiRequests.CREATE_OPPORTUNITY, {
+    body: opportunityData,
+  });
   return body;
 };
-
-
 
 export default {
   getOpportunityById,
@@ -101,4 +109,3 @@ export default {
   getOpportunities,
   getOpportunityByClientId,
 };
-

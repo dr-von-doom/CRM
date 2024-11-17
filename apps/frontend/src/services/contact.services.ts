@@ -1,16 +1,22 @@
+import { ApiRequests } from "../types/api.types";
 import { ContactType } from "../types/client.types";
-import {  ApiRequests } from "../types/api.types";
 import { requestApi } from "./api";
 
-export const getContactsByClientId = async (clientId: string): Promise<ContactType[]> => {
+/**
+ * Fetches a contact by ID from the API.
+ *
+ * @param {string} clientId - The ID of the client to fetch contacts for.
+ * @returns {Promise<ContactType[]>} - The contacts for the client.
+ */
+export const getContactsByClientId = async (
+  clientId: string
+): Promise<ContactType[]> => {
   const { body } = await requestApi(ApiRequests.GET_CONTACTS, {
-    queryParams: { clientId }, 
+    queryParams: { clientId },
   });
 
-  return body;  
+  return body;
 };
-
-
 
 /**
  * Updates a contact in the API.
@@ -27,16 +33,16 @@ export const updateContact = async (
 
   const updatedContactData: ContactType = {
     id,
-    clientId: clientId ?? "", 
-    firstName: firstName ?? "", 
-    lastName: lastName ?? "", 
-    email: email ?? "", 
-    phone: phone ?? "", 
+    clientId: clientId ?? "",
+    firstName: firstName ?? "",
+    lastName: lastName ?? "",
+    email: email ?? "",
+    phone: phone ?? "",
     ...rest,
   };
 
   const options = {
-    body: updatedContactData, 
+    body: updatedContactData,
     pathParams: { id },
   };
 
