@@ -19,6 +19,7 @@ import {
 import { useCreateClient } from "../../hooks/clients/useCreateClients";
 import { useCreateContact } from "../../hooks/useCreateContact";
 import { ClientType, ContactType } from "../../types/client.types";
+import { Link } from "react-router-dom";
 
 type FormValues = Omit<ClientType, "id"> & {
   contacts: Omit<ContactType, "id" | "clientId">[];
@@ -322,9 +323,11 @@ const CreateClientPage = () => {
             {/* Submit button */}
             <Grid item xs={12}>
               <Button
+                component={Link}
                 type="submit"
                 variant="contained"
                 color="primary"
+                to={"/clients"}
                 sx={{
                   width: { xs: "340px", md: "600px", lg: "900px" },
                   py: 1.5,
