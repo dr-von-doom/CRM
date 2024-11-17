@@ -1,12 +1,3 @@
-import {
-  Alert,
-  Box,
-  Button,
-  Grid,
-  Snackbar,
-  TextField,
-  Typography,
-} from "@mui/material";
 import { useState } from "react";
 import {
   Controller,
@@ -14,9 +5,7 @@ import {
   useFieldArray,
   useForm,
 } from "react-hook-form";
-import { useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
-import BaseLayout from "../../layout/BaseLayout";
 import {
   Box,
   Button,
@@ -43,7 +32,6 @@ const CreateClientPage = () => {
     register,
     formState: { errors },
     reset,
-    reset,
   } = useForm<FormValues>();
   const { fields, append, remove } = useFieldArray({
     control,
@@ -52,13 +40,6 @@ const CreateClientPage = () => {
 
   const createClientMutation = useCreateClient();
   const createContactMutation = useCreateContact();
-
-  // State for Snackbar
-  const [openSnackbar, setOpenSnackbar] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState("");
-  const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">(
-    "success"
-  );
 
   // State for Snackbar
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -106,41 +87,8 @@ const CreateClientPage = () => {
         isActive: true,
         contacts: [],
       });
-      // Show success Snackbar
-      setSnackbarMessage("Client created successfully!");
-      setSnackbarSeverity("success");
-      setOpenSnackbar(true);
-
-      reset({
-        nit: "",
-        name: "",
-        address: "",
-        city: "",
-        country: "",
-        phone: "",
-        email: "",
-        isActive: true,
-        contacts: [],
-      });
     } catch (error) {
       console.error("Error creating client or contacts:", error);
-
-      // Show error Snackbar
-      setSnackbarMessage("An error occurred while creating the client.");
-      setSnackbarSeverity("error");
-      setOpenSnackbar(true);
-    }
-  };
-
-  // Close Snackbar handler
-  const handleCloseSnackbar = (
-    _event?: React.SyntheticEvent | Event,
-    reason?: string
-  ) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpenSnackbar(false);
 
       // Show error Snackbar
       setSnackbarMessage("An error occurred while creating the client.");
@@ -387,21 +335,6 @@ const CreateClientPage = () => {
               >
                 Create
               </Button>
-              {/* Snackbar for success and error messages */}
-              <Snackbar
-                open={openSnackbar}
-                autoHideDuration={6000}
-                onClose={handleCloseSnackbar}
-                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-              >
-                <Alert
-                  onClose={handleCloseSnackbar}
-                  severity={snackbarSeverity}
-                  sx={{ width: "100%" }}
-                >
-                  {snackbarMessage}
-                </Alert>
-              </Snackbar>
               {/* Snackbar for success and error messages */}
               <Snackbar
                 open={openSnackbar}
