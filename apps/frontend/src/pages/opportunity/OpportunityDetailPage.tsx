@@ -7,6 +7,8 @@ import {
   Chip,
   Button,
   Toolbar,
+  Button,
+  Toolbar,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import useGetOpportunityById from "../../hooks/opportunity/useGetOpportunityById";
@@ -23,9 +25,31 @@ import { FollowUpsTable } from "../../components/followUps/FollowUpsTable";
 import { Link } from "react-router-dom";
 import CreateFollowUpModal from "../../components/followUps/CreateFollowUps/CreateFollowUps";
 import React from "react";
+import {
+  opportunityBusinessTypeMap,
+  opportunityStatusMap,
+} from "../../types/opportunity.types";
+import { FollowUpsTable } from "../../components/followUps/FollowUpsTable";
+import { Link } from "react-router-dom";
+import CreateFollowUpModal from "../../components/followUps/CreateFollowUps/CreateFollowUps";
+import React from "react";
 
 const OpportunityDetailPage = () => {
   const { id } = useParams<{ id: string }>();
+  const {
+    data: opportunity,
+    isLoading,
+    isError,
+  } = useGetOpportunityById(id as string);
+
+
+  const [modalOpen, setModalOpen] = React.useState(false);
+
+
+  const handleOpenModal = () => setModalOpen(true);
+
+  
+  const handleCloseModal = () => setModalOpen(false);
   const {
     data: opportunity,
     isLoading,
@@ -71,6 +95,15 @@ const OpportunityDetailPage = () => {
           flexDirection: "column",
         }}
       >
+      <Box
+        sx={{
+          padding: { xs: 2, sm: 4 },
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
         <Paper
           elevation={4}
           sx={{
@@ -95,6 +128,9 @@ const OpportunityDetailPage = () => {
               {opportunity.businessName}
             </Typography>
             <Chip
+              icon={
+                opportunity.isDeleted ? <CancelIcon /> : <CheckCircleIcon />
+              }
               icon={
                 opportunity.isDeleted ? <CancelIcon /> : <CheckCircleIcon />
               }
@@ -191,8 +227,49 @@ const OpportunityDetailPage = () => {
             opportunityId={opportunity.id}
           />
         )}
+      <Box
+        sx={{
+          padding: { xs: 2, sm: 4 },
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Toolbar sx={{ paddingLeft: 0, paddingRight: 0 }}>
+          <Typography variant="h6">Follow ups</Typography>
+          <Button
+            component={Link}
+            to={""}
+            variant="contained"
+            color="primary"
+            sx={{ ml: "auto" }}
+            onClick={handleOpenModal}
+          >
+            Create Follow-up
+          </Button>
+        </Toolbar>
+
+
+        <Box sx={{ marginTop: 3 }}>
+          <FollowUpsTable
+            opportunityId={opportunity.id}
+            onDelete={() => {}}
+            onEdit={() => {}}
+            onSelect={() => {}}
+          />
+        </Box>
+      </Box>
+
+      {modalOpen && (
+          <CreateFollowUpModal
+            open={modalOpen}
+            onClose={handleCloseModal}
+            clientId={opportunity.clientId}
+            opportunityId={opportunity.id}
+          />
+        )}
     </BaseLayout>
   );
 };
 
 export default OpportunityDetailPage;
+
