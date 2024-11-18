@@ -1,7 +1,7 @@
 export enum contactType {
-  CALL = "call",
-  EMAIL = "email",
-  MEETING = "meeting",
+  CALL = "Call",
+  EMAIL = "Email",
+  MEETING = "Meeting",
 }
 
 export interface FollowUpType {
