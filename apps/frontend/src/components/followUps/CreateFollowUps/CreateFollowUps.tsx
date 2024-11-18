@@ -17,6 +17,7 @@ import BaseLayout from "../../../layout/BaseLayout";
 
 interface CreateFollowUpModalProps {
   open: boolean;
+  opportunityId: string;
   clientId: string;
   onClose: () => void;
 }
@@ -24,6 +25,7 @@ interface CreateFollowUpModalProps {
 const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({
   open,
   clientId,
+  opportunityId, 
   onClose,
 }) => {
   const { data: contactsData } = useGetContactsByClientId(clientId);
@@ -63,7 +65,7 @@ const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({
   ) => {
     const fullFollowUpData: FollowUpType = {
       id: "",
-      opportunityId: "",
+      opportunityId,
       isDeleted: false,
       ...data,
     };
@@ -227,7 +229,7 @@ const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({
               >
                 X
               </Button>
-              <Button variant="outlined" type="submit" color="primary" onClick={onClose}>
+              <Button variant="outlined" type="submit" color="primary">
                 Save
               </Button>
             </Box>

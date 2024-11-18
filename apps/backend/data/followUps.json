@@ -1353,6 +1353,46 @@
       "contactId": "6c4361eb-d26a-4e20-ac23-0cae13f3bd03",
       "executiveId": "emilyroldan@gmail.com",
       "description": "xxxx"
+    },
+    {
+      "id": "UAIMkCo",
+      "opportunityId": "",
+      "isDeleted": false,
+      "type": "Call",
+      "date": "2024-11-18",
+      "contactId": "",
+      "executiveId": "gg@gmail.com",
+      "description": "xx"
+    },
+    {
+      "id": "v3wMwju",
+      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
+      "isDeleted": false,
+      "type": "Call",
+      "date": "2024-11-18",
+      "contactId": "",
+      "executiveId": "gg@gmail.com",
+      "description": "xxx"
+    },
+    {
+      "id": "vVeASwo",
+      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
+      "isDeleted": false,
+      "type": "Call",
+      "date": "2024-11-18",
+      "contactId": "",
+      "executiveId": "gg@gmail.com",
+      "description": "hola"
+    },
+    {
+      "id": "CxfpXHn",
+      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
+      "isDeleted": false,
+      "type": "Call",
+      "date": "2024-11-18",
+      "contactId": "",
+      "executiveId": "emilyroldanripoll@gmail.com",
+      "description": "nueva conclusion"
     }
   ]
 }

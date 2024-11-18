@@ -190,6 +190,7 @@ const OpportunityDetailPage = () => {
             open={modalOpen}
             onClose={handleCloseModal}
             clientId={opportunity.clientId}
+            opportunityId={opportunity.id}
           />
         )}
     </BaseLayout>
