@@ -5,6 +5,8 @@ import {
   Paper,
   Divider,
   Chip,
+  Button,
+  Toolbar,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import useGetOpportunityById from "../../hooks/opportunity/useGetOpportunityById";
@@ -18,6 +20,9 @@ import {
   opportunityStatusMap,
 } from "../../types/opportunity.types";
 import { FollowUpsTable } from "../../components/followUps/FollowUpsTable";
+import { Link } from "react-router-dom";
+import CreateFollowUpModal from "../../components/followUps/CreateFollowUps/CreateFollowUps";
+import { useState } from "react";
 
 const OpportunityDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,6 +31,14 @@ const OpportunityDetailPage = () => {
     isLoading,
     isError,
   } = useGetOpportunityById(id as string);
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  // Función para abrir el modal
+  const handleOpenModal = () => setModalOpen(true);
+
+  // Función para cerrar el modal
+  const handleCloseModal = () => setModalOpen(false);
 
   if (isLoading) {
     return (
@@ -125,7 +138,7 @@ const OpportunityDetailPage = () => {
               {new Date(opportunity.estimatedDate).toLocaleDateString()}
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              <strong>Estimated Value:</strong> $
+              <strong>Estimated Value:</strong> $$
               {opportunity.estimatedValue.toLocaleString()}
             </Typography>
           </Box>
@@ -138,9 +151,26 @@ const OpportunityDetailPage = () => {
           flexDirection: "column",
         }}
       >
-        <Typography variant="h5" gutterBottom>
-          Follow Ups
-        </Typography>
+
+        <Toolbar sx={{ paddingLeft: 0, paddingRight: 0 }}>
+          <Typography variant="h6">Follow ups</Typography>
+          <Button
+            component={Link}
+            to={""}
+            variant="contained"
+            color="primary"
+            sx={{ ml: "auto" }}
+            onClick={handleOpenModal}
+          >
+            Create Opportunity
+          </Button>
+        </Toolbar>
+
+        <CreateFollowUpModal
+          open={modalOpen} 
+          onClose={handleCloseModal} 
+          clientId={opportunity.clientId} 
+        />
 
         <FollowUpsTable
           opportunityId={opportunity.id}
