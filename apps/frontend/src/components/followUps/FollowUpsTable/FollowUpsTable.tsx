@@ -125,7 +125,6 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
         rows={followUps || []}
         columns={columns}
         columnVisibilityModel={FollowUpsDataGridColumnVisibility}
-        rowCount={followUps?.length}
         disableColumnMenu
       />
     </Box>
