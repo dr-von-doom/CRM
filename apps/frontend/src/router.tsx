@@ -6,7 +6,6 @@ import ClientsPage from "./pages/client/ClientPage";
 import CreateClientPage from "./pages/client/CreateClientPage";
 import HomePage from "./pages/HomePage";
 import { OpportunityPage } from "./pages/opportunity/OpportunityPage";
-import CreateOpportunityPage  from "./pages/opportunity/CreateOpportunityPage";
 import OpportunityDetailPage from "./pages/opportunity/OpportunityDetailPage";
 const routes = [
   {
@@ -22,7 +21,7 @@ const routes = [
     element: <ClientsPage />,
   },
   {
-    path: "/clients/create", 
+    path: "/clients/create",
     element: <CreateClientPage />,
     showInNav: true,
   },
@@ -33,12 +32,7 @@ const routes = [
     element: <OpportunityPage />,
   },
   {
-    path: "/opportunities/create", 
-    element: <CreateOpportunityPage />,
-    showInNav: true,
-  },
-  {
-    path: "/opportunities/:id", 
+    path: "/opportunities/:id",
     element: <OpportunityDetailPage />,
     showInNav: true,
   },
@@ -52,4 +46,3 @@ export const AppRouter = () => {
 
 export { routes };
 export default AppRouter;
-

@@ -47,8 +47,8 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
       reset({
         ...opportunityData,
         estimatedDate: opportunityData.estimatedDate
-          ? formatDate(new Date(opportunityData.estimatedDate), "YYYY-MM-DD")
-          : "", 
+          ? formatDate(new Date(opportunityData.estimatedDate))
+          : "",
       });
     }
   }, [opportunityData, reset]);
@@ -66,10 +66,14 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
   if (!opportunityData) return null;
 
   return (
-    <Modal open={open} onClose={onClose} aria-labelledby="edit-opportunity-modal">
+    <Modal
+      open={open}
+      onClose={onClose}
+      aria-labelledby="edit-opportunity-modal"
+    >
       <Box
         sx={{
-          position: "absolute" as "absolute",
+          position: "absolute",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -193,11 +197,13 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
                 rules={{ required: "This field is required" }}
                 render={({ field }) => (
                   <Select {...field} fullWidth error={!!errors.status}>
-                    {Object.entries(opportunityStatusMap).map(([key, label]) => (
-                      <MenuItem key={key} value={key}>
-                        {label}
-                      </MenuItem>
-                    ))}
+                    {Object.entries(opportunityStatusMap).map(
+                      ([key, label]) => (
+                        <MenuItem key={key} value={key}>
+                          {label}
+                        </MenuItem>
+                      )
+                    )}
                   </Select>
                 )}
               />
@@ -208,7 +214,12 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
           </Grid>
 
           <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}>
-            <Button variant="outlined" onClick={onClose} color="error" sx={{ mr: 2 }}>
+            <Button
+              variant="outlined"
+              onClick={onClose}
+              color="error"
+              sx={{ mr: 2 }}
+            >
               Cancel
             </Button>
             <Button variant="outlined" type="submit" color="primary">

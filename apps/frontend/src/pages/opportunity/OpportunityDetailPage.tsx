@@ -13,11 +13,21 @@ import BaseLayout from "../../layout/BaseLayout";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
-import { opportunityBusinessTypeMap, opportunityStatusMap } from "../../types/opportunity.types";
+import {
+  opportunityBusinessTypeMap,
+  opportunityStatusMap,
+} from "../../types/opportunity.types";
+import useGetFollowUps from "../../hooks/followUp/useGetFollowUps";
 
 const OpportunityDetailPage = () => {
   const { id } = useParams<{ id: string }>();
-  const { data: opportunity, isLoading, isError } = useGetOpportunityById(id as string);
+  const {
+    data: opportunity,
+    isLoading,
+    isError,
+  } = useGetOpportunityById(id as string);
+  const { data: followUpsData } = useGetFollowUps(id as string);
+  console.log(followUpsData);
 
   if (isLoading) {
     return (
@@ -40,7 +50,13 @@ const OpportunityDetailPage = () => {
 
   return (
     <BaseLayout>
-      <Box sx={{ padding: { xs: 2, sm: 4 }, display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          padding: { xs: 2, sm: 4 },
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <Paper
           elevation={4}
           sx={{
@@ -65,7 +81,9 @@ const OpportunityDetailPage = () => {
               {opportunity.businessName}
             </Typography>
             <Chip
-              icon={opportunity.isDeleted ? <CancelIcon /> : <CheckCircleIcon />}
+              icon={
+                opportunity.isDeleted ? <CancelIcon /> : <CheckCircleIcon />
+              }
               label={opportunity.isDeleted ? "Deleted" : "Active"}
               color={opportunity.isDeleted ? "error" : "success"}
               sx={{
@@ -90,10 +108,12 @@ const OpportunityDetailPage = () => {
               <strong>Description:</strong> {opportunity.description}
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              <strong>Business Type:</strong> {opportunityBusinessTypeMap[opportunity.businessType]}
+              <strong>Business Type:</strong>{" "}
+              {opportunityBusinessTypeMap[opportunity.businessType]}
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              <strong>Status:</strong> {opportunityStatusMap[opportunity.status]}
+              <strong>Status:</strong>{" "}
+              {opportunityStatusMap[opportunity.status]}
             </Typography>
           </Box>
 
@@ -105,7 +125,8 @@ const OpportunityDetailPage = () => {
               {new Date(opportunity.estimatedDate).toLocaleDateString()}
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              <strong>Estimated Value:</strong> ${opportunity.estimatedValue.toLocaleString()}
+              <strong>Estimated Value:</strong> $
+              {opportunity.estimatedValue.toLocaleString()}
             </Typography>
           </Box>
         </Paper>
