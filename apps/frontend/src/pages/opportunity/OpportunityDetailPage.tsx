@@ -17,7 +17,7 @@ import {
   opportunityBusinessTypeMap,
   opportunityStatusMap,
 } from "../../types/opportunity.types";
-import useGetFollowUps from "../../hooks/followUp/useGetFollowUps";
+import { FollowUpsTable } from "../../components/followUps/FollowUpsTable";
 
 const OpportunityDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,8 +26,6 @@ const OpportunityDetailPage = () => {
     isLoading,
     isError,
   } = useGetOpportunityById(id as string);
-  const { data: followUpsData } = useGetFollowUps(id as string);
-  console.log(followUpsData);
 
   if (isLoading) {
     return (
@@ -55,6 +53,8 @@ const OpportunityDetailPage = () => {
           padding: { xs: 2, sm: 4 },
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
         }}
       >
         <Paper
@@ -110,8 +110,12 @@ const OpportunityDetailPage = () => {
             <Typography variant="body1" color="textSecondary" gutterBottom>
               <strong>Business Type:</strong>{" "}
               {opportunityBusinessTypeMap[opportunity.businessType]}
+              <strong>Business Type:</strong>{" "}
+              {opportunityBusinessTypeMap[opportunity.businessType]}
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
+              <strong>Status:</strong>{" "}
+              {opportunityStatusMap[opportunity.status]}
               <strong>Status:</strong>{" "}
               {opportunityStatusMap[opportunity.status]}
             </Typography>
@@ -127,9 +131,29 @@ const OpportunityDetailPage = () => {
             <Typography variant="body1" color="textSecondary" gutterBottom>
               <strong>Estimated Value:</strong> $
               {opportunity.estimatedValue.toLocaleString()}
+              <strong>Estimated Value:</strong> $
+              {opportunity.estimatedValue.toLocaleString()}
             </Typography>
           </Box>
         </Paper>
+      </Box>
+      <Box
+        sx={{
+          padding: { xs: 2, sm: 4 },
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Typography variant="h5" gutterBottom>
+          Follow Ups
+        </Typography>
+
+        <FollowUpsTable
+          opportunityId={opportunity.id}
+          onDelete={() => {}}
+          onEdit={() => {}}
+          onSelect={() => {}}
+        />
       </Box>
     </BaseLayout>
   );
