@@ -227,7 +227,7 @@ const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({
               >
                 X
               </Button>
-              <Button variant="outlined" type="submit" color="primary">
+              <Button variant="outlined" type="submit" color="primary" onClick={onClose}>
                 Save
               </Button>
             </Box>
