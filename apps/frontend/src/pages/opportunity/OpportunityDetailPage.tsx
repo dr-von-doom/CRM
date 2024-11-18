@@ -7,7 +7,6 @@ import {
   Chip,
   Button,
   Toolbar,
-  useTheme,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import useGetOpportunityById from "../../hooks/opportunity/useGetOpportunityById";
@@ -26,7 +25,6 @@ import CreateFollowUpModal from "../../components/followUps/CreateFollowUps/Crea
 import React from "react";
 
 const OpportunityDetailPage = () => {
-  const theme = useTheme();
   const { id } = useParams<{ id: string }>();
   const {
     data: opportunity,
@@ -34,13 +32,13 @@ const OpportunityDetailPage = () => {
     isError,
   } = useGetOpportunityById(id as string);
 
-  // Estado para controlar la apertura y cierre del modal
+
   const [modalOpen, setModalOpen] = React.useState(false);
 
-  // Función para abrir el modal
+
   const handleOpenModal = () => setModalOpen(true);
 
-  // Función para cerrar el modal
+  
   const handleCloseModal = () => setModalOpen(false);
 
   if (isLoading) {
