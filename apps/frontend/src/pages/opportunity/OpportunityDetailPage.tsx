@@ -84,9 +84,6 @@ const OpportunityDetailPage = () => {
               icon={
                 opportunity.isDeleted ? <CancelIcon /> : <CheckCircleIcon />
               }
-              icon={
-                opportunity.isDeleted ? <CancelIcon /> : <CheckCircleIcon />
-              }
               label={opportunity.isDeleted ? "Deleted" : "Active"}
               color={opportunity.isDeleted ? "error" : "success"}
               sx={{
