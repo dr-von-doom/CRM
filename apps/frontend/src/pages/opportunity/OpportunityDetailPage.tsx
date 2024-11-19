@@ -7,7 +7,6 @@ import {
   Chip,
   Button,
   Toolbar,
-  useTheme,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import useGetOpportunityById from "../../hooks/opportunity/useGetOpportunityById";
@@ -26,7 +25,6 @@ import CreateFollowUpModal from "../../components/followUps/CreateFollowUps/Crea
 import React from "react";
 
 const OpportunityDetailPage = () => {
-  const theme = useTheme();
   const { id } = useParams<{ id: string }>();
   const {
     data: opportunity,
@@ -158,8 +156,8 @@ const OpportunityDetailPage = () => {
       >
         <Toolbar
           sx={{
-            paddingLeft: theme.spacing(0),
-            paddingRight: theme.spacing(0),
+            paddingLeft: 0,
+            paddingRight: 0,
           }}
         >
           <Typography variant="h6">Follow Ups</Typography>
@@ -175,8 +173,7 @@ const OpportunityDetailPage = () => {
           </Button>
         </Toolbar>
 
-
-        <Box sx={{ marginTop: 3 }}>
+        <Box sx={{ marginTop: 2}}>
           <FollowUpsTable
             opportunityId={opportunity.id}
             onDelete={() => {}}
