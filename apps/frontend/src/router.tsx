@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import { OpportunityPage } from "./pages/opportunity/OpportunityPage";
 import OpportunityDetailPage from "./pages/opportunity/OpportunityDetailPage";
 import CreateOpportunityPage from "./pages/opportunity/CreateOpportunityPage";
+import ClientDetailsPage from "./pages/client/ClientDetailsPage";
 const routes = [
   {
     path: "/",
