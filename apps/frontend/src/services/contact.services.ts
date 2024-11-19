@@ -50,3 +50,17 @@ export const updateContact = async (
 
   return body;
 };
+
+/**
+ * It gets a contact by ID from the API.
+ *
+ * @param {string} id Contact ID
+ * @returns {Promise<ContactType>} - The contact data.
+ */
+export const getContactById = async (id: string): Promise<ContactType> => {
+  const { body } = await requestApi(ApiRequests.GET_CONTACT_BY_ID, {
+    pathParams: { id },
+  });
+
+  return body;
+};
