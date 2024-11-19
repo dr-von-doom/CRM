@@ -47,7 +47,7 @@ const EditOpportunityModal: React.FC<EditOpportunityModalProps> = ({
       reset({
         ...opportunityData,
         estimatedDate: opportunityData.estimatedDate
-          ? formatDate(new Date(opportunityData.estimatedDate), "YYYY-MM-DD")
+          ? formatDate(new Date(opportunityData.estimatedDate))
           : "", 
       });
     }
