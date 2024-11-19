@@ -1,12 +1,3 @@
-import {
-  Alert,
-  Box,
-  Button,
-  Grid,
-  Snackbar,
-  TextField,
-  Typography,
-} from "@mui/material";
 import { useState } from "react";
 import {
   Controller,
@@ -15,10 +6,20 @@ import {
   useForm,
 } from "react-hook-form";
 import { FaTrashAlt } from "react-icons/fa";
+import {
+  Box,
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  Snackbar,
+  Alert,
+} from "@mui/material";
 import { useCreateClient } from "../../hooks/clients/useCreateClients";
 import { useCreateContact } from "../../hooks/contact/useCreateContact";
 import BaseLayout from "../../layout/BaseLayout";
 import { ClientType, ContactType } from "../../types/client.types";
+import { Link } from "react-router-dom";
 
 type FormValues = Omit<ClientType, "id"> & {
   contacts: Omit<ContactType, "id" | "clientId">[];
@@ -322,9 +323,11 @@ const CreateClientPage = () => {
             {/* Submit button */}
             <Grid item xs={12}>
               <Button
+                component={Link}
                 type="submit"
                 variant="contained"
                 color="primary"
+                to={"/clients"}
                 sx={{
                   width: { xs: "340px", md: "600px", lg: "900px" },
                   py: 1.5,
