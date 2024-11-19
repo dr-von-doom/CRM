@@ -138,7 +138,7 @@ const CreateOpportunityPage = () => {
               >
                 {Object.entries(opportunityBusinessTypeMap).map(
                   ([key, label]) => (
-                    <MenuItem disabled key={key} value={key}>
+                    <MenuItem key={key} value={key}>
                       {label}
                     </MenuItem>
                   )
@@ -230,7 +230,7 @@ const CreateOpportunityPage = () => {
                 }}
               >
                 {Object.entries(opportunityStatusMap).map(([key, label]) => (
-                  <MenuItem key={key} value={key}>
+                  <MenuItem disabled key={key} value={key}>
                     {label}
                   </MenuItem>
                 ))}
