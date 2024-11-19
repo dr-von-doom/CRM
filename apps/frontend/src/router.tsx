@@ -42,6 +42,11 @@ const routes = [
     element: <OpportunityDetailPage />,
     showInNav: true,
   },
+  {
+    path: "/clients/:id",
+    element: <ClientDetailsPage />,
+    showInNav: true,
+  }
 ];
 
 const router = createBrowserRouter(routes);

@@ -18,16 +18,15 @@ import {
   ClientDataGridColumns,
   ClientDataGridColumnVisibility,
 } from "./ClientTable.types";
+import { useNavigate } from "react-router-dom";
 
 export type ClientTableProps = {
-  onSelect: (clientId: string) => void;
   onEdit: (clientId: string) => void;
 };
 /**
  * Client table component
  */
 export const ClientTable: FC<ClientTableProps> = ({
-  onSelect,
   onEdit,
 }: ClientTableProps) => {
   const [page, setPage] = useState(1);
@@ -57,8 +56,12 @@ export const ClientTable: FC<ClientTableProps> = ({
    * Client open button component
    */
   const OpenButton = ({ clientId }: { clientId: string }) => {
+    const navigate = useNavigate();
     return (
-      <IconButton color="primary" onClick={() => onSelect(clientId)}>
+      <IconButton
+        color="primary"
+        onClick={() => navigate(`/clients/${clientId}`)}
+      >
         <OpenInNewIcon />
       </IconButton>
     );

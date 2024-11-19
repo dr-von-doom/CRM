@@ -14,9 +14,6 @@ type StoryType = StoryObj<typeof meta>;
 
 export const Default: StoryType = {
   args: {
-    onSelect: (clientId: string) => {
-      console.log("onSelect", clientId);
-    },
     onEdit: (clientId: string) => {
       console.log("onEdit", clientId);
     },

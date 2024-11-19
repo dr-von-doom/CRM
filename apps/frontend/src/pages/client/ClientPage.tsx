@@ -1,10 +1,8 @@
 import { Box, Button, Toolbar, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ClientDetails from "../../components/clients/ClientDetails/ClientDetails";
 import ClientTable from "../../components/clients/ClientTable/ClientTable";
 import EditClientModal from "../../components/clients/EditClientModal/EditClientModal";
-import SidePanel from "../../components/common/SidePanel";
 import BaseLayout from "../../layout/BaseLayout";
 
 const ClientPage = () => {
@@ -12,21 +10,11 @@ const ClientPage = () => {
 
   const [selectedClientId, setSelectedClientId] = useState<string | null>(null);
 
-  const [sidePanelOpen, setSidePanelOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = (clientId?: string) => {
     setModalOpen(true);
     setSelectedClientId(clientId || null);
-  };
-
-  const openPanel = (clientId?: string) => {
-    setSidePanelOpen(true);
-    setSelectedClientId(clientId || null);
-  };
-
-  const closePanel = () => {
-    setSidePanelOpen(false);
   };
 
   return (
@@ -60,22 +48,11 @@ const ClientPage = () => {
           }}
         >
           <ClientTable
-            onSelect={(clientId: string) => {
-              openPanel(clientId);
-            }}
             onEdit={(clientId: string) => {
               openModal(clientId);
             }}
           />
         </Box>
-
-        <SidePanel
-          isOpen={sidePanelOpen}
-          onClose={closePanel}
-          title={"Client Details"}
-        >
-          <ClientDetails clientId={selectedClientId!} />
-        </SidePanel>
 
         {modalOpen && (
           <EditClientModal
