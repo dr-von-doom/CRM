@@ -22,6 +22,7 @@ import {
   opportunityStatusMap,
 } from "../../types/opportunity.types";
 
+
 type FormValues = Omit<OpportunityType, "isDeleted">;
 
 const CreateOpportunityPage = () => {
@@ -62,7 +63,7 @@ const CreateOpportunityPage = () => {
   }
 
   if (isError) {
-    return <Typography color="error">Error loading clients</Typography>;
+    return <BaseLayout><Typography color="error">Error loading clients</Typography></BaseLayout>;
   }
 
   return (
@@ -229,7 +230,7 @@ const CreateOpportunityPage = () => {
                 }}
               >
                 {Object.entries(opportunityStatusMap).map(([key, label]) => (
-                  <MenuItem key={key} value={key}>
+                  <MenuItem disabled key={key} value={key}>
                     {label}
                   </MenuItem>
                 ))}

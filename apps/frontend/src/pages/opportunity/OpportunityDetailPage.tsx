@@ -32,32 +32,35 @@ const OpportunityDetailPage = () => {
     isError,
   } = useGetOpportunityById(id as string);
 
-
   const [modalOpen, setModalOpen] = React.useState(false);
-
 
   const handleOpenModal = () => setModalOpen(true);
 
-  
   const handleCloseModal = () => setModalOpen(false);
 
   if (isLoading) {
     return (
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
-        <CircularProgress />
-      </Box>
+      <BaseLayout>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+          }}
+        >
+          <CircularProgress />
+        </Box>
+      </BaseLayout>
     );
   }
 
   if (isError || !opportunity) {
-    return <ErrorAlert />;
+    return (
+      <BaseLayout>
+        <ErrorAlert />
+      </BaseLayout>
+    );
   }
 
   return (
@@ -76,7 +79,6 @@ const OpportunityDetailPage = () => {
           sx={{
             padding: { xs: 3, sm: 4 },
             width: "100%",
-            maxWidth: "500px",
             borderRadius: 3,
             background: "linear-gradient(to bottom, #f9f9f9, #ffffff)",
           }}
@@ -124,7 +126,6 @@ const OpportunityDetailPage = () => {
             <Typography variant="body1" color="textSecondary" gutterBottom>
               <strong>Business Type:</strong>{" "}
               {opportunityBusinessTypeMap[opportunity.businessType]}
-             
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
               <strong>Status:</strong>{" "}
@@ -153,8 +154,13 @@ const OpportunityDetailPage = () => {
           flexDirection: "column",
         }}
       >
-        <Toolbar sx={{ paddingLeft: 0, paddingRight: 0 }}>
-          <Typography variant="h6">Follow ups</Typography>
+        <Toolbar
+          sx={{
+            paddingLeft: 0,
+            paddingRight: 0,
+          }}
+        >
+          <Typography variant="h6">Follow Ups</Typography>
           <Button
             component={Link}
             to={""}
@@ -167,8 +173,7 @@ const OpportunityDetailPage = () => {
           </Button>
         </Toolbar>
 
-
-        <Box sx={{ marginTop: 3 }}>
+        <Box sx={{ marginTop: 2}}>
           <FollowUpsTable
             opportunityId={opportunity.id}
             onDelete={() => {}}
@@ -179,13 +184,13 @@ const OpportunityDetailPage = () => {
       </Box>
 
       {modalOpen && (
-          <CreateFollowUpModal
-            open={modalOpen}
-            onClose={handleCloseModal}
-            clientId={opportunity.clientId}
-            opportunityId={opportunity.id}
-          />
-        )}
+        <CreateFollowUpModal
+          open={modalOpen}
+          onClose={handleCloseModal}
+          clientId={opportunity.clientId}
+          opportunityId={opportunity.id}
+        />
+      )}
     </BaseLayout>
   );
 };
