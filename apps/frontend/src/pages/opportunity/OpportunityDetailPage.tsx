@@ -124,12 +124,9 @@ const OpportunityDetailPage = () => {
             <Typography variant="body1" color="textSecondary" gutterBottom>
               <strong>Business Type:</strong>{" "}
               {opportunityBusinessTypeMap[opportunity.businessType]}
-              <strong>Business Type:</strong>{" "}
-              {opportunityBusinessTypeMap[opportunity.businessType]}
+             
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              <strong>Status:</strong>{" "}
-              {opportunityStatusMap[opportunity.status]}
               <strong>Status:</strong>{" "}
               {opportunityStatusMap[opportunity.status]}
             </Typography>
@@ -143,8 +140,6 @@ const OpportunityDetailPage = () => {
               {new Date(opportunity.estimatedDate).toLocaleDateString()}
             </Typography>
             <Typography variant="body1" color="textSecondary" gutterBottom>
-              <strong>Estimated Value:</strong> $
-              {opportunity.estimatedValue.toLocaleString()}
               <strong>Estimated Value:</strong> $
               {opportunity.estimatedValue.toLocaleString()}
             </Typography>
