@@ -201,7 +201,7 @@ const ClientDetailsPage = () => {
                               status={opportunity.status}
                             ></OpportunityStatusChip>
                           </TableCell>
-                          <TableCell>{opportunity.estimatedDate}</TableCell>
+                          <TableCell>{new Date(opportunity.estimatedDate).toLocaleDateString()}</TableCell>
                           <TableCell>
                             {"COP " + opportunity.estimatedValue}
                           </TableCell>
