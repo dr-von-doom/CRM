@@ -176,7 +176,6 @@ const OpportunityDetailPage = () => {
         <Box sx={{ marginTop: 2}}>
           <FollowUpsTable
             opportunityId={opportunity.id}
-            onDelete={() => {}}
             onEdit={() => {}}
             onSelect={() => {}}
           />
