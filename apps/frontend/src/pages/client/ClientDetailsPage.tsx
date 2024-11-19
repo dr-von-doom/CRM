@@ -23,6 +23,10 @@ import BaseLayout from "../../layout/BaseLayout";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { AccountCircle, Contacts, Face } from "@mui/icons-material";
+import BusinessTypeChip from "../../components/opportunity/BusinessTypeChip/BusinessTypeChip";
+import OpportunityStatusChip from "../../components/opportunity/OpportunityStatusChip/OpportunityStatusChip";
+import { useState } from "react";
+import { FollowUpsTable } from "../../components/followUps/FollowUpsTable";
 
 const ClientDetailsPage = () => {
   const clientId = useParams<{ id: string }>().id;
@@ -35,6 +39,7 @@ const ClientDetailsPage = () => {
     clientId as string
   );
   const { data: contacts } = useGetContactsByClientId(clientId as string);
+  const [opportunityId, setOpportunityId] = useState<string>();
 
   if (isLoading)
     return (
@@ -69,7 +74,6 @@ const ClientDetailsPage = () => {
           sx={{
             padding: { xs: 3, sm: 4 },
             width: "100%",
-            maxWidth: "500px",
             borderRadius: 3,
             background: "linear-gradient(to bottom, #f9f9f9, #ffffff)",
           }}
@@ -187,8 +191,16 @@ const ClientDetailsPage = () => {
                       {opportunities?.map((opportunity) => (
                         <TableRow key={opportunity.id}>
                           <TableCell>{opportunity.businessName}</TableCell>
-                          <TableCell>{opportunity.businessType}</TableCell>
-                          <TableCell>{opportunity.status}</TableCell>
+                          <TableCell>
+                            <BusinessTypeChip
+                              businessType={opportunity.businessType}
+                            ></BusinessTypeChip>
+                          </TableCell>
+                          <TableCell>
+                            <OpportunityStatusChip
+                              status={opportunity.status}
+                            ></OpportunityStatusChip>
+                          </TableCell>
                           <TableCell>{opportunity.estimatedDate}</TableCell>
                           <TableCell>
                             {"COP " + opportunity.estimatedValue}
@@ -198,6 +210,9 @@ const ClientDetailsPage = () => {
                               color="primary"
                               variant="outlined"
                               sx={{ borderRadius: 99, borderWidth: 2 }}
+                              onClick={() => {
+                                setOpportunityId(opportunity.id);
+                              }}
                             >
                               Follow up
                             </Button>
@@ -210,6 +225,14 @@ const ClientDetailsPage = () => {
               </Box>
             </CardContent>
           </Card>
+        )}
+        {opportunityId && (
+          <FollowUpsTable
+            opportunityId={opportunityId}
+            onDelete={() => {}}
+            onEdit={() => {}}
+            onSelect={() => {}}
+          ></FollowUpsTable>
         )}
       </Box>
     </BaseLayout>
