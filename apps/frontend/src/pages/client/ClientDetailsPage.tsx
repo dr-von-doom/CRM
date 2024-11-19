@@ -232,7 +232,7 @@ const ClientDetailsPage = () => {
             onDelete={() => {}}
             onEdit={() => {}}
             onSelect={() => {}}
-          ></FollowUpsTable>
+          />
         )}
       </Box>
     </BaseLayout>
