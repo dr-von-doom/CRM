@@ -15,6 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "@crm/backend": "^0.0.0",
-    "@crm/frontend": "^0.0.0"
+    "@crm/frontend": "^0.0.0",
+    "@popperjs/core": "^2.11.8",
+    "react-hook-form": "^7.53.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.1"
   }
 }

@@ -22,6 +22,7 @@ for (let i = 0; i < 100; i++) {
     description: Array.from({ length: faker.number.int({ min: 1, max: 5 }) }, () =>
       faker.lorem.sentence()
     ), 
+    isDeleted: false,
   });
 }
 

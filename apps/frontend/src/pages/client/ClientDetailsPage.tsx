@@ -43,6 +43,7 @@ const ClientDetailsPage = () => {
 
   if (isLoading)
     return (
+      <BaseLayout>
       <Box
         display="flex"
         justifyContent="center"
@@ -51,11 +52,12 @@ const ClientDetailsPage = () => {
       >
         <CircularProgress />
       </Box>
+      </BaseLayout>
     );
 
-  if (isError) return <ErrorAlert />;
+  if (isError) return <BaseLayout><ErrorAlert /></BaseLayout>;
 
-  if (!client) return <ErrorAlert title="Client not found" description="" />;
+  if (!client) return <BaseLayout><ErrorAlert title="Client not found" description="" /></BaseLayout>;
 
   return (
     <BaseLayout>

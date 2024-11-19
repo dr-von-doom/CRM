@@ -43,6 +43,7 @@ const OpportunityDetailPage = () => {
 
   if (isLoading) {
     return (
+      <BaseLayout>
       <Box
         sx={{
           display: "flex",
@@ -53,11 +54,12 @@ const OpportunityDetailPage = () => {
       >
         <CircularProgress />
       </Box>
+      </BaseLayout>
     );
   }
 
   if (isError || !opportunity) {
-    return <ErrorAlert />;
+    return <BaseLayout><ErrorAlert /></BaseLayout>;
   }
 
   return (
@@ -76,7 +78,6 @@ const OpportunityDetailPage = () => {
           sx={{
             padding: { xs: 3, sm: 4 },
             width: "100%",
-            maxWidth: "500px",
             borderRadius: 3,
             background: "linear-gradient(to bottom, #f9f9f9, #ffffff)",
           }}
