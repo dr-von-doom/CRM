@@ -45,10 +45,14 @@ export const updateFollowUp = async (
  * @returns {Promise<FollowUpType[]>} - List of follow-ups.
  */
 export const getFollowUps = async (
-  opportunityId?: string
+  opportunityId?: string,
+  getDeleted: boolean = false
 ): Promise<FollowUpType[]> => {
   const { body } = await requestApi(ApiRequests.GET_FOLLOW_UPS, {
-    queryParams: { opportunityId },
+    queryParams: { 
+      opportunityId,
+      isDeleted: getDeleted,
+    },
   });
   return body;
 };
