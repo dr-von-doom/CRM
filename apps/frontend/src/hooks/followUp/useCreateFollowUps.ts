@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
-import { createFollowUp } from "../../services/followups.services";
 import { FollowUpType } from "../../types/followUps.types";
+import { createFollowUp } from "../../services/followUps.services";
 
 export const useCreateFollowUp = () => {
   return useMutation({

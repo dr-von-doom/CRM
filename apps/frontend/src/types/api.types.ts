@@ -27,6 +27,7 @@ export enum ApiRequests {
   CREATE_CLIENT = "CREATE_CLIENT",
   /* Contact routes */
   GET_CONTACTS = "GET_CONTACTS",
+  GET_CONTACT_BY_ID = "GET_CONTACT_BY_ID",
   CREATE_CONTACT = "CREATE_CONTACT",
   UPDATE_CONTACT = "UPDATE_CONTACT",
   /* Opportunity routes */
@@ -39,7 +40,7 @@ export enum ApiRequests {
   GET_FOLLOW_UPS = "GET_FOLLOW_UPS",
   CREATE_FOLLOW_UP = "CREATE_FOLLOW_UP",
   UPDATE_FOLLOW_UP = "UPDATE_FOLLOW_UP",
-  GET_FOLLOW_UP_BY_ID = "GET_FOLLOW_UP_BY_ID", 
+  GET_FOLLOW_UP_BY_ID = "GET_FOLLOW_UP_BY_ID",
 }
 
 // Mapping API requests to their respective paths
@@ -54,6 +55,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_CONTACTS]: "/contacts",
   [ApiRequests.CREATE_CONTACT]: "/contacts",
   [ApiRequests.UPDATE_CONTACT]: "/contacts/:id",
+  [ApiRequests.GET_CONTACT_BY_ID]: "/contacts/:id",
   /* Opportunity paths */
   [ApiRequests.GET_OPPORTUNITIES]: "/opportunities",
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: "/opportunities/:id",
@@ -65,7 +67,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_FOLLOW_UPS]: "/follow-ups",
   [ApiRequests.CREATE_FOLLOW_UP]: "/follow-ups",
   [ApiRequests.UPDATE_FOLLOW_UP]: "/follow-ups/:id",
-  [ApiRequests.GET_FOLLOW_UP_BY_ID]: "/follow-ups/:id", 
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: "/follow-ups/:id",
 };
 
 // Mapping API requests to their respective HTTP methods
@@ -80,6 +82,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.GET_CONTACTS]: httpMethod.GET,
   [ApiRequests.CREATE_CONTACT]: httpMethod.POST,
   [ApiRequests.UPDATE_CONTACT]: httpMethod.PATCH,
+  [ApiRequests.GET_CONTACT_BY_ID]: httpMethod.GET,
   /* Opportunity request methods */
   [ApiRequests.GET_OPPORTUNITIES]: httpMethod.GET,
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: httpMethod.GET,
@@ -90,7 +93,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.GET_FOLLOW_UPS]: httpMethod.GET,
   [ApiRequests.CREATE_FOLLOW_UP]: httpMethod.POST,
   [ApiRequests.UPDATE_FOLLOW_UP]: httpMethod.PATCH,
-  [ApiRequests.GET_FOLLOW_UP_BY_ID]: httpMethod.GET, 
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: httpMethod.GET,
 };
 
 // Body types for API requests
@@ -105,6 +108,7 @@ export type ApiRequestBodyType = {
   [ApiRequests.GET_CONTACTS]: void;
   [ApiRequests.UPDATE_CONTACT]: ContactType;
   [ApiRequests.CREATE_CONTACT]: Partial<ContactType>;
+  [ApiRequests.GET_CONTACT_BY_ID]: void;
   /* Opportunity body types */
   [ApiRequests.GET_OPPORTUNITIES]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: void;
@@ -115,7 +119,7 @@ export type ApiRequestBodyType = {
   [ApiRequests.GET_FOLLOW_UPS]: void;
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: Partial<FollowUpType>;
-  [ApiRequests.GET_FOLLOW_UP_BY_ID]: void; 
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
 };
 
 // Query parameter types for API requests
@@ -130,6 +134,7 @@ export type ApiRequestQueryType = {
   [ApiRequests.GET_CONTACTS]: { clientId?: string } & Partial<ContactType>;
   [ApiRequests.CREATE_CONTACT]: void;
   [ApiRequests.UPDATE_CONTACT]: void;
+  [ApiRequests.GET_CONTACT_BY_ID]: void;
   /* Opportunity query types */
   [ApiRequests.GET_OPPORTUNITIES]: paginationType & Partial<OpportunityType>;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: void;
@@ -140,7 +145,7 @@ export type ApiRequestQueryType = {
   [ApiRequests.GET_FOLLOW_UPS]: Partial<FollowUpType>;
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: void;
-  [ApiRequests.GET_FOLLOW_UP_BY_ID]: void; 
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
 };
 
 // Path parameter types for API requests
@@ -155,6 +160,7 @@ export type ApiPathParamsType = {
   [ApiRequests.GET_CONTACTS]: void;
   [ApiRequests.CREATE_CONTACT]: void;
   [ApiRequests.UPDATE_CONTACT]: { id: string };
+  [ApiRequests.GET_CONTACT_BY_ID]: { id: string };
   /* Opportunity path params */
   [ApiRequests.GET_OPPORTUNITIES]: void;
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: { id: string };
@@ -165,7 +171,7 @@ export type ApiPathParamsType = {
   [ApiRequests.GET_FOLLOW_UPS]: void;
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: { id: string };
-  [ApiRequests.GET_FOLLOW_UP_BY_ID]: { id: string }; 
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: { id: string };
 };
 
 // Response types for API requests
@@ -180,6 +186,7 @@ export type ApiResponseType = {
   [ApiRequests.GET_CONTACTS]: ContactType[];
   [ApiRequests.CREATE_CONTACT]: ContactType;
   [ApiRequests.UPDATE_CONTACT]: ContactType;
+  [ApiRequests.GET_CONTACT_BY_ID]: ContactType;
   /* Opportunity response types */
   [ApiRequests.GET_OPPORTUNITIES]: OpportunityType[];
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: OpportunityType;
@@ -190,5 +197,5 @@ export type ApiResponseType = {
   [ApiRequests.GET_FOLLOW_UPS]: FollowUpType[];
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: FollowUpType;
-  [ApiRequests.GET_FOLLOW_UP_BY_ID]: FollowUpType; 
+  [ApiRequests.GET_FOLLOW_UP_BY_ID]: FollowUpType;
 };

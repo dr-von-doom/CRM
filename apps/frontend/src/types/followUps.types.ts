@@ -1,7 +1,7 @@
 export enum contactType {
-  CALL = "Call",
-  EMAIL = "Email",
-  MEETING = "Meeting",
+  CALL = "call",
+  EMAIL = "email",
+  MEETING = "meeting",
 }
 
 export interface FollowUpType {
@@ -11,5 +11,6 @@ export interface FollowUpType {
   date: string;
   contactId: string | null;
   executiveId: string;
-  description: string[]; 
+  description: string[];
+  isDeleted: boolean;
 }
