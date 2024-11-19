@@ -1,5 +1,7 @@
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import EditIcon from "@mui/icons-material/Edit";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import {
-  Alert,
   Box,
   Button,
   CircularProgress,
@@ -9,15 +11,10 @@ import {
   DialogContentText,
   DialogTitle,
   IconButton,
-  Snackbar,
 } from "@mui/material";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import EditIcon from "@mui/icons-material/Edit";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { DataGrid, GridRowParams } from "@mui/x-data-grid";
 import { FC, useState } from "react";
 import useGetFollowUps from "../../../hooks/followUp/useGetFollowUps";
-import useUpdateFollowUps from "../../../hooks/followUp/useUpdateFollowUp";
 import { ErrorAlert } from "../../common/alerts";
 import {
   FollowUpsDataGridColumns,
@@ -26,8 +23,9 @@ import {
 
 export type FollowUpsTableProps = {
   opportunityId: string;
-  onSelect: (followUpId: string) => void;
-  onEdit: (followUpId: string) => void;
+  onSelect: (clientId: string) => void;
+  onEdit: (clientId: string) => void;
+  onDelete: (clientId: string, isActive: boolean) => void;
 };
 
 /**
@@ -37,33 +35,29 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
   opportunityId,
   onSelect,
   onEdit,
+  onDelete,
 }: FollowUpsTableProps) => {
-  const { data: followUps, isLoading, isError } = useGetFollowUps(opportunityId);
-  const { mutate: updateFollowUp, isPending } = useUpdateFollowUps();
+  const {
+    data: followUps,
+    isLoading,
+    isError,
+  } = useGetFollowUps(opportunityId);
 
   const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
   const [selectedFollowUpId, setSelectedFollowUpId] = useState<string | null>(null);
-  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [selectedIsActive, setSelectedIsActive] = useState<boolean>(false);
 
-  const handleDeleteClick = (followUpId: string) => {
+  const handleDeleteClick = (followUpId: string, isActive: boolean) => {
     setSelectedFollowUpId(followUpId);
+    setSelectedIsActive(isActive);
     setOpenConfirmDialog(true);
   };
 
   const handleConfirmDelete = () => {
-    if (selectedFollowUpId) {
-      updateFollowUp(
-        { id: selectedFollowUpId, followUpData: { isDeleted: true } },
-        {
-          onError: () => {
-            setOpenSnackbar(true);
-          },
-          onSettled: () => {
-            setOpenConfirmDialog(false);
-            setSelectedFollowUpId(null);
-          },
-        }
-      );
+    if (selectedFollowUpId !== null) {
+      onDelete(selectedFollowUpId, selectedIsActive);
+      setOpenConfirmDialog(false);
+      setSelectedFollowUpId(null);
     }
   };
 
@@ -72,36 +66,44 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
     setSelectedFollowUpId(null);
   };
 
-  const handleCloseSnackbar = () => {
-    setOpenSnackbar(false);
-  };
-
   /**
    * FollowUps open button component
    */
-  const OpenButton = ({ followUpId }: { followUpId: string }) => (
-    <IconButton color="primary" onClick={() => onSelect(followUpId)}>
-      <OpenInNewIcon />
-    </IconButton>
-  );
+  const OpenButton = ({ followUpId }: { followUpId: string }) => {
+    return (
+      <IconButton color="primary" onClick={() => onSelect(followUpId)}>
+        <OpenInNewIcon />
+      </IconButton>
+    );
+  };
 
   /**
    * FollowUps edit button component
    */
-  const EditButton = ({ followUpId }: { followUpId: string }) => (
-    <IconButton color="primary" onClick={() => onEdit(followUpId)}>
-      <EditIcon />
-    </IconButton>
-  );
+  const EditButton = ({ followUpId }: { followUpId: string }) => {
+    return (
+      <IconButton color="primary" onClick={() => onEdit(followUpId)}>
+        <EditIcon />
+      </IconButton>
+    );
+  };
 
   /**
    * FollowUps delete button component
    */
-  const DeleteButton = ({ followUpId }: { followUpId: string }) => (
-    <IconButton color="error" onClick={() => handleDeleteClick(followUpId)}>
-      <DeleteForeverIcon />
-    </IconButton>
-  );
+  const DeleteButton = ({
+    followUpId,
+    isActive,
+  }: {
+    followUpId: string;
+    isActive: boolean;
+  }) => {
+    return (
+      <IconButton color="error" onClick={() => handleDeleteClick(followUpId, isActive)}>
+        <DeleteForeverIcon />
+      </IconButton>
+    );
+  };
 
   const columns = [
     {
@@ -123,10 +125,10 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
     },
     {
       field: "delete",
-      headerName: "Delete",
+      headerName: "Active",
       sortable: false,
       renderCell: ({ row }: Partial<GridRowParams>) => {
-        return <DeleteButton followUpId={row.id} />;
+        return <DeleteButton followUpId={row.id} isActive={row.isActive} />;
       },
     },
   ];
@@ -153,7 +155,7 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
   return (
     <Box>
       <DataGrid
-        loading={isLoading || isPending}
+        loading={isLoading}
         rows={followUps || []}
         columns={columns}
         columnVisibilityModel={FollowUpsDataGridColumnVisibility}
@@ -176,27 +178,11 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
           <Button onClick={handleCloseDialog} color="inherit">
             Cancel
           </Button>
-          <Button onClick={handleConfirmDelete} color="error" disabled={isPending}>
-            {isPending ? "Deleting..." : "Delete"}
+          <Button onClick={handleConfirmDelete} color="error">
+            Delete
           </Button>
         </DialogActions>
       </Dialog>
-
-      {/* Error Snackbar */}
-      <Snackbar
-        open={openSnackbar}
-        onClose={handleCloseSnackbar}
-        autoHideDuration={3000}
-      >
-        <Alert
-          onClose={handleCloseSnackbar}
-          severity="error"
-          variant="filled"
-          sx={{ width: "100%" }}
-        >
-          Error deleting follow-up
-        </Alert>
-      </Snackbar>
     </Box>
   );
 };
