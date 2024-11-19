@@ -6,7 +6,7 @@ import { FollowUpType } from "../../types/followUps.types";
 /**
  * Custom hook for updating a follow-up using React Query's useMutation.
  */
-const useUpdateFollowUps = () => {
+const useUpdateFollowUp = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
@@ -28,4 +28,4 @@ const useUpdateFollowUps = () => {
   });
 };
 
-export default useUpdateFollowUps;
+export default useUpdateFollowUp;
