@@ -11,5 +11,5 @@ export const useGetAllSummaries = () => {
     },
   });
 };
-
+console.log("success!")
 export default useGetAllSummaries;

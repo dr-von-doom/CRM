@@ -12,5 +12,7 @@ export const getAllSummaries = async (): Promise<SummaryType[]> => {
     queryParams: undefined,  // No query parameters needed since we want all summaries
   });
 
+  console.log("Fecth completed")
   return body;  
+
 };
