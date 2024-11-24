@@ -8,13 +8,10 @@ import { requestApi } from "./api";
  * @returns {Promise<SummaryType[]>} - The summary data for all clients.
  */
 export const getAllSummaries = async (): Promise<SummaryType[]> => {
-  console.log("Start Fecth")
-  const { body } = await requestApi(ApiRequests.GET_SUMMARY, {
-    
-    queryParams: undefined,  // No query parameters needed since we want all summaries
-  });
+  console.log("Start Fetch");
+  
+  const { body } = await requestApi(ApiRequests.GET_SUMMARY);
 
-  console.log("Fecth completed")
-  return body;  
-
+  console.log("Fetch completed");
+  return body;
 };
