@@ -1,0 +1,334 @@
+{
+  "": [
+    {
+      "clientId": "0614aefe-b30b-4c6e-a230-1647e57399d9",
+      "clientName": "Frailejon",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "b24d9c42-0377-45ef-96d7-7af7627a0b56",
+      "clientName": "Bertrand",
+      "totalEstimated": "822.26",
+      "totalExecuted": "822.26"
+    },
+    {
+      "clientId": "7ad6d79a-1634-4fae-aece-f75d48fda4fe",
+      "clientName": "Elmira",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "08f0fdaa-4202-4e42-a954-168e7b1d3731",
+      "clientName": "Lina",
+      "totalEstimated": "620.78",
+      "totalExecuted": "620.78"
+    },
+    {
+      "clientId": "25c0fe83-24cc-4896-aeac-ce5044a82d61",
+      "clientName": "Maxime",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "73f123d2-fbec-4cfd-bbe5-eb68454b25f5",
+      "clientName": "Donato",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "6b644196-01de-40f9-b02f-c08834cd7c34",
+      "clientName": "Camryn",
+      "totalEstimated": "157.98",
+      "totalExecuted": "157.98"
+    },
+    {
+      "clientId": "94604594-a486-4bb5-8093-9702d5ffd8d5",
+      "clientName": "Llewellyn",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "2aca0659-812d-44c7-bff8-8edd57c9c513",
+      "clientName": "Arnaldo",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "3b83d115-eeb1-49b0-b538-55eb16abe168",
+      "clientName": "Justyn",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "b4ce28b7-805b-48cc-a551-f9e9c82ad7d1",
+      "clientName": "Ayden",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "ba5ed062-aa46-4101-ac5d-0633bc5b2c1c",
+      "clientName": "Aaliyah",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "4b7471a6-5838-45e4-bb6a-15028f63d77c",
+      "clientName": "Coleman",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "2f07a166-f22a-4721-a773-60cc4e4e6a03",
+      "clientName": "Reinhold",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "a3e287c6-f35f-4165-a6eb-3bfcf4ca17e8",
+      "clientName": "Bennett",
+      "totalEstimated": "990.69",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "ba6d5937-911e-4993-b7d1-41a1085b71fd",
+      "clientName": "Serenity",
+      "totalEstimated": "1259.68",
+      "totalExecuted": "1259.68"
+    },
+    {
+      "clientId": "b9a71027-efe4-4097-b80b-d2c5528a0af0",
+      "clientName": "Akeem",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "6eac0475-7eac-4386-a301-da37ba4bf7f7",
+      "clientName": "Maureen",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "96598245-d3b9-4c74-a094-24a7b0718b4a",
+      "clientName": "Carli",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "6f4336ef-abe0-40f8-8935-4ea71f0eec0c",
+      "clientName": "Summer",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "8579d8ef-e9f8-41a3-9489-c6fbce5a183e",
+      "clientName": "Alphonso",
+      "totalEstimated": "142.82",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "dad94e17-d759-4dcd-9276-7aa9d85aa056",
+      "clientName": "Aleen",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "409fdaa5-70a6-44c7-ae1e-3ec5107eaa89",
+      "clientName": "Hyman",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "f7f0b8f6-4631-4d17-9f7c-5548905f5328",
+      "clientName": "Grayce",
+      "totalEstimated": "227.82",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "8c07435d-49e9-4911-9749-5e750c3c67e3",
+      "clientName": "Alanis",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "23318f14-2097-4c1a-a1ab-b0ffd0eb64be",
+      "clientName": "Dallas",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "e2d02eb2-c368-4a58-a0c1-504bb54b5505",
+      "clientName": "Jayne",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "02656686-a189-4785-adec-d8365c826a9c",
+      "clientName": "Ron",
+      "totalEstimated": "432.52",
+      "totalExecuted": "432.52"
+    },
+    {
+      "clientId": "4de74e93-6159-48cf-ae53-d460449e35e6",
+      "clientName": "Estel",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "6b6684bd-2534-4f12-b8e8-428e87b0ddf1",
+      "clientName": "Bianka",
+      "totalEstimated": "473.22",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "6e7bc925-d4e0-4670-aa04-2bdc3805dd97",
+      "clientName": "Madaline",
+      "totalEstimated": "980.15",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "0b74e9a2-d398-4094-bcd2-004618bb0ddc",
+      "clientName": "Kyla",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "924b21ed-b32b-4a3b-b286-e60eaff86dab",
+      "clientName": "Sammie",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "12d6c844-de64-4da2-a8fe-776e80da9295",
+      "clientName": "Matt",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "1e055fbe-5aa3-4d7d-b4aa-f1446a8b570c",
+      "clientName": "Celia",
+      "totalEstimated": "198.81",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "883e0b7d-fdc9-472b-81f6-ad2c27968e43",
+      "clientName": "Eino",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "2584a434-e0de-4b99-b0f9-94b79352d6f1",
+      "clientName": "Lambert",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "6cd4ae7b-38d0-40ed-9866-f9e5cd67080b",
+      "clientName": "Scarlett",
+      "totalEstimated": "622.85",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "7332e23e-ddb4-4fe2-8926-6fc15f298856",
+      "clientName": "Emerson",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "b89feebd-5cdf-4f01-9e5b-fbd10691cbea",
+      "clientName": "Raina",
+      "totalEstimated": "231.19",
+      "totalExecuted": "231.19"
+    },
+    {
+      "clientId": "f0d74b78-8a51-4167-a595-3a7fd054df53",
+      "clientName": "Zion",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "5a6924cc-503e-4262-ab84-5480230997ee",
+      "clientName": "Velva",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "13aecd84-d2b5-43ca-b3a6-591860c424c0",
+      "clientName": "Chasity",
+      "totalEstimated": "1336.48",
+      "totalExecuted": "553.97"
+    },
+    {
+      "clientId": "fa5107b1-c506-4ae2-bcc7-ff18c1d0aecc",
+      "clientName": "Orrin",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "3ab848ac-752d-47f0-b5a5-d2b857799126",
+      "clientName": "Zechariah",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "afb73982-bf5a-4386-a58b-626672ab34c9",
+      "clientName": "Audra",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "1f50ad6a-98a1-4a36-bc2f-14b8d99fd04a",
+      "clientName": "Oren",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "033885c1-5acc-4c46-8ea0-2e4fefb1b8eb",
+      "clientName": "Davon",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "79e750b2-66d4-4a2f-bf3d-0e69de677cb7",
+      "clientName": "Aurore",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "580bbb18-0116-4318-88f2-1c9b939675cc",
+      "clientName": "Yvonne",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "YDotdtW",
+      "clientName": "Diego Smith",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "3ev9d1z",
+      "clientName": "Jon Stewart Doe",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "4Y7I01P",
+      "clientName": "Daniel Andres Olivares Rodelo",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "D9FR6Ju",
+      "clientName": "Jon Stewart Doe",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    },
+    {
+      "clientId": "8Wlcjqp",
+      "clientName": "Jon Stewart Doe",
+      "totalEstimated": "0.00",
+      "totalExecuted": "0.00"
+    }
+  ]
+}

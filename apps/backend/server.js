@@ -16,14 +16,20 @@ const followUpRouter = jsonServer.router(
   path.join(__dirname, "data", "followUps.json")
 );
 
+const summaryRouter = jsonServer.router(
+  path.join(__dirname, "data", "summary.json")
+);
+
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
+
 
 server.use("/clients", clientRouter);
 server.use("/contacts", contactRouter);
 server.use("/opportunities", opportunityRouter);
 server.use("/follow-ups", followUpRouter);
+server.use("/summary", summaryRouter);
 
 const port = process.env.PORT || 3000;
 server.listen(port, () => {

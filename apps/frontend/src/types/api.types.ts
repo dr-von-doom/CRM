@@ -1,8 +1,9 @@
 import { ClientType, ContactType } from "./client.types";
 import { OpportunityType } from "./opportunity.types";
 import { FollowUpType } from "./followUps.types";
+import { SummaryType } from "./summary.types";  // Importamos el nuevo tipo SummaryType
 
-// Definition of HTTP methods
+// Definición de métodos HTTP
 export enum httpMethod {
   GET = "GET",
   POST = "POST",
@@ -11,13 +12,13 @@ export enum httpMethod {
   DELETE = "DELETE",
 }
 
-// Pagination type interface
+// Tipo para paginación
 export interface paginationType {
   _page?: number;
   _limit?: number;
 }
 
-// Enumeration for API requests
+// Enumeración de solicitudes de la API
 export enum ApiRequests {
   CHECK_HEALTH = "CHECK_HEALTH",
   /* Client routes */
@@ -41,9 +42,11 @@ export enum ApiRequests {
   CREATE_FOLLOW_UP = "CREATE_FOLLOW_UP",
   UPDATE_FOLLOW_UP = "UPDATE_FOLLOW_UP",
   GET_FOLLOW_UP_BY_ID = "GET_FOLLOW_UP_BY_ID",
+  /* Summary routes */
+ GET_SUMMARY = "GET_SUMMARY"
 }
 
-// Mapping API requests to their respective paths
+// Mapeo de solicitudes de la API a sus respectivas rutas
 export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.CHECK_HEALTH]: "/",
   /* Client paths */
@@ -61,16 +64,17 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_OPPORTUNITY_BY_ID]: "/opportunities/:id",
   [ApiRequests.UPDATE_OPPORTUNITY]: "/opportunities/:id",
   [ApiRequests.CREATE_OPPORTUNITY]: "/opportunities",
-  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]:
-    "/opportunities?clientId=:clientId",
+  [ApiRequests.GET_OPPORTUNITY_BY_CLIENT_ID]: "/opportunities?clientId=:clientId",
   /* Follow-up paths */
   [ApiRequests.GET_FOLLOW_UPS]: "/follow-ups",
   [ApiRequests.CREATE_FOLLOW_UP]: "/follow-ups",
   [ApiRequests.UPDATE_FOLLOW_UP]: "/follow-ups/:id",
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: "/follow-ups/:id",
+  /* Summary paths */
+  [ApiRequests.GET_SUMMARY]: "/summary",
 };
 
-// Mapping API requests to their respective HTTP methods
+// Mapeo de métodos HTTP a solicitudes de la API
 export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.CHECK_HEALTH]: httpMethod.GET,
   /* Client request methods */
@@ -94,9 +98,11 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.CREATE_FOLLOW_UP]: httpMethod.POST,
   [ApiRequests.UPDATE_FOLLOW_UP]: httpMethod.PATCH,
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: httpMethod.GET,
-};
+  /* Summary request method */
+  [ApiRequests.GET_SUMMARY]: httpMethod.GET,  
+}
 
-// Body types for API requests
+
 export type ApiRequestBodyType = {
   [ApiRequests.CHECK_HEALTH]: void;
   /* Client body types */
@@ -120,9 +126,10 @@ export type ApiRequestBodyType = {
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: Partial<FollowUpType>;
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
+  /* Summary body types */
+  [ApiRequests.GET_SUMMARY]: void; 
 };
 
-// Query parameter types for API requests
 export type ApiRequestQueryType = {
   [ApiRequests.CHECK_HEALTH]: void;
   /* Client query types */
@@ -146,9 +153,10 @@ export type ApiRequestQueryType = {
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: void;
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
+  /* Summary query types */
+  [ApiRequests.GET_SUMMARY]: void; 
 };
 
-// Path parameter types for API requests
 export type ApiPathParamsType = {
   [ApiRequests.CHECK_HEALTH]: void;
   /* Client path params */
@@ -172,9 +180,10 @@ export type ApiPathParamsType = {
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: { id: string };
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: { id: string };
+  /* Summary path params */
+  [ApiRequests.GET_SUMMARY]:void;  
 };
 
-// Response types for API requests
 export type ApiResponseType = {
   [ApiRequests.CHECK_HEALTH]: { message: string };
   /* Client response types */
@@ -198,4 +207,6 @@ export type ApiResponseType = {
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: FollowUpType;
+  /* Summary response types */
+  [ApiRequests.GET_SUMMARY]: SummaryType[];  
 };
