@@ -20,6 +20,7 @@ const summaryRouter = jsonServer.router(
   path.join(__dirname, "data", "summary.json")
 );
 
+
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);

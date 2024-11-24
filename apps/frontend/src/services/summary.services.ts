@@ -8,10 +8,19 @@ import { requestApi } from "./api";
  * @returns {Promise<SummaryType[]>} - The summary data for all clients.
  */
 export const getAllSummaries = async (): Promise<SummaryType[]> => {
-  console.log("Start Fetch");
-  
-  const { body } = await requestApi(ApiRequests.GET_SUMMARY);
+  try {
+    console.info("Start Fetch"); // Logging de inicio
 
-  console.log("Fetch completed");
-  return body;
+    const response = await requestApi(ApiRequests.GET_SUMMARY);
+
+    if (!response || !response.body) {
+      throw new Error("Invalid API response: missing body");
+    }
+
+    console.info("Fetch completed"); // Logging al completar
+    return response.body;
+  } catch (error) {
+    console.error("Error fetching summaries:", error); // Logging de error
+    throw error; // Re-lanza el error para que el consumidor lo maneje
+  }
 };
