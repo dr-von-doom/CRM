@@ -1,9 +1,9 @@
 import { ClientType, ContactType } from "./client.types";
 import { OpportunityType } from "./opportunity.types";
 import { FollowUpType } from "./followUps.types";
-import { SummaryType } from "./summary.types";  // Importamos el nuevo tipo SummaryType
+import { SummaryType } from "./summary.types"; 
 
-// Definición de métodos HTTP
+// Definition of HTTP methods
 export enum httpMethod {
   GET = "GET",
   POST = "POST",
@@ -12,13 +12,14 @@ export enum httpMethod {
   DELETE = "DELETE",
 }
 
-// Tipo para paginación
+// Pagination type interface
 export interface paginationType {
   _page?: number;
   _limit?: number;
 }
 
-// Enumeración de solicitudes de la API
+
+// Enumeration for API requests
 export enum ApiRequests {
   CHECK_HEALTH = "CHECK_HEALTH",
   /* Client routes */
@@ -46,7 +47,7 @@ export enum ApiRequests {
  GET_SUMMARY = "GET_SUMMARY"
 }
 
-// Mapeo de solicitudes de la API a sus respectivas rutas
+// Mapping API requests to their respective paths
 export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.CHECK_HEALTH]: "/",
   /* Client paths */
@@ -74,7 +75,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_SUMMARY]: "/summary",
 };
 
-// Mapeo de métodos HTTP a solicitudes de la API
+// Mapping API requests to their respective HTTP methods
 export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.CHECK_HEALTH]: httpMethod.GET,
   /* Client request methods */
@@ -102,7 +103,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.GET_SUMMARY]: httpMethod.GET,  
 }
 
-
+// Body types for API requests
 export type ApiRequestBodyType = {
   [ApiRequests.CHECK_HEALTH]: void;
   /* Client body types */
@@ -130,6 +131,8 @@ export type ApiRequestBodyType = {
   [ApiRequests.GET_SUMMARY]: void; 
 };
 
+
+// Query parameter types for API requests
 export type ApiRequestQueryType = {
   [ApiRequests.CHECK_HEALTH]: void;
   /* Client query types */
@@ -154,9 +157,10 @@ export type ApiRequestQueryType = {
   [ApiRequests.UPDATE_FOLLOW_UP]: void;
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
   /* Summary query types */
-  [ApiRequests.GET_SUMMARY]: void; 
+  [ApiRequests.GET_SUMMARY]:Partial<SummaryType>; 
 };
 
+// Path parameter types for API requests
 export type ApiPathParamsType = {
   [ApiRequests.CHECK_HEALTH]: void;
   /* Client path params */
@@ -184,6 +188,7 @@ export type ApiPathParamsType = {
   [ApiRequests.GET_SUMMARY]:void;  
 };
 
+// Response types for API requests
 export type ApiResponseType = {
   [ApiRequests.CHECK_HEALTH]: { message: string };
   /* Client response types */
