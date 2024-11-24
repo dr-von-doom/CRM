@@ -80,6 +80,8 @@ export const requestApi = async <T extends ApiRequests>(
     options?.queryParams as unknown as Record<string, string>
   )}`;
 
+  console.log("Making request to:", route);  
+
   console.log(
     `[requestApi] fetching: {${ApiRequestMethods[request]}} ${route}`
   );
