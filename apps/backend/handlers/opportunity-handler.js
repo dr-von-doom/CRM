@@ -73,7 +73,7 @@ const getClientOpportunityComparison = (db, _req, res) => {
   }, {});
 
   const filteredResults = Object.keys(result)
-    .filter((clientId) => clientsMap[clientId]) 
+    .filter((clientId) => clientsMap[clientId])
     .map((clientId, index) => ({
       id: index,
       valueEstimated: result[clientId].valueEstimated,
@@ -83,7 +83,6 @@ const getClientOpportunityComparison = (db, _req, res) => {
 
   return res.json(filteredResults);
 };
-
 
 module.exports = {
   getOpportunityOverview,

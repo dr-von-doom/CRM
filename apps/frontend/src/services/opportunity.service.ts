@@ -3,7 +3,7 @@ import {
   opportunityKeyValueMap,
   OpportunityType,
 } from "../types/opportunity.types";
-import { OverviewData, ComparisonData } from "../types/overview.types";
+import { ComparisonData, OverviewData } from "../types/overview.types";
 import { OPPORTUNITIES_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
@@ -148,7 +148,6 @@ export const getOpportunitiesComparison = async (): Promise<
 
   return body;
 };
-
 
 export default {
   getOpportunityById,
