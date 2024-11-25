@@ -24,6 +24,7 @@ export const OpportunityPieChart = ({
 
   return (
     <Box
+      data-testid={`opportunity-pie-chart-grouped-by-${groupBy}`}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -32,7 +33,7 @@ export const OpportunityPieChart = ({
       <Typography
         variant="h6"
         sx={{
-          textAlign: "center", 
+          textAlign: "center",
           fontWeight: "bold",
           marginBottom: 0,
         }}

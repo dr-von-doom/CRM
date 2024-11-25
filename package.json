@@ -20,6 +20,8 @@
     "react-hook-form": "^7.53.2"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
     "@types/node": "^22.9.1"
   }
 }

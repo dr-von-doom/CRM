@@ -42,6 +42,7 @@ export const OpportunityBarChart = () => {
 
   return (
     <Box
+      data-testid="opportunity-bar-chart"
       sx={{
         display: "flex",
         flexDirection: "column",
