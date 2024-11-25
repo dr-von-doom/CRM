@@ -1,8 +1,7 @@
 import { ClientType, ContactType } from "./client.types";
 import { FollowUpType } from "./followUps.types";
 import { OpportunityType } from "./opportunity.types";
-import { OverviewData } from "./overview.types";
-import { ComparisonData } from "./comparison.types";
+import { OverviewData, ComparisonData } from "./overview.types";
 
 // Definition of HTTP methods
 export enum httpMethod {
