@@ -1,6 +1,7 @@
 import { ClientType, ContactType } from "./client.types";
-import { OpportunityType } from "./opportunity.types";
 import { FollowUpType } from "./followUps.types";
+import { OpportunityType } from "./opportunity.types";
+import { OverviewData } from "./overview.types";
 
 // Definition of HTTP methods
 export enum httpMethod {
@@ -41,6 +42,8 @@ export enum ApiRequests {
   CREATE_FOLLOW_UP = "CREATE_FOLLOW_UP",
   UPDATE_FOLLOW_UP = "UPDATE_FOLLOW_UP",
   GET_FOLLOW_UP_BY_ID = "GET_FOLLOW_UP_BY_ID",
+  /* Dashboard routes */
+  GET_OPPORTUNITIES_OVERVIEW = "GET_OPPORTUNITIES_OVERVIEW",
 }
 
 // Mapping API requests to their respective paths
@@ -68,6 +71,8 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.CREATE_FOLLOW_UP]: "/follow-ups",
   [ApiRequests.UPDATE_FOLLOW_UP]: "/follow-ups/:id",
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: "/follow-ups/:id",
+  /* Dashboard paths */
+  [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: "/opportunities/overview",
 };
 
 // Mapping API requests to their respective HTTP methods
@@ -94,6 +99,8 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.CREATE_FOLLOW_UP]: httpMethod.POST,
   [ApiRequests.UPDATE_FOLLOW_UP]: httpMethod.PATCH,
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: httpMethod.GET,
+  /* Dashboard request methods */
+  [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: httpMethod.GET,
 };
 
 // Body types for API requests
@@ -120,6 +127,8 @@ export type ApiRequestBodyType = {
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: Partial<FollowUpType>;
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
+  /* Dashboard body types */
+  [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: void;
 };
 
 // Query parameter types for API requests
@@ -146,6 +155,8 @@ export type ApiRequestQueryType = {
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: void;
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
+  /* Dashboard query types */
+  [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: { groupBy: keyof OpportunityType };
 };
 
 // Path parameter types for API requests
@@ -172,6 +183,8 @@ export type ApiPathParamsType = {
   [ApiRequests.CREATE_FOLLOW_UP]: void;
   [ApiRequests.UPDATE_FOLLOW_UP]: { id: string };
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: { id: string };
+  /* Dashboard path params */
+  [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: void;
 };
 
 // Response types for API requests
@@ -198,4 +211,6 @@ export type ApiResponseType = {
   [ApiRequests.CREATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.UPDATE_FOLLOW_UP]: FollowUpType;
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: FollowUpType;
+  /* Dashboard response types */
+  [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: OverviewData[];
 };

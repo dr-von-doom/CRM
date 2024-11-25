@@ -1,5 +1,6 @@
 import { ApiRequests } from "../types/api.types";
 import { OpportunityType } from "../types/opportunity.types";
+import { OverviewData } from "../types/overview.types";
 import { OPPORTUNITIES_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
@@ -102,10 +103,28 @@ export const createOpportunity = async (
   return body;
 };
 
+/**
+ * It fetches the opportunities overview data from the API.
+ * @param {keyof OpportunityType} groupBy - The group by filter.
+ *
+ * @returns {Promise<OverviewData[]>} - The opportunities overview data.
+ */
+export const getOpportunitiesOverview = async (
+  groupBy: keyof OpportunityType
+): Promise<OverviewData[]> => {
+  console.log("[getOpportunitiesOverview] groupBy", groupBy);
+
+  const { body } = await requestApi(ApiRequests.GET_OPPORTUNITIES_OVERVIEW, {
+    queryParams: { groupBy },
+  });
+  return body;
+};
+
 export default {
   getOpportunityById,
   updateOpportunity,
   createOpportunity,
   getOpportunities,
   getOpportunityByClientId,
+  getOpportunitiesOverview,
 };
