@@ -1,6 +1,7 @@
 import { ApiRequests } from "../types/api.types";
 import { OpportunityType } from "../types/opportunity.types";
 import { OverviewData } from "../types/overview.types";
+import { ComparisonData } from "../types/comparison.types";
 import { OPPORTUNITIES_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
@@ -120,6 +121,24 @@ export const getOpportunitiesOverview = async (
   return body;
 };
 
+/**
+ * It fetches the opportunities comparison data from the API.
+ *
+ * @returns {Promise<ComparisonData[]>} - The opportunities comparison data.
+ */
+export const getOpportunitiesComparison = async (): Promise<
+  ComparisonData[]
+> => {
+  console.log("[getOpportunitiesComparison] Fetching data...");
+
+  const { body } = await requestApi(
+    ApiRequests.GET_OPPORTUNITIES_COMPARISON,
+    {}
+  );
+
+  return body;
+};
+
 export default {
   getOpportunityById,
   updateOpportunity,
@@ -127,4 +146,5 @@ export default {
   getOpportunities,
   getOpportunityByClientId,
   getOpportunitiesOverview,
+  getOpportunitiesComparison,
 };

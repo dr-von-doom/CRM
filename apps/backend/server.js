@@ -1,8 +1,9 @@
 const jsonServer = require("json-server");
 const path = require("path");
 const { getOpportunityOverview } = require("./handlers/opportunity-handler");
+const { getClientOpportunityComparison } = require("./handlers/client-handler"); // Importa la nueva función
 
-data = {
+const data = {
   clients: require("./data/clients.json"),
   contacts: require("./data/contacts.json"),
   opportunities: require("./data/opportunities.json"),
@@ -12,18 +13,10 @@ data = {
 const server = jsonServer.create();
 const router = jsonServer.router(data);
 
-const clientRouter = jsonServer.router(
-  path.join(__dirname, "data", "clients.json")
-);
-const contactRouter = jsonServer.router(
-  path.join(__dirname, "data", "contacts.json")
-);
-const opportunityRouter = jsonServer.router(
-  path.join(__dirname, "data", "opportunities.json")
-);
-const followUpRouter = jsonServer.router(
-  path.join(__dirname, "data", "followUps.json")
-);
+const clientRouter = jsonServer.router(path.join(__dirname, "data", "clients.json"));
+const contactRouter = jsonServer.router(path.join(__dirname, "data", "contacts.json"));
+const opportunityRouter = jsonServer.router(path.join(__dirname, "data", "opportunities.json"));
+const followUpRouter = jsonServer.router(path.join(__dirname, "data", "followUps.json"));
 
 const middlewares = jsonServer.defaults();
 
@@ -36,6 +29,11 @@ server.get("/opportunities/overview", (req, res) => {
   const { groupBy } = req.query;
 
   return getOpportunityOverview(groupBy, router.db, res);
+});
+
+
+server.get("/opportunities/comparison", (res) => {
+  return getClientOpportunityComparison(router.db, res);  
 });
 
 server.use("/opportunities", opportunityRouter);

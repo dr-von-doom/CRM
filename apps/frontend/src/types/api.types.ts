@@ -2,6 +2,7 @@ import { ClientType, ContactType } from "./client.types";
 import { FollowUpType } from "./followUps.types";
 import { OpportunityType } from "./opportunity.types";
 import { OverviewData } from "./overview.types";
+import { ComparisonData } from "./comparison.types";
 
 // Definition of HTTP methods
 export enum httpMethod {
@@ -44,6 +45,7 @@ export enum ApiRequests {
   GET_FOLLOW_UP_BY_ID = "GET_FOLLOW_UP_BY_ID",
   /* Dashboard routes */
   GET_OPPORTUNITIES_OVERVIEW = "GET_OPPORTUNITIES_OVERVIEW",
+  GET_OPPORTUNITIES_COMPARISON =  "GET_OPPORTUNITIES_COMPARISON",
 }
 
 // Mapping API requests to their respective paths
@@ -73,6 +75,7 @@ export const ApiRequestPaths: Record<ApiRequests, string> = {
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: "/follow-ups/:id",
   /* Dashboard paths */
   [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: "/opportunities/overview",
+  [ApiRequests.GET_OPPORTUNITIES_COMPARISON]: "/opportunities/comparison",
 };
 
 // Mapping API requests to their respective HTTP methods
@@ -101,6 +104,7 @@ export const ApiRequestMethods: Record<ApiRequests, httpMethod> = {
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: httpMethod.GET,
   /* Dashboard request methods */
   [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: httpMethod.GET,
+  [ApiRequests.GET_OPPORTUNITIES_COMPARISON]: httpMethod.GET
 };
 
 // Body types for API requests
@@ -129,6 +133,8 @@ export type ApiRequestBodyType = {
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
   /* Dashboard body types */
   [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: void;
+  [ApiRequests.GET_OPPORTUNITIES_COMPARISON]: void;
+
 };
 
 // Query parameter types for API requests
@@ -157,6 +163,7 @@ export type ApiRequestQueryType = {
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: void;
   /* Dashboard query types */
   [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: { groupBy: keyof OpportunityType };
+  [ApiRequests.GET_OPPORTUNITIES_COMPARISON]: void;
 };
 
 // Path parameter types for API requests
@@ -185,6 +192,7 @@ export type ApiPathParamsType = {
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: { id: string };
   /* Dashboard path params */
   [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: void;
+  [ApiRequests.GET_OPPORTUNITIES_COMPARISON]: void;
 };
 
 // Response types for API requests
@@ -213,4 +221,5 @@ export type ApiResponseType = {
   [ApiRequests.GET_FOLLOW_UP_BY_ID]: FollowUpType;
   /* Dashboard response types */
   [ApiRequests.GET_OPPORTUNITIES_OVERVIEW]: OverviewData[];
+  [ApiRequests.GET_OPPORTUNITIES_COMPARISON]: ComparisonData[];
 };
