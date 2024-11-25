@@ -1,6 +1,9 @@
 const jsonServer = require("json-server");
 const path = require("path");
-const { getOpportunityOverview, getClientOpportunityComparison } = require("./handlers/opportunity-handler");
+const {
+  getOpportunityOverview,
+  getClientOpportunityComparison,
+} = require("./handlers/opportunity-handler");
 
 const data = {
   clients: require("./data/clients.json"),
@@ -12,10 +15,18 @@ const data = {
 const server = jsonServer.create();
 const router = jsonServer.router(data);
 
-const clientRouter = jsonServer.router(path.join(__dirname, "data", "clients.json"));
-const contactRouter = jsonServer.router(path.join(__dirname, "data", "contacts.json"));
-const opportunityRouter = jsonServer.router(path.join(__dirname, "data", "opportunities.json"));
-const followUpRouter = jsonServer.router(path.join(__dirname, "data", "followUps.json"));
+const clientRouter = jsonServer.router(
+  path.join(__dirname, "data", "clients.json")
+);
+const contactRouter = jsonServer.router(
+  path.join(__dirname, "data", "contacts.json")
+);
+const opportunityRouter = jsonServer.router(
+  path.join(__dirname, "data", "opportunities.json")
+);
+const followUpRouter = jsonServer.router(
+  path.join(__dirname, "data", "followUps.json")
+);
 
 const middlewares = jsonServer.defaults();
 
@@ -30,11 +41,9 @@ server.get("/opportunities/overview", (req, res) => {
   return getOpportunityOverview(groupBy, router.db, res);
 });
 
-
-server.get("/opportunities/comparison", (_req, res) => {
-  return getClientOpportunityComparison(router.db, null, res);  
+server.get("/opportunities/comparison", (_, res) => {
+  return getClientOpportunityComparison(router.db, res);
 });
-
 
 server.use("/opportunities", opportunityRouter);
 server.use("/follow-ups", followUpRouter);
