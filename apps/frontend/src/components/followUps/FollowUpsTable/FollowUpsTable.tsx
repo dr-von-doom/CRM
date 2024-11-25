@@ -23,18 +23,17 @@ import {
   FollowUpsDataGridColumns,
   FollowUpsDataGridColumnVisibility,
 } from "./FollowUpsTable.types";
+import EditFollowUpModal from "../EditFollowUpModal/EditFollowUpModal.tsx";
 
 export type FollowUpsTableProps = {
   opportunityId: string;
-  onSelect: (clientId: string) => void;
-  onEdit: (clientId: string) => void;
+  onSelect: (followUpId: string) => void;
 };
 
 export const FollowUpsTable: FC<FollowUpsTableProps> = ({
   opportunityId,
   onSelect,
-  onEdit,
-}: FollowUpsTableProps) => {
+}) => {
   const {
     data: followUps,
     isLoading,
@@ -43,7 +42,10 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
-  const [selectedFollowUpId, setSelectedFollowUpId] = useState<string | null>(null);
+  const [selectedFollowUpId, setSelectedFollowUpId] = useState<string | null>(
+    null
+  );
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   const { mutate: updateFollowUp, isPending } = useUpdateFollowUp();
 
@@ -83,6 +85,16 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
     setOpenSnackbar(false);
   };
 
+  const handleEditClick = (followUpId: string) => {
+    setSelectedFollowUpId(followUpId);
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setSelectedFollowUpId(null);
+  };
+
   /**
    * FollowUps open button component
    */
@@ -99,7 +111,7 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
    */
   const EditButton = ({ followUpId }: { followUpId: string }) => {
     return (
-      <IconButton color="primary" onClick={() => onEdit(followUpId)}>
+      <IconButton color="primary" onClick={() => handleEditClick(followUpId)}>
         <EditIcon />
       </IconButton>
     );
@@ -171,7 +183,17 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
         columns={columns}
         columnVisibilityModel={FollowUpsDataGridColumnVisibility}
         disableColumnMenu
+        autoHeight
       />
+
+      {/* Edit Follow-Up Modal */}
+      {selectedFollowUpId && (
+        <EditFollowUpModal
+          open={isEditModalOpen}
+          followUpId={selectedFollowUpId}
+          onClose={handleCloseEditModal}
+        />
+      )}
 
       {/* Confirmation Dialog */}
       <Dialog
@@ -182,18 +204,15 @@ export const FollowUpsTable: FC<FollowUpsTableProps> = ({
         <DialogTitle id="confirm-delete-dialog">Confirm Delete</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Are you sure you want to delete this follow-up? This action cannot be undone.
+            Are you sure you want to delete this follow-up? This action cannot be
+            undone.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog} color="inherit">
             Cancel
           </Button>
-          <Button
-            onClick={handleConfirmDelete}
-            color="error"
-            disabled={isPending}
-          >
+          <Button onClick={handleConfirmDelete} color="error" disabled={isPending}>
             {isPending ? "Deleting..." : "Delete"}
           </Button>
         </DialogActions>

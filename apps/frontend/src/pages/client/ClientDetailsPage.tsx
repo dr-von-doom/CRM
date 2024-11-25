@@ -231,7 +231,6 @@ const ClientDetailsPage = () => {
         {opportunityId && (
           <FollowUpsTable
             opportunityId={opportunityId}
-            onEdit={() => {}}
             onSelect={() => {}}
           />
         )}
