@@ -1,27 +1,28 @@
+import { Box, Typography } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 import { BarChart } from "@mui/x-charts/BarChart";
 import { axisClasses } from "@mui/x-charts/ChartsAxis";
-import CircularProgress from "@mui/material/CircularProgress";
 import useGetOpportunitiesComparison from "../../../hooks/opportunity/useGetOpportunitiesComparison";
 import { ErrorAlert } from "../../common/alerts";
-import { Typography, Box } from "@mui/material";
 
 const chartSettings = {
-  width: 1200,
-  height: 600,
+  height: 300,
   yAxis: [
     {
       label: "Amount",
       labelProps: {
-        dx: -50, 
+        dx: -50,
       },
     },
   ],
   sx: {
     [`.${axisClasses.bottom} .${axisClasses.label}`]: {
-      transform: "translate(0, 10px)", 
+      textAnchor: "end",
+      transformOrigin: "center",
+      transform: "rotate(-45deg)",
     },
     [`.${axisClasses.left} .${axisClasses.label}`]: {
-      transform: "translate(-10px, 0)", 
+      transform: "translate(-10px, 0)",
     },
   },
 };
@@ -36,7 +37,7 @@ export const OpportunityBarChart = () => {
   const dataset = (data ?? []).map((item) => ({
     label: item.label,
     valueEstimated: item.valueEstimated,
-    valueExecuted: item.valueExecuted || 0, 
+    valueExecuted: item.valueExecuted || 0,
   }));
 
   return (
@@ -59,29 +60,50 @@ export const OpportunityBarChart = () => {
       >
         Estimated vs Executed Opportunities for each client
       </Typography>
-      <BarChart
-        dataset={dataset}
-        xAxis={[
-          {
-            scaleType: "band",
-            dataKey: "label",
-            label: "Clients",
-          },
-        ]}
-        series={[
-          {
-            dataKey: "valueExecuted",
-            label: "Executed Value",
-            color: "#4caf50",
-          },
-          {
-            dataKey: "valueEstimated",
-            label: "Estimated Value",
-            color: "#ff9800",
-          },
-        ]}
-        {...chartSettings}
-      />
+      <Box
+        sx={{
+          overflowX: "auto", // Enables horizontal scrolling
+          width: "100%", // Optional: limit width of the container
+        }}
+      >
+        <Box>
+          <BarChart
+            dataset={dataset}
+            grid={{ vertical: true }}
+            xAxis={[
+              {
+                scaleType: "band",
+                dataKey: "label",
+                label: "Clients",
+              },
+            ]}
+            borderRadius={10}
+            series={[
+              {
+                dataKey: "valueExecuted",
+                label: "Executed Value",
+                color: "#4caf50",
+              },
+              {
+                dataKey: "valueEstimated",
+                label: "Estimated Value",
+                color: "#ff9800",
+              },
+            ]}
+            {...chartSettings}
+            width={Math.max(1200, dataset.length * 100)}
+            slotProps={{
+              legend: {
+                direction: "row",
+                position: { vertical: "top", horizontal: "left" },
+                padding: 0,
+              },
+            }}
+          />
+        </Box>
+      </Box>
     </Box>
   );
 };
+
+export default OpportunityBarChart;

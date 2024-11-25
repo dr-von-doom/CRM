@@ -1,7 +1,8 @@
+import { Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { OpportunityPieChart, OpportunityBarChart} from "../components/overview/OpportunityPieChart";
+import { OpportunityBarChart } from "../components/overview/OpportunityBarChart";
+import { OpportunityPieChart } from "../components/overview/OpportunityPieChart";
 import BaseLayout from "../layout/BaseLayout";
-import {Box} from "@mui/material";
 
 export const HomePage = () => {
   return (
@@ -12,13 +13,9 @@ export const HomePage = () => {
           padding: 3,
         }}
       >
-        <OpportunityBarChart></OpportunityBarChart>
+        <OpportunityBarChart />
       </Box>
 
-      <Grid container spacing={3}>
-        <Grid size={{ xs: 12, md: 6 }}>
-          
-    
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, md: 6 }}>
           <OpportunityPieChart
@@ -33,6 +30,7 @@ export const HomePage = () => {
           />
         </Grid>
       </Grid>
+    </BaseLayout>
   );
 };
 
