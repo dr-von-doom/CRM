@@ -1,6 +1,10 @@
 import { ApiRequests } from "../types/api.types";
 import { OpportunityType } from "../types/opportunity.types";
 import { OverviewData, ComparisonData } from "../types/overview.types";
+import {
+  opportunityKeyValueMap,
+  OpportunityType,
+} from "../types/opportunity.types";
 import { OPPORTUNITIES_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
@@ -117,6 +121,14 @@ export const getOpportunitiesOverview = async (
   const { body } = await requestApi(ApiRequests.GET_OPPORTUNITIES_OVERVIEW, {
     queryParams: { groupBy },
   });
+
+  // map labels if "groupBy" exists in opportunityKeyValueMap
+  if (opportunityKeyValueMap[groupBy])
+    return body.map((data) => ({
+      ...data,
+      label: opportunityKeyValueMap[groupBy]?.[data.label] ?? data.label,
+    }));
+
   return body;
 };
 
