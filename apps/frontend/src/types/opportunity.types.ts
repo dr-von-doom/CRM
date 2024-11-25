@@ -41,6 +41,13 @@ export interface OpportunityType {
   isDeleted: boolean;
 }
 
+export const opportunityKeyValueMap: Partial<
+  Record<keyof OpportunityType, Record<string, string>>
+> = {
+  businessType: opportunityBusinessTypeMap,
+  status: opportunityStatusMap,
+};
+
 export interface OpportunityType {
   id: string;
   clientId: string;
