@@ -1,5 +1,5 @@
 export interface OverviewData {
   label: string;
   value: number;
-  id: string;
+  id: number;
 }

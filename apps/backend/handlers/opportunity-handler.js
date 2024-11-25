@@ -24,8 +24,8 @@ const getOpportunityOverview = (groupBy, db, res) => {
 
   // Return an array of id, value and label
   return res.json(
-    Object.keys(result).map((key) => ({
-      id: key,
+    Object.keys(result).map((key, index) => ({
+      id: index,
       value: result[key],
       label: key,
     }))
