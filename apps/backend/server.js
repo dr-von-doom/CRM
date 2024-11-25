@@ -1,7 +1,7 @@
 const jsonServer = require("json-server");
 const path = require("path");
 const { getOpportunityOverview } = require("./handlers/opportunity-handler");
-const { getClientOpportunityComparison } = require("./handlers/client-handler"); // Importa la nueva función
+const { getClientOpportunityComparison } = require("./handlers/opportunity-comparison"); 
 
 const data = {
   clients: require("./data/clients.json"),
@@ -32,9 +32,10 @@ server.get("/opportunities/overview", (req, res) => {
 });
 
 
-server.get("/opportunities/comparison", (res) => {
-  return getClientOpportunityComparison(router.db, res);  
+server.get("/opportunities/comparison", (_req, res) => {
+  return getClientOpportunityComparison(router.db, null, res);  
 });
+
 
 server.use("/opportunities", opportunityRouter);
 server.use("/follow-ups", followUpRouter);
