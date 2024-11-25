@@ -56,3 +56,20 @@ export const getFollowUps = async (
   });
   return body;
 };
+
+
+/**
+ * Fetches an FollowUps by ID from the API.
+ *
+ * @param {string} id - FollowUps ID
+ * @returns {Promise<FollowUpType>} - The FollowUps data.
+ */
+export const getFollowUpById = async (
+  id: string
+): Promise<FollowUpType> => {
+  const { body } = await requestApi(ApiRequests.GET_FOLLOW_UP_BY_ID, {
+    pathParams: { id },
+  });
+
+  return body;
+};

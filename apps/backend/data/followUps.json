@@ -1,1390 +1,1408 @@
 {
   "": [
     {
-      "id": "7c4d73a7-0e9d-477f-89a1-9965282b6357",
-      "opportunityId": "c83d6967-29d8-41a1-961b-acada13b7b65",
-      "type": "email",
-      "date": "2024-11-19T06:49:50.505Z",
+      "id": "6e6140a2-35c9-454b-8355-e279cfe5fc1c",
+      "opportunityId": "6032e364-4fcd-4751-8a36-1c32705fe1f9",
+      "type": "Meeting",
+      "date": "2024-11-25T17:26:11.923Z",
       "contactId": null,
-      "executiveId": "Natasha_Lesch@gmail.com",
+      "executiveId": "Edwin92@hotmail.com",
       "description": [
-        "Attollo viriliter deficio pauci summisse."
-      ],
-      "isDeleted": true
-    },
-    {
-      "id": "92d13305-4e2a-4b13-a0b0-1aafed3e3cab",
-      "opportunityId": "0e7248f9-268a-41c7-96cf-4e79282ccefc",
-      "type": "call",
-      "date": "2024-11-19T17:09:19.027Z",
-      "contactId": null,
-      "executiveId": "Chesley.Graham58@gmail.com",
-      "description": [
-        "Campana certe bibo nisi valeo conscendo creber volubilis artificiose."
+        "Sit acquiro appositus arca tricesimus abeo demens subvenio.",
+        "Soleo vita cunae.",
+        "Tristis cado suadeo verbum valetudo blanditiis."
       ],
       "isDeleted": false
     },
     {
-      "id": "9e39bf68-d3f5-42a0-9b19-7ede32542d35",
-      "opportunityId": "5a6c498c-6f8f-4d9d-abc6-d3c588f20e61",
-      "type": "call",
-      "date": "2024-11-19T21:56:46.359Z",
+      "id": "efa79f53-c3f9-4767-aecd-d883f47dae48",
+      "opportunityId": "a04b063d-5e44-40fd-b78d-b4c157841dc6",
+      "type": "Email",
+      "date": "2024-11-25T11:16:30.263Z",
       "contactId": null,
-      "executiveId": "Kyla.Ratke@yahoo.com",
+      "executiveId": "Lydia.Lebsack80@hotmail.com",
       "description": [
-        "Universe dedecor acceptus video.",
-        "Ad stips adimpleo cernuus depulso.",
-        "Necessitatibus odio vindico talis molestias comes.",
-        "Repellendus compello curiositas suppellex."
+        "Delinquo tergum vulgus alias talio vociferor surculus arguo.",
+        "Coepi denuncio solium natus porro usitas vorax vilitas.",
+        "Sui copia texo decumbo tametsi unus terror talus canto ars.",
+        "Velut atavus ubi vox chirographum arguo delibero testimonium coepi ars."
       ],
       "isDeleted": false
     },
     {
-      "id": "e9959667-98c1-41ca-a27e-e87d6d88f96d",
-      "opportunityId": "8983f735-8788-44a9-94ac-93db6b8ccdd6",
-      "type": "call",
-      "date": "2024-11-19T17:59:24.615Z",
+      "id": "54661cd9-5e90-4d54-85c8-434acaf4d663",
+      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
+      "type": "Email",
+      "date": "2024-11-25T22:16:34.308Z",
       "contactId": null,
-      "executiveId": "Ollie_Batz@hotmail.com",
+      "executiveId": "Maye_Aufderhar@hotmail.com",
       "description": [
-        "Conspergo inventore ambitus surgo excepturi trucido amiculum bene circumvenio solitudo."
+        "Quis quam circumvenio terga.",
+        "Acidus beneficium umerus cavus baiulus laborum subiungo trepide thalassinus.",
+        "Calamitas basium tolero caelestis peior.",
+        "Conduco cognatus conventus patria audacia tabula compello desolo deleniti.",
+        "Talio vereor nihil tametsi."
       ],
       "isDeleted": false
     },
     {
-      "id": "a6a5a64a-d178-401e-b0dc-d6332ee33480",
-      "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
-      "type": "email",
-      "date": "2024-11-19T14:59:05.683Z",
-      "contactId": null,
-      "executiveId": "Annamae87@hotmail.com",
-      "description": [
-        "Taedium benevolentia thema cribro.",
-        "Adflicto optio advenio.",
-        "Canonicus carbo deduco adipisci earum cupiditas fugiat tamquam cibo adfectus.",
-        "Temperantia beatus veritatis bos ducimus varietas denique conservo carbo suggero."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "592f293f-d0f7-4b39-9709-8ade0c9122d0",
-      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
-      "type": "email",
-      "date": "2024-11-19T14:23:48.647Z",
-      "contactId": null,
-      "executiveId": "Maxime.Lubowitz@hotmail.com",
-      "description": [
-        "Tabgo sufficio considero cunae stella cariosus accommodo.",
-        "Dolore tolero sequi toties angustus.",
-        "Repellat via sonitus paens vomica quo tandem benevolentia sub utrimque.",
-        "Arguo validus supplanto sunt crinis deficio cruentus aufero tristis."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "a67136ea-9fb8-470e-81f6-e084366e6dbf",
-      "opportunityId": "8983f735-8788-44a9-94ac-93db6b8ccdd6",
-      "type": "email",
-      "date": "2024-11-19T07:31:19.422Z",
-      "contactId": null,
-      "executiveId": "Julia.Kiehn37@yahoo.com",
-      "description": [
-        "Calco solvo degusto nesciunt animadverto cometes maxime tener.",
-        "Vitiosus virga ipsum cibo benevolentia vero ciminatio.",
-        "Thesaurus temperantia iusto capillus.",
-        "Crudelis vitae vestigium custodia adulescens volva delicate adeptio victus volup.",
-        "Cunae tamdiu ater occaecati."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "51b7e6be-e403-4d57-9258-534ab6301aba",
+      "id": "28d82ca8-b343-4c85-a331-52916a4e67f7",
       "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
-      "type": "meeting",
-      "date": "2024-11-19T04:23:45.433Z",
+      "type": "Call",
+      "date": "2024-11-25T02:07:05.004Z",
       "contactId": null,
-      "executiveId": "Lyla_Hyatt97@hotmail.com",
+      "executiveId": "Zion74@hotmail.com",
       "description": [
-        "Audax demo vehemens porro repellendus quisquam solutio.",
-        "Adfectus culpa triumphus.",
-        "Appositus calcar sub undique addo trans demum.",
-        "Demitto collum bardus vilicus."
+        "Administratio optio apto vox despecto vorago.",
+        "Amitto abeo nobis ut vulariter crur torrens totidem."
       ],
       "isDeleted": false
     },
     {
-      "id": "31018225-a724-40ef-abb9-19b15abca003",
-      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
-      "type": "email",
-      "date": "2024-11-18T22:37:22.009Z",
-      "contactId": null,
-      "executiveId": "Danika11@gmail.com",
-      "description": [
-        "Decimus usque altus et."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "764a9dbe-331a-4266-a7f5-7d95b4407f6f",
-      "opportunityId": "0e7248f9-268a-41c7-96cf-4e79282ccefc",
-      "type": "call",
-      "date": "2024-11-19T08:05:59.834Z",
-      "contactId": null,
-      "executiveId": "Ottilie_Orn78@gmail.com",
-      "description": [
-        "Patria vulgus carbo minus comparo laudantium audacia sodalitas vae vos.",
-        "Addo doloremque terebro ullam cito voluptatem defungo stella.",
-        "Tribuo sunt doloribus venustas.",
-        "Territo ascisco spiritus aliqua stabilis cerno trepide admitto."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "323a67bb-7c5b-459e-8cce-b8bfc1e69771",
-      "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
-      "type": "call",
-      "date": "2024-11-19T14:18:17.845Z",
-      "contactId": null,
-      "executiveId": "Anibal_Hodkiewicz68@hotmail.com",
-      "description": [
-        "Adhaero deserunt vitae cattus clamo perferendis sperno voro cursus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "c670933b-5fc8-4bd2-948d-9e14adc866f2",
-      "opportunityId": "7fa61257-7302-408f-9c65-22f3d59d7887",
-      "type": "meeting",
-      "date": "2024-11-19T14:17:24.771Z",
-      "contactId": null,
-      "executiveId": "Terrill55@hotmail.com",
-      "description": [
-        "Tondeo enim et tondeo tergum cunae sponte.",
-        "Comminor trucido quo veritas tersus defetiscor adicio calco temperantia vestigium.",
-        "Venia degenero comptus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "10a5b1e6-a329-4b80-b3d1-4a625485eebe",
-      "opportunityId": "5a6c498c-6f8f-4d9d-abc6-d3c588f20e61",
-      "type": "email",
-      "date": "2024-11-19T12:18:10.738Z",
-      "contactId": null,
-      "executiveId": "Florida26@yahoo.com",
-      "description": [
-        "Demum voluptatum derelinquo celer corrigo quia."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "8f137a51-80f1-4bd5-b208-39f6580d43d1",
-      "opportunityId": "37ef28e6-4c91-44f4-9bf8-90787e77d36f",
-      "type": "meeting",
-      "date": "2024-11-19T19:16:13.528Z",
-      "contactId": null,
-      "executiveId": "Iliana88@gmail.com",
-      "description": [
-        "Aegrotatio cubitum tero atavus corrigo vorago communis depopulo.",
-        "Atrox textor delibero."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "f2ca4e95-ada2-416d-b2f2-341e8e208b35",
-      "opportunityId": "8983f735-8788-44a9-94ac-93db6b8ccdd6",
-      "type": "call",
-      "date": "2024-11-19T16:39:43.445Z",
-      "contactId": null,
-      "executiveId": "Kaia.Hand-Ebert@hotmail.com",
-      "description": [
-        "Civis carpo adipiscor contigo caput utique studio totidem.",
-        "Cibus minus adopto arcesso audeo asper cattus tabella adhaero.",
-        "Sunt autus sustineo totam degero arca.",
-        "Debilito summisse sunt defetiscor calculus voluptas fugiat teneo autus cuius.",
-        "Cunabula thema audentia tabula architecto summa thesaurus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "bd45cefb-9179-4e83-869e-acdbadc146ac",
+      "id": "4bd3c383-88b5-43cd-b942-44e8b69c7b32",
       "opportunityId": "7f61327a-5e92-48ac-8e19-b34d336d1d5c",
-      "type": "call",
-      "date": "2024-11-19T15:41:21.301Z",
+      "type": "Email",
+      "date": "2024-11-25T00:43:24.329Z",
       "contactId": null,
-      "executiveId": "Garry_Crist4@hotmail.com",
+      "executiveId": "Nolan59@yahoo.com",
       "description": [
-        "Supra aranea uberrime corrigo molestias depulso.",
-        "Succurro avaritia celer dedecor attonbitus templum crux valetudo texo.",
-        "Cado verumtamen curvo solio caveo turbo consequatur.",
-        "Vestigium numquam cohibeo ullus cado acies sono adfectus ultra."
+        "Chirographum supellex spoliatio.",
+        "Caput decimus vinitor supellex tamquam.",
+        "Adhaero patria cogito sponte utrimque vomica tutamen video culpa dedecor."
       ],
       "isDeleted": false
     },
     {
-      "id": "0f995d39-449d-4aa0-9e42-172af13c2490",
-      "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
-      "type": "email",
-      "date": "2024-11-19T17:09:55.583Z",
-      "contactId": null,
-      "executiveId": "Francisca17@yahoo.com",
-      "description": [
-        "Atavus tam suus spargo cupiditate denuo doloribus vallum.",
-        "Patior tibi textilis thermae quod comparo corrigo desidero arbustum cupressus.",
-        "Curia adamo calculus tero amplus adsum ulterius adicio victoria.",
-        "Deprimo alius curiositas.",
-        "Tremo mollitia cariosus terreo sperno comedo decretum apostolus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "8a037212-f2fd-49c9-bec9-84709e1fe7e6",
-      "opportunityId": "eOnkHQi",
-      "type": "call",
-      "date": "2024-11-19T18:18:29.821Z",
-      "contactId": null,
-      "executiveId": "Madalyn38@yahoo.com",
-      "description": [
-        "Maiores depono tego quasi nihil celo.",
-        "Crastinus ademptio vero cerno patruus asporto eveniet.",
-        "Statim capio autus consectetur.",
-        "Bestia collum unus tredecim aliquam conicio amicitia censura stips apud."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "7c47a2ea-7dac-4189-a812-43bd3a781888",
-      "opportunityId": "8f7553f9-c1eb-47df-9e05-784a1a2dd8d9",
-      "type": "call",
-      "date": "2024-11-19T09:15:44.603Z",
-      "contactId": null,
-      "executiveId": "Aracely_Will62@hotmail.com",
-      "description": [
-        "Ullus tamen advenio angulus demoror claudeo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "60656b46-4cbd-4bd2-ac60-e6f2faae90d5",
-      "opportunityId": "0e7248f9-268a-41c7-96cf-4e79282ccefc",
-      "type": "meeting",
-      "date": "2024-11-19T14:57:36.967Z",
-      "contactId": null,
-      "executiveId": "Ashlee_Hane80@gmail.com",
-      "description": [
-        "Virtus amor sufficio.",
-        "Stabilis temeritas ambitus quia consuasor.",
-        "Tenetur conatus quis beneficium laudantium aggero talis cumque succurro."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "2dc56ec0-05c9-4826-9edb-fcfb051d7e91",
-      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
-      "type": "email",
-      "date": "2024-11-18T22:07:30.675Z",
-      "contactId": null,
-      "executiveId": "Gabriella.Ferry46@gmail.com",
-      "description": [
-        "Claro ceno bonus circumvenio defendo confido alias tondeo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "f2cc1e4e-59f5-4609-bee2-b5054d7bbf9a",
-      "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
-      "type": "meeting",
-      "date": "2024-11-19T10:07:36.864Z",
-      "contactId": null,
-      "executiveId": "Bobby_Osinski@yahoo.com",
-      "description": [
-        "Acidus confugo tendo tabernus bardus vereor ars cicuta."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "a2c0c18e-dd99-4bc6-954f-6b0f9c3d450f",
-      "opportunityId": "67f8f989-bb71-4bc6-8067-50a6fd1dc930",
-      "type": "meeting",
-      "date": "2024-11-19T05:45:25.394Z",
-      "contactId": null,
-      "executiveId": "Erin.MacGyver@gmail.com",
-      "description": [
-        "Viriliter cubo utrum censura."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "ef126146-c052-446e-b579-aa23fffb9efc",
-      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
-      "type": "email",
-      "date": "2024-11-18T23:39:20.102Z",
-      "contactId": null,
-      "executiveId": "Brown45@hotmail.com",
-      "description": [
-        "Vesper careo vomito conservo.",
-        "Decipio amitto illum dolores."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "12c168ad-9ff2-40be-a33d-72c6ad44a7c0",
-      "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
-      "type": "email",
-      "date": "2024-11-19T02:06:05.456Z",
-      "contactId": null,
-      "executiveId": "Casey_Dooley64@yahoo.com",
-      "description": [
-        "Eum adsidue eveniet."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "46972ef4-8f73-4784-a113-faa8ad95af55",
-      "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
-      "type": "email",
-      "date": "2024-11-19T13:26:25.011Z",
-      "contactId": null,
-      "executiveId": "Lawson.Krajcik@gmail.com",
-      "description": [
-        "Sint uredo cervus calcar vis.",
-        "Vere deserunt vomito curvo comparo.",
-        "Callide arca cubo unde aut accedo admoneo denego.",
-        "Pariatur praesentium veniam turpis nesciunt ago.",
-        "Careo minus soleo reprehenderit capillus caelum."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "49851b82-3cb4-40a1-8e13-bfabd915e14d",
-      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
-      "type": "meeting",
-      "date": "2024-11-19T17:14:41.347Z",
-      "contactId": null,
-      "executiveId": "Westley13@yahoo.com",
-      "description": [
-        "Vester ventus conculco comedo culpa compono agnitio."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "5c95c4bb-103b-4d93-a65f-e742c4569541",
+      "id": "bfa10d57-a396-4021-b9a8-410d57aba4b7",
       "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
-      "type": "call",
-      "date": "2024-11-18T22:38:34.499Z",
+      "type": "Meeting",
+      "date": "2024-11-25T06:53:31.846Z",
       "contactId": null,
-      "executiveId": "Rebeca_Kiehn87@yahoo.com",
+      "executiveId": "Clarabelle.Ward@yahoo.com",
       "description": [
-        "Creptio at dens debitis condico coniecto."
+        "Vinculum vitiosus cohors tamquam desparatus.",
+        "Occaecati aperiam audio tamdiu similique tricesimus.",
+        "Aequus adficio supellex vigilo."
       ],
       "isDeleted": false
     },
     {
-      "id": "b4e3e31f-0b99-40be-b2c1-82ac2e5f797d",
-      "opportunityId": "eOnkHQi",
-      "type": "call",
-      "date": "2024-11-18T23:57:57.702Z",
-      "contactId": null,
-      "executiveId": "Kristina.Grant@gmail.com",
-      "description": [
-        "Ustilo tui aeneus cenaculum aufero.",
-        "Cernuus verus vulgaris caelestis audax vesco dolorem titulus quod nostrum.",
-        "Adopto atque acquiro conor vulariter utrum caput aqua tres clibanus.",
-        "Statim caelum solus degusto cupio cavus collum universe."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "17926077-3b74-44d1-8f9d-f8323869e0d9",
-      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
-      "type": "meeting",
-      "date": "2024-11-18T23:58:21.333Z",
-      "contactId": null,
-      "executiveId": "Zella_Conn60@gmail.com",
-      "description": [
-        "Occaecati debeo turpis."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "7caf48f9-a79e-438e-9dec-e1f42f70bc82",
-      "opportunityId": "259b6044-d1c0-4043-9569-205c13613cd0",
-      "type": "email",
-      "date": "2024-11-19T07:27:17.725Z",
-      "contactId": null,
-      "executiveId": "Mathias_Davis@yahoo.com",
-      "description": [
-        "Aspicio calco testimonium avarus convoco velociter.",
-        "Conitor damno suffoco tubineus aurum sint neque uxor.",
-        "Thermae tempora carpo cursus debeo peior auxilium vergo soluta certus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "9626a877-cec3-44ef-8a85-e7d70da0cb2b",
-      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
-      "type": "meeting",
-      "date": "2024-11-19T03:43:00.022Z",
-      "contactId": null,
-      "executiveId": "Javonte77@hotmail.com",
-      "description": [
-        "Stultus congregatio speculum tempus stultus tempus illo vapulus.",
-        "Vulariter virgo confugo.",
-        "Corporis cernuus viridis dens aspernatur tristis."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "8c7941c8-17b6-43a2-bc8a-29069f5857e9",
-      "opportunityId": "eOnkHQi",
-      "type": "meeting",
-      "date": "2024-11-19T20:52:40.641Z",
-      "contactId": null,
-      "executiveId": "Laurine75@hotmail.com",
-      "description": [
-        "Voluntarius crastinus defetiscor tum odit vita pariatur possimus sed.",
-        "Hic tenus tristis argumentum coniecto anser coepi truculenter."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "d529f43a-a16d-423b-8acc-86f326d5eac1",
-      "opportunityId": "67f8f989-bb71-4bc6-8067-50a6fd1dc930",
-      "type": "meeting",
-      "date": "2024-11-19T17:34:35.564Z",
-      "contactId": null,
-      "executiveId": "Mikayla_Greenfelder@gmail.com",
-      "description": [
-        "Carcer vix tabgo laboriosam ago maiores a cultellus ustulo.",
-        "Repellat theatrum tamdiu nesciunt terga vicissitudo concido dedecor.",
-        "Coepi crustulum una creta certus comes tutamen carbo textor."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "28480a3a-8537-42b2-bb82-452ce185ecaf",
-      "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
-      "type": "call",
-      "date": "2024-11-19T09:05:20.475Z",
-      "contactId": null,
-      "executiveId": "Christy.Muller3@hotmail.com",
-      "description": [
-        "Tersus alias tametsi carbo.",
-        "Pel pax verumtamen theatrum.",
-        "Peior sui alo adhuc aro.",
-        "Dolorem cito laboriosam turba deduco accusantium adeptio toties fugit voveo.",
-        "Vae decretum atque aeternus summa tricesimus corroboro caste absum."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "027fe2b4-1aca-4efc-921f-7194c139826a",
-      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
-      "type": "meeting",
-      "date": "2024-11-19T18:13:32.414Z",
-      "contactId": null,
-      "executiveId": "Serena26@yahoo.com",
-      "description": [
-        "Somniculosus voveo sonitus venio crustulum blandior.",
-        "Adulescens coadunatio abstergo.",
-        "Constans confido ustilo vero certe corona consequuntur suspendo.",
-        "Cervus assentator necessitatibus avaritia tutis cribro laboriosam audax sed ascisco."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "c3d1f5fd-075c-498e-9a42-2182b22b0dca",
-      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
-      "type": "email",
-      "date": "2024-11-19T00:18:42.311Z",
-      "contactId": null,
-      "executiveId": "Fredy_Nitzsche71@hotmail.com",
-      "description": [
-        "Decor vapulus sulum."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "d75eaddf-e9d5-412d-af54-01505c2fefda",
-      "opportunityId": "a04b063d-5e44-40fd-b78d-b4c157841dc6",
-      "type": "meeting",
-      "date": "2024-11-19T21:53:09.727Z",
-      "contactId": null,
-      "executiveId": "Letha.OConner40@gmail.com",
-      "description": [
-        "Pariatur coniuratio aequus solio.",
-        "Cilicium turbo odit defetiscor tristis verbera pecco depulso.",
-        "Tribuo vulgivagus universe."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "86f0036b-8279-41fe-9d71-55765681c8a7",
-      "opportunityId": "6032e364-4fcd-4751-8a36-1c32705fe1f9",
-      "type": "call",
-      "date": "2024-11-18T22:59:23.760Z",
-      "contactId": null,
-      "executiveId": "Dedric_Emmerich79@gmail.com",
-      "description": [
-        "Chirographum magni agnosco vita absum animi textor ventus amissio.",
-        "Crux tracto caelum earum depromo.",
-        "Valetudo volva esse varietas centum alioqui dedico praesentium.",
-        "Stabilis accendo amor."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "83767a87-2cc7-41ed-839a-b4e35e6a4211",
-      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
-      "type": "call",
-      "date": "2024-11-19T19:30:23.278Z",
-      "contactId": null,
-      "executiveId": "Dillon29@gmail.com",
-      "description": [
-        "Tero thesaurus amet solvo quo tersus condico.",
-        "Appositus tabernus ut ante aequitas totam somniculosus caries sequi carpo.",
-        "Error defleo chirographum."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "f033799c-884e-419f-863e-6aa95cdbefba",
+      "id": "8ed812b0-69a1-4cfd-a2bc-80f89a44975d",
       "opportunityId": "d23dfac4-4ac1-47af-aa57-1948f39e561e",
-      "type": "call",
-      "date": "2024-11-19T15:51:28.916Z",
+      "type": "Email",
+      "date": "2024-11-25T17:03:57.181Z",
       "contactId": null,
-      "executiveId": "Antonietta.Rau92@yahoo.com",
+      "executiveId": "Lester95@gmail.com",
       "description": [
-        "Tametsi tondeo coepi vado cultellus bardus dolorum crux occaecati.",
-        "Valde combibo deprimo ulterius anser iure ager patrocinor arceo amo.",
-        "Contigo delego curia vigilo provident in defungo atavus despecto.",
-        "Deripio utroque depopulo anser comparo vacuus advoco adfero statua varietas.",
-        "Facilis vulticulus verus aestas suasoria villa auditor."
+        "Condico blandior aro conforto denuo acsi alienus.",
+        "Vae aestas verbum bestia vulgus sumo atque.",
+        "Traho subseco tabula defluo explicabo fugit tonsor compello.",
+        "Amo arca clibanus talio vester ambitus cohaero ducimus decerno usque."
       ],
       "isDeleted": false
     },
     {
-      "id": "42468879-d3d5-47cb-9201-9b072536d01c",
-      "opportunityId": "a201e30c-ded2-4db0-809b-14d50eb87142",
-      "type": "call",
-      "date": "2024-11-18T23:01:25.768Z",
-      "contactId": null,
-      "executiveId": "Freeda84@hotmail.com",
-      "description": [
-        "Adsuesco delicate voluptates antea depromo sub bellum.",
-        "Tendo volva aeternus celo cernuus carus viduo comprehendo thalassinus aureus.",
-        "Aggero bibo suasoria ratione causa hic tabula aeternus auctor colo.",
-        "Tricesimus valens arx crapula.",
-        "Debilito ultra venia vigilo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "976281d2-e1b2-4095-be72-88addd8cc676",
-      "opportunityId": "eOnkHQi",
-      "type": "meeting",
-      "date": "2024-11-19T04:31:36.640Z",
-      "contactId": null,
-      "executiveId": "Moises.Reinger31@hotmail.com",
-      "description": [
-        "Bene vehemens delibero tremo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "27fe692d-242f-4311-a9b8-275e06c3fcc3",
-      "opportunityId": "eOnkHQi",
-      "type": "email",
-      "date": "2024-11-19T10:56:38.806Z",
-      "contactId": null,
-      "executiveId": "Murray_Pfeffer@hotmail.com",
-      "description": [
-        "Capitulus aliqua carbo coaegresco.",
-        "Catena tum tres consequuntur avarus cogito tergo.",
-        "Vero neque corrigo deporto ex substantia."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "20a613a2-2781-4121-95dc-1af669305c40",
-      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
-      "type": "call",
-      "date": "2024-11-19T13:23:19.936Z",
-      "contactId": null,
-      "executiveId": "Cassidy.Ernser91@yahoo.com",
-      "description": [
-        "Suus conor in compono curvo assumenda cedo suspendo suggero curo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "7e8a4ce4-66e8-4dd0-96b3-95a5629a7451",
+      "id": "c5ab6dde-e495-4867-bb98-f77d2a3f0fa6",
       "opportunityId": "37ef28e6-4c91-44f4-9bf8-90787e77d36f",
-      "type": "meeting",
-      "date": "2024-11-19T19:23:48.560Z",
+      "type": "Call",
+      "date": "2024-11-25T17:19:49.234Z",
       "contactId": null,
-      "executiveId": "Abdul.MacGyver@yahoo.com",
+      "executiveId": "Samir_Fadel@yahoo.com",
       "description": [
-        "Alter curiositas accommodo angelus cohors laborum.",
-        "Velit decor addo ipsa.",
-        "Adicio soluta deleo volo laboriosam ascit arbustum pel tamdiu.",
-        "Numquam officiis coepi sequi aveho corpus subiungo nesciunt.",
-        "Adulescens texo molestiae."
+        "Crustulum volutabrum corrupti cavus comitatus caecus saepe stillicidium comis.",
+        "Demonstro patruus virtus arguo enim verumtamen tribuo confero.",
+        "Tendo casus carmen."
       ],
       "isDeleted": false
     },
     {
-      "id": "8219905b-4679-4d94-b562-72d75f7b2792",
-      "opportunityId": "c83d6967-29d8-41a1-961b-acada13b7b65",
-      "type": "call",
-      "date": "2024-11-19T21:25:53.467Z",
-      "contactId": null,
-      "executiveId": "Simeon_Prohaska24@hotmail.com",
-      "description": [
-        "Undique umquam vivo sordeo suggero tero sodalitas conturbo vero.",
-        "Hic laboriosam decretum argumentum quod possimus adversus tollo anser.",
-        "Coniuratio alias dignissimos valetudo deorsum decet acerbitas deserunt eligendi arceo.",
-        "Adnuo tyrannus cognatus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "4dceaa0b-7e8e-4033-8c99-5a0551d657ed",
-      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
-      "type": "email",
-      "date": "2024-11-18T23:10:49.183Z",
-      "contactId": null,
-      "executiveId": "Hassan_Lakin@gmail.com",
-      "description": [
-        "Claudeo unus tutis sto demitto at supra verecundia celer atrocitas."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "5d52e085-5290-4066-b224-6a759196ac99",
-      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
-      "type": "call",
-      "date": "2024-11-19T02:33:32.369Z",
-      "contactId": null,
-      "executiveId": "Jake_Mitchell31@hotmail.com",
-      "description": [
-        "Vel cohors ambulo curto speculum velit vicissitudo thermae."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "01b9cea9-5d2a-4191-82bc-030312828956",
-      "opportunityId": "c83d6967-29d8-41a1-961b-acada13b7b65",
-      "type": "email",
-      "date": "2024-11-19T06:50:56.526Z",
-      "contactId": null,
-      "executiveId": "Magdalen_Koch79@gmail.com",
-      "description": [
-        "Administratio supellex cibo cognomen decipio umquam decens ventosus voveo.",
-        "Canis amplexus cupressus ab quam sit."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "46820a3b-d4de-484d-a535-153c22628f67",
-      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
-      "type": "email",
-      "date": "2024-11-19T05:31:56.327Z",
-      "contactId": null,
-      "executiveId": "Mara_West@yahoo.com",
-      "description": [
-        "Calculus validus tardus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "e4011a2a-1532-4db9-a26f-691745b31534",
-      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
-      "type": "meeting",
-      "date": "2024-11-19T13:17:21.700Z",
-      "contactId": null,
-      "executiveId": "Karolann54@gmail.com",
-      "description": [
-        "Aufero pauper aestivus vulgo traho adduco.",
-        "Sopor vulpes acerbitas aestus sapiente ipsum arcus tam canonicus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "12148fef-438c-41a3-b09b-f29352618863",
-      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
-      "type": "call",
-      "date": "2024-11-19T00:43:02.717Z",
-      "contactId": null,
-      "executiveId": "Brody45@yahoo.com",
-      "description": [
-        "Bos acidus acervus amplexus coma ceno volaticus.",
-        "Tantum creber optio summisse.",
-        "Defetiscor stultus comis careo.",
-        "Beneficium consectetur despecto tabernus tot.",
-        "Thalassinus barba cui vestigium soluta clibanus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "91bd04ae-0581-4920-b788-62851e1ed9c5",
-      "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
-      "type": "email",
-      "date": "2024-11-19T00:03:49.526Z",
-      "contactId": null,
-      "executiveId": "Micheal.Crooks@gmail.com",
-      "description": [
-        "Adversus conatus colo curo ad thesaurus arma.",
-        "Amaritudo delectatio commemoro tardus.",
-        "Contabesco vulgus vaco armarium concedo desino unus casus combibo delibero.",
-        "Amo defleo ater adicio.",
-        "Id subnecto cum facilis."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "9d506394-118c-40df-9a35-cfd55e084ef0",
-      "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
-      "type": "call",
-      "date": "2024-11-19T20:37:50.771Z",
-      "contactId": null,
-      "executiveId": "Jeramy_Bechtelar@yahoo.com",
-      "description": [
-        "Nobis tres tracto.",
-        "Quaerat clibanus constans suasoria suasoria.",
-        "Aeger sperno tametsi vix vorax cohaero callide cibus tamen.",
-        "Sonitus cui vapulus cotidie stella video cupiditate."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "c63bfeea-f9ec-473f-a0e9-f35f8c0ded55",
-      "opportunityId": "d23dfac4-4ac1-47af-aa57-1948f39e561e",
-      "type": "email",
-      "date": "2024-11-19T17:06:31.491Z",
-      "contactId": null,
-      "executiveId": "Malcolm2@gmail.com",
-      "description": [
-        "Tempus repudiandae volubilis voluptate defluo eius.",
-        "Suppono delectatio admitto avaritia temperantia.",
-        "Umerus comprehendo cado aperio tres avaritia.",
-        "Termes tempore ratione ad suffragium cum acerbitas sequi.",
-        "Supplanto depulso curto temeritas atque modi vinum cernuus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "32396eb1-92bb-4e58-9cef-38ed3e399306",
-      "opportunityId": "84b96bf9-f009-42fd-9b7c-73362b99d898",
-      "type": "call",
-      "date": "2024-11-19T19:10:42.921Z",
-      "contactId": null,
-      "executiveId": "Angeline23@yahoo.com",
-      "description": [
-        "Cupressus quasi vulgus.",
-        "Trans angelus iste supellex.",
-        "Ulciscor supellex debitis cultura denique adeptio carcer damnatio.",
-        "Valetudo a clarus turpis."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "7147b9d4-f659-4c5c-a48f-d406315b5222",
-      "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
-      "type": "call",
-      "date": "2024-11-19T04:06:48.790Z",
-      "contactId": null,
-      "executiveId": "Bettie.Streich@gmail.com",
-      "description": [
-        "Nulla conqueror curvo deficio cometes defleo audax viduo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "7c320265-c107-4da5-9491-e0ef0f995f02",
-      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
-      "type": "call",
-      "date": "2024-11-18T23:49:53.953Z",
-      "contactId": null,
-      "executiveId": "Darron_Gislason@hotmail.com",
-      "description": [
-        "Avaritia quasi bene damnatio nemo.",
-        "A tepidus degusto.",
-        "Asporto tredecim aurum caecus coniecto vulariter avarus vacuus.",
-        "Strenuus tamquam cognatus cibus una aegrotatio auditor."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "a70f9a70-ec70-414c-8dfb-fbd51f00d525",
-      "opportunityId": "37ef28e6-4c91-44f4-9bf8-90787e77d36f",
-      "type": "email",
-      "date": "2024-11-19T08:25:01.461Z",
-      "contactId": null,
-      "executiveId": "Jeff80@hotmail.com",
-      "description": [
-        "Tollo tollo adimpleo colligo distinctio virgo exercitationem ancilla nisi.",
-        "Turbo subito blandior damnatio vito depono versus amor demum."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "93797203-713a-412b-8f7b-cff67e8ae158",
-      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
-      "type": "email",
-      "date": "2024-11-19T20:46:09.162Z",
-      "contactId": null,
-      "executiveId": "Saige_OHara6@hotmail.com",
-      "description": [
-        "Esse ab ante vestigium autem maiores angelus conscendo.",
-        "Curtus nulla umquam harum et."
-      ],
-      "isDeleted": true
-    },
-    {
-      "id": "6f824c9b-2037-4eb9-ae70-a07314539874",
-      "opportunityId": "7fa61257-7302-408f-9c65-22f3d59d7887",
-      "type": "meeting",
-      "date": "2024-11-19T14:08:43.712Z",
-      "contactId": null,
-      "executiveId": "Gabriel.Koepp51@gmail.com",
-      "description": [
-        "Acerbitas casso sulum nisi cicuta comptus cursus appono.",
-        "Vesper viriliter paens cetera.",
-        "Tredecim accendo adversus dedico tardus.",
-        "Xiphias socius confero iste ocer."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "97d121c2-ef9e-4301-a926-b8d5536c8622",
-      "opportunityId": "84b96bf9-f009-42fd-9b7c-73362b99d898",
-      "type": "call",
-      "date": "2024-11-19T08:23:08.667Z",
-      "contactId": null,
-      "executiveId": "Olaf47@gmail.com",
-      "description": [
-        "Creta verumtamen timidus arcus attollo adhuc valetudo tunc cohors tenus.",
-        "Acsi atqui depopulo.",
-        "Assumenda cariosus arca deficio enim."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "78fb77fd-82cf-474c-9bba-5dd51b61203a",
-      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
-      "type": "call",
-      "date": "2024-11-19T20:59:26.327Z",
-      "contactId": null,
-      "executiveId": "Greg_Schmitt50@hotmail.com",
-      "description": [
-        "Suadeo coadunatio capillus cultura vere.",
-        "Dedico a deputo.",
-        "Speciosus thalassinus complectus agnosco vicissitudo perspiciatis vis.",
-        "Vespillo alveus cohibeo adhuc anser volva deludo dicta arguo.",
-        "Comptus earum ceno amo admoveo aperio."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "a6981ddf-a507-447b-b188-8c3be952c41d",
-      "opportunityId": "a201e30c-ded2-4db0-809b-14d50eb87142",
-      "type": "meeting",
-      "date": "2024-11-19T17:49:57.595Z",
-      "contactId": null,
-      "executiveId": "Cleo.Bergstrom22@yahoo.com",
-      "description": [
-        "Utique ad utpote nesciunt depromo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "e49c92c3-5db0-438e-8dfb-8e2133667b4b",
-      "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
-      "type": "meeting",
-      "date": "2024-11-19T20:27:42.561Z",
-      "contactId": null,
-      "executiveId": "Amparo13@gmail.com",
-      "description": [
-        "Textus cunae caput.",
-        "Aureus amet viscus aiunt enim.",
-        "Crux titulus perspiciatis curvo curiositas patior vesper decens cultellus."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "cbd43205-06a1-48a7-b5bd-c88137f18b71",
-      "opportunityId": "6032e364-4fcd-4751-8a36-1c32705fe1f9",
-      "type": "meeting",
-      "date": "2024-11-19T20:55:05.326Z",
-      "contactId": null,
-      "executiveId": "Theresa_Steuber@hotmail.com",
-      "description": [
-        "Adsidue carus amaritudo subito soleo subvenio.",
-        "Sumptus cogito arbor.",
-        "Vaco cenaculum theologus vulnero ater."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "11d861a5-0ecd-4c30-924f-6211f9b5f588",
-      "opportunityId": "b922ec97-fa01-41f4-b45a-63156c5fd635",
-      "type": "meeting",
-      "date": "2024-11-19T02:29:10.195Z",
-      "contactId": null,
-      "executiveId": "Yolanda_Kilback@hotmail.com",
-      "description": [
-        "Summa vulgaris suffragium.",
-        "Suspendo vicinus certus adeptio talis illo aegrus vae undique vergo.",
-        "Callide pectus ea supplanto.",
-        "Ager utor cohibeo statua crastinus delego tonsor vulpes.",
-        "Talis sollicito volo vilicus voco nesciunt."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "a51c7172-6ee3-4611-94fa-00d59a8398e7",
-      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
-      "type": "email",
-      "date": "2024-11-19T20:15:50.025Z",
-      "contactId": null,
-      "executiveId": "Monserrat28@hotmail.com",
-      "description": [
-        "Deserunt amor vesper complectus.",
-        "Suspendo velut ipsam eum tyrannus tripudio."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "3bb14297-7cd8-4a3b-975f-0282b838d3f9",
-      "opportunityId": "6032e364-4fcd-4751-8a36-1c32705fe1f9",
-      "type": "email",
-      "date": "2024-11-19T11:19:04.444Z",
-      "contactId": null,
-      "executiveId": "Joan_Crist53@hotmail.com",
-      "description": [
-        "Ars vobis acerbitas similique atavus voco depromo antepono accusantium conqueror.",
-        "A depono quod caries autus blandior suasoria reprehenderit adduco.",
-        "Coniecto bestia creo iste.",
-        "Magnam defendo pax dens suffoco umerus terminatio."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "ddc88237-221c-4667-9fba-8fae8a1695b2",
-      "opportunityId": "259b6044-d1c0-4043-9569-205c13613cd0",
-      "type": "email",
-      "date": "2024-11-19T05:55:27.717Z",
-      "contactId": null,
-      "executiveId": "Scarlett_Stracke47@gmail.com",
-      "description": [
-        "Assentator vitae adulescens."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "9dc322f3-11bb-47f5-9d4d-6a9faa3f1bd8",
-      "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
-      "type": "email",
-      "date": "2024-11-19T01:17:25.507Z",
-      "contactId": null,
-      "executiveId": "Rebeka99@gmail.com",
-      "description": [
-        "Adopto curso conturbo crustulum beneficium defero arcus cavus ulterius alter.",
-        "Bibo confero ventus substantia denego."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "5162813b-7d4b-4e04-8eec-62ed3ab1c68e",
-      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
-      "type": "call",
-      "date": "2024-11-19T05:35:19.471Z",
-      "contactId": null,
-      "executiveId": "Issac49@yahoo.com",
-      "description": [
-        "Trucido auditor sumo aeneus.",
-        "Aliquam ea trans defetiscor defendo urbs celo corporis cuius curvo.",
-        "Tutamen complectus toties tracto verto videlicet cimentarius vomica vestrum bene."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "a43c2cf2-2fdb-4139-b9fe-6299513b5a59",
-      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
-      "type": "call",
-      "date": "2024-11-19T06:47:21.342Z",
-      "contactId": null,
-      "executiveId": "Mack81@hotmail.com",
-      "description": [
-        "Tergiversatio urbanus audio fugit.",
-        "Necessitatibus cum ulciscor atrocitas tolero thalassinus cenaculum usitas.",
-        "Recusandae commodo denuo cur alioqui cauda volubilis trans volva.",
-        "Desparatus fuga avaritia unus suscipit calcar solium cumque."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "f0b7a8e4-9a89-4225-953c-fd819055dcd7",
-      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
-      "type": "email",
-      "date": "2024-11-19T13:02:48.912Z",
-      "contactId": null,
-      "executiveId": "Jailyn_Schiller80@gmail.com",
-      "description": [
-        "Soluta admoneo earum adipisci tempora.",
-        "Nisi perferendis tametsi summopere demergo theatrum conforto.",
-        "Ceno bellicus sulum tener defendo tremo.",
-        "Stips sub thermae numquam decet.",
-        "Cetera ars conduco cotidie spargo hic."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "36709f3b-c10a-48c5-a6ff-04a1364f4264",
-      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
-      "type": "call",
-      "date": "2024-11-19T18:08:57.392Z",
-      "contactId": null,
-      "executiveId": "Anthony78@gmail.com",
-      "description": [
-        "Curiositas consequatur harum tergo quam calamitas stella.",
-        "Cenaculum dolorem maxime coepi eveniet aeternus sophismata temperantia tonsor inventore.",
-        "Veritas ipsum virgo aranea.",
-        "Sponte ratione quod.",
-        "Carus solvo venia compello summisse sit terga consequatur amplus adimpleo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "0f27315a-f96f-47ee-a11e-9bbef19b1310",
-      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
-      "type": "call",
-      "date": "2024-11-19T03:57:33.503Z",
-      "contactId": null,
-      "executiveId": "Brandy33@hotmail.com",
-      "description": [
-        "Crastinus thermae infit supplanto via collum.",
-        "Utor aspernatur crinis aperte casso amitto sto."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "de215393-55c7-423d-8820-7bf2704968cc",
-      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
-      "type": "call",
-      "date": "2024-11-18T23:23:05.284Z",
-      "contactId": null,
-      "executiveId": "Jairo70@gmail.com",
-      "description": [
-        "Turpis spectaculum vulgivagus vulgo.",
-        "Video vestigium corporis arceo capitulus bis bardus timor.",
-        "Decretum comes copiose vespillo reprehenderit.",
-        "Creta amoveo despecto cupiditas nam coniuratio odio.",
-        "Acceptus absum sursum sint amplitudo verus asporto quod."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "d4baed75-6038-4bc7-b929-666bd62096ab",
-      "opportunityId": "a04b063d-5e44-40fd-b78d-b4c157841dc6",
-      "type": "meeting",
-      "date": "2024-11-19T18:22:33.927Z",
-      "contactId": null,
-      "executiveId": "Victoria.Buckridge82@yahoo.com",
-      "description": [
-        "Taedium ea charisma pauper acer.",
-        "Viscus villa amor calculus conduco sponte.",
-        "Cubo auctor tenuis aestivus usitas.",
-        "Tempora votum cras sumo ater benigne vergo at.",
-        "Tenetur minus subiungo amita triumphus vomer volo amo eius varietas."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "998fc163-a6d3-48d6-ab77-3c3bd78c6797",
+      "id": "3e69d477-78c7-4e98-ae5a-43d11d7b9691",
       "opportunityId": "8983f735-8788-44a9-94ac-93db6b8ccdd6",
-      "type": "meeting",
-      "date": "2024-11-19T16:26:32.929Z",
+      "type": "Meeting",
+      "date": "2024-11-25T13:17:57.671Z",
       "contactId": null,
-      "executiveId": "Bethel29@gmail.com",
+      "executiveId": "Estella.Thiel@yahoo.com",
       "description": [
-        "Sint ante dolores supplanto.",
-        "Adeptio defero volup copiose teres antea.",
-        "Vae paens umbra decumbo.",
-        "Una arx ducimus unus vestrum."
+        "Amet ad cruentus quibusdam custodia conculco aperiam.",
+        "Alter tres coerceo caritas labore."
       ],
       "isDeleted": false
     },
     {
-      "id": "139cdcf2-a901-48f4-bac5-dc2b72d19554",
-      "opportunityId": "37ef28e6-4c91-44f4-9bf8-90787e77d36f",
-      "type": "meeting",
-      "date": "2024-11-19T05:00:29.856Z",
+      "id": "58ce181f-5be5-44b4-a6a8-3c5547d24fdf",
+      "opportunityId": "0abc188f-9269-43b9-91c1-8b83c352df8c",
+      "type": "Call",
+      "date": "2024-11-25T13:06:55.339Z",
       "contactId": null,
-      "executiveId": "Elfrieda.Friesen@yahoo.com",
+      "executiveId": "Nelle_Graham80@hotmail.com",
       "description": [
-        "Comminor usus solio.",
-        "Depopulo culpa annus alienus.",
-        "Cursim porro chirographum apparatus terga vetus spes voluptatem clementia."
+        "Cunctatio aspicio laborum accusantium vicissitudo cicuta aegrus vinitor.",
+        "Congregatio tot cariosus tardus voro adversus fugiat numquam.",
+        "Comptus depono tolero teres.",
+        "Suppono repudiandae crebro thesis perferendis."
       ],
       "isDeleted": false
     },
     {
-      "id": "afcc6d54-3af0-4bd7-83e4-e527e3a7069b",
-      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
-      "type": "call",
-      "date": "2024-11-19T04:12:22.628Z",
-      "contactId": null,
-      "executiveId": "Kyleigh_Towne5@yahoo.com",
-      "description": [
-        "Beatae antepono coniecto communis totidem tremo adhaero."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "c19c4b76-8526-4a0c-b77f-3cc14967b312",
-      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
-      "type": "meeting",
-      "date": "2024-11-19T10:12:20.075Z",
-      "contactId": null,
-      "executiveId": "Jack12@gmail.com",
-      "description": [
-        "Vita ipsa paulatim armarium assentator veniam succedo modi.",
-        "Clam adnuo acidus.",
-        "Suppellex alioqui cariosus tendo summa depromo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "a024ebab-cee9-4520-ae52-2a8980a6cd8c",
-      "opportunityId": "67f8f989-bb71-4bc6-8067-50a6fd1dc930",
-      "type": "meeting",
-      "date": "2024-11-18T23:26:45.573Z",
-      "contactId": null,
-      "executiveId": "Arvid39@gmail.com",
-      "description": [
-        "Crinis causa depono tui.",
-        "Tergo articulus circumvenio incidunt ager fugit abutor.",
-        "Dolor dolor quas."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "2580a66f-fd3a-405e-a4b7-779799d8632f",
-      "opportunityId": "b922ec97-fa01-41f4-b45a-63156c5fd635",
-      "type": "meeting",
-      "date": "2024-11-19T03:52:29.737Z",
-      "contactId": null,
-      "executiveId": "Olin_Bahringer54@hotmail.com",
-      "description": [
-        "Tonsor aliqua damnatio."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "c40b03e2-1c3d-499e-8a7b-22fffceddb1f",
-      "opportunityId": "a04b063d-5e44-40fd-b78d-b4c157841dc6",
-      "type": "email",
-      "date": "2024-11-19T14:52:00.890Z",
-      "contactId": null,
-      "executiveId": "Leonard87@hotmail.com",
-      "description": [
-        "Assumenda depopulo cenaculum studio esse vita.",
-        "Dolorem fugiat torrens abeo averto ultra aqua vae.",
-        "Unde vis curo absorbeo.",
-        "Usitas voluntarius arcus spargo.",
-        "Alo suscipit maiores cognomen aptus accusamus tenuis depono aspernatur aer."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "904182fb-453b-474c-bb32-7d82cbcfd58f",
-      "opportunityId": "d23dfac4-4ac1-47af-aa57-1948f39e561e",
-      "type": "call",
-      "date": "2024-11-19T05:36:42.092Z",
-      "contactId": null,
-      "executiveId": "Liliana67@gmail.com",
-      "description": [
-        "Cometes ratione sto vado adsidue tamquam curiositas."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "0eb058af-a667-4458-9714-c087645f1959",
+      "id": "c92284e4-fa56-4f91-b7a4-f9eab9092d90",
       "opportunityId": "6032e364-4fcd-4751-8a36-1c32705fe1f9",
-      "type": "meeting",
-      "date": "2024-11-19T00:10:17.509Z",
+      "type": "Email",
+      "date": "2024-11-25T02:46:33.236Z",
       "contactId": null,
-      "executiveId": "Delphia.Williamson@gmail.com",
+      "executiveId": "Denis_Murray99@yahoo.com",
       "description": [
-        "Antepono patrocinor cultura tutis tribuo consectetur.",
-        "Clementia tardus aptus sponte.",
-        "Antepono carbo assumenda admiratio tantillus."
+        "Conservo subvenio volutabrum ipsum.",
+        "Aeger pax et aliqua dolores adicio adeptio.",
+        "Beatus ratione allatus vilitas claudeo arca amoveo coniuratio adstringo audio."
       ],
       "isDeleted": false
     },
     {
-      "id": "8d5dd5c6-40d1-4ddd-a19e-73821e5a9244",
-      "opportunityId": "a201e30c-ded2-4db0-809b-14d50eb87142",
-      "type": "meeting",
-      "date": "2024-11-19T17:04:04.443Z",
-      "contactId": null,
-      "executiveId": "Evelyn_Cruickshank@gmail.com",
-      "description": [
-        "Vel quisquam pecco conor adhaero talus vitae qui utpote.",
-        "Sollicito aegrotatio aqua.",
-        "Articulus ut sortitus doloremque.",
-        "Vere balbus adipisci supplanto absconditus artificiose amplus a.",
-        "Patruus denuo alii cura voluptas."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "f31e17f3-d6f1-4513-b330-586c7ae6f891",
-      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
-      "type": "call",
-      "date": "2024-11-19T01:39:35.894Z",
-      "contactId": null,
-      "executiveId": "Tania_Greenfelder46@hotmail.com",
-      "description": [
-        "Clamo velit illum."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "38d7ec12-f72a-490b-b9af-17735028a605",
-      "opportunityId": "a201e30c-ded2-4db0-809b-14d50eb87142",
-      "type": "meeting",
-      "date": "2024-11-19T16:31:07.170Z",
-      "contactId": null,
-      "executiveId": "Vita91@yahoo.com",
-      "description": [
-        "Quis adinventitias cunabula vicissitudo tollo umerus.",
-        "Ducimus tempora conor.",
-        "Spectaculum arbustum coma versus autus.",
-        "Ago verus verbum odio crepusculum tactus.",
-        "Agnosco exercitationem tenuis utrimque vereor."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "ea2fd9b1-7af6-428e-aeb9-f6d382d52a37",
-      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
-      "type": "meeting",
-      "date": "2024-11-19T12:23:36.258Z",
-      "contactId": null,
-      "executiveId": "Daija7@gmail.com",
-      "description": [
-        "Cohibeo autus dicta vestigium coniuratio creber adulatio.",
-        "Harum totus stabilis alias viduo aestus aegrotatio amet optio.",
-        "Curso tenetur amplus conculco."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "23844cab-4e02-41c3-b3bc-364cb5d024bd",
-      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
-      "type": "call",
-      "date": "2024-11-19T09:37:37.302Z",
-      "contactId": null,
-      "executiveId": "Mireille61@hotmail.com",
-      "description": [
-        "Terga dapifer cervus curis ater adfectus cultellus corpus summopere."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "98339b70-4eb8-475f-9e26-c81eb8f31f0e",
-      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
-      "type": "meeting",
-      "date": "2024-11-19T12:45:00.151Z",
-      "contactId": null,
-      "executiveId": "Derick31@yahoo.com",
-      "description": [
-        "Qui uberrime tendo spargo aut vado.",
-        "Agnitio tracto abeo rem admitto.",
-        "Spiculum taceo crinis adamo desidero sodalitas totam vinitor atavus alias.",
-        "Cauda necessitatibus dolores conitor votum dapifer despecto voluptatum amplexus quo.",
-        "Defaeco utor verbum contego molestiae apto."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "9a04640d-4ae9-4b65-8038-997c88f182c6",
-      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
-      "type": "meeting",
-      "date": "2024-11-19T02:27:59.172Z",
-      "contactId": null,
-      "executiveId": "Leonel60@gmail.com",
-      "description": [
-        "Acerbitas arcesso deleniti consectetur cresco contra advenio acerbitas charisma somnus.",
-        "Thymum avaritia casso crinis absens thymbra.",
-        "Considero arma caelestis molestiae aliqua.",
-        "Alioqui creo cresco volaticus assumenda atrocitas vulgo nostrum cursim celo."
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "d212f650-6006-41ab-9e60-c5a567a72546",
+      "id": "2fdc1193-9747-48cf-a4bc-e92f3f831dd6",
       "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
-      "type": "meeting",
-      "date": "2024-11-19T04:02:12.643Z",
+      "type": "Meeting",
+      "date": "2024-11-25T12:04:14.784Z",
       "contactId": null,
-      "executiveId": "Ubaldo_Bechtelar13@gmail.com",
+      "executiveId": "Florida.Stiedemann12@gmail.com",
       "description": [
-        "Balbus vesco itaque certus vestigium fugiat vulpes utrimque ocer."
+        "Tondeo vita inflammatio nam cunae turbo constans.",
+        "Campana utique socius stillicidium carbo tenuis accendo demulceo paulatim apud.",
+        "Curto sapiente explicabo vorago causa candidus."
       ],
       "isDeleted": false
     },
     {
-      "id": "8111d4a3-7364-431c-97f0-6f4517358767",
-      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
-      "type": "meeting",
-      "date": "2024-11-19T09:42:59.182Z",
+      "id": "b7617d49-2dc1-45cd-ab58-fa682f3efa5a",
+      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
+      "type": "Call",
+      "date": "2024-11-25T20:39:09.168Z",
       "contactId": null,
-      "executiveId": "King1@gmail.com",
+      "executiveId": "Dimitri.Wiegand14@yahoo.com",
       "description": [
-        "Agnosco nam quas supplanto."
-      ],
-      "isDeleted": true
-    },
-    {
-      "id": "24b25dac-0864-40fe-b3ee-e3bafe266743",
-      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
-      "type": "email",
-      "date": "2024-11-19T11:51:02.714Z",
-      "contactId": null,
-      "executiveId": "Adolphus30@gmail.com",
-      "description": [
-        "Vito contabesco astrum cohaero cauda voco addo amplitudo teneo.",
-        "Casus vaco depraedor creator adinventitias ipsa tego vere ara aqua.",
-        "Veritatis deripio alienus.",
-        "Alioqui inflammatio derideo crapula spargo demens suggero territo."
+        "Totam quae denuo."
       ],
       "isDeleted": false
     },
     {
-      "id": "a71d9800-114a-4aba-aa9a-f646b396452b",
+      "id": "21feb11e-f4cc-4bff-b9dd-615cdec7b525",
+      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
+      "type": "Call",
+      "date": "2024-11-25T01:11:04.845Z",
+      "contactId": null,
+      "executiveId": "Marina54@gmail.com",
+      "description": [
+        "Desino tam torqueo adnuo quibusdam illo dolore.",
+        "Crudelis pecus comes subseco cogo auxilium itaque tendo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "b444ec8b-245a-4016-8b68-25eb4ac208c8",
+      "opportunityId": "7fa61257-7302-408f-9c65-22f3d59d7887",
+      "type": "Email",
+      "date": "2024-11-25T00:01:25.062Z",
+      "contactId": null,
+      "executiveId": "Elda_Goodwin@hotmail.com",
+      "description": [
+        "Cohibeo derelinquo taceo stabilis tener atrox coepi.",
+        "Comminor arbor vulnero articulus catena supellex cogo solvo angustus solvo.",
+        "Audacia ultio ambitus patruus.",
+        "Artificiose teres officiis."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "6ec2ed85-d4fd-41a1-8df5-0cc4cd734b6c",
+      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
+      "type": "Email",
+      "date": "2024-11-25T00:09:48.711Z",
+      "contactId": null,
+      "executiveId": "Leanna_Kunde73@yahoo.com",
+      "description": [
+        "Defluo adeo optio crux aro basium viscus alius textor valeo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "69352eb0-116c-4652-ab28-0fefcb80cf89",
+      "opportunityId": "6032e364-4fcd-4751-8a36-1c32705fe1f9",
+      "type": "Call",
+      "date": "2024-11-25T06:06:21.215Z",
+      "contactId": null,
+      "executiveId": "Jaylen_Casper@hotmail.com",
+      "description": [
+        "Commodo temporibus cilicium suadeo cedo.",
+        "Capio admoveo quibusdam."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "ad22646a-1031-4f41-9e34-8b9c86c0a77b",
+      "opportunityId": "7f61327a-5e92-48ac-8e19-b34d336d1d5c",
+      "type": "Email",
+      "date": "2024-11-25T18:52:16.653Z",
+      "contactId": null,
+      "executiveId": "Adela_Bosco@gmail.com",
+      "description": [
+        "Confero curis tabella caput inventore.",
+        "Cogo vester soluta temporibus.",
+        "Baiulus sollicito incidunt validus defessus cumque.",
+        "Canto angelus illo certe."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "1e9d7a11-9194-4481-8b95-03878e234265",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Email",
+      "date": "2024-11-25T02:21:51.581Z",
+      "contactId": null,
+      "executiveId": "King_Keebler@gmail.com",
+      "description": [
+        "Tredecim benevolentia delicate quia demo vinitor.",
+        "Aperiam acceptus deleo contego abundans.",
+        "Sollicito adipisci urbs aegre ubi.",
+        "Aqua statim uter defendo tubineus.",
+        "Ago eaque alienus termes degero theca voluptates."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "9c4ff54d-8b9c-4df5-b43f-e59ea31e52f4",
       "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
-      "type": "meeting",
-      "date": "2024-11-19T22:04:40.939Z",
+      "type": "Meeting",
+      "date": "2024-11-25T19:42:38.760Z",
       "contactId": null,
-      "executiveId": "Bo.Williamson@gmail.com",
+      "executiveId": "Melvin.Daugherty45@gmail.com",
       "description": [
-        "Laudantium qui campana tego."
+        "Caterva somniculosus abstergo summa cariosus.",
+        "Tamdiu cohors patria deripio certus acer.",
+        "Delego illo laboriosam soleo."
       ],
       "isDeleted": false
     },
     {
-      "id": "5049e5c8-abbd-41e4-af04-9053ded901c1",
-      "opportunityId": "67f8f989-bb71-4bc6-8067-50a6fd1dc930",
-      "type": "email",
-      "date": "2024-11-19T19:43:07.393Z",
+      "id": "4a246be8-dd97-4fea-a1de-fce5846d4deb",
+      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
+      "type": "Meeting",
+      "date": "2024-11-25T11:23:55.628Z",
       "contactId": null,
-      "executiveId": "Alycia.Farrell@yahoo.com",
+      "executiveId": "Erin5@gmail.com",
       "description": [
-        "Cursus ciminatio denuncio conitor."
+        "Causa voveo suppellex tibi cubicularis unde vinco angelus usque conservo.",
+        "Annus nostrum provident voluntarius cattus theologus.",
+        "Dens terebro vespillo amor cauda.",
+        "Doloremque strues aeger tenax amita mollitia tametsi laboriosam.",
+        "Eligendi theatrum arceo damno inflammatio alioqui undique."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "cf2c6a08-be67-4659-8182-87fb1c164e76",
+      "opportunityId": "8f7553f9-c1eb-47df-9e05-784a1a2dd8d9",
+      "type": "Call",
+      "date": "2024-11-25T04:00:50.514Z",
+      "contactId": null,
+      "executiveId": "Henri_Kutch@gmail.com",
+      "description": [
+        "Ciminatio cupio delectatio vomer sponte velit tumultus curiositas cognomen vesco.",
+        "Collum dolore aranea.",
+        "Recusandae victus voluptate usque argentum.",
+        "Quia aliquam subnecto audio angelus artificiose velociter ver.",
+        "Cubicularis amita cui consequuntur."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "2d9e5441-9e3e-4da7-97b0-ec33b806fa70",
+      "opportunityId": "7fa61257-7302-408f-9c65-22f3d59d7887",
+      "type": "Meeting",
+      "date": "2024-11-25T10:42:08.260Z",
+      "contactId": null,
+      "executiveId": "Retha.Brekke@yahoo.com",
+      "description": [
+        "Ago viridis et.",
+        "Cribro aduro sumo est.",
+        "Voluptate aqua adsidue odit caput thesaurus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "f96a9a9a-4ad7-4ee0-ad1c-713713b9b189",
+      "opportunityId": "84b96bf9-f009-42fd-9b7c-73362b99d898",
+      "type": "Email",
+      "date": "2024-11-25T14:53:36.849Z",
+      "contactId": null,
+      "executiveId": "Rhett77@hotmail.com",
+      "description": [
+        "Aestas villa patrocinor undique vapulus annus eum autem tumultus.",
+        "Magni sum damnatio terra at id tabula turpis caput ars.",
+        "Cenaculum suffoco traho venia agnitio absens vulticulus decumbo cervus derelinquo.",
+        "Appello decipio deleo clam desolo sollers.",
+        "Cumque absum confero solum eveniet."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "4ecdd911-1be6-426c-a0cc-72e21160f8cd",
+      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
+      "type": "Email",
+      "date": "2024-11-25T09:40:51.352Z",
+      "contactId": null,
+      "executiveId": "Akeem62@yahoo.com",
+      "description": [
+        "Delectus adnuo adeo utroque cornu.",
+        "Patria sordeo cumque voro solvo mollitia astrum vomica valetudo.",
+        "Defero dolorum auditor calco textilis.",
+        "Ago voluptate tenuis circumvenio quod soleo umbra textor magni subito."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "5e929f41-ecdb-4517-9e85-4afbc981501c",
+      "opportunityId": "8983f735-8788-44a9-94ac-93db6b8ccdd6",
+      "type": "Meeting",
+      "date": "2024-11-25T09:21:55.169Z",
+      "contactId": null,
+      "executiveId": "Destiney64@gmail.com",
+      "description": [
+        "Cogito subiungo celebrer tremo sint cubitum cerno articulus beatus.",
+        "Dolore sunt voluptatibus possimus sint.",
+        "Sub contra in.",
+        "Theatrum deprecator vulnero arto."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "2ef3f870-1bad-429d-a35a-10d6b6216586",
+      "opportunityId": "37ef28e6-4c91-44f4-9bf8-90787e77d36f",
+      "type": "Meeting",
+      "date": "2024-11-25T22:06:36.325Z",
+      "contactId": null,
+      "executiveId": "Eric_Muller37@gmail.com",
+      "description": [
+        "Campana eaque contra.",
+        "Tabgo ars deporto neque confugo caelestis maiores stips delinquo.",
+        "Aro adeptio averto balbus vitium arca uterque blandior."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "838c1e17-4291-456f-941f-f9a93694ca8e",
+      "opportunityId": "8f7553f9-c1eb-47df-9e05-784a1a2dd8d9",
+      "type": "Call",
+      "date": "2024-11-25T09:52:13.009Z",
+      "contactId": null,
+      "executiveId": "Virgie29@yahoo.com",
+      "description": [
+        "Tergeo utilis ascit suppono ascit aggero vulgo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "31c329a2-6371-4049-bb4b-5af10d5ebc4a",
+      "opportunityId": "eOnkHQi",
+      "type": "Email",
+      "date": "2024-11-25T18:05:33.922Z",
+      "contactId": null,
+      "executiveId": "Carrie_Williamson@gmail.com",
+      "description": [
+        "Alienus tabgo qui."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "7634c3ea-7187-4722-9285-42f0c197a7fb",
+      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
+      "type": "Email",
+      "date": "2024-11-27",
+      "contactId": "",
+      "executiveId": "Camylle.Luettgen30@yahoo.com",
+      "description": [
+        "Adiuvo aperio vel urbs ago vinitor cado.",
+        "Temperantia advenio solio conspergo.",
+        "Theologus demo amita."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "6641d839-8e78-4a6a-ae8e-a71776729aa9",
+      "opportunityId": "d23dfac4-4ac1-47af-aa57-1948f39e561e",
+      "type": "Meeting",
+      "date": "2024-11-25T01:37:32.705Z",
+      "contactId": null,
+      "executiveId": "Carroll.Fritsch@yahoo.com",
+      "description": [
+        "Cibo subiungo bonus testimonium comedo totidem.",
+        "Vulgus saepe antea antiquus eaque aspernatur verus tabula.",
+        "Optio bibo admoneo aurum tabesco cupiditate consequatur adinventitias pauper peccatus.",
+        "Totidem suscipio utpote vulgo sui.",
+        "Cultellus patior depereo tamen cilicium talio solvo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "5c36f005-142f-4e09-88a3-857571264a68",
+      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
+      "type": "Meeting",
+      "date": "2024-11-25T18:02:15.031Z",
+      "contactId": null,
+      "executiveId": "Suzanne_Windler@gmail.com",
+      "description": [
+        "Antea dicta spoliatio aeneus damno.",
+        "Tempora auditor comprehendo aeneus eius utrum aliquam despecto aestas aedificium."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "27c98009-8ae3-4c16-8083-46f4743ea86e",
+      "opportunityId": "5a6c498c-6f8f-4d9d-abc6-d3c588f20e61",
+      "type": "Meeting",
+      "date": "2024-11-25T11:44:27.801Z",
+      "contactId": null,
+      "executiveId": "Ibrahim38@hotmail.com",
+      "description": [
+        "Pariatur sulum contra asperiores assentator undique.",
+        "Decretum subseco asporto vitiosus fugiat culpa sopor totam."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "2bc001fe-cea0-48f0-92f9-0e4bbdcd2e65",
+      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
+      "type": "Email",
+      "date": "2024-11-25T15:35:39.595Z",
+      "contactId": null,
+      "executiveId": "Vivianne38@hotmail.com",
+      "description": [
+        "Patior vulnus curiositas debitis vivo vetus succurro.",
+        "Vulgaris deludo soluta numquam advenio in trado totus atqui fuga.",
+        "Cur suppellex possimus carcer."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0263627c-f386-49c1-a80c-814440076247",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Call",
+      "date": "2024-11-25T21:34:36.648Z",
+      "contactId": null,
+      "executiveId": "Giuseppe11@gmail.com",
+      "description": [
+        "Deduco advoco apostolus vinitor quia a.",
+        "Vitae certus cunabula bos aetas vox texo hic corporis defleo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "1937886b-39ec-4646-bdd2-2d204d4de01a",
+      "opportunityId": "eOnkHQi",
+      "type": "Call",
+      "date": "2024-11-25T10:57:09.256Z",
+      "contactId": null,
+      "executiveId": "Faye_Ziemann@yahoo.com",
+      "description": [
+        "Molestias alioqui pauci absconditus.",
+        "Volutabrum celebrer vetus atqui derelinquo caritas crebro sto.",
+        "Aptus calamitas terga conitor.",
+        "Audeo cibus rerum tutamen placeat."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "f96186e2-8cef-47ae-975e-a5831638df5f",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Call",
+      "date": "2024-11-25T22:02:22.834Z",
+      "contactId": null,
+      "executiveId": "Marilou63@yahoo.com",
+      "description": [
+        "Cupressus torqueo nobis beneficium adeptio admiratio beatus cresco.",
+        "Pariatur ipsa veritatis adamo angelus cruentus arbor assumenda aliqua conspergo.",
+        "Tricesimus absum tendo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "ac503222-d044-484f-b589-453be4a1cec6",
+      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
+      "type": "Email",
+      "date": "2024-11-25T17:38:02.130Z",
+      "contactId": null,
+      "executiveId": "Christopher56@yahoo.com",
+      "description": [
+        "Theologus vinco cogo conitor colligo cibo.",
+        "Templum solio optio despecto ara decumbo.",
+        "Comminor vicissitudo totus adsum dolorum tam.",
+        "Labore xiphias pax carus adnuo.",
+        "Unus adsuesco solitudo vix cupressus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "ec13532b-5b18-4d43-8c29-9c308eede71c",
+      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
+      "type": "Meeting",
+      "date": "2024-11-25T13:28:05.209Z",
+      "contactId": null,
+      "executiveId": "Jules19@gmail.com",
+      "description": [
+        "Demitto conventus praesentium.",
+        "Vobis laudantium cubicularis omnis vito cui cattus trans ante.",
+        "Audio volup atque ter utpote demonstro tergiversatio crepusculum amoveo minima."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "592ee893-4574-4e25-8b2e-4029fc2d773c",
+      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
+      "type": "Email",
+      "date": "2024-11-25T13:00:15.574Z",
+      "contactId": null,
+      "executiveId": "Joe.Hills52@hotmail.com",
+      "description": [
+        "Vehemens consequatur defetiscor textus provident trado urbanus tubineus deprecator.",
+        "Velit officia casus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0b4ed806-3c1b-44a9-bdf5-35f2bc07e136",
+      "opportunityId": "9967f40b-1437-4581-83dd-5480a6a46c47",
+      "type": "Email",
+      "date": "2024-11-24",
+      "contactId": "6c4361eb-d26a-4e20-ac23-0cae13f3bd03",
+      "executiveId": "Bria_Windler45@hotmail.com",
+      "description": [
+        "Civis carmen volva facere claudeo subnecto peccatus adiuvo vomito tondeo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "565d33dc-90a5-43d1-ac13-a27c4c6a95aa",
+      "opportunityId": "eOnkHQi",
+      "type": "Meeting",
+      "date": "2024-11-25T13:03:28.036Z",
+      "contactId": null,
+      "executiveId": "Annetta.Gottlieb57@yahoo.com",
+      "description": [
+        "Amicitia carus color arceo vito maiores conservo communis thymbra titulus.",
+        "Vulticulus theologus delego vociferor chirographum cruentus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "2a283b57-5108-4e6d-8356-021531d11822",
+      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
+      "type": "Email",
+      "date": "2024-11-25T08:08:06.112Z",
+      "contactId": null,
+      "executiveId": "Cristina_Christiansen44@yahoo.com",
+      "description": [
+        "Communis absens adulescens velit contabesco tantillus denuncio."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "8f12e842-a3f8-4f5f-98bb-142bc45278bd",
+      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
+      "type": "Call",
+      "date": "2024-11-25T07:17:34.025Z",
+      "contactId": null,
+      "executiveId": "Karli_Stamm@hotmail.com",
+      "description": [
+        "Absum tutis ceno demonstro animi comburo cedo peccatus abscido.",
+        "Tertius denego audax sopor.",
+        "Delego temeritas vilitas tempus comedo quidem patria conicio concedo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "73dc59c4-d7b0-4780-b5f5-9a325d54c188",
+      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
+      "type": "Call",
+      "date": "2024-11-25T15:07:56.867Z",
+      "contactId": null,
+      "executiveId": "Kacie.Wolff@yahoo.com",
+      "description": [
+        "Qui culpo dolorem cuppedia caput cupressus sumptus cupio cura.",
+        "Templum tumultus absorbeo basium cedo totus.",
+        "Atqui caput utilis dignissimos acsi.",
+        "Tricesimus decretum valetudo correptius comedo conicio sordeo adipiscor vergo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "ac5a94ec-51d9-469f-a6c8-82d7344d85ff",
+      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
+      "type": "Email",
+      "date": "2024-11-25T21:01:06.158Z",
+      "contactId": null,
+      "executiveId": "Vito_OReilly@hotmail.com",
+      "description": [
+        "Summisse amitto unus.",
+        "Odit aro aeternus verumtamen aliquam paens.",
+        "Crudelis cuius ceno considero arx.",
+        "Contra textilis curso caelum coma curatio subito circumvenio cohaero officiis.",
+        "Comedo veritatis suggero debitis sollicito vorago pecto decretum aduro."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "4c291230-41db-4b0d-9c8d-92b73c38df9a",
+      "opportunityId": "7fa61257-7302-408f-9c65-22f3d59d7887",
+      "type": "Meeting",
+      "date": "2024-11-25T11:10:51.632Z",
+      "contactId": null,
+      "executiveId": "Agnes_Kovacek@yahoo.com",
+      "description": [
+        "Dolores beneficium brevis abstergo theca auctus.",
+        "Viridis abeo delinquo asperiores demergo.",
+        "Vigilo carus verto arma.",
+        "Adflicto cresco casso quos."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "7ffd98ae-6665-4c90-8ef6-ed0e616be720",
+      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
+      "type": "Email",
+      "date": "2024-11-25T12:33:23.727Z",
+      "contactId": null,
+      "executiveId": "Darryl97@hotmail.com",
+      "description": [
+        "Patruus spiculum auditor deputo odio dolorem recusandae vereor alioqui una.",
+        "Coma occaecati contego vulgus.",
+        "Cuius vinitor valde suppono vestrum tredecim alter succurro vitiosus.",
+        "Speculum bene dignissimos ea spes fugit acervus velit talio centum.",
+        "Auctor surculus votum capto admiratio nesciunt dapifer chirographum solus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "29eb673f-87b5-4082-b00f-1d2abe29e47f",
+      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
+      "type": "Meeting",
+      "date": "2024-11-25T08:38:05.914Z",
+      "contactId": null,
+      "executiveId": "Jermey84@yahoo.com",
+      "description": [
+        "Usitas viscus incidunt thymum deporto timidus timor."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0e58b274-4ccc-4ba9-9753-328ed49effb2",
+      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
+      "type": "Meeting",
+      "date": "2024-11-25T16:29:10.071Z",
+      "contactId": null,
+      "executiveId": "Emmitt_Willms@hotmail.com",
+      "description": [
+        "Ter vulgo dicta vetus beatus vilicus tepesco verbera sono verumtamen.",
+        "Soleo vestrum velut casso spiculum."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "9041497e-8835-4d7d-8d40-42b1f7eac4fb",
+      "opportunityId": "d23dfac4-4ac1-47af-aa57-1948f39e561e",
+      "type": "Call",
+      "date": "2024-11-25T18:21:36.966Z",
+      "contactId": null,
+      "executiveId": "Cloyd.Cormier37@gmail.com",
+      "description": [
+        "Aspicio vester cervus veritatis sustineo casso turba.",
+        "Repellendus aggero curatio aranea cupiditas.",
+        "Amita facilis curriculum cernuus molestias acsi stipes armarium."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "30375fa2-e1f4-4aa1-96a0-4efc8b791ec0",
+      "opportunityId": "8983f735-8788-44a9-94ac-93db6b8ccdd6",
+      "type": "Meeting",
+      "date": "2024-11-25T10:19:47.436Z",
+      "contactId": null,
+      "executiveId": "Bernardo51@hotmail.com",
+      "description": [
+        "Clementia vociferor acceptus socius ago animi adipiscor causa ipsa decumbo.",
+        "Labore derelinquo bellum velit bis canis coniuratio.",
+        "Tergiversatio cometes tametsi nostrum nam ulciscor."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "1578b2ca-3cd7-4b11-98b3-3183a035c29a",
+      "opportunityId": "9967f40b-1437-4581-83dd-5480a6a46c47",
+      "type": "Call",
+      "date": "2024-11-25T07:57:24.296Z",
+      "contactId": null,
+      "executiveId": "Zella.Ebert45@hotmail.com",
+      "description": [
+        "Accendo utrimque suscipio quibusdam ter eligendi.",
+        "Cultura comptus autus vomica ancilla."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "644c1507-ec98-4db9-9486-d84d4457d9af",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Email",
+      "date": "2024-11-25T01:07:22.711Z",
+      "contactId": null,
+      "executiveId": "Velva.Trantow63@yahoo.com",
+      "description": [
+        "Conicio coerceo tamisium abundans centum."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "f669e68d-a040-43bf-9af7-88959a745566",
+      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
+      "type": "Call",
+      "date": "2024-11-25T09:45:12.822Z",
+      "contactId": null,
+      "executiveId": "Alberta71@yahoo.com",
+      "description": [
+        "Nesciunt appono architecto tener demergo.",
+        "Uterque adipiscor aiunt creta tum."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "8c74c64b-6351-40dd-b9d3-1ec3044f3f6e",
+      "opportunityId": "7f61327a-5e92-48ac-8e19-b34d336d1d5c",
+      "type": "Call",
+      "date": "2024-11-25T09:05:41.407Z",
+      "contactId": null,
+      "executiveId": "Rebekah_Anderson@gmail.com",
+      "description": [
+        "Veritas minima abstergo tondeo amitto talio curia suadeo corporis.",
+        "Derelinquo verbera custodia thesaurus arceo.",
+        "Solutio cupiditate alveus vallum comis arma volup beatae.",
+        "Uterque socius voluptas vae.",
+        "Creta claudeo cunae adiuvo supplanto vulnero ratione solutio."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "a0c3bfdd-7a4b-4a35-9567-c0a0f57de271",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Email",
+      "date": "2024-11-25T00:34:43.805Z",
+      "contactId": null,
+      "executiveId": "Anastacio84@gmail.com",
+      "description": [
+        "Commemoro defessus acerbitas defero subiungo autus.",
+        "Tego error accendo tricesimus tepesco vis animus vulariter sodalitas vesica.",
+        "Suasoria quas solutio."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "d54c09d6-c6de-46f4-b736-9d19c970d95a",
+      "opportunityId": "6032e364-4fcd-4751-8a36-1c32705fe1f9",
+      "type": "Meeting",
+      "date": "2024-11-25T06:51:03.376Z",
+      "contactId": null,
+      "executiveId": "Marta_Ward@hotmail.com",
+      "description": [
+        "Veniam ceno pariatur dolor coniuratio comes.",
+        "Viridis cogito vel cena.",
+        "Alius candidus stultus non asporto vinco in cum autus animus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "301871e5-b0ef-44ac-bf04-6230f02650d7",
+      "opportunityId": "7fa61257-7302-408f-9c65-22f3d59d7887",
+      "type": "Meeting",
+      "date": "2024-11-25T14:45:23.897Z",
+      "contactId": null,
+      "executiveId": "Rogelio.Willms@gmail.com",
+      "description": [
+        "Vergo perferendis capio.",
+        "Solium vox triduana ocer conduco uredo sed abeo ara.",
+        "Admiratio ea nam turba esse via ceno cuius sumptus aeger."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "580a1e2c-d475-4dbc-902a-f2adbc4e37a9",
+      "opportunityId": "259b6044-d1c0-4043-9569-205c13613cd0",
+      "type": "Email",
+      "date": "2024-11-25T05:55:08.293Z",
+      "contactId": null,
+      "executiveId": "Vallie_Mosciski@hotmail.com",
+      "description": [
+        "Cinis vae comis distinctio cito desolo.",
+        "Certus agnosco decet vulgo utpote aurum adstringo.",
+        "Uterque vespillo cohaero.",
+        "Ago defetiscor expedita officia totus quaerat."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0b9585cf-4aa5-4dd4-a4f0-f1a0f218c029",
+      "opportunityId": "d23dfac4-4ac1-47af-aa57-1948f39e561e",
+      "type": "Meeting",
+      "date": "2024-11-25T13:11:10.601Z",
+      "contactId": null,
+      "executiveId": "Mohammad.Welch57@yahoo.com",
+      "description": [
+        "Ulciscor velut conscendo maiores contabesco angelus.",
+        "Crudelis comprehendo curto.",
+        "Vinco facilis vado cruciamentum tunc angulus deprecator virgo in porro.",
+        "Demonstro optio caecus vulpes defaeco."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "348b3d38-f64c-479f-be18-64236d5134f2",
+      "opportunityId": "eOnkHQi",
+      "type": "Meeting",
+      "date": "2024-11-25T16:05:00.939Z",
+      "contactId": null,
+      "executiveId": "Bailee.Fay73@gmail.com",
+      "description": [
+        "Sum statua fugiat tam tristis.",
+        "Socius termes supplanto causa vix approbo vilis aggredior vespillo iusto.",
+        "Tubineus derideo denique sulum universe."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "519a9031-5e8d-45de-9cdb-cc3b227ee12c",
+      "opportunityId": "c83d6967-29d8-41a1-961b-acada13b7b65",
+      "type": "Call",
+      "date": "2024-11-25T13:10:35.749Z",
+      "contactId": null,
+      "executiveId": "Uriel85@gmail.com",
+      "description": [
+        "Reprehenderit nobis ascisco patruus cruciamentum quis.",
+        "Deleo contra curis.",
+        "Adhaero confido allatus dolor tutis celer animi cruentus carbo tunc.",
+        "Spargo laborum uter aeneus vesper.",
+        "Defungo voluptates vinco solium decipio compono arx decretum impedit."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "989dc346-15ab-4686-b852-40742955f1a6",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Meeting",
+      "date": "2024-11-25T06:27:58.889Z",
+      "contactId": null,
+      "executiveId": "Margarete.Reilly@gmail.com",
+      "description": [
+        "Supplanto vivo crebro pectus argumentum."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "d2a39ca2-e960-4afb-8dac-42dd25f2b08e",
+      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
+      "type": "Meeting",
+      "date": "2024-11-25T01:06:33.933Z",
+      "contactId": null,
+      "executiveId": "Marianne_Walker14@hotmail.com",
+      "description": [
+        "Acervus eligendi quia temeritas crux consuasor carus calcar attonbitus carus.",
+        "Delicate decerno acceptus ipsam candidus coadunatio totus tergiversatio coruscus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "033e7b48-2848-4af7-ac1c-c2630f1d6019",
+      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
+      "type": "Email",
+      "date": "2024-11-25T14:11:07.710Z",
+      "contactId": null,
+      "executiveId": "Shaina_Runte92@yahoo.com",
+      "description": [
+        "Adnuo fuga appello theologus suadeo tantillus addo vehemens decerno.",
+        "Ullus villa bardus careo deorsum.",
+        "Amicitia vallum thesaurus convoco conspergo earum concedo compono.",
+        "Comes thalassinus adamo vos.",
+        "Speciosus adversus depromo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "a894d93a-36e6-4b4b-92f0-6fcf3c601a93",
+      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
+      "type": "Email",
+      "date": "2024-11-25T13:11:58.226Z",
+      "contactId": null,
+      "executiveId": "Chanelle37@yahoo.com",
+      "description": [
+        "Unus talis architecto vix expedita asperiores utrimque cunae tepidus.",
+        "Vinitor comptus crapula tumultus capillus.",
+        "Dens recusandae deporto vilicus atavus bestia explicabo aequitas appositus atavus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "4b95e629-bb22-4b51-8c5a-5e4e1a902c9b",
+      "opportunityId": "5a6c498c-6f8f-4d9d-abc6-d3c588f20e61",
+      "type": "Email",
+      "date": "2024-11-24T23:24:31.705Z",
+      "contactId": null,
+      "executiveId": "Jude.Nienow@yahoo.com",
+      "description": [
+        "Tracto maxime delego benigne verto desparatus exercitationem thesis creber.",
+        "Cupiditate corona sono tenuis basium.",
+        "Cruentus arx comptus.",
+        "Quod contigo sumo sponte fuga arbitro terebro libero."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "93df0211-ae8c-4f0a-b381-35d201dcc33d",
+      "opportunityId": "84b96bf9-f009-42fd-9b7c-73362b99d898",
+      "type": "Email",
+      "date": "2024-11-25T01:45:53.164Z",
+      "contactId": null,
+      "executiveId": "Cicero62@gmail.com",
+      "description": [
+        "Voluptatem totam balbus calco.",
+        "Tum cilicium agnitio odit chirographum arto ars carus.",
+        "Tres libero dolores carpo alioqui defessus.",
+        "Clam ullus bellicus cado tamquam amplexus.",
+        "Super creator cognomen arx acerbitas."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "abfb3a10-b9ee-45aa-9f12-83c8be6da008",
+      "opportunityId": "37ef28e6-4c91-44f4-9bf8-90787e77d36f",
+      "type": "Call",
+      "date": "2024-11-25T10:46:35.175Z",
+      "contactId": null,
+      "executiveId": "Vern77@yahoo.com",
+      "description": [
+        "Civitas cubicularis usitas tres beneficium volubilis communis acquiro admoveo curvo.",
+        "Admitto alienus cibus acceptus adaugeo talis absconditus bellicus talis."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "b8ec45d3-f3f8-45bf-9584-fe8fb19a753e",
+      "opportunityId": "c83d6967-29d8-41a1-961b-acada13b7b65",
+      "type": "Meeting",
+      "date": "2024-11-25T09:50:37.107Z",
+      "contactId": null,
+      "executiveId": "Mozell_Will-Hartmann10@yahoo.com",
+      "description": [
+        "Dicta magnam depereo urbs aspicio odio.",
+        "Totidem confugo arbor aptus verbera centum.",
+        "Dedecor carmen vinum ut antepono architecto tabula.",
+        "Degero blandior cribro currus stultus caterva eos blanditiis."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "7e2534a3-7c9e-48fe-8202-dc9cec0aa227",
+      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
+      "type": "Call",
+      "date": "2024-11-25T05:06:34.738Z",
+      "contactId": null,
+      "executiveId": "Javonte.Hauck@hotmail.com",
+      "description": [
+        "Amplus acquiro tollo aspernatur.",
+        "Balbus abstergo supellex caput sustineo.",
+        "Maiores capto arca accendo tabella ascit.",
+        "Eos adversus xiphias sit tero amo deporto debilito."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0d701bf0-14fc-4bd2-892c-a0e5d6719fcc",
+      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
+      "type": "Email",
+      "date": "2024-11-25T09:18:54.001Z",
+      "contactId": null,
+      "executiveId": "Ernestina.Beahan50@hotmail.com",
+      "description": [
+        "Tenax unde cuppedia attero."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "8b85e53b-fba5-4f3f-9d14-1cc3c044a677",
+      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
+      "type": "Call",
+      "date": "2024-11-25T18:59:46.430Z",
+      "contactId": null,
+      "executiveId": "Jack75@hotmail.com",
+      "description": [
+        "Tempore commemoro somniculosus vulgivagus inventore.",
+        "Audeo conscendo veritas deinde ustilo creo theca.",
+        "Solum tersus crinis sol maxime altus suggero defleo.",
+        "Compello audeo creator adulatio pecco caute."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "cfaef477-df66-4bab-bd9d-a0cd6146bf1f",
+      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
+      "type": "Call",
+      "date": "2024-11-25T00:31:15.937Z",
+      "contactId": null,
+      "executiveId": "Noemy_Morar@hotmail.com",
+      "description": [
+        "Verbera succurro conturbo caries adeo mollitia fugiat doloremque.",
+        "Curatio arcesso autus commodo reiciendis tego arguo adfero admoneo.",
+        "Versus beatus provident."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "8d031367-2f4b-4665-a23d-5dd57b1456fd",
+      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
+      "type": "Call",
+      "date": "2024-11-24T22:51:30.427Z",
+      "contactId": null,
+      "executiveId": "Abdul_Hilll92@hotmail.com",
+      "description": [
+        "Comedo absconditus alius.",
+        "Decumbo summa voluntarius tam civis sustineo.",
+        "Iusto tibi accommodo somnus alii delectus advoco commodo absconditus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "53670ed3-1c4c-4466-b796-d2d21a6d5bbc",
+      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
+      "type": "Call",
+      "date": "2024-11-25T08:21:08.290Z",
+      "contactId": null,
+      "executiveId": "Gunner_Price@hotmail.com",
+      "description": [
+        "Amaritudo tyrannus spiculum adfectus textilis cruciamentum tenetur."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0949adb5-655c-4dd5-80b0-6f41430ba654",
+      "opportunityId": "a04b063d-5e44-40fd-b78d-b4c157841dc6",
+      "type": "Meeting",
+      "date": "2024-11-25T15:18:29.640Z",
+      "contactId": null,
+      "executiveId": "Dee_MacGyver@hotmail.com",
+      "description": [
+        "Pax comes una.",
+        "Thymbra derelinquo suppono inflammatio astrum demoror.",
+        "Valde sufficio cui adsum tabella ciminatio ea statua approbo aer.",
+        "Addo via ea.",
+        "Vulgivagus circumvenio facilis curvo caritas ipsum cognomen aspicio cum valetudo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "221e63d0-18ee-44b1-8968-8bfa436524df",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Email",
+      "date": "2024-11-25T03:36:41.590Z",
+      "contactId": null,
+      "executiveId": "Graciela_Stiedemann@gmail.com",
+      "description": [
+        "Vigilo baiulus tripudio eum contego vomica surculus.",
+        "Paens contra congregatio cultellus ambitus.",
+        "Stultus vilicus tollo territo acer."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0cf2eed3-86c2-465d-92f8-6f0d2f02e441",
+      "opportunityId": "6d330391-9cd3-4cd8-94fe-765b74d1c286",
+      "type": "Email",
+      "date": "2024-11-25T14:24:47.133Z",
+      "contactId": null,
+      "executiveId": "Jodie67@hotmail.com",
+      "description": [
+        "Vomica antea ulciscor cedo acer.",
+        "Cruentus confido fugit caterva.",
+        "Aestus ex alii decimus animi speciosus sodalitas paulatim.",
+        "Caecus undique viduo ait.",
+        "Vesco altus quisquam talus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "a1359e1e-ed3f-4b27-b39f-ee2fdb8e30a3",
+      "opportunityId": "9967f40b-1437-4581-83dd-5480a6a46c47",
+      "type": "Email",
+      "date": "2024-11-25T18:00:59.419Z",
+      "contactId": null,
+      "executiveId": "Eloise.Hammes@hotmail.com",
+      "description": [
+        "Cibus patria depulso victoria demo.",
+        "Dicta surculus combibo laborum illo absconditus.",
+        "Cursim abstergo expedita.",
+        "Coma decens auctor tot distinctio.",
+        "Termes acerbitas peccatus curvo tenus vulgaris bos nesciunt ocer umerus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "2bfc9953-f792-45d5-9f08-2731f9bb05f9",
+      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
+      "type": "Meeting",
+      "date": "2024-11-25T01:19:16.197Z",
+      "contactId": null,
+      "executiveId": "Gregg_Rice@yahoo.com",
+      "description": [
+        "Vinculum admitto theca demonstro deripio solitudo tutamen.",
+        "Eius animi veniam ante aqua carus turba clibanus.",
+        "Crustulum cedo victus.",
+        "Verbum decimus voro talus cenaculum."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0c6e07ec-1a47-4c81-adaf-699acfe12041",
+      "opportunityId": "8f7553f9-c1eb-47df-9e05-784a1a2dd8d9",
+      "type": "Meeting",
+      "date": "2024-11-25T09:53:04.150Z",
+      "contactId": null,
+      "executiveId": "Matilda80@hotmail.com",
+      "description": [
+        "Claustrum sol illum talus demitto terreo.",
+        "Bellum vulnus certe commodi."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "87543fe0-c9ed-4615-aec6-7b3fff8dbb52",
+      "opportunityId": "9cd35795-8145-4b58-afbc-8428f4c272a5",
+      "type": "Meeting",
+      "date": "2024-11-25T10:08:50.091Z",
+      "contactId": null,
+      "executiveId": "Una_Franey@hotmail.com",
+      "description": [
+        "Calcar ascisco stella velum veniam una vapulus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "d4396c88-c570-4571-b6ec-8190ae24fc1e",
+      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
+      "type": "Meeting",
+      "date": "2024-11-25T01:08:52.215Z",
+      "contactId": null,
+      "executiveId": "Gracie91@hotmail.com",
+      "description": [
+        "Peccatus tardus texo.",
+        "Nulla decens eligendi apostolus dolorum.",
+        "Voco canto caute tamen compello attonbitus voluntarius deduco cimentarius.",
+        "Thermae bellicus tantum decor."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "d2e9abd2-819f-488b-ac00-9ae3219336f4",
+      "opportunityId": "67f8f989-bb71-4bc6-8067-50a6fd1dc930",
+      "type": "Call",
+      "date": "2024-11-25T11:04:40.351Z",
+      "contactId": null,
+      "executiveId": "Jacey.Gorczany-Jacobs@yahoo.com",
+      "description": [
+        "Celebrer damno tamquam spiritus cognatus ater ea celo arx arbitro."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "082dfcc3-476c-4512-b252-8cbc5049f3b3",
+      "opportunityId": "7f61327a-5e92-48ac-8e19-b34d336d1d5c",
+      "type": "Call",
+      "date": "2024-11-25T14:45:46.385Z",
+      "contactId": null,
+      "executiveId": "Lindsay.Mayert40@gmail.com",
+      "description": [
+        "Nisi decerno cupio sui cursim suffoco.",
+        "Patria aeneus comis confero defungo.",
+        "Bardus antiquus supellex autus quae arcus.",
+        "Bos ante magni claro veritas adhuc pax."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "6232a9e6-6993-4172-9ea5-ed3e9447cbef",
+      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
+      "type": "Email",
+      "date": "2024-11-25T21:50:39.889Z",
+      "contactId": null,
+      "executiveId": "Jazmyn77@gmail.com",
+      "description": [
+        "Vel laudantium utique dicta torqueo consectetur claro cubo.",
+        "Tepesco decens eum.",
+        "Corporis corona succurro nulla tantillus sursum.",
+        "Verbum aureus delinquo cometes tutis ut appello vicissitudo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "2f5cdb0b-da8c-4e18-839b-3ebc55066483",
+      "opportunityId": "d23dfac4-4ac1-47af-aa57-1948f39e561e",
+      "type": "Meeting",
+      "date": "2024-11-25T04:18:23.166Z",
+      "contactId": null,
+      "executiveId": "Veda35@gmail.com",
+      "description": [
+        "Turbo vestigium accendo alter cuius tamquam volup aiunt cubitum sursum.",
+        "Sonitus pariatur sperno socius ducimus cruciamentum tum.",
+        "Caput curia censura vesper talio suffragium.",
+        "Sonitus depereo virtus vos solus ubi tumultus dignissimos temptatio varietas.",
+        "Quo quibusdam acies ex tergiversatio turpis labore conscendo possimus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "d6fadc67-45a0-4f8d-b4db-8709fa73587c",
+      "opportunityId": "baec7d3e-30ec-437e-92dd-850e133954dc",
+      "type": "Meeting",
+      "date": "2024-11-25T22:00:32.655Z",
+      "contactId": null,
+      "executiveId": "Frederick.Crona73@gmail.com",
+      "description": [
+        "Trado civis alii.",
+        "Appositus coniecto condico abutor umquam arx iusto tardus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "b7e76ad8-13d6-40fe-b8f0-97e8db6a3395",
+      "opportunityId": "eOnkHQi",
+      "type": "Email",
+      "date": "2024-11-25T03:59:27.830Z",
+      "contactId": null,
+      "executiveId": "Amanda_Kozey@hotmail.com",
+      "description": [
+        "Assentator tamdiu cunctatio adaugeo quisquam."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "8e9d8e84-3dbb-45e1-9afa-182cd704dacb",
+      "opportunityId": "b922ec97-fa01-41f4-b45a-63156c5fd635",
+      "type": "Call",
+      "date": "2024-11-25T16:04:35.886Z",
+      "contactId": null,
+      "executiveId": "Korbin50@yahoo.com",
+      "description": [
+        "Villa cupiditas torqueo voluntarius defleo confugo volup argumentum tenus ambitus.",
+        "Absum architecto denego adversus subnecto dapifer taceo condico aut.",
+        "Ager barba verecundia congregatio aegre adamo vestigium tabesco."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "65e7ef0c-05f5-4c00-89f8-52b1446a2eeb",
+      "opportunityId": "c5046422-92bb-4f8c-b885-75c614511f9e",
+      "type": "Call",
+      "date": "2024-11-25T07:53:53.529Z",
+      "contactId": null,
+      "executiveId": "Keira3@yahoo.com",
+      "description": [
+        "Repellat creta amor solus.",
+        "Deludo creo constans uberrime patrocinor abeo nisi.",
+        "Cubicularis terminatio explicabo conservo tenuis.",
+        "Campana cupiditas carbo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "9eb1caee-d408-4673-9f2e-1302b1809a40",
+      "opportunityId": "0d12276a-70f5-43ce-b513-005a3b6711a5",
+      "type": "Email",
+      "date": "2024-11-25T17:02:37.595Z",
+      "contactId": null,
+      "executiveId": "Antonio73@yahoo.com",
+      "description": [
+        "Adsidue quasi clementia argentum calamitas cinis caput aut speciosus.",
+        "Veritas coruscus apto thalassinus alius cauda repudiandae."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "848677d6-e4ba-4c6e-a203-89ceaeaa2c8b",
+      "opportunityId": "f5f03160-9208-4028-999f-62ce1b088e8a",
+      "type": "Call",
+      "date": "2024-11-25T00:53:25.096Z",
+      "contactId": null,
+      "executiveId": "Meaghan92@gmail.com",
+      "description": [
+        "Video temeritas contigo earum xiphias cimentarius amo.",
+        "Admoneo subiungo dolore congregatio vulnus.",
+        "Contego deputo vere virgo desolo."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "d58eb1e5-8d74-403a-8d0b-a62c92fd8e81",
+      "opportunityId": "dc63fd22-cbbb-41b4-ad91-68680cf1dd7e",
+      "type": "Email",
+      "date": "2024-11-25T01:12:17.457Z",
+      "contactId": null,
+      "executiveId": "Johann_Lehner79@gmail.com",
+      "description": [
+        "Socius tersus suscipio culpo adaugeo ars desidero bonus depromo turbo.",
+        "Acceptus creo defluo aperte pariatur.",
+        "Spes advoco adhaero spiculum thema repudiandae.",
+        "Aspernatur tres sol surgo coepi decerno tamdiu deripio ulciscor harum."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "23fdffd6-aa13-414f-95a1-7119f0c2eb2a",
+      "opportunityId": "4e62af0e-807f-405b-94e3-6bc5f3f8f778",
+      "type": "Meeting",
+      "date": "2024-11-25T10:35:11.612Z",
+      "contactId": null,
+      "executiveId": "Brenden_Mitchell35@gmail.com",
+      "description": [
+        "Templum tui viduo aurum subvenio cetera utrum unus supellex vulticulus.",
+        "Strues aliquid apostolus ambitus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "396d6e19-703c-4ed8-8910-0e5ad7a7d90c",
+      "opportunityId": "dfe3388a-bacd-4bf0-b66e-fa7384313268",
+      "type": "Email",
+      "date": "2024-11-25T22:08:27.595Z",
+      "contactId": null,
+      "executiveId": "Eula.Hyatt@yahoo.com",
+      "description": [
+        "Vix commodi viriliter charisma accusator currus vox tumultus curatio bos.",
+        "Animus ipsam cribro bellum truculenter utroque commodi at tendo canonicus."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "4d9d5cc3-141a-48cf-bf7f-f09754508a9a",
+      "opportunityId": "18a121a4-c2d3-4b07-acb8-f084061b9a03",
+      "type": "Call",
+      "date": "2024-11-25T08:01:06.084Z",
+      "contactId": null,
+      "executiveId": "Horace_Anderson49@gmail.com",
+      "description": [
+        "Corpus occaecati dens vulpes."
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "0d549511-e5b5-49e0-bc94-198369badebd",
+      "opportunityId": "84b96bf9-f009-42fd-9b7c-73362b99d898",
+      "type": "Meeting",
+      "date": "2024-11-25T00:21:52.691Z",
+      "contactId": null,
+      "executiveId": "Devan44@gmail.com",
+      "description": [
+        "Tredecim toties cattus arceo umerus minus adulatio animadverto voluntarius.",
+        "Vae suasoria antea coniecto labore capio umerus via."
       ],
       "isDeleted": false
     }
