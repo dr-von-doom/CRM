@@ -1,5 +1,5 @@
 import FlagCircleIcon from "@mui/icons-material/FlagCircle";
-import HomeIcon from "@mui/icons-material/Home";
+import AnalyticsIcon from "@mui/icons-material/Analytics"; 
 import PeopleIcon from "@mui/icons-material/People";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ClientsPage from "./pages/client/ClientPage";
@@ -10,12 +10,6 @@ import OpportunityDetailPage from "./pages/opportunity/OpportunityDetailPage";
 import CreateOpportunityPage from "./pages/opportunity/CreateOpportunityPage";
 import ClientDetailsPage from "./pages/client/ClientDetailsPage";
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    icon: <HomeIcon />,
-    element: <HomePage />,
-  },
   {
     path: "/clients",
     name: "Clients",
@@ -32,6 +26,12 @@ const routes = [
     name: "Opportunities",
     icon: <FlagCircleIcon />,
     element: <OpportunityPage />,
+  },
+  {
+    path: "/",
+    name: "Overview",
+    icon: <AnalyticsIcon />,
+    element: <HomePage />,
   },
   {
     path: "/opportunities/create",

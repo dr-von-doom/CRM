@@ -29,7 +29,16 @@ export const OpportunityPieChart = ({
         flexDirection: "column",
       }}
     >
-      <Typography variant="h6">{title}</Typography>
+      <Typography
+        variant="h6"
+        sx={{
+          textAlign: "center", 
+          fontWeight: "bold",
+          marginBottom: 0,
+        }}
+      >
+        {title}
+      </Typography>
 
       <PieChart
         series={[

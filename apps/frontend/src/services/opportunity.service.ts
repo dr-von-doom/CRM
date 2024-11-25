@@ -1,10 +1,9 @@
 import { ApiRequests } from "../types/api.types";
-import { OpportunityType } from "../types/opportunity.types";
-import { OverviewData, ComparisonData } from "../types/overview.types";
 import {
   opportunityKeyValueMap,
   OpportunityType,
 } from "../types/opportunity.types";
+import { ComparisonData, OverviewData } from "../types/overview.types";
 import { OPPORTUNITIES_PAGE_SIZE } from "../utils/const";
 import { requestApi } from "./api";
 
