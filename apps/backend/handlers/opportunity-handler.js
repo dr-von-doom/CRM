@@ -36,12 +36,11 @@ const getOpportunityOverview = (groupBy, db, res) => {
 };
 
 /**
- * /**
  * it returns an array of objects with the following structure:
  * {
  *  id: number,
-    valueEstimated: number,
-    valueExecuted: number,
+ *  valueEstimated: number,
+ *  valueExecuted: number,
  *  label: string
  * }
  * @param {object} db
@@ -73,15 +72,18 @@ const getClientOpportunityComparison = (db, _req, res) => {
     return acc;
   }, {});
 
-  return res.json(
-    Object.keys(result).map((clientId, index) => ({
+  const filteredResults = Object.keys(result)
+    .filter((clientId) => clientsMap[clientId]) 
+    .map((clientId, index) => ({
       id: index,
       valueEstimated: result[clientId].valueEstimated,
       valueExecuted: result[clientId].valueExecuted,
-      label: clientsMap[clientId] || "Unknown Client",
-    }))
-  );
+      label: clientsMap[clientId],
+    }));
+
+  return res.json(filteredResults);
 };
+
 
 module.exports = {
   getOpportunityOverview,

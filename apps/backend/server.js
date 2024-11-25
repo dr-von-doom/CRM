@@ -1,6 +1,6 @@
 const jsonServer = require("json-server");
 const path = require("path");
-const { getOpportunityOverview } = require("./handlers/opportunity-handler");
+const { getOpportunityOverview, getClientOpportunityComparison } = require("./handlers/opportunity-handler");
 
 const data = {
   clients: require("./data/clients.json"),
