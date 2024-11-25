@@ -13,7 +13,7 @@ for (let i = 0; i < 100; i++) {
   followUps.push({
     id: faker.string.uuid(),
     opportunityId: opportunity.id,
-    type: faker.helpers.arrayElement(["call", "email", "meeting"]),
+    type: faker.helpers.arrayElement(["Call", "Email", "eeting"]),
     date: faker.date.recent().toISOString(),
     contactId: clientContacts.length > 0
       ? clientContacts[faker.number.int({ min: 0, max: clientContacts.length - 1 })].id
