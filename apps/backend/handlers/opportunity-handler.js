@@ -44,10 +44,9 @@ const getOpportunityOverview = (groupBy, db, res) => {
  *  label: string
  * }
  * @param {object} db
- * @param {object} _req
  * @param {object} res
  */
-const getClientOpportunityComparison = (db, _req, res) => {
+const getClientOpportunityComparison = (db, res) => {
   const { "": opportunities } = db.get("opportunities").value();
   const { "": clients } = db.get("clients").value();
 
